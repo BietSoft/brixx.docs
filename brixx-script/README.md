@@ -226,6 +226,8 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       </body>
     </html>
 
+Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-element-sample.zip]](downloads/brixx-element-sample.zip)
+
 Um den Brixx HTML-Element zu testen können wir den Projektordner **`[brixx-element-sample]`** im Visual Studio Code öffnen. Zum starten der HTML-Datei mit der *Live Server* Erweiterung gibt es verschiedene Möglichkeiten.
 
 1. Klick auf **`[Go Live]`** in der *Status Bar* zum Ein/Ausschalten des Live Servers. 
@@ -241,5 +243,13 @@ Um den Brixx HTML-Element zu testen können wir den Projektordner **`[brixx-elem
 
    HTML-Datei **`index.html`** mit der Live Server Erweiterung (http://127.0.0.1:5500/index.html)
 
-
 Under Construction ...
+
+## Take the Tutorial
+
+package.json  
+webpack
+
+Build a Brixx Component  
+Build a Brixx JSX-Element  
+Build a Brixx HTML-Element
