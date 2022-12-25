@@ -1,6 +1,7 @@
 # Brixx-Script
 
-  > This document is under construction and not yet complete. However, we have decided to make the product available for use in advance. For information on using Brixx-Script, please contact info@brixx.it
+  > This document is under construction and is currently only available in German. However, we have decided to make the product available for use in the current version 1.0.3.  
+  For information on using Brixx-Script, please contact info@brixx.it
 
 Brixx-Script ist eine JavaScript-Bibliothek zur Erstellen von Webkomponenten (Web-Bausteinen). Mit Brixx-Script können **„Smarte“-Web-Bausteine** (Brixx) für Webseiten und Webanwendungen erstellt werden. Dadurch kannn beispielsweise Programmieraufwand und Projektkomplexität mit unser **Low-Code-Entwicklung** auf ein Minimum reduziert werden. Brixx Web-Bausteine können als HTML-Elemente in jedem HTML-Dokument sowie als Brixx-Script-Baustein in JavaScript-Projekten und Frameworks verwendet werden.  
 Brixx Web-Bausteine können mit JavaScript und insbesondere [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt werden. JSX wurde 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 seinen Ursprung als Plattform- und Programiersprachen unabhängige Bibliothek **LaSSiE**, wurde 2005 mit E4X erweitert, und zuletzt 2014 E4X durch JSX ersetzt, nachdem E4X von der Mozilla Foundation als deprecated gekennzeichnet wurde. LaSSiE findet in Produkten wie **Brixx-Decision-Script** und **Brixx-Process-Script** als Baustein-System Verwendung und aufgrund der Popularität und Verbreitung von JSX wurde LaSSiE 2022 als unabhängiges Produkt **Brixx-Script** zur Erstellung von Webkomponenten (Web-Bausteinen) zu veröffentlicht.
@@ -175,7 +176,7 @@ Abschließend wird das erstellte Brixx Element als HTML-Elemet **`<brixx-animal-
     // Register the Brixx HTML-Element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
-Kompletter Brixx-Web-Baustein in der JavaScript-Datei **`./components/brixx-animal-list.js`**
+Kompletter Brixx Web-Baustein in der JavaScript-Datei **`./components/brixx-animal-list.js`**
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -407,7 +408,96 @@ Integriertes Terminal-Fenster im Visual Studio Code
 
 Under Construction ...
 
-webpack
+### **webpack**
 
-Build a Brixx HTML-Element   
-Build a Brixx Component  
+## Build a Brixx HTML-Element
+...  
+
+### Build a Brixx JSX-Element (Preview)
+
+Kompletter Brixx Web-Baustein in der JavaScript-Datei **`./components/brixx-simple-element.js`**
+
+    // Imports
+    import { Brixx } from '@brixx/script'
+
+    // Create a Brixx JSX-Element
+    const Greeting = ({ name }) => (
+      <div>
+        <h3>Hello {name}. Welcome to the our Brixx world!</h3>
+      </div>
+    )
+
+    // Create a Brixx default element
+    Brixx.element = (
+      <div>
+        <div>
+          <hr />
+          <h2>Brixx JSX-Element</h2>
+          <Greeting name={'Bob the Builder'} />
+          <hr />
+        </div>
+      </div>
+    )
+
+    // Register the Brixx HTML-Element <brixx-simple-element>
+    Brixx.registerElement({ name: 'brixx-simple-element' })
+
+## Build a Brixx Component Class
+
+### Brixx Component Class Sample (Preview)
+
+Komplette Brixx Component Class **`Counter`** in der JavaScript-Datei **`Counter.js`**
+
+    // Imports
+    import { Brixx } from '@brixx/script'
+
+    /**
+    * Class Brixx Counter component
+    */
+    export default class Counter extends Brixx.Component {
+      /**
+      * Create a Brixx Counter component object
+      *
+      * @param {*} props - the Counter props
+      */
+      constructor(props) {
+        super(props)
+        this.state = {
+          count: 0
+        }
+      }
+
+      /**
+      * Brixx Counter component mounted
+      */
+      componentDidMount() {
+        Brixx.console.log('Brixx Counter Component mounted')
+
+        // Force render if component is mounted
+        this.forceUpdate()
+      }
+
+      /**
+      * Render the Brixx Counter component
+      */
+      render() {
+        return (
+          <div id={this.id}>
+            {this.props.children}
+            <h3>Count: {this.state.count}</h3>
+            <button
+              onClick={(event) => {
+                this.setState({
+                  count: this.state.count + 1
+                })
+              }}
+            >
+              Increment
+            </button>
+          </div>
+        )
+      }
+    }
+
+## Build a Brixx-Script-Component
+...
