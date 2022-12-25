@@ -1,7 +1,9 @@
 # Brixx-Script
 
-Brixx-Script ist eine JavaScript-Bibliothek zum Erstellen von Webkomponenten (Web-Bausteinen). Es können **Smarte Web-Bausteine** (Brixx) für Webseiten und Webanwendungen erstellt werden und dadurch nicht zuletzt Programmieraufwand und Projekt-Komplexität mit unser **Low-Code-Entwicklung** auf ein Minimum reduziert werden. Brixx Web-Bausteine können dabei sowohl als HTML-Elemente in jedem beliebigen HTML-Dokument, als auch als Brixx-Script-Baustein in JavaScript Projekten und Frameworks verwendet werden.  
-Brixx Web-Bausteine können mit JavaScript und insbesondere mit [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt werden. JSX wurde in 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von HTML-Elementen in JavaSript. Brixx-Script hat seinen Ursprung in 1998 als Plattform- und Programiersprachen unabhängige Bibliothek **LaSSiE** und wurde bereits in 2005 mit E4X erweitert. LaSSiE wird in anderen Produkten wie **Brixx-Decision-Script** und **Brixx-Process-Script** als Baustein-System eingesetzt und aufgrund der großen Popularität und Verbreitung von JSX wurde LaSSiE mit JSX erweitert und als als Brixx-Script zur Erstellung von Webkomponenten (Web-Bausteinen) zu veröffentlicht.
+  > This document is under construction and not yet complete. However, we have decided to make the product available for use in advance. For information on using Brixx-Script, please contact info@brixx.it
+
+Brixx-Script ist eine JavaScript-Bibliothek zur Erstellen von Webkomponenten (Web-Bausteinen). Mit Brixx-Script können **„Smarte“-Web-Bausteine** (Brixx) für Webseiten und Webanwendungen erstellt werden. Dadurch kannn beispielsweise Programmieraufwand und Projektkomplexität mit unser **Low-Code-Entwicklung** auf ein Minimum reduziert werden. Brixx Web-Bausteine können als HTML-Elemente in jedem HTML-Dokument sowie als Brixx-Script-Baustein in JavaScript-Projekten und Frameworks verwendet werden.  
+Brixx Web-Bausteine können mit JavaScript und insbesondere [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt werden. JSX wurde 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 seinen Ursprung als Plattform- und Programiersprachen unabhängige Bibliothek **LaSSiE**, wurde 2005 mit E4X erweitert, und zuletzt 2014 E4X durch JSX ersetzt, nachdem E4X von der Mozilla Foundation als deprecated gekennzeichnet wurde. LaSSiE findet in Produkten wie **Brixx-Decision-Script** und **Brixx-Process-Script** als Baustein-System Verwendung und aufgrund der Popularität und Verbreitung von JSX wurde LaSSiE 2022 als unabhängiges Produkt **Brixx-Script** zur Erstellung von Webkomponenten (Web-Bausteinen) zu veröffentlicht.
 
 ## Package `@brixx/script`
 
@@ -61,14 +63,14 @@ Es gibt jede Menge nützlicher Erweiterungen für Visual Studio Code die einem d
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Ein lokaler Entwicklungsserver (Webserver) mit Auto Reload (Live reload) bei Änderungen am Quellcode. Der Live Server ermöglicht das Verhalten der Brixx Webkomponente im Browser zu testen, und verhindert darüber hinaus die *blocked by CORS policy* ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen.
 - [NPM-Scripts](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.vscode-npm-scripts) Anzeigen und Ausführen von NPM-SCRIPTS aus der Explorer Ansicht.
 
-## Node.js und npm
+## Node.js und Npm
 Um eigenständige Brixx **Webkomponenten** zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager). 
 
 ### **Node.js**
 Wird als Entwicklungswerkzeug für den **Build** (Erstellung) eigenständiger Brixx Webkomponenten verwendet, **nicht zur Laufzeit** benötigt, und erfordert keine besonderen Node.js Kenntnisse. Durch die Verwendung von Node.js können nahezu alle **State-of-the-art** Entwicklungswerkzeuge wie Webpack und Babel verwendet werden.
 
 ### **Npm**
-Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein Package Manager für die Verwaltung der benötigten JavaScript Packages, sowohl für den Build von Brixx Webkomponenten als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js zur Entwicklung benötigt.
+Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein **Node Package Manager** für die Verwaltung der benötigten JavaScript Packages, sowohl für den Build von Brixx Webkomponenten als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js zur Entwicklung benötigt.
 
 ### **Installation Node.js und npm für Windows**
 1. Download the Node.js [Windows Installer (.msi)](https://nodejs.org/en/download/)
@@ -243,13 +245,169 @@ Um den Brixx HTML-Element zu testen können wir den Projektordner **`[brixx-elem
 
    HTML-Datei **`index.html`** mit der Live Server Erweiterung (http://127.0.0.1:5500/index.html)
 
+## Tutorial
+
+### **Was ist die package.json?**
+
+Die **`package.json`** ist die zentrale **NPM-Konfigurationsdatei** von einem **Node.js** Projekt, die sich im Stammverzeichnis (`root`) eines Projekts befindet. In diesem Tutorial erfahren wir, wie man eine *package.json* Datei mit den Metadaten erstellt, z. B. Name, Version, Beschreibung, Schlüsselwörter und Abhängigkeiten.
+
+Beispiel für eine *package.json* Datei
+
+    {
+      "name": "brixx-simple-element",
+      "version": "1.0.0",
+      "description": "Brixx simple element sample",
+      "main": "index.js",
+      "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server"
+      },
+      "keywords": [
+        "brixx",
+        "element"
+      ],
+      "author": "Frank Biet",
+      "license": "MIT",
+      "dependencies": {
+        "@brixx/script": "1.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "7.19.6",
+        "@babel/preset-env": "7.19.4",
+        "@babel/plugin-transform-react-jsx": "7.19.0",
+        "babel-loader": "8.2.5",
+        "css-loader": "6.7.1",
+        "html-webpack-plugin": "5.5.0",
+        "style-loader": "3.3.1",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.10.0",
+        "webpack-dev-server": "4.11.1"
+      }
+    }    
+
+### **Wofür wird die package.json benötigt?**
+Die `package.json` eines Projekts ist der zentrale Ort, an dem man die Anwendung konfigurieren und beschreiben kann und die Abhängigkeiten des Projekts gehandhabt werden. Es ist die `package.json` Datei, die es NPM ermöglicht, ein Projekt zu starten, Skripts auszuführen, Abhängigkeiten zu installieren, in der NPM-Registrierung zu veröffentlichen und viele andere nützliche Aufgaben auszuführen. Die `package.json` erfüllt mehrere Rollen im Projekt, von denen einige nur für in NPM veröffentlichte Pakete gelten. 
+
+Ein Projekt muss eine `package.json` enthalten, bevor Pakete von NPM installiert werden können. Dies ist wahrscheinlich der Hauptgrund, warum Sie einen in Ihrem Projekt benötigen.
+
+### **Wichtige Felder in der package.json**
+Sehen wir uns die wichtigsten Felder an, die in einer `package.json` enthalten sein können. Einige sind für die Veröffentlichung in NPM erforderlich, während andere helfen, die Anwendung auszuführen oder Abhängigkeiten zu installieren.
+
+Es gibt mehr Felder als die, die wir behandeln, aber dies sind die wesentlichen Eigenschaften die man kennen sollte.
+
+    name: "brixx-simple-element"
+
+Das Namensfeld **`name`** definiert den Namen des Pakets. Beim Veröffentlichen in der NPM-Registrierung ist das der Name, unter dem das Paket aufgelistet wird. Es darf nicht mehr als 214 Zeichen lang sein, darf nur Kleinbuchstaben enthalten und muss URL-sicher sein (Bindestriche und Unterstriche sind erlaubt, aber keine Leerzeichen oder andere Zeichen, die in URLs nicht erlaubt sind).
+
+    "version": "1.0.0"
+
+Das Versionsfeld **`version`** ist für jedes veröffentlichte Paket wichtig und vor der Veröffentlichung erforderlich. Es ist die aktuelle Version der Software, die die `package.json` beschreibt.
+
+  > Sie müssen die Semantic Version nicht verwenden , aber ist der verwendete Standard und wird empfohlen. Für ein unveröffentlichtes Paket ist diese Eigenschaft nicht erforderlich (optional). Dabei wird die Versionsnummer erhöht, bevor neue Versionen in NPM veröffentlicht werden. Wenn ein Paket als Abhängigkeit verwendet wird, ist es wichtig, das Versionsfeld auf dem neuesten Stand zu halten, um sicherzustellen, dass andere die richtige Version eines Pakets verwenden.
+
+    "description": "Brixx simple element sample"
+
+Das Beschreibungsfeld **`description`** wird von der NPM-Registrierung für veröffentlichte Pakete verwendet, um das Paket in den Suchergebnissen und auf der Website `npmjs.com` zu beschreiben und wird verwendet, Pakete aufzufinden, wenn Benutzer die NPM-Registrierung durchsuchen. Das sollte eine kurze Zusammenfassung sein, wofür das Paket bestimmt ist.
+
+    "main": "index.js"
+
+Das Felt **`main`** ist eine funktionale Eigenschaft der `package.json`. Es definiert den Einstiegspunkt ins Projekt und ist üblicherweise die Datei, die zum Starten des Projekts verwendet wird. In der Regel die Datei **`index.js`** im Stammverzeichnis des Projekts, aber es kann jede Datei sein, die als Haupteinstiegspunkt für Ihr Paket verwendet wird.
+
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack-dev-server"
+    },
+
+Das Feld **`scripts`** ist eine weitere funktionale Eigenschaft und gibt Objekte an, dessen Schlüssel Skripte sind, die mit **`npm run <scriptName>`** aufgeführt werden können. Skripte sind in der Regel Terminalbefehle, mit denen man Aufgaben für ein Projekt ausführen kann, wie im Beispiel mit **`webpack`**.
+
+    "keywords": ["brixx", "element"]
+
+Das Feld **`keywords`** (Schlüsselörter) ist eine Liste von Zeichenfolgen und dient einem ähnlichen Zweck wie die Beschreibung. Es wird von der NPM-Registrierung indiziert, um bei der Suche nach Paketen zu helfen. Jeder Wert ist ein Schlüsselwort, das dem Paket zugeordnet wird. Das Feld wird nicht benötigt und ist optional, wenn das Paket nicht in der NPM-Registrierung veröffentlicht wird, und kann weglassen werden.
+
+    "author": "Frank Biet"
+
+Das Feld **`author`** ist entweder eine Zeichenfolge im Format "Name <email> <url>"oder ein Objekt mit Feldern `name`, `email`, `url`. Die E-Mail-Adresse und die URL sind optional.
+
+    "author": [{
+      "name": "Frank Biet",
+      "email": "info@brixx.it",
+      "url": "https://brixx.it"
+    }],
+
+DaS Feld ist nützlich, um einen Kontakt für ein öffentliches Projekt anzugeben.
+
+    "license": "MIT"
+
+Dies ist eine wichtige, oft übersehene Eigenschaft. Mit dem Lizenzfeld **`license`** kann man definieren, welche Lizenz für den Code gilt. Das ist wichtig, wenn man ein Projekt in der NPM-Registrierung veröffentlicht, da die Lizenz die Verwendung der Software durch einige Entwickler oder Organisationen einschränken kann. Eine eindeutige Lizenz hilft, klar zu definieren, unter welchen Bedingungen die Software verwendet werden kann. Das Feld wird nicht benötigt und ist optional, wenn das Paket nicht in der NPM-Registrierung veröffentlicht wird, und kann weglassen werden.
+
+  > Der Wert dieses Felds ist normalerweise der Kennungscode der Lizenz – eine Zeichenfolge wie "MIT"oder "ISC"für die MIT -Lizenz bzw. die ISC -Lizenz. Wenn Sie keine Lizenz bereitstellen oder die Nutzung eines privaten oder unveröffentlichten Pakets ausdrücklich nicht gewähren möchten, können Sie "UNLICENSED"als Lizenz angeben. Lizenz auswählen ist eine hilfreiche Ressource, wenn Sie sich nicht sicher sind, welche Lizenz Sie verwenden sollen.
+
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/..."
+    }
+
+Man kann im Feld **`repository`** wo sich der Code für ein Projekt befindet. Dieses Feld ist ein Objekt, das die URL definiert, unter der sich der Quellcode befindet, und welche Art von Versionskontrollsystem verwendet wird. Das URL-Feld soll darauf hinweisen, von wo aus auf die Versionskontrolle zugegriffen werden kann, nicht nur auf die freigegebene Codebasis. Das Feld wird nicht benötigt und ist optional, wenn das Paket nicht in der NPM-Registrierung veröffentlicht wird, und kann weglassen werden.
+
+    "dependencies": {
+      "@brixx/script": "1.0.3"
+    }
+
+Dies ist eines der wichtigsten Felder und der Grund, warum wir die `package.json` benötigen. Alle Abhängigkeiten im Projekt werden hier aufgelistet. Wenn man ein Paket mit Npm installiert, werden alle Abhängigkeiten in den **`[node_modules]`** Ordner heruntergeladen und ein Eintrag zur Eigenschaft **`dependencies`** hinzugefügt, der den Namen des Pakets und die installierte Version notiert.  
+Das Feld ist ein Objekt mit dem Paketnamen als Schlüssel und einer Version oder einem Versionsbereich als Wert. Damit weiß Npm, welche Pakete in welchen Versionen installiert werden müssen, wenn **`npm install`** in dem Verzeichnis ausgeführt wird. 
+
+  > Das Caretzeichen (**`^`**) und die Tilde (**`~`**) sind Notationen für Versionsbereiche in der `package.json`. [Mehr über Versionen in Npm](https://docs.npmjs.com/cli/v6/using-npm/semver)
+
+    "devDependencies": {
+      "@babel/core": "7.19.6",
+      "@babel/preset-env": "7.19.4",
+      "@babel/plugin-transform-react-jsx": "7.19.0",
+      "babel-loader": "8.2.5",
+      "css-loader": "6.7.1",
+      "html-webpack-plugin": "5.5.0",
+      "style-loader": "3.3.1",
+      "webpack": "5.74.0",
+      "webpack-cli": "4.10.0",
+      "webpack-dev-server": "4.11.1"
+    }
+
+Ähnlich wie das Feld **`dependencies`**, aber für Pakete, die nur während der Entwicklung und nicht in der Produktion benötigt werden.
+
+Ein Beispiel ist die Verwendung von **`webpack`**, ein Tools zum erstellen von Projekt Bundles, das nicht mehr benötigt wird, wenn die Anwendung bereitgestellt und in Produktion ist. Mit der **`devDependencies`** Eigenschaft kann man angeben welche Abhängigkeiten in Produktion nicht benötigt werden. Wenn man die Anwendung in einer Produktionsumgebung installieren möchte, kann man **`npm install --production`** verwenden , um nur zu installieren, was im **`dependencies`** Feld aufgeführt ist .
+
+Um ein Paket als **`devDependency`** zu installieren, verwendet man  **`npm install --save-dev <package>`**
+
+### **Verwalten der package.json**
+
+Eine `package.json` Datei muss gültiges **JSON** sein. Das bedeutet, dass fehlende Kommas, nicht geschlossene Anführungszeichen oder andere Formatierungsfehler Npm hindern, mit der `package.json` zu interagieren . Wenn Sie einen Fehler einführen, wird beim nächsten Ausführen eines NPM-Befehls ein Fehler angezeigt.
+
+  > Abhängigkeiten werden mit den NPM-Befehlen **`npm install`**, **`npm uninstall`** und **`npm update`** verwaltet, so dass die Datei `package.json` und der Ordner **`[node_modules]`** synchron gehalten werden. Wenn Sie eine Abhängigkeitsliste manuell hinzufügen, muss man **`npm install`** ausführen, bevor die Abhängigkeit im Projekt installiert wird.
+
+Mit Hilfe von **`npm init`** zum Erstellen der `package.json` kann man sicherstellen, dass Sie eine gültige `package.json` Datei erstellt wird. Dazu erstellen als Beispiel einen neuen Ordner **`[brixx-npm-sample]`** und wechseln in der Eingabeaufforderung oder einer anderen Terminal-Anwendung in das erstellte Verzeichnis und starten **`npm init`**
+
+<img src="images/npm-init-01.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Anschliessend wird man aufgefordert die Angaben zum Projekt zu machen.  
+
+<img src="images/npm-init-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Wir können im ersten Schritt die Eingabevorschläge bestätigen und später erweitern.
+
+<img src="images/npm-init-03.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Wir betätigen mit **`[yes]`** und sind fertig.
+
+  > **TIP:** Die `package.json` kann auch im Projektordner **`[brixx-npm-sample]`** innerhalb m Visual Studio Code in einem integrierten Terminal-Fenster (`Ctrl+Shift+ö`) erstellt werden.
+
+<img src="images/npm-init-04.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Integriertes Terminal-Fenster im Visual Studio Code
+
+#
+
 Under Construction ...
 
-## Take the Tutorial
-
-package.json  
 webpack
 
+Build a Brixx HTML-Element   
 Build a Brixx Component  
-Build a Brixx JSX-Element  
-Build a Brixx HTML-Element
