@@ -1,6 +1,6 @@
 # BRIXX.it documentation repository
 
-This is the BRIXX.it documentation repository. Please feel free to contact us for further information on the use [`info@brixx.it`](info@brixx.it)
+This is the BRIXX.it documentation repository. For further information please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 #
 
