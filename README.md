@@ -4,7 +4,7 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 #
 
-## [brixx-script Version 1.03](./brixx-script/README.md)
+## [brixx-script Version 1.0.3](./brixx-script/README.md)
 
 #
 
