@@ -1,4 +1,4 @@
-# Brixx-Script
+# Brixx-Script.
 
   > This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.3 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
@@ -6,14 +6,14 @@ Brixx-Script ist eine freie JavaScript-Bibliothek zur Erstellung von unabhängig
 
 ## Package `@brixx/script`
 
-### **Version: `1.0.0`**
+### Version: `1.0.0`
 
 # Was wird alles benötigt?
 
 ## Quellcode Editor
 Für die Entwicklung kann ein Texteditor, wie der in der Linux Community beliebte [Vim](https://www.vim.org/), oder ein Quellcode Editor wie [Notpad++](https://notepad-plus-plus.org/downloads/) oder [Sublime Text](https://www.sublimetext.com/) verwendet werden. Ein kostenfreie Alternative zu einer professionellen integrierten Entwicklungsumgebung (IDE) ist [Visual Studio Code](https://code.visualstudio.com/) (VS Code) als leichtgewichtiger Quellcode Editor mit vielen IDE Erweiterungen. Visual Studio Code ist dadurch mehr als nur ein Quellcode Bearbeitungstool und derzeit der wohl beliebteste Quellcode Editor.
 
-### **Install Visual Studio Code for Windows**
+### Install Visual Studio Code for Windows
 1. Download the [Visual Studio Code installer](https://go.microsoft.com/fwlink/?LinkID=534107) for Windows.
 2. Once it is downloaded, run the installer. This will only take a minute.
 3. By default, VS Code is installed under `C:\Users\{Username}\AppData\Local\Programs\Microsoft VS Code`.
@@ -22,21 +22,21 @@ Alternatively, you can also download a [Zip archive](https://code.visualstudio.c
 
 > **Tip:** Setup will add Visual Studio Code to your `%PATH%`, so from the console you can type 'code .' to open VS Code on that > folder. You will need to restart your console after the installation for the change to the `%PATH%` environmental variable to >   take effect.
 
-### **User setup versus system setup**
+### User setup versus system setup
 VS Code provides both Windows user and system level setups. Installing the [user setup](https://go.microsoft.com/fwlink/?LinkID=534107) does not require Administrator privileges as the location will be under your user Local AppData (LOCALAPPDATA) folder. User setup also provides a smoother background update experience.
 
 The [system setup](https://go.microsoft.com/fwlink/?linkid=852157) requires elevation to Administrator privileges and will place the installation under Program Files. This also means that VS Code will be available to all users in the system.
 
 See the [Download Visual Studio Code](https://code.visualstudio.com/download) page for a complete list of available installation options.
 
-### **32-bit versions**
+### 32-bit versions
 If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https://go.microsoft.com/fwlink/?LinkId=723965) and [Zip archive](https://go.microsoft.com/fwlink/?LinkID=733265) are available.
 
 <img src="images/vscode-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Get started
 
-### **Visual Studio Code Erweiterungen**
+### Visual Studio Code Erweiterungen
 Es gibt viele Erweiterungen (Extensions) für Visual Studio Code. Man kann z. B. die Anzeigesprache in Visual Studio Code mit der Erweiterung [German Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de) auf Deutsch umzustellen. 
 
  > **Tip:** Wer mit unterschiedlichen Editoren arbeitet sollte die Anzeigesprache in Visual Studio Code nicht umstellen. Das erleichtert die Arbeit mit anderen Editoren die in der Regel die selben englischen Menübezeichnungen verwenden, aber keine Umstellung der Anzeigesprach auf Deutsch möglich ist.
@@ -55,7 +55,7 @@ Genauso einfach kann in Visual Studio Code eine Erweiterung auch wieder deinstal
 
 <img src="images/vscode-german.webp" style="margin-bottom: 10px; width: 600px;" />
 
-### **Empfohlene Erweiterungen zur Berabeitung von Brixx Webkomponenten**
+### Empfohlene Erweiterungen zur Berabeitung von Brixx Webkomponenten
 Es gibt jede Menge nützliche Erweiterungen für Visual Studio Code die uns die Arbeit erleichten. Nahezu unverzichtbare Erweiterungen zur Erstellung von Brixx Webkomponenten sind folgende:
 
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Ein lokaler Entwicklungsserver (Webserver) mit Auto Reload (Live reload) bei Änderungen am Quellcode. Der Live Server ermöglicht das Verhalten der Brixx Webkomponente im Browser zu testen, und verhindert die *blocked by CORS policy* ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen.
@@ -64,13 +64,13 @@ Es gibt jede Menge nützliche Erweiterungen für Visual Studio Code die uns die 
 ## Node.js und Npm
 Um eigenständige Brixx **Webkomponenten** zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager). 
 
-### **Node.js**
+### Node.js
 Wird als Entwicklungswerkzeug für den **Build** (Erstellung) eigenständiger Brixx Webkomponenten verwendet, **nicht zur Laufzeit** benötigt, und erfordert keine besonderen Node.js Kenntnisse. Durch die Verwendung von Node.js können alle **State-of-the-art** Entwicklungswerkzeuge wie Webpack und Babel verwendet werden.
 
-### **Npm**
+### Npm
 Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein **Node Package Manager** für die Verwaltung der benötigten JavaScript Packages, sowohl für den Build von Brixx Webkomponenten als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js zur Entwicklung benötigt.
 
-### **Installation von Node.js und npm für Windows**
+### Installation von Node.js und npm für Windows
 1. Download the Node.js [Windows Installer (.msi)](https://nodejs.org/en/download/)
    
    <img src="images/node-download.png" style="margin-bottom: -5px; width: 600px;" />
@@ -103,6 +103,14 @@ Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein 
 
    Click `[Finish]`
 
+Wir können die Installation in der Eingabeaufforderung überprüfen mit den Befehlen **`node --version`** und **`npm --version`**
+
+   <img src="images/node-versions.webp" style="margin-bottom: -5px; width: 600px;" />
+
+   Eingabeaufforderung
+
+  > **Tip:** Es eine alternative Node.js zu installieren, und sogar unterschiedliche Node Versionen nebeneinander zu installieren. Hierfür kann man, z. B. unter Windows, den [Node Version Manager (NVM)](https://learn.microsoft.com/de-de/windows/dev-environment/javascript/nodejs-on-windows) installieren. Das ist zur Bearbeitung von Brixx Webkomponenten in der Regel aber nicht erforderlich, da hier keine spezielle Node.js Versionsabhängigkeit besteht.
+
 ## Webpack
 Mit dem Modul-Bundler [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') für moderne JavaScript-Anwendungen können Anwendungen in sogenannten **Bundles** erstellt werden in denen alle verwendeten Assets bereitgestellt werden. Dadurch ist eine einfache Intergration und Verteilung von Brixx Webkomponenten möglich. Für die Erstellung einer Brixx Webkomponente mit Webpack stehen Beispiele und Vorlagen zur Verfügung, erfordert keine besonderen Vorkenntnisse und hat eine niedrige Einstigshürde.
 
@@ -115,7 +123,7 @@ Wir verwenden moderne, State-of-the-art Tools und Technologien, um eie einfache 
 
 ## Brixx Web-Baustein [brixx-animal-list] erstellen
 
- Brixx Web-Bausteine (Webkomponenten) werden standartmäßig im Ordner **`[components]`** abgelegt. Dazu erstellen wir einen Ordner **`.\components`** im Projekt-Ordner **`[brixx-element-sample]`** womit die Prokekt-Ordnerstruktur im Beispiel wie folgt aussieht.
+ Brixx Web-Bausteine (Webkomponenten) werden standartmäßig im Ordner **`[components]`** abgelegt. Dazu erstellen wir einen Ordner **`.\components`** im Projektordner **`[brixx-element-sample]`** womit die Prokekt-Ordnerstruktur im Beispiel wie folgt aussieht.
 
 ```
 [brixx-element-sample]
@@ -234,7 +242,7 @@ Um den Brixx Web-Baustein zu testen können wir den Projektordner **`[brixx-elem
 
 1. Klick auf **`[Go Live]`** in der *Status Bar* zum Ein/Ausschalten des Live Servers. 
 2. Bei aktivem Quellcode Fenster der HTML-Datei **`index.html`** mit der Tastenkombination **`[ALT+L Alt+O]`**
-3. Klick mit der rechten Maustaste (Kontextmenü) auf die HTML-Datei **`index.html`** im Explorer Fenster und Auswahl vom Menüeintrag **`[Open with Live Server]`**. 
+3. Klick mit der rechten Maustaste (Kontextmenü) auf die HTML-Datei **`index.html`** im Explorer-Fenster und Auswahl vom Menüeintrag **`[Open with Live Server]`**. 
 
    <img src="images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 800px;" />
 
@@ -246,7 +254,7 @@ Um den Brixx Web-Baustein zu testen können wir den Projektordner **`[brixx-elem
 
 ## Tutorial
 
-### **Was ist die package.json?**
+### Was ist die package.json?
 
 Die **`package.json`** ist die zentrale **NPM-Konfigurationsdatei** von einem **Node.js** Projekt, die sich im Stammverzeichnis (`root`) eines JavaScript-Projekts befindet. In diesem Tutorial erfahren wir, wie man eine *package.json* Datei mit *Metadaten* erstellt, z. B. Name, Version, Beschreibung, Schlüsselwörter und Abhängigkeiten.
 
@@ -284,12 +292,12 @@ Beispiel für eine *package.json* Datei
       }
     }    
 
-### **Wofür wird die package.json benötigt?**
+### Wofür wird die package.json benötigt?
 Die *package.json* ist der zentrale Ort in einem JavaScript-Projekt, an dem man die JavaScript-Anwendung konfigurieren und beschreiben kann und die Abhängigkeiten des Projekts gehandhabt werden. Es ist die *package.json*, die es NPM ermöglicht, ein Projekt zu starten, Skripte auszuführen, Abhängigkeiten zu installieren, in der NPM-Registry zu veröffentlichen und andere nützliche Aufgaben auszuführen. Die *package.json* erfüllt mehrere Rollen im Projekt, von denen einige nur für in NPM veröffentlichte Pakete gelten. 
 
   > Ein Projekt muss eine *package.json* enthalten, bevor Pakete von NPM installiert werden können.
 
-### **Wichtige Felder in der package.json**
+### Wichtige Felder in der package.json
 Sehen wir uns die wichtigsten Felder in einer *package.json* an. Einige sind für die Veröffentlichung in NPM erforderlich, während andere helfen, die Anwendung auszuführen oder Abhängigkeiten zu installieren. Es gibt mehr Felder (Eigenschaften) als wir behandeln, aber das sind die wesentlichen Eigenschaften die man kennen sollte.
 
     name: "brixx-simple-element"
@@ -352,7 +360,7 @@ Man kann im Feld **`repository`** angeben wo sich der Code für das Projekt befi
 
 Dies ist eines der wichtigsten Felder und der Grund, warum wir die *package.json* benötigen. Alle Abhängigkeiten im Projekt werden hier aufgelistet. Wird ein Paket mit Npm installiert, werden alle Abhängigkeiten im Ordner **`[node_modules]`** heruntergeladen und ein neuer Eintrag zur Eigenschaft **`dependencies`** hinzugefügt. Das Feld ist ein Objekt mit dem Paketnamen als Schlüssel und einer Version oder einem Versionsbereich als Wert. Damit „weiß“ Npm, welche Pakete in welchen Versionen installiert werden müssen, wenn **`npm install`** im Ordner ausgeführt in der sich die package.json befindet. 
 
-  > Das Caretzeichen (**`^`**) und die Tilde (**`~`**) sind zusätzliche Notationen für Versionsbereiche in der *package.json*. [Mehr über Versionen in Npm](https://docs.npmjs.com/cli/v6/using-npm/semver)
+  > Das Caretzeichen **`^`** und die Tilde **`~`** sind zusätzliche Notationen für Versionsbereiche in der *package.json*. [Mehr über Versionen in Npm](https://docs.npmjs.com/cli/v6/using-npm/semver)
 
     "devDependencies": {
       "@babel/core": "7.19.6",
@@ -367,46 +375,129 @@ Dies ist eines der wichtigsten Felder und der Grund, warum wir die *package.json
       "webpack-dev-server": "4.11.1"
     }
 
-Ähnlich wie das Feld **`dependencies`**, aber für Pakete, die nur während der Entwicklung und nicht in der Produktion benötigt werden.
+Ähnlich wie das Feld **`dependencies`**, aber für Pakete, die nur für die Entwicklung und nicht in der Produktion benötigt werden.
 
 Ein Beispiel ist **`webpack`**, ein Tools zum erstellen von Projekt Bundles, das nicht mehr benötigt wird, wenn die Anwendung bereitgestellt und in Produktion ist. Mit der Eigenschaft **`devDependencies`** kann man angeben welche Abhängigkeiten in Produktion nicht benötigt werden. Wenn man die Anwendung in einer Produktionsumgebung installieren möchte, kann man **`npm install --production`** verwenden, um nur zu installieren, was im Feld **`dependencies`** aufgeführt ist.
 
    > Um ein Paket als **`devDependency`** zu installieren, verwendet man  **`npm install --save-dev <package>`**
 
-### **Verwalten der package.json**
+### Verwalten der package.json
 
 Eine *package.json* Datei muss gültiges **JSON-Dormat** sein. Das bedeutet, dass fehlende Kommas, nicht geschlossene Anführungszeichen oder andere Formatierungsfehler Npm hindern, mit der *package.json* zu interagieren und beim nächsten Ausführen eines NPM-Befehls wird ein Fehler angezeigt.
 
-  > Abhängigkeiten werden mit den NPM-Befehlen **`npm install`**, **`npm uninstall`** und **`npm update`** verwaltet, so dass die Datei *package.json* und der Ordner **`[node_modules]`** synchron gehalten werden. Wenn man einen Eintrag, alse eine Abhängigkeit manuell hinzufüget, muss man **`npm install`** ausführen, bevor die Abhängigkeit im Projekt verwendet werden kann.
+  > NPM-Packages werden mit den NPM-Befehlen **`npm install`**, **`npm uninstall`** und **`npm update`** verwaltet, so dass die Datei *package.json* und der Ordner **`[node_modules]`** synchron gehalten werden. Wenn man einen Eintrag, alse eine Abhängigkeit manuell hinzufüget, muss man **`npm install`** ausführen, bevor die Abhängigkeit im Projekt verwendet werden kann.  
+  NPM-Packages für die Entwicklung können aternativ im „globalen“ Ordner **`[node_modules]`** mit **`npm install <package> -g`** installiert werden. Diese müssen dann nicht im Projekt bereitgestellt werden und sind in allen Projekten verfügbar. Das ist nicht empfohlen, wenn man das Projekt z. B. an andere Entwickler weitergeben, oder mit mehreren Entwicklern an einem Projekt arbeiten möchte. Zudem kann es schnell zu Versionskonflikten in Projekten kommen die eine andere Package Version benötigen. Es ist kein Nachteil NPM-Packages für ein Projekte bereitzustellen. Zuerst werden die NPM-Packages im Projektordner gesucht, werden diese nicht gefunden werden wird im globalen NPM-Package Ordner gesucht.
 
 Mit Hilfe von **`npm init`** zum Erstellen der *package.json* kann man sicherstellen, dass Sie eine gültige *package.json* Datei erstellt wird. Dazu erstellen als Beispiel einen neuen Ordner **`[brixx-npm-sample]`** und wechseln in die Eingabeaufforderung, oder einer anderen Terminal-Anwendung in das erstellte Verzeichnis und starten **`npm init`**
 
-<img src="images/npm-init-01.webp" style="margin-bottom: 10px; width: 600px;" />
+<img src="images/npm-init-01.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Eingabeaufforderung
 
 Anschliessend wird man aufgefordert Angaben zum Projekt zu machen.  
 
-<img src="images/npm-init-02.webp" style="margin-bottom: 10px; width: 600px;" />
+<img src="images/npm-init-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Eingabeaufforderung
 
 Wir können Eingabevorschläge bestätigen und später anpassen oder erweiten.
 
 <img src="images/npm-init-03.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Wir betätigen die Eingaben sind fertig.
+Wir betätigen die Eingaben in der Eingabeaufforderung und sind fertig.
 
-  > **TIP:** Die *package.json* kann auch im Projektordner **`[brixx-npm-sample]`** im Visual Studio Code in einem integrierten Terminal-Fenster (`Ctrl+Shift+ö`) erstellt werden.
+  > **TIP:** Die *package.json* kann auch im Projektordner **`[brixx-npm-sample]`** in Visual Studio Code in einem Terminal-Fenster (`Ctrl+Shift+ö`) erstellt werden.
 
 <img src="images/npm-init-04.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Visual Studio Code - Integriertes Terminal-Fenster
+Visual Studio Code - Terminal-Fenster
 
 #
 
 Under Construction ...
 
-### **webpack**
+### webpack
 
-## Build a Brixx HTML-Element
-...  
+### babel
+
+## Brixx Webkomponente erstellen
+Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und verwenden diese als **HTML-Element**. Dazu erstellen wir einen Projektordner **[brixx-simple-element]** und darin zuerst eine *package.json* Datei als zentrale Konfiguration für die Brixx Webkomponente. Im Beispiel verwenden wir das Template [package.json.template](downloads/package.json.template) für eine Brixx Webkomponente und speichern diese als *package.json* im Projektordner (Stammverzeichnis). Anschließend können wir die *package.json* einfach z. B. in Visual Studio Code weiter bearbeiten. Das erleichter den Einstig mit den verschiedenen Abhängigkeiten durch die verwendeten JavaScript Packages.
+
+Brixx *package.json* Template
+
+    {
+      "name": "{brixx-component-name}",
+      "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server"
+      },
+      "dependencies": {
+        "@brixx/script": "{brixx-script-version}"
+      },
+      "devDependencies": {
+        "@babel/core": "7.19.6",
+        "@babel/preset-env": "7.19.4",
+        "@babel/plugin-transform-react-jsx": "7.19.0",
+        "babel-loader": "8.2.5",
+        "css-loader": "6.7.1",
+        "html-webpack-plugin": "5.5.0",
+        "style-loader": "3.3.1",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.10.0",
+        "webpack-dev-server": "4.11.1"
+      }
+    }
+
+Hier müssen wir dann nur noch den Namen der neuen Brixx Webkomponente in der *package.json* im Feld **`name`** angeben
+
+    "name": "brixx-simple-element"
+
+und bei den Projekt Abhängigkeiten **`dependencies`** die Version des Brixx-Script NPM-Packages **`@brixx/script`** festlegen
+
+    "dependencies": {
+      "@brixx/script": "1.0.3"
+    }
+
+Wir verwenden im Beispiel als Name **`brixx-simple-element`** und verwenden die Brixx-Script Version **`1.0.3`**
+
+Die Projekt Abhängigkeiten **`devDependencies`** werden für die Entwicklung benötigt, um eine eigenständige Brixx Webkomponente zu erstellen, die als universeller Brixx-Webbaustein in jeder Webseite oder Webanwendung verwendet werden kann. Diese werden hier verwaltet damit diese u. a. nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden müssen.
+
+Mit den **NPM-Scripts** können wir die Brixx Webkomponente mit **`npm run build`** erstellen und mit **`npm run start`** testen
+
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack-dev-server"
+    }
+
+Wenn für Visual Studio Code die Erweiterung *NPM-Scripts* installiert ist können wir die Skripte auch direkt im Explorer-Fenster ausgeführt werden.
+
+<img src="images/vscode-npm-scripts.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Visual Studio Code - NPM-SCRIPTS
+
+### NPM-Packages installieren
+Die benötigten NPM-Packages werden später noch genauer betrachtet, im ersten Schritt für das Projekt bereitgestellt und mit **`npm run install`** installiert, oder einfach mit dem Shortcut **`npm i`**. Dazu wechseln wir vorher in den Projektordner **[brixx-simple-element]** in der Eingabeaufforderung.
+
+<img src="images/npm-install.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Eingabeaufforderung
+
+  > **Tip:** Die Packages können auch im Projektordner **`[brixx-simple-element]`** in Visual Studio Code im Terminal-Fenster **`npm run install`** installiert.  
+  Dadurch kann man in der Entwicklungsumgebung (Visual Studio Code) bleiben und muss diese nicht für andere Aufgaben verlassen.
+
+<img src="images/vscode-npm-install.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Visual Studio Code - Terminal-Fenster
+
+Nach der Installation der NPM-packages sehen wir im Projektordner im Explorer-Fenster den Ordner **`node_modules`** mit den lokalen NPM-Packages und die Datei **`package-lock.json`**
+
+  > Die Datei *package-lock.json* wird automatisch für alle Vorgänge generiert, bei denen Npm die *package.json* ändert. Diese wird neu erstellt wenn die Datei nicht vorhanden ist oder gelöscht wurde. In manchen Fällen kann es hilfreich sein die Datei *package-lock.json* vor der Installation zu löschen.
+
+<img src="images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Visual Studio Code - Explorer-Fenster
+
+#
 
 ### Build a Brixx JSX-Element (Preview)
 
