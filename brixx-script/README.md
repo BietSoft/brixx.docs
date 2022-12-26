@@ -496,3 +496,7 @@ Komplette Brixx Component Class **`Counter`** in der JavaScript-Datei **`Counter
         )
       }
     }
+
+#
+
+Copyright © BRIXX.it 2022 
