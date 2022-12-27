@@ -4,15 +4,19 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 #
 
-## [brixx-script Version 1.0.3](./brixx-script/README.md)
+## [Brixx-Script Version 1.0.3](./brixx-script/README.md)
+
+### [Install Visual Studio Code for Windows](./VSCode.md)
+
+### [Install Node.js and npm for Windows](./Nodejs.md)
 
 #
 
-Under Construction ...
+Cooming soon
 
-## brixx-decision-script Version 1.0.0
+## Brixx-Decision-Script
 
-## brixx-process-srcript Version 1.0.0
+## Brixx-Process-Srcript
 
 #
 
