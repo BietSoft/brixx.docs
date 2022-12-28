@@ -19,7 +19,7 @@ Für die Entwicklung kann ein Texteditor, wie der in der Linux Community beliebt
 Um eigenständige Brixx **Webkomponenten** zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager). 
 
 ### Node.js
-Node.js wird als Entwicklungswerkzeug für den **Build** (Erstellung) eigenständiger Brixx Webkomponenten verwendet, **nicht zur Laufzeit** benötigt, und erfordert keine besonderen Node.js Kenntnisse. Durch die Verwendung von Node.js haben wir die Möglichkeit alle **State-of-the-art** Entwicklungswerkzeuge wie Webpack und Babel zu verwenden.
+Node.js wird als Entwicklungswerkzeug für den **Build** (Erstellung) eigenständiger Brixx Webkomponenten verwendet, **nicht zur Laufzeit** benötigt, und erfordert keine besonderen Node.js Kenntnisse. Durch die Verwendung von Node.js haben wir die Möglichkeit alle **State-of-the-art** Entwicklungswerkzeuge wie *Webpack* und *Babel* zu verwenden.
 
 ### Npm
 Npm ist fester Bestandteil bei der Installation von Node.js und ist im Ursprung ein **Node Package Manager** zur Verwaltung der benötigten JavaScript-Packages, sowohl für den Build von Brixx Webkomponenten als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js zur Entwicklung benötigt.
@@ -156,15 +156,17 @@ Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es versch
 
 1. Klick auf **`[Go Live]`** in der *Status Bar* (Start/Stop Server)
 2. Bei Bearbeitung der HTML-Datei mit der Tastenkombination **`[ALT+L Alt+O]`**
-3. Klick mit rechter Maustaste (Kontextmenü) auf die HTML-Datei in der Explorer-Ansicht und Auswahl vom Menüeintrag **`[Open with Live Server]`**
+3. Klick mit der rechten Maustaste (Kontextmenü) auf die HTML-Datei in der Explorer-Ansicht und Auswahl von **`[Open with Live Server]`** im Kontextmenü.
 
    <img src="../images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
 
    Visual-Studio-Code - Projektordner **`[brixx-element-sample]`**
 
+   Die HTML-Datei **`index.html`** wird unter der Adresse `http://127.0.0.1:5500/index.html` bereitgestellt und im Standard-Browser geöffnet, solange kein spezieller Browser für die *Live Server*-Einstellungen festgelegt wird.
+
    <img src="../images/vscode-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
 
-   HTML-Datei **`index.html`** mit der Live Server Erweiterung (http://127.0.0.1:5500/index.html)
+   Der fertige Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 ## Brixx Webkomponente `[brixx-simple-element]` erstellen
 Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und wollen diese später als **HTML-Element** verwenden. Dafür erstellen wir zuerst einen Projektordner **`[brixx-simple-element]`** und darin die Datei [`package.json`](../NPM-config.md) als zentrale Konfiguration für die Brixx Webkomponente. Dafür verwenden wir das Template [package.json.windows](../downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für das Beispiel anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
@@ -208,47 +210,7 @@ Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für da
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die als Brixx-Webbaustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der *package.json* verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 
-Mit den NPM **`scripts`** können wir die Brixx Webkomponente mit **`npm run build`** bauen (erstellen) und mit **`npm run start`** mit dem *Webpack DevServer* im Browser testen.
-
-    "scripts": {
-      "build": "webpack --env package_name=%npm_package_name%",
-      "start": "webpack-dev-server --env package_name=%npm_package_name%"
-    }
-
-Wenn die Erweiterung *NPM-Scripts* in Visual Studio Code installiert ist können die NPM-Scripts auch direkt aus der Explorer-Ansicht ausgeführt werden.
-
-<img src="../images/vscode-npm-scripts.webp" style="margin-bottom: -5px; width: 600px;" />
-
-Visual Studio Code - NPM-SCRIPTS
-
-### NPM-Packages installieren 
-Wir öffnen die Eingabeaufforderung und wechseln in den Projektordner **[brixx-simple-element]**. Anschließend werden die NPM-Packages der Abhängigkeiten in der *package.json* mit **`npm install`** installiert und für das Projekt bereitgestellt. Die einzelnen NPM-Packages werden wenn genauer betrachtet, in der Regel aber im Hintergrund zur Erstellung einer Brixx Webkomponente verwendet.
-
-<img src="../images/npm-install.webp" style="margin-bottom: 15px; width: 600px;" />
-
-  > **Tip:** Die Abhängigkeiten in der *package.json* können auch in der Entwicklungsumgebung (Visual Studio Code) in einem Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen.
-
-<img src="../images/vscode-npm-install-01.webp" style="margin-bottom: -5px; width: 600px;" />
-
-Visual Studio Code - Terminal-Fenster
-
-Mit der Erweiterung *NPM-Scripts* für Visual Studio Code haben wir eine weitere Möglichkeit NPM-Packages zu installieren.
-
-<img src="../images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
-
-Visual Studio Code - Terminal-Fenster
-
-Klick mit rechter Maustaste (Kontextmenü) in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** auf **`package.json`** und Auswahl vom Menüeintrag **`[Run Intall]`** 
-
-Nach der Installation der NPM-Packages sehen wir im Projektordner in der Explorer-Ansicht den Ordner **`node_modules`** mit den lokalen NPM-Packages und die Datei **`package-lock.json`**
-
-  > Die Datei *package-lock.json* wird automatisch für alle Vorgänge generiert, bei denen npm die *package.json* ändert. Die *package-lock.json* wird erstellt wenn die Datei nicht vorhanden ist. In seltenen Fällen kann es hilfreich sein die Datei *package-lock.json* vor der Installation zu löschen.
-
-<img src="../images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
-
-Visual Studio Code - Explorer-Ansicht
-
-Zur Erstellung einer Brixx Webkomponente wird der Modul-Bundler **Webpack** mit **Babel** verwendet. Das erfordert folgende NPM-Packages als **`devDependencies`** in der *package.json* und sind bereits im *package.json.template* enthalten. Dabei sind die Versionsnummern der NPM-Packages für das Beispiel fest „gepinnt“ und können sich mit der Zeit ändern.
+Zur Erstellung der Brixx Webkomponente wird in Brixx-Script der Modul-Bundler **Webpack** und **Babel** verwendet. Das erfordert für die Entwicklung eine Reihe von NPM-Packages als **`devDependencies`** und sind im Template bereits eingetragen. Dabei sind die Versionsnummern der NPM-Packages im Beispiel „gepinnt“, können sich aber in einer späteren Version ändern.
 
     ...
     "devDependencies": {
@@ -264,9 +226,30 @@ Zur Erstellung einer Brixx Webkomponente wird der Modul-Bundler **Webpack** mit 
       "webpack-dev-server": "4.11.1"
     }
     ...
+  
+Mit den NPM **`scripts`** können wir die Brixx Webkomponente mit **`npm run build`** bauen (erstellen) und mit **`npm run start`** mit dem *Webpack DevServer* im Browser testen.
+
+    "scripts": {
+      "build": "webpack --env package_name=%npm_package_name%",
+      "start": "webpack-dev-server --env package_name=%npm_package_name%"
+    }
+
+### [NPM-Packages installieren](../NPM-install.md) 
+Wenn die Erweiterung *NPM-Scripts* installiert ist können nicht nur die NPM-Scripts direkt aus der Explorer-Ansicht ausgeführt, sondern auch die NPM-Packages installiert werden.
+Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und installieren die NPM-Packages der Abhängigkeiten in der *package.json* durch Klick mit der rechten Maustaste auf **`package.json`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`**  und Auswahl von **`[Run Intall]`** im Kontextmenü.
+
+<img src="../images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Visual Studio Code - NPM-SCRIPTS
+
+Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt sehen wir in der Explorer-Ansicht den Ordner **`node_modules`** mit den NPM-Packages und die Datei **`package-lock.json`**
+
+<img src="../images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Visual Studio Code - Explorer-Ansicht
 
 ### Webpack-Konfiguration
-Zum erstellen der Brixx Webkomponente benötigen wir eine Webpack-Konfigurationsdatei. Dafür verwenden wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Stammverzeichnis des Projekts. Für die Erstellung einer **„Standard“ Brixx Webkomponente** muss keine weitere Anpassung an der Webpack-Konfigurationsdatei vorgenommen werden; in dem Fall wird die Eigenschaft **`name`** in der *package.json* als Name für die Brixx Webkomponente verwendet.
+Zum erstellen der Brixx Webkomponente benötigen wir eine **Webpack-Konfigurationsdatei**. Dafür verwenden wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Stammverzeichnis des Projekts. Für die Erstellung einer **„Standard“ Brixx Webkomponente** muss keine Anpassung vorgenommen werden. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
 
 Brixx *webpack.config.js* Template
 
@@ -350,23 +333,23 @@ Brixx *webpack.config.js* Template
       }
     }
 
-Wir haben die Möglichkeit die Webpack-Konfiguration anzupassen. Hierzu stehen folgende Eigenschaften in der *webpack.config.js* zur Verfügung:
+Um die Webpack-Konfiguration anzupassen stehen folgende Eigenschaften in der *webpack.config.js* im Bereich `Edit the Brixx Component optional build settings here!` zur Verfügung und Anpassungen sollten nur in diesem Bereich erfolgen.
 
     // Edit the Brixx Component optional build settings here!
     // Brixx element prefix
     const brixx_element_prefix = 'brixx'
 
-Die Eigenschaft **`brixx_element_prefix`** legt den Prefix der Brixx Webkomponente fest. Dieser wird benötigt bei der Verwendung der Brixx Webkomponente als Brixx HTML-Element **`(default='brixx')`** z. B, wird 'custom-element' zur Brixx Script-Component Datei **`brixx-custom-element.js`** und das Brixx HTML-Element **`<brixx-custom-element>`***
+Die optionale Eigenschaft **`brixx_element_prefix`** legt den **`prefix-`** (hyphen) der Brixx Webkomponente fest und wird benötigt bei Verwendung als Brixx HTML-Element **`(default='brixx')`**. Dabei wird **`custom-element`** als Name der Brixx Webkomponente zur Brixx Script-Component Datei **`brixx-custom-element.js`** und zum Brixx HTML-Element **`<brixx-custom-element>`**
 
     // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
     const brixx_component_name = null
 
-Die Eigenschaft **`brixx_component_name`** legt den Namen der Brixx Webkomponente fest und ist standardmäßig nicht definiert **`(default=null)`**; in dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**
+Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert **`(default=null)`**. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**
 
     // Brixx Components folder
     const brixx_component_folder = 'components'
 
-Die Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt und erwartet wird **`(default='./components')`**
+Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt und erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
 
 #
 

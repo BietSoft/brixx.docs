@@ -1,6 +1,6 @@
 # Projekt Konfiguration package.json
 
-Die **`package.json`** ist die **Konfigurationsdatei** in einem **Node.js** Projekt, die sich in der Regel im Stammverzeichnis (`root`) des Projekts befindent.
+Die **`package.json`** ist die **Konfigurationsdatei** in einem **Node.js** Projekt, die sich in der Regel im Stammverzeichnis (`Root`) des Projekts befindent.
 
 Beispiel für eine *package.json* Datei
 
