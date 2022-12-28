@@ -7,21 +7,17 @@ This is the BRIXX.it documentation repository. For further information please fe
 ## [Brixx-Script Version 1.0.3](./brixx-script/README.md)
 
 ### [Install Visual Studio Code for Windows](./VSCode.md)
-
 ### [Install Node.js and npm for Windows](./Nodejs.md)
-
 ### [Projekt Konfiguration package.json](./NPM-config.md)
-
 ### [NPM-Packages installieren](./NPM-install.md)
+### [Webpack Konfiguration webpack.config.js](./Webpack-config.md)
 
 #
 
 Cooming soon ...
 
 ## Brixx-Decision-Script
-
 ## Brixx-Process-Srcript
-
 ## PDFX-Collection
 
 #

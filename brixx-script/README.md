@@ -248,115 +248,35 @@ Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt
 
 Visual Studio Code - Explorer-Ansicht
 
-### Webpack-Konfiguration
-Zum erstellen der Brixx Webkomponente benötigen wir eine **Webpack-Konfigurationsdatei**. Dafür verwenden wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Stammverzeichnis des Projekts. Für die Erstellung einer **„Standard“ Brixx Webkomponente** muss keine Anpassung vorgenommen werden. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
+### [Webpack-Konfiguration](../Webpack-config.md)
+Zum erstellen der Brixx Webkomponente mit *Webpack* und *Babel* benötigen wir eine **Webpack-Konfiguratiosdatei** (`webpack.config.js`) im Stammverzeichnis des Projekts. Dafür verwenden wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Für die Erstellung einer **„Standard“ Brixx Webkomponente** muss keine weitere Anpassung vorgenommen werden. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
 
-Brixx *webpack.config.js* Template
+<img src="../images/vscode-webpack-config.webp" style="margin-bottom: -5px; width: 600px;" />
 
-    // Edit the Brixx Component optional build settings here!
-    // Brixx element prefix
-    const brixx_element_prefix = 'brixx'
-    // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
-    const brixx_component_name = null
-    // Brixx Components folder
-    const brixx_component_folder = 'components'
+Visual Studio Code - webpack.config.js
 
-    // Do not edit the Brixx Component build settings here!
-    const path = require('path')
-    const HtmlWebpackPlugin = require('html-webpack-plugin')
+Damit sind die Vorbereitungen zur Erstellung einer Brixx Webkomponente erledigt  wodurch die Prokekt-Ordnerstruktur im Beispiel aktuell wie folgt aussieht.
 
-    module.exports = (env, argv) => {
-      // Brixx Component script file name pattern: [brixx_element_prefix]-[brixx_component_name].js
-      let brixx_file_name = brixx_component_name || env.package_name || `${brixx_element_prefix}-element`
-      const pattern = `(${brixx_element_prefix}-[a-zA-Z0-9])`
-      const regexp = new RegExp(pattern, 'g')
-      const prefix = regexp.test(brixx_file_name)
-      if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
-      const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-
-      return {
-        mode: 'production',
-        entry: './index.js',
-        output: {
-          path: path.resolve(__dirname, 'dist'),
-          filename: brixx_script_file
-        },
-        devServer: {
-          // Enable hot reloading
-          hot: true,
-          historyApiFallback: {
-            index: '../index.html'
-          }
-          // Not yet used
-          // port: 3000,
-        },
-        performance: {
-          hints: false,
-          maxEntrypointSize: 512000,
-          maxAssetSize: 512000
-        },
-        module: {
-          rules: [
-            {
-              test: /\.m?js$/,
-              exclude: /node_modules/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env'],
-                  plugins: [
-                    [
-                      '@babel/plugin-transform-react-jsx',
-                      {
-                        pragma: 'Brixx.createElement'
-                      }
-                    ]
-                  ]
-                }
-              }
-            },
-            {
-              test: /\.css$/,
-              use: ['style-loader', 'css-loader']
-            }
-          ]
-        },
-        plugins: [
-          new HtmlWebpackPlugin({
-            template: 'index.html',
-            publicPath: '',
-            scriptLoading: 'blocking',
-            inject: 'head',
-            minify: { removeComments: false }
-          })
-        ]
-      }
-    }
-
-Um die Webpack-Konfiguration anzupassen stehen folgende Eigenschaften in der *webpack.config.js* im Bereich `Edit the Brixx Component optional build settings here!` zur Verfügung und Anpassungen sollten nur in diesem Bereich erfolgen.
-
-    // Edit the Brixx Component optional build settings here!
-    // Brixx element prefix
-    const brixx_element_prefix = 'brixx'
-
-Die optionale Eigenschaft **`brixx_element_prefix`** legt den **`prefix-`** (hyphen) der Brixx Webkomponente fest und wird benötigt bei Verwendung als Brixx HTML-Element **`(default='brixx')`**. Dabei wird **`custom-element`** als Name der Brixx Webkomponente zur Brixx Script-Component Datei **`brixx-custom-element.js`** und zum Brixx HTML-Element **`<brixx-custom-element>`**
-
-    // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
-    const brixx_component_name = null
-
-Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert **`(default=null)`**. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**
-
-    // Brixx Components folder
-    const brixx_component_folder = 'components'
-
-Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt und erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
+```
+[brixx-simple-element]
+ │
+ ├── [node-modules]
+ │
+ ├── package.json.lock
+ ├── package.json
+ └── webpack.config.js
+```
 
 #
 
 Under Construction ...
 
-### Build a Brixx JSX-Element (Preview)
+**`index.js`**
 
+**`index.html`**
+
+
+### Build a Brixx JSX-Element (Preview)
 Kompletter Brixx Web-Baustein in der JavaScript-Datei **`./components/brixx-simple-element.js`**
 
     // Imports
@@ -390,7 +310,6 @@ Kompletter Brixx Web-Baustein in der JavaScript-Datei **`./components/brixx-simp
 ## Build a Brixx Component Class
 
 ### Brixx Component Class Sample (Preview)
-
 Komplette Brixx Component Class **`Counter`** in der JavaScript-Datei **`Counter.js`**
 
     // Imports
