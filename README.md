@@ -10,9 +10,13 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 ### [Install Node.js and npm for Windows](./Nodejs.md)
 
+### [Projekt Konfiguration package.json](./NPM-config.md)
+
+### [NPM-Packages installieren](./NPM-install.md)
+
 #
 
-Cooming soon
+Cooming soon ...
 
 ## Brixx-Decision-Script
 
