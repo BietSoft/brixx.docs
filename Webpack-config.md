@@ -21,7 +21,7 @@ Brixx *webpack.config.js* Template
     const HtmlWebpackPlugin = require('html-webpack-plugin')
 
     module.exports = (env, argv) => {
-      // Brixx Component script file name pattern: [brixx_element_prefix]-[brixx_component_name].js
+      // Brixx Component-Script file name pattern: [brixx_element_prefix]-[brixx_component_name].js
       let brixx_file_name = brixx_component_name || env.package_name || `${brixx_element_prefix}-element`
       const pattern = `(${brixx_element_prefix}-[a-zA-Z0-9])`
       const regexp = new RegExp(pattern, 'g')
@@ -110,5 +110,5 @@ Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in d
     // Brixx build folder
     const brixx_dist_folder = 'dist'
 
-Die optionale Eigenschaft **`brixx_dist_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file), die im Ordner **`brixx_component_folder`** abgelegt wird, in Projekten verwendet und verteilt.
+Die optionale Eigenschaft **`brixx_dist_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component-Script file) im Ordner **`brixx_component_folder`** in Projekten verwendet und verteilt.
 
