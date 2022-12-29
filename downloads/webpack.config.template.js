@@ -5,6 +5,8 @@ const brixx_element_prefix = 'brixx'
 const brixx_component_name = null
 // Brixx Components folder
 const brixx_component_folder = 'components'
+// Brixx build folder
+const brixx_dist_folder = 'dist'
 
 // Do not edit the Brixx Component build settings here!
 const path = require('path')
@@ -23,7 +25,7 @@ module.exports = (env, argv) => {
     mode: 'production',
     entry: './index.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, brixx_dist_folder),
       filename: brixx_script_file
     },
     devServer: {
@@ -69,6 +71,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: 'index.html',
+        component: brixx_file_name,
         publicPath: '',
         scriptLoading: 'blocking',
         inject: 'head',

@@ -2,6 +2,8 @@
 
 Für die Webpack-Konfiguration erstellen wir eine **Webpack-Konfigurationsdatei** (`webpack.config.js`) im Stammverzeichnis des Projekts. Dafür verwenden wir im Projekt das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner.
 
+  > Das Template für die Webpack Konfiguration ist zum einen für Anwender, die nur die erstellte Brixx Webkomponente in Projekte verteilen möchten, aber auch für Einsteiger die keine Webpack Kentnisse haben. Für die Erstellung der Brixx Webkomponente sind keine Kentnisse und Anpassungen notwendig, Fortgeschrittene Anwender mit Webpack Kentnissen haben aber die Möglichkeit die Webpack-Konfiguration frei für ihre Zwecke anzupassen.
+
 Brixx *webpack.config.js* Template
 
     // Edit the Brixx Component optional build settings here!
@@ -11,6 +13,8 @@ Brixx *webpack.config.js* Template
     const brixx_component_name = null
     // Brixx Components folder
     const brixx_component_folder = 'components'
+    // Brixx build folder
+    const brixx_dist_folder = 'dist'
 
     // Do not edit the Brixx Component build settings here!
     const path = require('path')
@@ -29,7 +33,7 @@ Brixx *webpack.config.js* Template
         mode: 'production',
         entry: './index.js',
         output: {
-          path: path.resolve(__dirname, 'dist'),
+          path: path.resolve(__dirname, brixx_dist_folder),
           filename: brixx_script_file
         },
         devServer: {
@@ -75,6 +79,7 @@ Brixx *webpack.config.js* Template
         plugins: [
           new HtmlWebpackPlugin({
             template: 'index.html',
+            component: brixx_file_name,
             publicPath: '',
             scriptLoading: 'blocking',
             inject: 'head',
@@ -100,4 +105,10 @@ Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ 
     // Brixx Components folder
     const brixx_component_folder = 'components'
 
-Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt und erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
+Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente im Projekt erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
+
+    // Brixx build folder
+    const brixx_dist_folder = 'dist'
+
+Die optionale Eigenschaft **`brixx_dist_folder`** legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file), die im Ordner **`brixx_component_folder`** abgelegt wird, in Projekten verwendet und verteilt.
+

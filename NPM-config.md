@@ -37,7 +37,7 @@ Beispiel für eine *package.json* Datei
     }    
 
 ## Wofür wird die package.json benötigt?
-Die *package.json* ist der zentrale Ort in einem JavaScript-Projekt, an dem man das Projekt konfigurieren und beschreiben kann und die Abhängigkeiten des Projekts verwaltet werden. Sie wird für das Package-Handling mit npm benötigt, um ein Projekt zu starten, Skripte auszuführen, Abhängigkeiten zu installieren, in der npm-Registry zu veröffentlichen und andere nützliche Aufgaben auszuführen. Die *package.json* erfüllt mehrere Rollen im Projekt, von denen einige nur für in der npm-Registry veröffentlichte Pakete gelten. 
+Die *package.json* ist der zentrale Ort in einem JavaScript-Projekt, an dem man das Projekt konfigurieren und beschreiben kann und die Abhängigkeiten des Projekts verwaltet werden. Sie wird für das Package-Handling mit npm benötigt, um ein Projekt zu starten, Scripte auszuführen, Abhängigkeiten zu installieren, in der npm-Registry zu veröffentlichen und andere nützliche Aufgaben auszuführen. Die *package.json* erfüllt mehrere Rollen im Projekt, von denen einige nur für in der npm-Registry veröffentlichte Pakete gelten. 
 
   > Ein Projekt muss eine *package.json* enthalten, bevor Pakete mit npm installiert werden können.
 
@@ -67,7 +67,7 @@ Das Felt **`main`** ist eine funktionale Eigenschaft der *package.json*. Es defi
       "start": "webpack-dev-server --env package_name=%npm_package_name%"
     },
 
-Das Feld **`scripts`** ist eine weitere funktionale Eigenschaft und gibt ein Objekte an, dessen Schlüssel Skripte sind, die mit **`npm run <scriptName>`** aufgeführt werden können. Skripte sind in der Regel Terminalbefehle, mit denen man Aufgaben für ein Projekt ausführen kann, wie im Beispiel **`npm run build`**.
+Das Feld **`scripts`** ist eine weitere funktionale Eigenschaft und gibt ein Objekte an, dessen Schlüssel Scripte sind, die mit **`npm run <scriptName>`** aufgeführt werden können. Scripte sind in der Regel Terminalbefehle, mit denen man Aufgaben für ein Projekt ausführen kann, wie im Beispiel **`npm run build`**.
 
     "keywords": ["brixx", "element"]
 
@@ -119,9 +119,9 @@ Eines der wichtigsten Felder und der Grund, warum wir die *package.json* benöti
       "webpack-dev-server": "4.11.1"
     }
 
-Ähnlich wie das Feld **`dependencies`**, aber für Pakete, die nur für die Entwicklung und nicht in der Produktion benötigt werden.
+Ähnlich wie das Feld **`dependencies`**, aber für Pakete, die nur für die Entwicklung und nicht in der Live-Umgebung benötigt werden.
 
-Ein Beispiel ist **`webpack`**, ein Tools zum erstellen von Projekt Bundles, das nicht mehr benötigt wird, wenn die Anwendung bereitgestellt und in Produktion ist. Mit der Eigenschaft **`devDependencies`** kann man angeben welche Abhängigkeiten in Produktion nicht benötigt werden. Wenn man die Anwendung in einer Produktionsumgebung installieren möchte, kann man **`npm install --production`** verwenden, um nur zu installieren, was im Feld **`dependencies`** aufgeführt ist.
+Ein Beispiel ist **`webpack`**, ein Tools zum erstellen von Projekt Bundles, das nicht mehr benötigt wird, wenn die Anwendung bereitgestellt und in der Live-Umgebung ist. Mit der Eigenschaft **`devDependencies`** kann man angeben welche Abhängigkeiten in der Live-Umgebung nicht benötigt werden. Wenn man die Anwendung in einer Live-Umgebung installieren möchte, kann man **`npm install --production`** verwenden, um nur zu installieren, was im Feld **`dependencies`** aufgeführt ist.
 
    > Um ein Paket als **`devDependency`** zu installieren, verwendet man  **`npm install --save-dev <package>`**
 

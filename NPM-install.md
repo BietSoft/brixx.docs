@@ -1,9 +1,9 @@
 # NPM-Packages installieren 
-Wir öffnen im Beispiel unter Windows die Eingabeaufforderung und wechseln in den gewünschten Projektordner z. B. **`[brixx-simple-element]`**. Anschließend werden die NPM-Packages der Abhängigkeiten **`dependencies`** und **`devDependencies`** in der *package.json* mit **`npm install`** oder dem Shortcut **`npm i`** installiert und für das Projekt und die Entwicklung bereitgestellt.
+Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Terminal Anwendung beispielsweise unter macOS, und wechseln in den Projektordner, im Beispiel den Ordner **`[brixx-simple-element]`**. Anschließend werden die NPM-Packages der Abhängigkeiten **`dependencies`** und **`devDependencies`** der *package.json* mit **`npm install`** oder dem Shortcut **`npm i`** installiert und für das Projekt und die Entwicklung bereitgestellt.
 
 <img src="./images/npm-install.webp" style="margin-bottom: 15px; width: 600px;" />
 
-  > **Tip:** Die Abhängigkeiten in der *package.json* können auch in der Entwicklungsumgebung, z. B. in Visual Studio Code in einem Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
+  > **Tip:** Die Abhängigkeiten der *package.json* können auch direkt aus der Entwicklungsumgebung, z. B. in Visual Studio Code in einem inetegrierten Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
 
 <img src="./images/vscode-npm-install-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
