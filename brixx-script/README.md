@@ -16,13 +16,13 @@ Für die Entwicklung kann ein Texteditor, wie der in der Linux Community beliebt
 ### [Install Visual Studio Code for Windows](../VSCode.md)
 
 ## Node.js und npm
-Um eine eigenständige Brixx **Webkomponente** zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager). 
+Um eigenständige Brixx Webkomponenten zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager). 
 
 ### Node.js
-Node.js wird als Entwicklungswerkzeug für den **Build** (Erstellung) einer eigenständigen Brixx Webkomponente verwendet, **nicht zur Laufzeit** benötigt, und erfordert keine besonderen Node.js Kenntnisse. Durch die Verwendung von Node.js haben wir die Möglichkeit alle **State-of-the-art** Entwicklungswerkzeuge wie *Webpack* und *Babel* zu verwenden.
+Node.js wird für die Erstellung eigenständiger Brixx Webkomponenten verwendet und nicht zur Laufzeit benötigt. Dadurch haben wir die Möglichkeit **State-of-the-art** Entwicklungswerkzeuge wie *Webpack* und *Babel* zu verwenden. Node.js wird für die Entwicklung im Hintergrund verwendet und für Brixx-Script werden keine Node.js Kenntnisse benötigt.
 
 ### Npm
-Npm ist fester Bestandteil bei der Installation von Node.js und ist im Ursprung ein **Node Package Manager** zur Verwaltung der benötigten JavaScript-Packages, sowohl für den Build einer Brixx Webkomponente als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js für die Entwicklung benötigt.
+Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein **Node Package Manager** zur Verwaltung der benötigten JavaScript-Packages, sowohl für die Brixx Webkomponente als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js für die Entwicklung verwendet und wird nicht zur Laufzeit benötigt.
 
 ### [Install Node.js and npm for Windows](../Nodejs.md)
 
@@ -332,7 +332,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
 
-Bei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template beim **Build** der Brixx Webkomponente mit Webpack und wird in erster Linie zum testen mit dem *Webpack DevServer* verwendet. Dafür verwenden wir im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Template-Datei als **`index.html`** im Projektordner. Auch hier sind wie bei der Webpack-Konfiguration für das Template keine Anpassungen erforderlich und kann direkt verwendet werden.
+Bei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template beim **Build** mit Webpack und wird in erster Linie zum testen mit dem *Webpack DevServer* verwendet. Dafür verwenden wir im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Template-Datei als **`index.html`** im Projektordner. Auch hier sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
 
 HTML-Template in der HTML-Datei **`index.html`**
 
