@@ -13,7 +13,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env, argv) => {
-  // Brixx Component-Script file name pattern: [brixx_element_prefix]-[brixx_component_name].js
+  // Brixx Component script file name pattern: [brixx_element_prefix]-[brixx_component_name].js
   let brixx_file_name = brixx_component_name || env.package_name || `${brixx_element_prefix}-element`
   const pattern = `(${brixx_element_prefix}-[a-zA-Z0-9])`
   const regexp = new RegExp(pattern, 'g')

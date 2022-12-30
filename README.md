@@ -8,9 +8,9 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 ### [Install Visual Studio Code for Windows](./VSCode.md)
 ### [Install Node.js and npm for Windows](./Nodejs.md)
-### [Projekt Konfiguration package.json](./NPM-config.md)
+### [Projekt-Konfiguration package.json](./NPM-config.md)
 ### [NPM-Packages installieren](./NPM-install.md)
-### [Webpack Konfiguration webpack.config.js](./Webpack-config.md)
+### [Webpack-Konfiguration webpack.config.js](./Webpack-config.md)
 
 #
 
