@@ -170,7 +170,7 @@ Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es versch
    Der fertige Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 ## Brixx Webkomponente `[brixx-simple-element]` erstellen
-Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und wollen diese später als **HTML-Element** verwenden. Dafür erstellen wir zuerst einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als Konfigurationsdatei für die Brixx Webkomponente. Dafür verwenden wir im Beispiel das Template [package.json.windows](../downloads/package.json.windows) und speichern die Template-Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für das Beispiel anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und wollen diese später als **HTML-Element** verwenden. Dafür erstellen wir zuerst einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als zentrale Konfigurationsdatei für die Brixx Webkomponente. Dafür verwenden wir im Beispiel das Template [package.json.windows](../downloads/package.json.windows) und speichern die Template-Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für das Beispiel anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx *package.json* Template für Windows
 
