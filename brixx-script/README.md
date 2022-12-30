@@ -170,7 +170,7 @@ Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es versch
    Der fertige Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 ## Brixx Webkomponente `[brixx-simple-element]` erstellen
-Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und wollen diese später als **HTML-Element** verwenden. Dafür erstellen wir zuerst einen Projektordner **`[brixx-simple-element]`** und darin die Datei [`package.json`](../NPM-config.md) als zentrale Konfiguration für die Brixx Webkomponente. Dafür verwenden wir im Beispiel das Template [package.json.windows](../downloads/package.json.windows) und speichern die Template-Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für das Beispiel anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und wollen diese später als **HTML-Element** verwenden. Dafür erstellen wir zuerst einen Projektordner **`[brixx-simple-element]`** und darin die [`Projekt-Konfiguration package.json`](../NPM-config.md) als Konfigurationsdatei für die Brixx Webkomponente. Dafür verwenden wir im Beispiel das Template [package.json.windows](../downloads/package.json.windows) und speichern die Template-Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für das Beispiel anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx *package.json* Template für Windows
 
@@ -249,7 +249,7 @@ Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt
 
 Visual Studio Code - Explorer-Ansicht
 
-### [Webpack-Konfiguration](../Webpack-config.md)
+### [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
 Zum erstellen der Brixx Webkomponente mit *Webpack* benötigen wir eine Webpack-Konfiguration. Dafür erstellen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Wir verwenden im Beispiel das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Template-Datei als **`webpack.config.js`** im Projektordner. Für die Erstellung einer **„Standard“ Brixx Webkomponente** sind für das Template keine Anpassungen erforderlich und kann direkt verwendet werden. In diesem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
 
 <img src="../images/vscode-webpack-config.webp" style="margin-bottom: -5px; width: 600px;" />
