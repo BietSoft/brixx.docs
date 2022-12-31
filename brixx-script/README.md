@@ -115,12 +115,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei **`./component
     Brixx.registerElement({ name: "brixx-animal-list" });
 
 ## Brixx Web-Baustein `[brixx-animal-list]` verwenden
-Die integration in ein HTML-Dokument ist unkompliziert. Der einfachste Weg ist die Brixx-Script **Standalone** Version zu verwenden. Diese beinhaltet alle nötigen Bestandteile für eine schnelle Integration und ist im Wesentlichen für die Entwicklung vorgesehen. Bei Verwendung der Standalone Version wird in der Console die Information *You are using the in-browser Brixx-Script transformer. It is recommended to build Brixx components for production* ausgegeben.
-
-    <!-- Load Brixx-Script standalone -->
-    <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
-
-Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
+Die integration in ein HTML-Dokument ist unKontextmenüDer Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
 
     <!-- Include the Brixx Component script files -->
     <script type="text/babel" src="./components/brixx-animal-list.js"
@@ -154,17 +149,16 @@ Um den Brixx Web-Baustein zu testen öffnen wir den Projektordner **`[brixx-elem
 
 Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es verschiedene Möglichkeiten.
 
-1. Klick auf **`[Go Live]`** in der *Status Bar* (`Start/Stop Server`)
-
-2. Bei Bearbeitung der HTML-Datei mit der Tastenkombination **`[ALT+L Alt+O]`**
-
-3. Klick mit der rechten Maustaste (Kontextmenü) auf die HTML-Datei in der Explorer-Ansicht und Auswahl von **`[Open with Live Server]`** im Kontextmenü.
+1. Klick auf **`[Go Live]`** in der Visual Studio Code Status Bar (**`Click to run live server`**) 
+2. Öffnen der HTML-Datei im Editor-Fenster mit der Tastenkombination **`[ALT+L Alt+O]`**
+3. Klick mit der rechten Maustaste auf die HTML-Datei das Editor-Fenster und Auswahl von **`[Open with Live Server]`**  
+4. Klick mit der rechten Maustaste auf die HTML-Datei in der Explorer-Ansicht und Auswahl von **`[Open with Live Server]`**
 
     <img src="../images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual-Studio-Code - Projektordner **`[brixx-element-sample]`**
 
-    Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse `http://127.0.0.1:5500/` bereitgestellt und im Standard-Browser geöffnet, solange kein spezieller Browser für die *Live Server*-Einstellungen festgelegt wird.
+    Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet. Der Browser kann bei den Einstellungen für die *Live Server* Erweiterung unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
     <img src="../images/vscode-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -237,7 +231,7 @@ Mit den NPM **`scripts`** können wir die Brixx Webkomponente mit **`npm run bui
     }
 
 ### [NPM-Packages installieren](../NPM-install.md) 
-Wenn die Erweiterung *NPM-Scripts* installiert ist können die NPM-Scripts direkt aus der Explorer-Ansicht ausgeführt. In den neueren Versionen von Visual Studio Code ist die Funktionalität von *NPM-Scripts* bereits integriert, dabei können dann auch die NPM-Packages mit **`npm install`** aus der Explorer-Ansicht installiert werden.
+Wenn die Erweiterung *NPM-Scripts* installiert ist können die NPM-Scripts direkt aus der Explorer-Ansicht ausgeführt werden und seit Version 1.23 steht in Visual Studio Code in der Explorer Ansicht bereits ein integrierter *NPM Script Explorer* zur Verfügung. Dabei können auch die NPM-Packages mit **`npm install`** aus der Explorer-Ansicht installiert werden.
 
   > **Tip:** Halten Sie den Visual Studio Code immer auf neuesten Stand. Dieser bekommt regelmäßige Update Release Versionen spendiert mit neuen Features. 
 

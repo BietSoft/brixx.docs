@@ -29,13 +29,15 @@ module.exports = (env, argv) => {
       filename: brixx_script_file
     },
     devServer: {
+      // Not yet used
+      // port: 3000,
       // Enable hot reloading
       hot: true,
+      // Open Browser after build
+      open: true,
       historyApiFallback: {
         index: '../index.html'
       }
-      // Not yet used
-      // port: 3000,
     },
     performance: {
       hints: false,
