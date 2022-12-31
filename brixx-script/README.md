@@ -399,10 +399,10 @@ Visual Studio Code - Brixx Component built
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
 ## Brixx Webkomponente [brixx-simple-element] testen
-Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente bei der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen
+Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen
 
 - Webpack DevServer  
-  Die Brixx Webkomponente kann mit **`npm run start`** getestet werden. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten (testen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder einfach Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
+  Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung getestet werden und muss dazu vorher nicht erstellt werden. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten (testen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder einfach Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
   <img src="../images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
