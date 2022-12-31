@@ -1,6 +1,5 @@
 # Webpack-Konfiguration webpack.config.js
-
-Für die Webpack-Konfiguration erstellen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Wir verwenden in den Beispiele das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Template-Datei als **`webpack.config.js`** im Projektordner. Das Template kann zur Erstellung einer **„Standard“ Brixx Webkomponente** verwendet werden. Dabei sind keine Webpack Kentnisse und Anpassungen an der Konfigurationsdatei notwendig, fortgeschrittene Anwender mit Webpack Kentnissen haben aber die Möglichkeit die Webpack-Konfiguration für eigene Zwecke anzupassen.
+Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Dafür verwenden wir zur Erstellung einer **„Standard“ Brixx Webkomponente** das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. Fortgeschrittene Anwender mit Webpack Kentnissen haben die Möglichkeit die Webpack-Konfiguration für eigene Zwecke anzupassen.
 
 Brixx *webpack.config.js* Template
 
@@ -91,7 +90,7 @@ Brixx *webpack.config.js* Template
 
 Um die Webpack-Konfiguration anzupassen stehen spezielle Eigenschaften im Bereich **`Edit the Brixx Component optional build settings here!`** zur Verfügung.
 
-  > Anwender ohne Webpack Kentnisse sollten Anpassungen an der Webpack-Konfiguration nur über diese Eigenschaften machen.
+  > Anwender ohne Webpack Kentnisse sollten Anpassungen an der Webpack-Konfiguration nur über die spezielle Eigenschaften machen.
 
     // Edit the Brixx Component optional build settings here!
     // Brixx element prefix
@@ -113,4 +112,3 @@ Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in d
     const brixx_dist_folder = 'dist'
 
 Die optionale Eigenschaft **`brixx_dist_folder`** wird für die Entwicklung benötigt und legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`brixx_component_folder`** in Projekten verwendet und verteilt.
-

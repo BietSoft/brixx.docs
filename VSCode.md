@@ -2,7 +2,6 @@
 Visual Studio Code is a free code editor, which runs on the macOS, Linux, and Windows operating systems. Getting up and running with Visual Studio Code is quick and easy. It is a small download so you can install in a matter of minutes. Let's see how to install Visual Studio Code for Windows.
 
 ## Installation
-
 1. Download the [Visual Studio Code installer](https://go.microsoft.com/fwlink/?LinkID=534107) for Windows.
 2. Once it is downloaded, run the installer. This will only take a minute.
 3. By default, VS Code is installed under `C:\Users\{Username}\AppData\Local\Programs\Microsoft VS Code`.
@@ -26,13 +25,12 @@ If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https:
 Visual Studio Code - Get started
 
 ## Visual Studio Code Erweiterungen
-Es gibt viele Erweiterungen (Extensions) für Visual Studio Code. Man kann z. B. die Anzeigesprache in Visual Studio Code mit der Erweiterung [German Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de) auf Deutsch umzustellen. 
+Erhöhen Sie die Leistung von Visual Studio Code durch Erweiterungen (Extensions). Die Features, die Visual Studio Code standardmäßig enthält, sind nur der „Anfang“. Mit VS Code-Erweiterungen können Sie Ihrer Installation Sprachen, Debugger und Tools hinzufügen, um Ihren Entwicklungsworkflow zu unterstützen, beispielsweise die Sprache in Visual Studio Code mit der Erweiterung [German Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de) auf Deutsch umzustellen. 
 
- > **Tip:** Wer mit vielen unterschiedlichen Editoren arbeitet sollte die Anzeigesprache in Visual Studio Code nicht umstellen. Das erleichtert die Arbeit mit anderen Editoren, die in der Regel die selben englischen Menübezeichnungen verwenden, aber nicht bei allen eine Umstellung der Anzeigesprach auf Deutsch möglich ist.
+ > **Tip:** Wer mit unterschiedlichen Editoren arbeitet sollte die Sprache in Visual Studio Code nicht umstellen. Das erleichtert den Umgang mit anderen Editoren, die in der Regel die selben englischen Menübezeichnungen verwenden, aber nicht bei allen Editoren ist eine Umstellung der Sprache auf Deutsch möglich ist.
 
 ### Erweiterungen installieren
-
-Eine Erweiterung (Extension) kann man im [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs) oder in Visual Studio Code unter Extensions (`Ctrl+Shift+X`) mit dem Suchfeld `[Search Extensions in Marktplace]` suchen und installieren. Im Beispiel sehen wir das exemplarisch mit der Erweiterung *German Language Pack*.
+Eine Erweiterung kann man im [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs) oder in Visual Studio Code unter Extensions (`Ctrl+Shift+X`) mit dem Suchfeld `[Search Extensions in Marktplace]` suchen und installieren. Im Beispiel sehen wir das exemplarisch mit der Erweiterung *German Language Pack*.
 
 <img src="images/vscode-plugins.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -43,16 +41,15 @@ Nach der Installation wird man zu einem Restart aufgefordert.
 <img src="images/vscode-restart.webp" style="margin-bottom: 10px; width: 400px;" />
 
 ### Erweiterungen deinstallieren
-
 Genauso einfach kann in Visual Studio Code eine Erweiterung auch wieder deinstalliert werden.
 
 <img src="images/vscode-german.webp" style="margin-bottom: 10px; width: 600px;" />
 
 ## Empfohlene Erweiterungen für die Entwicklung
-Es gibt jede Menge nützliche Erweiterungen für Visual Studio Code die uns die Arbeit bei der Entwicklung erleichten. Nahezu unverzichtbare Erweiterungen zur Erstellung von Brixx Webkomponenten sind:
+Es gibt ein reichhaltiges Angebot an nützlichen Erweiterungen für Visual Studio Code die uns die Arbeit bei der Entwicklung erleichten. Unverzichtbare Erweiterungen für die Entwicklung und zur Erstellung von Brixx Webkomponenten sind:
 
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)  
-  Ein lokaler Webserver (Entwicklungsserver) mit Auto Reload (Live reload) bei Änderungen am Quellcode. Der Live Server    ermöglicht es das Verhalten der Brixx Webkomponente während der Entwicklung in einer Browserumgebung zu testen, und verhindert die *blocked by CORS policy* ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
+  Ein lokaler Webserver (Entwicklungsserver) mit Auto Reload (Live reload) bei Änderungen am Quellcode. Der *Live Server*    ermöglicht es bei der Entwicklung das Verhalten der Brixx Webkomponente  in einer Browserumgebung zu testen, und verhindert die *blocked by CORS policy* ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
 
 - [NPM-Scripts](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.vscode-npm-scripts) (Visual Studio Code bis Version 1.22)  
-  Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit Version 1.23 steht in Visual Studio Code in der Explorer Ansicht bereits ein integrierter *NPM Script Explorer* zur Verfügung und eine zusätzliche Installation der Erweiterung wird nicht mehr benötigt.
+  Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit Version 1.23 steht in Visual Studio Code in der Explorer Ansicht bereits ein integrierter *NPM Script Explorer* zur Verfügung und eine zusätzliche Installation der Erweiterung *NPM-Scripts* wird nicht mehr benötigt.

@@ -9,7 +9,7 @@ Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Termi
 
 Visual Studio Code - Terminal-Fenster
 
-Mit der Erweiterung *NPM-Scripts* für Visual Studio Code haben wir eine weitere Möglichkeit die Abhängigkeiten in der *package.json* zu installieren.
+Mit dem *NPM Script Explorer* haben wir eine weitere Möglichkeit die Abhängigkeiten in der *package.json* zu installieren.
 
 <img src="./images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
