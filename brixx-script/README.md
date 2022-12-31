@@ -156,11 +156,11 @@ Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es versch
 
     <img src="../images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
 
-    Visual-Studio-Code - Projektordner **`[brixx-element-sample]`**
+    Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
     Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet. Der Browser kann bei den Einstellungen für die *Live Server* Erweiterung unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
-    <img src="../images/vscode-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
@@ -398,22 +398,43 @@ Visual Studio Code - Brixx Component built
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
-#
-
-Under Construction ...
-
 ## Brixx Webkomponente [brixx-simple-element] testen
-Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. 
+Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente bei der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen
 
-- Webpack DevServer
+- Webpack DevServer  
+  Die Brixx Webkomponente kann mit **`npm run start`** getestet werden. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten (testen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder einfach Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
+  <img src="../images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
-- Live Server
+  Visual Studio Code - Run start
+
+  Die HTML-Datei **`index.html`** wird mit dem *Webpack DevServer* unter der Adresse **`http://127.0.0.1:8080/index.html`** im Standard-Browser geöffnet.
+
+  <img src="../images/vscode-webpack-devserver.webp" style="margin-bottom: -5px; width: 600px;" />
+
+  Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
+
+- Live Server  
+  Wir können die erstellte Brixx Webkomponente auch mit dem *Live Server* testen, ganau wie beim Web-Baustein **`[brixx-animal-list]`**. Dabei entspricht der Ordner **`./dist`** dem Projektordner vom Web-Baustein und wir starten zum testen die HTML-Datei **`index.html`** mit dem *Live Server*.
+  
+  <img src="../images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
+
+  Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
+
+  Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** im Standard-Browser geöffnet.
+
+  <img src="../images/vscode-live-server-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+  Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
 ## Brixx Webkomponente [brixx-simple-element] verwenden
 In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`./dist`**  in Projekten verwendet und verteilt.  
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`./dist`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`./components`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente eigenstängig, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
+
+#
+
+Under Construction ...
 
 ## Build a Brixx Script-Component
 ...
