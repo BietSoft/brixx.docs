@@ -404,7 +404,7 @@ In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Compon
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`./dist`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`./components`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente eigenstängig, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
 
 ## Brixx Webkomponente [brixx-simple-element] testen
-Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen
+Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
 
 - Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten (testen) die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
@@ -420,6 +420,16 @@ Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkom
 
 - Wir können die Brixx Webkomponente mit dem **Live Server** testen wie beim Web-Baustein **`[brixx-animal-list]`**. Dafür muss die Brixx Webkomponente erstellt werden, wobei der Ordner **`./dist`** dem Projektordner vom Web-Baustein entspricht, und starten die HTML-Datei **`index.html`** mit dem *Live Server*.
   
+  ```
+  [dist]
+  │
+  ├── [components]
+  │    │    
+  │    └── brixx-simple-element.js
+  │
+  └── index.html
+  ```
+
   <img src="../images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
 
   Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
