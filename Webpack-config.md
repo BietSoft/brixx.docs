@@ -12,6 +12,8 @@ Brixx *webpack.config.js* Template
     const brixx_component_folder = 'components'
     // Brixx build folder
     const brixx_dist_folder = 'dist'
+    // Webpack server port
+    const webpack_server_port = '8080'
 
     // Do not edit the Brixx Component build settings here!
     const path = require('path')
@@ -25,7 +27,13 @@ Brixx *webpack.config.js* Template
       const prefix = regexp.test(brixx_file_name)
       if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
       const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-
+      let server_port = '8080'  
+      try {
+        server_port = webpack_server_port
+      } catch (error) {
+        // Use default server port
+      }
+      
       return {
         mode: 'production',
         entry: './index.js',
@@ -34,11 +42,11 @@ Brixx *webpack.config.js* Template
           filename: brixx_script_file
         },
         devServer: {
-          // Not yet used
-          // port: 3000,
+          // Set server port
+          port: server_port,
           // Enable hot reloading
           hot: true,
-          // Open Browser after build
+          // Open browser after build
           open: true,
           historyApiFallback: {
             index: '../index.html'
@@ -112,3 +120,8 @@ Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in d
     const brixx_dist_folder = 'dist'
 
 Die optionale Eigenschaft **`brixx_dist_folder`** wird für die Entwicklung benötigt und legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`brixx_component_folder`** in Projekten verwendet und verteilt.
+
+    // Webpack server port
+    const webpack_server_port = '8080'
+
+Die optionale Eigenschaft **`webpack_server_port`** legt den Port **`(default='8080')`** für die Adresse **`http://127.0.0.1:{webpack_server_port}/index.html`** fest unter dem der *Webpack DevServer* die HTML-Datei **`(default='index.html')`** zum testen der Brixx Webkomponente bereitstellt und im Standard-Browser öffnet Mit der Eigenschaft hat man die Möglichkeit z. B. bei einem konkurierenden lokalen Webserver den Port für den Webpack DevServer anzupassen.

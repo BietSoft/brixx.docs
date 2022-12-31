@@ -7,6 +7,8 @@ const brixx_component_name = null
 const brixx_component_folder = 'components'
 // Brixx build folder
 const brixx_dist_folder = 'dist'
+// Webpack server port
+const webpack_server_port = '8080'
 
 // Do not edit the Brixx Component build settings here!
 const path = require('path')
@@ -20,7 +22,13 @@ module.exports = (env, argv) => {
   const prefix = regexp.test(brixx_file_name)
   if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
   const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-
+  let server_port = '8080'  
+  try {
+    server_port = webpack_server_port
+  } catch (error) {
+    // Use default server port
+  }
+  
   return {
     mode: 'production',
     entry: './index.js',
@@ -29,11 +37,11 @@ module.exports = (env, argv) => {
       filename: brixx_script_file
     },
     devServer: {
-      // Not yet used
-      // port: 3000,
+      // Set server port
+      port: server_port,
       // Enable hot reloading
       hot: true,
-      // Open Browser after build
+      // Open browser after build
       open: true,
       historyApiFallback: {
         index: '../index.html'

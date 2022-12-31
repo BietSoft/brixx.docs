@@ -364,7 +364,7 @@ Vor der Erstellung der Brixx Webkomponente mit Webpack sieht die Projekt-Ordners
 ```
 
 ### Brixx Webkomponente bauen
-Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder einfach Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
+Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
 <img src="../images/vscode-npm-build-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -398,39 +398,37 @@ Visual Studio Code - Brixx Component built
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
+## Brixx Webkomponente [brixx-simple-element] verwenden
+In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`./dist`**  in Projekten verwendet und verteilt.  
+
+Auf dem ersten Blick scheint das Ergebnis im Ordner **`./dist`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`./components`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente eigenstängig, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
+
 ## Brixx Webkomponente [brixx-simple-element] testen
 Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen
 
-- Webpack DevServer  
-  Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung getestet werden und muss dazu vorher nicht erstellt werden. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten (testen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder einfach Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
+- Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten (testen) die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
   <img src="../images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
   Visual Studio Code - Run start
 
-  Die HTML-Datei **`index.html`** wird mit dem *Webpack DevServer* unter der Adresse **`http://127.0.0.1:8080/index.html`** im Standard-Browser geöffnet.
+  Die HTML-Datei **`index.html`** wird mit dem *Webpack DevServer* unter der Adresse **`http://127.0.0.1:8080/index.html`** bereitgestellt und im Standard-Browser geöffnet.
 
   <img src="../images/vscode-webpack-devserver.webp" style="margin-bottom: -5px; width: 600px;" />
 
   Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
-- Live Server  
-  Wir können die erstellte Brixx Webkomponente auch mit dem *Live Server* testen, ganau wie beim Web-Baustein **`[brixx-animal-list]`**. Dabei entspricht der Ordner **`./dist`** dem Projektordner vom Web-Baustein und wir starten zum testen die HTML-Datei **`index.html`** mit dem *Live Server*.
+- Wir können die Brixx Webkomponente mit dem **Live Server** testen wie beim Web-Baustein **`[brixx-animal-list]`**. Dafür muss die Brixx Webkomponente erstellt werden, wobei der Ordner **`./dist`** dem Projektordner vom Web-Baustein entspricht, und starten die HTML-Datei **`index.html`** mit dem *Live Server*.
   
   <img src="../images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
 
   Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
-  Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** im Standard-Browser geöffnet.
+  Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet.
 
   <img src="../images/vscode-live-server-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
   Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
-
-## Brixx Webkomponente [brixx-simple-element] verwenden
-In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`./dist`**  in Projekten verwendet und verteilt.  
-
-Auf dem ersten Blick scheint das Ergebnis im Ordner **`./dist`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`./components`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente eigenstängig, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
 
 #
 
