@@ -115,13 +115,18 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei **`./component
     Brixx.registerElement({ name: "brixx-animal-list" });
 
 ## Brixx Web-Baustein `[brixx-animal-list]` verwenden
-Die integration in ein HTML-Dokument ist unkompliziert. Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
+Die integration in ein HTML-Dokument ist unkompliziert. Wir verwenden die <b>Brixx-Script Standalone Version</b> vom Brixx-CDN, um eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument zu ermöglichen. 
+
+    <!-- Load Brixx-Script standalone -->
+    <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
+
+Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird dabei mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt. 
 
     <!-- Include the Brixx Component script files -->
     <script type="text/babel" src="./components/brixx-animal-list.js"
         data-type="module" data-presets="brixx"></script>
 
-Brixx-Script Standalone verwendet Babel mit **`type="text/babel"`** um Brixx Webkomponenten in den unterschiedlichen Browsern verwenden zu können. Dann müssen nur noch die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt werden und die Brixx Webkomponente kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Brixx-Script Standalone verenden wir Babel mit **`type="text/babel"`** um Brixx Webkomponenten in den unterschiedlichen Browsern verwenden zu können. Dann müssen nur noch die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt werden und die Brixx Webkomponente kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
@@ -422,12 +427,12 @@ Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkom
   
   ```
   [dist]
-  │
-  ├── [components]
-  │    │    
-  │    └── brixx-simple-element.js
-  │
-  └── index.html
+   │
+   ├── [components]
+   │    │    
+   │    └── brixx-simple-element.js
+   │
+   └── index.html
   ```
 
   <img src="../images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
