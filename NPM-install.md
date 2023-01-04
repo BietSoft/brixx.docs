@@ -1,21 +1,23 @@
 # NPM-Packages installieren 
-Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Terminal Anwendung beispielsweise unter macOS, und wechseln in den Projektordner, im Beispiel den Ordner **`[brixx-simple-element]`**. Anschließend werden die NPM-Packages der Abhängigkeiten **`dependencies`** und **`devDependencies`** der *package.json* mit **`npm install`** oder dem Shortcut **`npm i`** installiert und für das Projekt und die Entwicklung bereitgestellt.
+Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Terminal Anwendung in einem anderen Betriebssystem, und wechseln in den Projektordner, im Beispiel **`[brixx-simple-element]`**. Anschließend werden die NPM-Packages der Abhängigkeiten **`dependencies`** und **`devDependencies`** der *package.json* mit **`npm install`** oder dem Shortcut **`npm i`** installiert und für die Entwicklung im Projektordner bereitgestellt.
 
-<img src="./images/npm-install.webp" style="margin-bottom: 15px; width: 600px;" />
+<img src="./images/npm-install.webp" style="margin-bottom: -5px; width: 600px;" />
 
-  > **Tip:** Die Abhängigkeiten der *package.json* können auch direkt aus der Entwicklungsumgebung, z. B. in Visual Studio Code in einem inetegrierten Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
+Windows Eingabeaufforderung
+
+  > **Tip:** Die Abhängigkeiten der *package.json* können auch in Entwicklungsumgebung in Visual Studio Code in einem  Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
 
 <img src="./images/vscode-npm-install-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Terminal-Fenster
 
-Mit dem *NPM Script Explorer* haben wir eine weitere Möglichkeit die Abhängigkeiten in der *package.json* zu installieren.
+Mit dem *NPM Script Explorer* haben wir eine zusätzliche Möglichkeit die Abhängigkeiten in der *package.json* zu installieren.
 
 <img src="./images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Visual Studio Code - Terminal-Fenster
+Visual Studio Code - NPM-SCRIPTS (*NPM Script Explorer*)
 
-Klick mit der rechten Maustaste (Kontextmenü) auf **`package.json`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`**  und im Menü **`[Run Intall]`** auswählen.
+Klick mit der rechten Maustaste (Kontextmenü) auf den Eintrag **`package.json`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`**  und im Menü **`[Run Intall]`** auswählen.
 
 Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt sehen wir in der Explorer-Ansicht den Ordner **`node_modules`** mit den NPM-Packages und die Datei **`package-lock.json`**
 
