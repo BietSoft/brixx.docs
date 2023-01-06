@@ -111,7 +111,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (Brixx Script-
     // Register the Brixx HTML-Element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
-## Brixx Web-Baustein verwenden
+### Brixx Web-Baustein verwenden
 Die integration in ein HTML-Dokument ist nicht besonders kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen. 
 
     <!-- Load Brixx-Script standalone -->
@@ -145,7 +145,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-element-sample.zip]](../downloads/brixx-element-sample.zip)
 
-## Brixx Web-Baustein testen
+### Brixx Web-Baustein testen
 Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten die HTML-Datei **`index.html`** mit dem *Live Server*. Dazu gibt es verschiedene Möglichkeiten.
 
 1. Klick auf **`[Go Live]`** in der Visual Studio Code Status Bar (**`Click to run live server`**
@@ -381,14 +381,14 @@ Beim **Build**-Prozess wird der Ordner **`[dist]`** erstellt. Darin die Brixx We
 
 Visual Studio Code - Brixx Component built
 
-## Brixx Webkomponente verwenden
+### Brixx Webkomponente verwenden
 In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente im Ordner **`[dist]`** in Projekten verwendet und verteilt.  
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
-## Brixx Webkomponente testen
+### Brixx Webkomponente testen
 Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung angepaßt und verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
 
 - Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten (testen) die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
@@ -553,7 +553,7 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
 Under Construction ...
 
-## Brixx Class Component hinzufügen
+### Brixx Class Component hinzufügen
 Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir die Webkomponente mit der **Brixx Class Component** (Klassen-Komponente) und erstellen im Ordner **[`components`]** die Class Component **`Counter`** in der JavaScript-Datei **`Counter.js`** Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
@@ -672,11 +672,11 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
 
 ### Brixx Webkomponente bauen
 
-## Brixx Webkomponente verwenden
+### Brixx Webkomponente verwenden
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-complex-element.zip]](../downloads/brixx-complex-element.zip)
 
-## Brixx Webkomponente testen
+### Brixx Webkomponente testen
 Wir testen die Brixx Webkomponente noch einmal mit **`npm run start`** bevor wir die Brixx Webkomponente endgültig erstellen.
 
 <img src="../images/vscode-complex-element-02.webp" style="margin-bottom: -5px; width: 600px;" />
