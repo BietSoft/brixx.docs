@@ -469,7 +469,7 @@ Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzel
     ├── package.json
     └── webpack.config.js
 
-### HTML-Dokument in der HTML-Datei *index.html* erweitern
+### HTML-Dokument erweitern
 Wir erweitern das HTML-Dokument nur mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
 
     ...
