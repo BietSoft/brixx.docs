@@ -355,7 +355,7 @@ Vor der Erstellung der Brixx Webkomponente mit Webpack sieht die Projekt-Ordners
     └── webpack.config.js
 
 ### Brixx Webkomponente bauen
-Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
+Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/run.png" width="8px" /> **]**
 
 <img src="../images/vscode-npm-build-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
