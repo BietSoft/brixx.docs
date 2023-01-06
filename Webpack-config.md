@@ -104,7 +104,7 @@ Um die Webpack-Konfiguration anzupassen stehen spezielle Eigenschaften im Bereic
     // Brixx element prefix
     const brixx_element_prefix = 'brixx'
 
-Die optionale Eigenschaft **`brixx_element_prefix`** legt den **`prefix-`** (hyphen) der Brixx Webkomponente fest und wird benötigt bei Verwendung als Brixx HTML-Element **`(default='brixx')`**. 
+Die optionale Eigenschaft **`brixx_element_prefix`** legt einen **Prefix** für den Namen der Brixx Webkomponente fest und wird bei Verwendung als Brixx HTML-Element benötigt **`(default='brixx')`**. Der Brixx Element Prefix wird dabei dem HTML-Element Namen mit einem Bindestrich (hyphen) vorangestellt. 
 
     // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
     const brixx_component_name = null

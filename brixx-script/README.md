@@ -2,7 +2,7 @@
 
   > This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.3 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
-Brixx-Script ist eine freie JavaScript-Library zur Erstellung unabhängiger Web-Bausteinen. Mit Brixx-Script können **„Smarte“ Web-Bausteine** (Brixx) für Webseiten oder Webanwendungen erstellt werden. Dadurch kann Programmieraufwand und Projektkomplexität durch **Low-Code-Entwicklung** auf ein Minimum reduziert werden. **Brixx Web-Bausteine** (Webkomponenten) können entweder als *Brixx HTML-Element* in jedem HTML-Dokument oder *Brixx Script-Baustein* in JavaScript-Projekten und Frameworks verwendet werden, und werden mit JavaScript und insbesondere [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt. JSX wurde 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 als LaSSiE seinen Ursprung als plattformunabhängige Web-Entwicklung und wurde 2005 zusätzlich mit E4X erweitert. E4X wurde 2014 mit der Einführung von JSX von der Mozilla Foundation als deprecated gekennzeichnet und folglich in LaSSiE durch JSX ersetzt. LaSSiE wurde z. B. in **Brixx-Decision-Script** und **Brixx-Process-Script** als integriertes Baustein-System verwendet, aber aufgrund der großen Popularität und Verbreitung von JSX im Dezember 2022 als freie JavaScript-Library **Brixx-Script** zur Erstellung von **Brixx Webkomponenten** (Web-Bausteine) veröffentlicht. Brixx-Script dient in erster Linie zur Erstellung einer Bausteinorientierten Projetstruktur kann aber auch eine Lightweight-Alternative zu komplexen Frameworks und Libraries sein.
+Brixx-Script ist eine freie JavaScript-Library zur Erstellung unabhängiger Web-Bausteinen. Mit Brixx-Script können **„Smarte“ Web-Bausteine** (Brixx) für Webseiten oder Webanwendungen erstellt werden. Dadurch kann Programmieraufwand und Projektkomplexität für eine **Low-Code-Entwicklung** auf ein Minimum reduziert werden. **Brixx Webkomponenten** (Web-Bausteine) können entweder als *Brixx HTML-Element* in jedem HTML-Dokument oder als *Brixx Script-Element* in JavaScript-Projekten und Frameworks verwendet werden, und werden mit JavaScript und insbesondere [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt. JSX wurde 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 als LaSSiE seinen Ursprung als plattformunabhängige Web-Entwicklung und wurde 2005 zusätzlich mit E4X erweitert. E4X wurde 2014 mit der Einführung von JSX von der Mozilla Foundation als deprecated gekennzeichnet und folglich in LaSSiE durch JSX ersetzt. LaSSiE wurde z. B. in **Brixx-Decision-Script** und **Brixx-Process-Script** als integriertes Baustein-System verwendet, aber aufgrund der großen Popularität und Verbreitung von JSX im Dezember 2022 als freie JavaScript-Library **Brixx-Script** zur Erstellung von Brixx Webkomponenten veröffentlicht. Brixx-Script dient in erster Linie zur Erstellung einer Bausteinorientierten Projetstruktur kann aber auch eine Lightweight-Alternative zu komplexen Frameworks und Libraries sein.
 
 ## Package `@brixx/script`
 
@@ -11,42 +11,44 @@ Brixx-Script ist eine freie JavaScript-Library zur Erstellung unabhängiger Web-
 # Was wird alles benötigt?
 
 ## Quellcode Editor
-Für die Entwicklung kann ein Texteditor, beispielsweise der in der Linux Community beliebte [Vim](https://www.vim.org/), oder ein Quellcode Editor wie [Notpad++](https://notepad-plus-plus.org/downloads/) oder [Sublime Text](https://www.sublimetext.com/) verwendet werden. Ein kostenfreie Alternative zu einer professionellen integrierten Entwicklungsumgebung (IDE) ist [Visual Studio Code](https://code.visualstudio.com/) (VS Code) als leichtgewichtiger Quellcode Editor mit vielen IDE Erweiterungen. Visual Studio Code ist damit mehr als nur ein Quellcode Bearbeitungstool und derzeit der wohl der beliebteste Quellcode Editor ([Install Visual Studio Code for Windows](../VSCode.md)).
+Für die Entwicklung kann ein einfacher Texteditor, beispielsweise der in der Linux Community beliebte [Vim](https://www.vim.org/), oder ein Quellcode Editor wie [Notpad++](https://notepad-plus-plus.org/downloads/) oder [Sublime Text](https://www.sublimetext.com/) verwendet werden. Ein kostenfreie Alternative zu einer professionellen integrierten Entwicklungsumgebung (IDE) ist [Visual Studio Code](https://code.visualstudio.com/) (VS Code) als leichtgewichtiger Quellcode Editor mit vielen IDE Erweiterungen. Visual Studio Code ist damit mehr als nur ein Quellcode Bearbeitungstool und derzeit der wohl der beliebteste Quellcode Editor ([Install Visual Studio Code for Windows](../VSCode.md)).
 
 ## Node.js und npm
-Um eine Brixx Webkomponente zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager) als Entwicklungswerkzeuge ([Install Node.js and npm for Windows](../Nodejs.md))
+Um Brixx Webkomponenten zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ 'Node package manager') (Node Package Manager) als Werkzeuge zur Entwicklung ([Install Node.js and npm for Windows](../Nodejs.md)) und werden nicht zur Laufzeit der Webkomponenten benötigt.
 
 ### Node.js
-Node.js wird im Hintergrund zur Erstellung eigenständiger Brixx Webkomponenten verwendet und wird nicht zur Laufzeit benötigt. Dadurch haben wir die Möglichkeit **State-of-the-art** Entwicklungswerkzeuge wie *Webpack* und *Babel* zu verwenden. Für Brixx-Script sind keine Node.js Kentnisse erforderlich.
+Node.js wird zur Erstellung eigenständiger Brixx Webkomponenten verwendet. Dadurch haben wir die Möglichkeit **State-of-the-art** Entwicklungswerkzeuge wie *Webpack* und *Babel* zu verwenden. Für Brixx-Script sind keine Node.js Kentnisse erforderlich.
 
 ### Npm
-Npm ist fester Bestandteil bei der Installation von Node.js und im Ursprung ein **Node Package Manager** zur Verwaltung benötigter JavaScript-Packages, sowohl für die Brixx Webkomponente als auch für die Entwicklungswerkzeuge. Npm wird wie Node.js für die Entwicklung verwendet und nicht zur Laufzeit benötigt.
+Npm ist ein fester Bestandteil bei der Installation von Node.js und ein **Node Package Manager** zur Verwaltung benötigter JavaScript-Packages im Projekt, sowohl für die Brixx Webkomponente, als auch für die verwendeten Entwicklungswerkzeuge. Npm wird wie Node.js für die Entwicklung verwendet und nicht zur Laufzeit benötigt.
 
 ## Webpack
-Mit dem Modul-Bundler [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') für moderne JavaScript-Anwendungen können sogenannte **Bundles** erstellt werden in denen alle Assets in einem Bundle bereitgestellt werden. Dadurch ist eine einfache Intergration und Verteilung von Brixx Webkomponenten möglich. Zur Erstellung einer Brixx Webkomponente mit Webpack stehen Beispiele und Templates zur Verfügung und erfordert für die Verwendung mit Brixx-Script keine Vorkenntnisse.
+Mit dem Modul-Bundler [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') für moderne JavaScript-Anwendungen können **Bundles** erstellt werden, in denen alle benötigten Projektdateien und in eine Datei gepackt (gebündelt) werden. Dadurch ist eine einfache Intergration und Verteilung von Brixx Webkomponenten möglich. Zur Erstellung einer Brixx Webkomponente mit Webpack stehen Beispiele und Templates zur Verfügung und erfordert für die Verwendung mit Brixx-Script keine Vorkenntnisse.
 
 ## Babel
 Der JavaScript Compiler [Babel](https://babeljs.io/ 'Opensource JavaScript transcompiler') wird verwendet ECMAScript 2015+ Code in eine Version für nicht kompatible oder ältere Browser zu konvertieren . Dadurch können Brixx Webkomponenten in allen Browsern und JavaScript-Umgebungen verwendet werden. Babel wird als Erweiterung mit Webpack verwendet und für die Verwendung stehen Beispiele und Templates zur Verfügung. Babel erfordert für die Verwendung mit Brixx-Sript keine Vorkenntnisse.
 
 ## Erste Schritte
-Wir verwenden moderne, State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') und [npm](https://www.npmjs.com/ 'Node package manager') auch [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') und [Babel](https://babeljs.io/ 'Opensource JavaScript transcompiler'), um eine Brixx Webkomponente zu erstellen. Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
+Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') und [npm](https://www.npmjs.com/ 'Node package manager') auch [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') und [Babel](https://babeljs.io/ 'Opensource JavaScript transcompiler'). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
 ## Brixx Web-Baustein `[brixx-animal-list]` erstellen
-Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir den Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-element-sample/
     ├── components/
     │   └── brixx-animal-list.js
     └── index.html
 
-Darin erstellen wir einen Brixx Web-Baustein (Brixx web component) **`[brixx-animal-list]`** in der JavaScript-Datei **`brixx-animal-list.js`** (Brixx script component). Als Erstes erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) und symbolisiert mögliche Eingabequellen z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
+  > Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (*Brixx web component*) und als **Brixx Script-Baustein** die JavaScript-Datei (*Brixx script component*) vom Brixx Web-Baustein.
+  
+Darin erstellen wir einen Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Baustein) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
 
-Anschließend wird ein Brixx Standard Element **`Brixx.element`** mit einer untergeordneten HTML-Liste und JSX erstellt.
+Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`** mit einer untergeordneten HTML-Liste.
 
-  > Ein **`Brixx.element`** kann für „einfache“ Brixx Web-Bausteine verwendet werden und einmal in einem Brixx Web-Baustein vorkommen. Das ermöglicht eine schnelle Entwicklung mit Brixx-Script und reduziert nicht zuletzt Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung). 
+  > Ein **`Brixx.element`** kann besonders für „einfache“ Brixx Web-Bausteine verwendet werden und einmal für einen Web-Baustein vorkommen, ermöglicht eine schnelle Entwicklung mit Brixx-Script, und reduziert nicht zuletzt Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung). 
 
     // Create a Brixx default element
     Brixx.element = 
@@ -57,9 +59,9 @@ Anschließend wird ein Brixx Standard Element **`Brixx.element`** mit einer unte
       </ul>
     </div>
 
-  > **Tip:** Die Formatierung ist bei Brixx-Sript frei. Wir empfehlen zur besseren Projektstruktur und JavaScript Integration JSX-Code in *Parentheses* **`()`** zu verwenden.
+  > **Tip:** Die Formatierung mit Brixx-Sript ist frei, es wird aber für eine bessere Projektstruktur und JavaScript Integration empfohlen JSX-Code in *Parentheses* **`()`** zu verwenden.
 
-    ...
+    // Create a Brixx default element
     Brixx.element = (
       <div>
         <h2>Animals</h2>
@@ -69,7 +71,7 @@ Anschließend wird ein Brixx Standard Element **`Brixx.element`** mit einer unte
       </div>
     );
 
-Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann als HTML-Listenelement **`<h3>{animal}</h3>`** mit Unterstützung der JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp) nacheinander ausgegeben und JavaScript-Erweiterungen können, wie im Beispiel zu sehen, dabei einfach mit *Curly Brackets* **`{}`** integriert werden.
+Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung der JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp) nacheinander ausgegeben. JavaScript-Erweiterungen können, wie im Beispiel zu sehen, bei JSX einfach mit *Curly Brackets* **`{}`** integriert werden.
 
     ...
     { 
@@ -82,12 +84,12 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann als HTML-
     }
     ...
 
-Abschließend wird das erstellte Brixx Element als HTML-Elemet **`<brixx-animal-list>`** im Browser registriert.
+Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** registriert.
 
     // Register the Brixx HTML-Element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
-Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei **`./components/brixx-animal-list.js`**
+Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (Brixx Script-Baustein) **`./components/brixx-animal-list.js`**
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -109,8 +111,8 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei **`./component
     // Register the Brixx HTML-Element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
-## Brixx Web-Baustein `[brixx-animal-list]` verwenden
-Die integration in ein HTML-Dokument ist unkompliziert. Wir verwenden die <b>Brixx-Script Standalone Version</b> vom Brixx-CDN, um eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument zu ermöglichen. 
+## Brixx Web-Baustein verwenden
+Die integration in ein HTML-Dokument ist nicht besonders kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen. 
 
     <!-- Load Brixx-Script standalone -->
     <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
@@ -121,7 +123,7 @@ Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component D
     <script type="text/babel" src="./components/brixx-animal-list.js"
         data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verenden wir Babel mit **`type="text/babel"`** um Brixx Webkomponenten in allen Browserversionen nutzen zu können. Dann werden noch die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
@@ -143,28 +145,28 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-element-sample.zip]](../downloads/brixx-element-sample.zip)
 
-## Brixx Web-Baustein `[brixx-animal-list]` testen
-Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und verwenden die *Live Server* Erweiterung.
+## Brixx Web-Baustein testen
+Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten die HTML-Datei **`index.html`** mit dem *Live Server*. Dazu gibt es verschiedene Möglichkeiten.
 
-Zum starten der HTML-Datei **`index.html`** mit dem *Live Server* gibt es verschiedene Möglichkeiten.
-
-1. Klick auf **`[Go Live]`** in der Visual Studio Code Status Bar (**`Click to run live server`**) 
+1. Klick auf **`[Go Live]`** in der Visual Studio Code Status Bar (**`Click to run live server`**
 2. Öffnen der HTML-Datei im Editor-Fenster mit der Tastenkombination **`[ALT+L Alt+O]`**
-3. Klick mit der rechten Maustaste auf die HTML-Datei das Editor-Fenster und Auswahl von **`[Open with Live Server]`**  
-4. Klick mit der rechten Maustaste auf die HTML-Datei in der Explorer-Ansicht und Auswahl von **`[Open with Live Server]`**
+3. Rechtsklick auf die HTML-Datei im **Editor-Fenster** und Auswahl von **`[Open with Live Server]`**  
+4. Rechtsklick auf die HTML-Datei in der **Explorer-Ansicht** und Auswahl von **`[Open with Live Server]`**
 
     <img src="../images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
-    Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet. Der Browser kann bei den *Live Server* Einstellungen unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
+    Die HTML-Datei **`index.html`** wird mit dem *Live Server* unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet. 
+    
+      > **Tip:** Der Browser kann bei den *Live Server* Einstellungen unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
     <img src="../images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 ## Brixx Webkomponente `[brixx-simple-element]` erstellen
-Wie erstellen eine „einfache“ **Brixx Webkomponente** (Web-Baustein) und werden die Webkomponente als **HTML-Element** verwenden. Dafür erstellen wir zuerst den Projektordner **`brixx-simple-element/`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als Konfigurationsdatei für die Webkomponente. Dafür verwenden wir im Beispiel das Template [package.json.windows](../downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und anpassen. Das erleichtert den Einstig im Umgang mit *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei *package.json* in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der *package.json* und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx *package.json* Template für Windows
 
@@ -191,21 +193,21 @@ Brixx *package.json* Template für Windows
       }
     }
 
-In der *package.json* muss nur bei der Eigenschaft **`name`** der „technische“ Name (Package Name) der Brixx Webkomponente
+In der *package.json* ersetzen wir den Platzhalter **`{brixx-component-name}`** für die Eigenschaft **`name`**  mit dem  Namen für das JavaScript-Package der neuen Brixx Webkomponente. Der Name muss aus Kleinbuchstaben und einem Wort bestehen und darf Bindestriche und Unterstriche enthalten.
 
     "name": "brixx-simple-element"
 
-und bei den Projekt Abhängigkeiten **`dependencies`** die Version für das NPM-Package **`@brixx/script`** angegeben werden.
+Bei den **`dependencies`** ersetzen wir dann noch den Platzhalter **`{brixx-script-version}`** mit der Version für das NPM-Package **`@brixx/script`** das wir verwenden.
 
     "dependencies": {
       "@brixx/script": "1.0.3"
     }
 
-Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package `@brixx/script` verwenden wir die Version **`1.0.3`** 
+Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.3`** 
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der *package.json* verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 
-Zur Erstellung der Brixx Webkomponente wird in Brixx-Script *Webpack* und *Babel* verwendet. Das erfordert für die Entwicklung eine Reihe von NPM-Packages als **`devDependencies`** und sind im Template bereits eingetragen. Dabei sind die Versionsnummern der NPM-Packages im Beispiel „gepinnt“, können sich aber in einer späteren Version ändern.
+Zur Erstellung der Brixx Webkomponente wird *Webpack* und *Babel* verwendet. Das erfordert für die Entwicklung eine Reihe von NPM-Packages als **`devDependencies`** und sind im Template eingetragen. Dabei sind die Versionsnummern der NPM-Packages für das Beispiel „gepinnt“, können aber bei Bedarf angepasst werden.
 
     ...
     "devDependencies": {
@@ -240,20 +242,20 @@ Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code
 
 Visual Studio Code - NPM-SCRIPTS (*NPM Script Explorer*)
 
-Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt sehen wir in der Explorer-Ansicht den Ordner **`node_modules`** mit den NPM-Packages und die Datei **`package-lock.json`**
+Nach der Installation der Abhängigkeiten in der *package.json* für das Projekt sehen wir in der Explorer-Ansicht den Ordner **`[node_modules]`** mit den NPM-Packages und die Datei **`package-lock.json`**
 
 <img src="../images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Explorer-Ansicht
 
 ### [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
-Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Dafür verwenden wir zur Erstellung einer **„Standard“ Brixx Webkomponente** das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig und kann direkt verwendet werden. In diesem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
+Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Zur Erstellung einer „einfachen“ **Brixx Webkomponente** nutzen wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. In diesem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet.
 
 <img src="../images/vscode-webpack-config.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - webpack.config.js
 
-Damit sind alle Vorbereitungen zur Erstellung der Brixx Webkomponente abgeschlossen wodurch die Projekt-Ordnerstruktur im Beispiel wie folgt aussieht.
+Damit sind die Vorbereitungen zur Erstellung der Brixx Webkomponente abgeschlossen wodurch die Projekt-Ordnerstruktur im Beispiel wie folgt aussieht.
 
     brixx-simple-element/
     ├── node-modules/
@@ -261,14 +263,14 @@ Damit sind alle Vorbereitungen zur Erstellung der Brixx Webkomponente abgeschlos
     ├── package.json
     └── webpack.config.js
 
-  > Im Unterschied zum Brixx Web-Baustein mit Brixx-Script Standalone importieren wir die Brixx Webkomponente nicht direkt mit der JavaScript-Datei in ein HTML-Dokument. Die Brixx Webkomponente wird dabei für die Entwicklung mit Webpack in der JavaScript-Datei **`index.js`** erwartet und in einem **Build**-Prozess mit dem NPM-Script **`build`** erstellt.
+  > Im Unterschied zum Brixx Web-Baustein importieren wir die Brixx Webkomponente nicht direkt mit der JavaScript-Datei in das HTML-Dokument. Dabei wird die Webkomponente für die Entwicklung mit Webpack in der JavaScript-Datei **`index.js`** erwartet und in einem **Build**-Prozess mit dem NPM-Script **`build`** erstellt.
 
 Wir erstellen die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und importieren zuerst das Modul **`Brixx`** aus dem NPM-Package **`@brixx/script`**, das wir mit der *package.json* installiert haben.
 
     // Imports
     import { Brixx } from '@brixx/script'
 
-Als nächstes erstellen wir ein „einfaches“ **JSX-Element** mit dem HTML Tag Name **`<Greeting>`** und dem HTML Attribut **`name`**. Das Attribut *name* können wir einfach im JSX-Element mit *Curly Brackets* **`{}`** verwenden. Ähnlich wie die Liste **`animals`** im Brixx Web-Baustein **`[brixx-animal-list]`**.
+Anschließend erstellen wir ein **JSX-Element** mit dem HTML Tag Name **`<Greeting>`** und dem HTML Attribut **`name`**. Das Attribut *name* können wir im JSX-Element mit *Curly Brackets* **`{}`** verwenden. Ähnlich wie die Liste **`animals`** im Brixx Web-Baustein **`[brixx-animal-list]`**.
 
     // Create a Brixx JSX-Element
     const Greeting = ({ name }) => (
@@ -277,7 +279,7 @@ Als nächstes erstellen wir ein „einfaches“ **JSX-Element** mit dem HTML Tag
       </div>
     )
 
-Anschließend erstellen ein **`Brixx.element`** mit dem JSX-Element **`<Greeting>`** und dem Attribut **`name={'Bob the Builder'}`** als Basis für die Brixx Webkomponente.
+Als nächstes erstellen ein **`Brixx.element`** mit dem JSX-Element **`<Greeting>`** und dem Attribut **`name={'Bob the Builder'}`** als Basis für die Brixx Webkomponente.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -291,12 +293,12 @@ Anschließend erstellen ein **`Brixx.element`** mit dem JSX-Element **`<Greeting
       </div>
     )
 
-Zum Schluss wird das Brixx Element als HTML-Elemet **`<brixx-simple-element>`** im Browser registriert.
+Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-simple-element>`** registriert.
 
     // Register the Brixx HTML-Element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
-Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
+Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Baustein) **`./index.js`**
 
     // Imports
     import { Brixx } from '@brixx/script'
@@ -322,7 +324,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
 
-Bei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template beim **Build**-Prozess mit Webpack und wird in erster Linie zum testen mit dem *Webpack DevServer* verwendet. Dafür verwenden wir im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Datei als **`index.html`** im Projektordner. Auch hier sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
+WirBei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template für den **Build**-Prozess mit Webpack und wird in der Regel nur zum testen mit dem *Webpack DevServer* verwendet. Wir nutzen im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Datei als **`index.html`** im Projektordner. Dabei sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
 
 HTML-Template in der HTML-Datei **`index.html`**
 
@@ -373,21 +375,21 @@ Nach dem **`Build`**-Prozess sieht die Projekt-Ordnerstruktur abschließend wie 
     ├── package.json
     └── webpack.config.js
 
-Beim **Build**-Prozess wurde der Ordner **`[dist]`** erstellt, in dem die Brixx Webkomponente als **Brixx Script-Component** im Ordner **`[components]`** in der JavaScript-Datei **`brixx-simple-element.js`** erstellt wurde. Der Ordner **`[dist]`** entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. 
+Beim **Build**-Prozess wird der Ordner **`[dist]`** erstellt. Darin die Brixx Webkomponente als **Brixx Script-Component** im Ordner **`[components]`** in der JavaScript-Datei **`brixx-simple-element.js`**. Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. 
 
 <img src="../images/vscode-npm-build-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Brixx Component built
 
+## Brixx Webkomponente verwenden
+In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente im Ordner **`[dist]`** in Projekten verwendet und verteilt.  
+
+Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
+
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
-## Brixx Webkomponente `[brixx-simple-element]` verwenden
-In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`[dist]`** in Projekten verwendet und verteilt.  
-
-Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente eigenstängig, kann direkt ohne Brixx-Script Standalone als Brixx **Script-Baustein** in das HTML-Dokument importiert werden.
-
-## Brixx Webkomponente `[brixx-simple-element]` testen
-Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
+## Brixx Webkomponente testen
+Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung angepaßt und verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
 
 - Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten (testen) die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/pfeil.png" width="8px" /> **]**
 
@@ -421,10 +423,10 @@ Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkom
   Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
 ## Brixx Webkomponente `[brixx-complex-element]` erstellen
-Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit CSS-Dateien anschließemd mit einer **Brixx Class Component** (Klassen-Komponente). Brixx Klassen-Komponenten werden zur besseren Strukturierung von komplexen Projekten verwendet und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner **`[brixx-complex-element]`** und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
+Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit zusätzlichen CSS-Dateien und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner **`[brixx-complex-element]`** und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
 ### HTML Styles hinzufügen
-Wir stylen die Brixx-Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür den Ordner **`[styles]`** im Projektordner. In den Ordner für die Styles kopieren wir die [Bootstrap CSS-Datei (ZIP)](https://get.cdnpkg.com/twitter-bootstrap/5.0.0-alpha1/bootstrap.min.css) **`bootstrap.min.css`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
+Wir „stylen“ die Brixx-Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen dafür zum einen [Bootstrap](https://getbootstrap.com/) und kopieren die [`bootstrap.min.css`](../downloads/bootstrap.min.css) in den Ordner **`[styles]`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
 
 Komplette Styles der CSS-Datei **`index.css`**
 
@@ -494,13 +496,13 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
     </html>
 
 ### Brixx Webkomponente erweitern
-Wir erweitern die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und importieren die CSS-Dateien.
+Wir erweitern die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und importieren zuerst die CSS-Dateien.
 
     // Styles
     import './styles/bootstrap.min.css'
     import './styles/index.css'
 
-Danach registrieren wir noch das Brixx HTML-Element unter dem neuen Namen **`brixx-complex-element`**
+Danach registrieren wir das Brixx HTML-Element unter dem neuen Namen **`brixx-complex-element`**
 
     // Register the Brixx HTML-Element <brixx-complex-element>
     Brixx.registerElement({ name: 'brixx-complex-element' })
@@ -508,7 +510,7 @@ Danach registrieren wir noch das Brixx HTML-Element unter dem neuen Namen **`bri
 Bevor wir das Beispiel mit einer **Brixx Class Component** erweitern machen wir die restlichen notwendigen Anpassungen und Erweiterungen.
 
 ### Webpack-Konfiguration erweitern
-Für die „Integration“ der CSS-Dateien erweitern wir die vorhandene Webpack-Konfiguration mit dem Webpack Plugin [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/). Damit haben wir u. a. die Möglichkeit eine externe CSS-Datei für die Brixx Webkomponente einzubinden, und unterstützt auch On-Demand-Loading von CSS und SourceMaps.
+Für die „Integration“ der CSS-Dateien erweitern wir die Webpack-Konfiguration mit dem Webpack Plugin [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/). Damit haben wir u. a. die Möglichkeit eine externe CSS-Datei für die Brixx Webkomponente einzubinden, und unterstützt auch On-Demand-Loading von CSS und SourceMaps.
 
     ...
     const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -527,11 +529,11 @@ Das Plugin wird in der Webpack-Konfiguration initialisiert und konfiguriert. Dab
       })
 
 ### Projekt-Konfiguration anpassen
-Für die Projekt-Konfiguration in der *package.json* müssen auch keine goßen Anpassung gemacht werden. Wir ändern den Package Namen der Webkomponente
+In der Projekt-Konfiguration *package.json* müssen auch nicht viele Anpassungen gemacht werden. Wir ersetzen den aktuellen Namen `brixx-simple-element` bei der Eigenschaft **`name`** mit dem  Namen für das JavaScript-Package der neuen Brixx Webkomponente.
 
     "name": "brixx-complex-element"
 
-und ersetzen wie das Plugin in der Webpack Konfiguration nur in den **`devDependencies`** das Package `style-loader` gegen das **`mini-css-extract-plugin`**
+Bei den **`devDependencies`** ersetzen wir das Package `style-loader` gegen **`mini-css-extract-plugin`** wie für das Plugin in der Webpack Konfiguration.
 
     ...
     "mini-css-extract-plugin": "2.7.2",
@@ -541,13 +543,18 @@ und ersetzen wie das Plugin in der Webpack Konfiguration nur in den **`devDepend
 Nach der Änderung der *package.json* installieren wir die NPM-Packages mit **`npm install`** und testen anschließend die Brixx Webkomponente.
 
 ### Brixx Webkomponente testen
-Die Brixx Webkomponente können wir, wie im Beispiel vorher, sehr einfach mit **`npm run start`** testen, ohne vorher die Brixx Webkomponente erstellen zu müssen.
+Die Brixx Webkomponente können wir während der Entwicklung immer mit **`npm run start`** testen, ohne vorher die Brixx Webkomponente erstellen zu müssen.
 
 <img src="../images/vscode-complex-element-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
-Damit der Name der Brixx Wekomponente hält was er verspricht erweitern wir die Webkomponente mit der **Brixx Class Component** (Klassen-Komponente). Wir erstellen im Ordner **[`components`]** die Brixx Class Component **`Counter`** in der JavaScript-Datei **`Counter.js`** Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+#
+
+Under Construction ...
+
+## Brixx Class Component hinzufügen
+Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir die Webkomponente mit der **Brixx Class Component** (Klassen-Komponente) und erstellen im Ordner **[`components`]** die Class Component **`Counter`** in der JavaScript-Datei **`Counter.js`** Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
     ├── components/
@@ -615,11 +622,11 @@ Komplette Brixx Class Component **`Counter`** in der JavaScript-Datei **`Counter
       }
     }
 
-Um die Brixx Class Component **`Counter`** im Beispiel verwenden zu können wird die JavaScript-Datei **`Counter.js`** im Ordner **[`components`]** in die Brixx Webkomponente importiert.
+Um die Brixx Class Component **`Counter`** zu verwenden wird die JavaScript-Datei **`Counter.js`** im Ordner **[`components`]** in die Brixx Webkomponente importiert.
 
     import Counter from './components/Counter'
 
-Anschließend können wir die Brixx Class Component **`Counter`** als HTML-Element **`<Counter>`** in der Brixx Webkomponente verwenden.
+Anschließend können wir die Class Component direkt als HTML-Element **`<Counter>`** in der Brixx Webkomponente verwenden.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -663,21 +670,20 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
     // Register the Brixx HTML-Element <brixx-complex-element>
     Brixx.registerElement({ name: 'brixx-complex-element' })
 
+### Brixx Webkomponente bauen
+
+## Brixx Webkomponente verwenden
+
+Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-complex-element.zip]](../downloads/brixx-complex-element.zip)
+
+## Brixx Webkomponente testen
 Wir testen die Brixx Webkomponente noch einmal mit **`npm run start`** bevor wir die Brixx Webkomponente endgültig erstellen.
 
 <img src="../images/vscode-complex-element-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
-Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-complex-element.zip]](../downloads/brixx-complex-element.zip)
-
-#
-
-Under Construction ...
-
-## Build a Brixx Class Component
-
-## Build a Brixx Script-Component
+## Brixx Script-Component
 ...
 
 #
