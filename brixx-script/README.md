@@ -8,8 +8,13 @@
 Brixx-Script ist eine freie JavaScript-Library zur Erstellung eigenständiger Web-Bausteinen. Mit Brixx-Script können **„Smarte“ Web-Bausteine** (Brixx) für Webseiten und Webanwendungen erstellt werden. Dadurch kann der Programmieraufwand und Projektkomplexität für eine **Low-Code-Entwicklung** auf ein Minimum reduziert werden. **Brixx Webkomponenten** (Web-Bausteine) werden mit mit [JSX (JavaScript XML)](https://en.wikipedia.org/wiki/JSX_(JavaScript)) erstellt und können als *Brixx HTML-Element* im HTML-Dokument oder *Brixx Script-Element* in JavaScript-Anwendungen und Frameworks verwendet werden. JSX wurde 2014 mit [React](https://en.wikipedia.org/wiki/React_(JavaScript_library)) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 als LaSSiE seinen Ursprung als plattformunabhängige Web-Entwicklung und wurde 2005 mit E4X erweitert. Zeitgleich mit dem Aufkommen von JSX wurde E4X von der Mozilla Foundation 2014 als deprecated gekennzeichnet und folglich auch in LaSSiE durch JSX ersetzt. LaSSiE wurde zunächst als integriertes Baustein-System in anderen Libraries eingesetzt, aber aufgrund der großen Popularität und Verbreitung von JSX im Dezember 2022 als freie JavaScript-Library **Brixx-Script** zur Erstellung von Brixx Webkomponenten veröffentlicht. Brixx-Script dient in erster Linie zur Erstellung einer Baustein-orientierten Projektarchitektur kann aber auch eine Lightweight-Alternative zu anderen Frameworks und Libraries sein.
 
 - [Was wird alles benötigt?](#required)
+  - [Install Visual Studio Code for Windows](../VSCode.md)
+  - [Install Node.js and npm for Windows](../Nodejs.md)
 - [Erste Schritte](#getstarted)
 - [Brixx-Script Tutorial](#tutorial)
+  - [Projekt-Konfiguration package.json](../NPM-config.md)
+  - [NPM-Packages installieren](../NPM-install.md)
+  - [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
 - [Brixx-Script Referenz](#reference)
 
 # <div id='required'/> Was wird alles benötigt?
