@@ -36,7 +36,7 @@ Der JavaScript Compiler [Babel](https://babeljs.io/ 'Opensource JavaScript trans
 Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ 'Opensource cross platform JavaScript runtime environment') und [npm](https://www.npmjs.com/ 'Node package manager') auch [Webpack](https://webpack.js.org/ 'Opensource JavaScript modul packer') und [Babel](https://babeljs.io/ 'Opensource JavaScript transcompiler'). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
 ## Brixx Web-Baustein `[brixx-animal-list]` erstellen
-Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur zu Beginn wie folgt aussieht.
 
     brixx-element-sample/
     ├── components/
@@ -45,14 +45,14 @@ Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[component
 
   > Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (*Brixx web component*) und als **Brixx Script-Baustein** die JavaScript-Datei (*Brixx script component*) vom Brixx Web-Baustein.
   
-Darin erstellen wir einen Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Baustein) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Baustein) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
 
 Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`** mit einer untergeordneten HTML-Liste.
 
-  > Ein **`Brixx.element`** kann besonders für „einfache“ Brixx Web-Bausteine verwendet werden und einmal für einen Web-Baustein vorkommen, ermöglicht eine schnelle Entwicklung mit Brixx-Script, und reduziert nicht zuletzt Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung). 
+  > Ein **`Brixx.element`** kann besonders für „einfache“ Brixx Web-Bausteine verwendet werden und einmal pro Web-Baustein vorkommen. Mit dem Brixx Standard-Element wird eine schnelle Entwicklung mit Brixx-Script ermöglicht, und reduziert Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung). 
 
     // Create a Brixx default element
     Brixx.element = 
@@ -63,7 +63,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`**
       </ul>
     </div>
 
-  > **Tip:** Die Formatierung mit Brixx-Sript ist frei, es wird aber für eine bessere Projektstruktur und JavaScript Integration empfohlen JSX-Code in *Parentheses* **`()`** zu verwenden.
+  > **Tip:** Die Code-Formatierung mit Brixx-Sript ist frei. Für eine bessere Projektstruktur ist aber empfohlen JSX-Code in *Parentheses* **`()`** als *Code-Block* zu verwenden.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -75,7 +75,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`**
       </div>
     );
 
-Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung der JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp) nacheinander ausgegeben. JavaScript-Erweiterungen können, wie im Beispiel zu sehen, bei JSX einfach mit *Curly Brackets* **`{}`** integriert werden.
+Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung der JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp) nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit *Curly Brackets* **`{}`** als *Code-Block* integriert werden.
 
     ...
     { 
@@ -93,7 +93,7 @@ Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** r
     // Register the Brixx HTML-Element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
-Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (Brixx Script-Baustein) **`./components/brixx-animal-list.js`**
+Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Datei) **`./components/brixx-animal-list.js`**
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -116,16 +116,15 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (Brixx Script-
     Brixx.registerElement({ name: "brixx-animal-list" });
 
 ### Brixx Web-Baustein verwenden
-Die integration in ein HTML-Dokument ist nicht besonders kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen. 
+Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen. 
 
     <!-- Load Brixx-Script standalone -->
     <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird dabei mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt. 
+Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird  mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt. 
 
     <!-- Include the Brixx Component script files -->
-    <script type="text/babel" src="./components/brixx-animal-list.js"
-        data-type="module" data-presets="brixx"></script>
+    <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
 Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
@@ -137,8 +136,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
         <!-- Load Brixx-Script standalone -->
         <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
         <!-- Include the Brixx Component script files -->
-        <script type="text/babel" src="./components/brixx-animal-list.js"
-          data-type="module" data-presets="brixx"></script>
+        <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
       </head>
 
       <body>
