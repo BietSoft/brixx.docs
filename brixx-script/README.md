@@ -1,5 +1,5 @@
 # Brixx-Script  
-## Package: `@brixx/script`  
+### Package: `@brixx/script`  
 ### Version: `1.0.3` (Release 23.12.2022)  
 #
 > This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script      version 1.0.3 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
