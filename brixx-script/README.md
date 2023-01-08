@@ -755,63 +755,127 @@ Under Construction ...
 Under Construction ...
 
 ## Brixx-Script Standalone
-### Brixx-Script Standalone Datei `brixx.min.js` im `<script>`-Tag referenzieren
+
+Brixx-Script Standalone Datei `brixx.min.js` im `<script>`-Tag referenzieren
+
 `<src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>`
 
 ## Brixx-Script Package
-### Brixx-Script Package installieren
-`npm i @brixx/script`  
 
-### Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren  
+### Brixx-Script Package installieren
+
+`npm i @brixx/script`
+
+### Brixx-Script Package importieren
+
+Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren  
 `import { Brixx } from '@brixx/script'`
 
 ## Static Variables
 
-### `version (string, readonly, default='1.0.4')`
+### `version`
 
-Gets the Brixx version.
+Get the Brixx version.
+
+`string, readonly, default='1.0.4'`
 
     console.log(Brixx.version)
 
-### `componentFolder (string, readonly)`
+### `componentFolder`
 
-Gets the Brixx component folder.
+Get the Brixx component folder.
+
+`string, readonly`
 
     console.log(Brixx.componentFolder)
 
-### `elementPrefix (string, readonly)`
+### `elementPrefix`
 
-Gets the Brixx element prefix.
+Get the Brixx element prefix.
+
+`string, readonly`, `default='brixx'`
 
     console.log(Brixx.elementPrefix)
 
 ## Static Methods
 
-### `UUID`
+### `UUID()`
+
+Returns an uuid id string.
+
+    const uuid = Brixx.UUID()
+
+### `createRoot(rootElement)`
+
+Creates and returns the Brixx root element.
+
+    const root = Brixx.createRoot(rootElement)
+
+### `setComponentFolder(folder)`
+Set the Brixx Component folder.
+
+`default='components'`
+
+    Brixx.setComponentFolder('components')
+
+### `setElementPrefix(prefix)`
+Set the Brixx HTML-Element prefix.
+
+`default='brixx'`
+
+    Brixx.setComponentFolder('brixx')
+
+### `load(file)`
+
+Load Text/JSON files.
+
+Returns the file data.
+
+    const date = Brixx.load(file)
+
+### `registerElement({name = `brxx-element`, script = null})`
+Register a Brixx HTML-Element.
+
+    Brixx.registerElement({ name: 'brixx-animal-list' })
+
+### `run({file = 'index.bs', load = false, rootElement = null})`
+ Run a Brixx app
+
+    Brixx.run()
+
+## Static objects
+
+### `element`
+
+The Brixx default element.
+
+`object, default=null`
+
+    Brixx.element = <div>...</div>
 
 ### `console`
 
+The Brixx console object.
+
+    Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
+    Brixx.console.dot(30, '-')
+    Brixx.console.out('Brixx-Script v' + Brixx.version)
+    Brixx.console.out('https://brixx.it/brixx-script')
+    Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
+
 ### `Component`
 
-### `element (default=null)`
+The Brixx Component class.
 
-### `createElement`
+Brixx Component class sample
 
-### `createRoot`
+    import { Brixx } from '@brixx/script'
 
-### `initLogger`
-
-### `registerPreset`
-
-### `setComponentFolder`
-
-### `setElementPrefix`
-
-### `load`
-
-### `registerElement`
-
-### `run`
+    export default class Test extends Brixx.Component {
+      render() {
+        return <div>...</div>
+      }
+    }
 
 ## Create an instance
 
@@ -819,7 +883,8 @@ Gets the Brixx element prefix.
 
 ## Class Methods
 
-### `render`
+### `render({ element = null, rootElement = null })`
+Render a Brixx element.
 
     const instance.render()
 
