@@ -21,6 +21,7 @@ Brixx-Script ist eine freie JavaScript-Library zur Erstellung eigenständiger We
     -   [NPM-Packages installieren](../NPM-install.md)
     -   [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
 -   [Brixx-Script Referenz](#reference)
+-   [Downloads](#downloads)
 
 # <div id='required'/> Was wird alles benötigt?
 
@@ -887,6 +888,11 @@ Brixx Component class sample
 Render a Brixx element.
 
     const instance.render()
+
+## <div id='downloads'/> Downloads
+- ### [Beispiel [brixx-element-sample]  (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+- ### [Beispiel [brixx-simple-element]  (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+- ### [Beispiel [brixx-complex-element]  (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ## Copyright and License
 
