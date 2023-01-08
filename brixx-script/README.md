@@ -834,7 +834,7 @@ Returns the file data.
 
     const date = Brixx.load(file)
 
-### `registerElement({name = `brxx-element`, script = null})`
+### `registerElement({name = `brixx-element`, script = null})`
 Register a Brixx HTML-Element.
 
     Brixx.registerElement({ name: 'brixx-animal-list' })
@@ -858,6 +858,7 @@ The Brixx default element.
 
 The Brixx console object.
 
+    Brixx.console.setLogEnabled(true)
     Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
     Brixx.console.dot(30, '-')
     Brixx.console.out('Brixx-Script v' + Brixx.version)
