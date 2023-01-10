@@ -165,7 +165,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       </body>
     </html>
 
-Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-element-sample.zip]](../downloads/brixx-element-sample.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -415,7 +415,7 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -737,7 +737,7 @@ Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-complex-element.zip]](../downloads/brixx-complex-element.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -891,9 +891,9 @@ Render a Brixx element.
     const instance.render()
 
 ## <div id='downloads'/> Downloads
-- ### [Beispiel [brixx-element-sample]  (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
-- ### [Beispiel [brixx-simple-element]  (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
-- ### [Beispiel [brixx-complex-element]  (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+- ### [Beispiel v1.0.6 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+- ### [Beispiel v1.0.6 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+- ### [Beispiel v1.0.6 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ## Copyright and License
 
