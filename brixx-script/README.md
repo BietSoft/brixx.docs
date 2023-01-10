@@ -146,7 +146,7 @@ Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component D
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute *data-type* ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
@@ -300,7 +300,7 @@ Wir erstellen die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und
 
 Anschließend erstellen wir ein **JSX-Element** mit dem HTML Tag Name **`<Greeting>`** und dem HTML Attribut **`name`**. Das Attribut _name_ können wir im JSX-Element mit _Curly Brackets_ **`{}`** verwenden. Ähnlich wie die Liste **`animals`** im Brixx Web-Baustein **`[brixx-animal-list]`**.
 
-    // Create a Brixx JSX-Element
+    // Create a Brixx JSX element
     const Greeting = ({ name }) => (
       <div>
         <h3>Hello {name}. Welcome to the our Brixx world!</h3>
@@ -312,12 +312,10 @@ Als nächstes erstellen ein **`Brixx.element`** mit dem JSX-Element **`<Greeting
     // Create a Brixx default element
     Brixx.element = (
       <div>
-        <div>
-          <hr />
-          <h2>Brixx JSX-Element</h2>
-          <Greeting name={'Bob the Builder'} />
-          <hr />
-        </div>
+        <hr />
+        <h2>Brixx JSX element</h2>
+        <Greeting name={'Bob the Builder'} />
+        <hr />
       </div>
     )
 
@@ -331,7 +329,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) *
     // Imports
     import { Brixx } from '@brixx/script'
 
-    // Create a Brixx JSX-Element
+    // Create a Brixx JSX element
     const Greeting = ({ name }) => (
       <div>
         <h3>Hello {name}. Welcome to the our Brixx world!</h3>
@@ -342,7 +340,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) *
     Brixx.element = (
       <div>
         <hr />
-        <h2>Brixx JSX-Element</h2>
+        <h2>Brixx JSX element</h2>
         <Greeting name={'Bob the Builder'} />
         <hr />
       </div>
@@ -684,7 +682,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
     import './styles/bootstrap.min.css'
     import './styles/index.css'
 
-    // Create a Brixx JSX-Element
+    // Create a Brixx JSX element
     const Greeting = ({ name }) => (
       <div>
         <h3>Hello {name}. Welcome to the our Brixx world!</h3>
@@ -695,7 +693,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
     Brixx.element = (
       <div>
         <hr />
-        <h2>Brixx JSX-Element</h2>
+        <h2>Brixx JSX element</h2>
         <Greeting name={'Bob the Builder'} />
         <hr />
         <h2>Brixx Component</h2>

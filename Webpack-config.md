@@ -8,9 +8,11 @@ Brixx *webpack.config.js* Template
     const brixx_element_prefix = 'brixx'
     // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
     const brixx_component_name = null
-    // Brixx Components folder
+    // Brixx components folder
     const brixx_component_folder = 'components'
-    // Brixx build folder
+    // Brixx component section
+    const brixx_component_section = 'head'
+    // Brixx dist folder
     const brixx_dist_folder = 'dist'
     // Webpack server port
     const webpack_server_port = '8080'
@@ -27,9 +29,15 @@ Brixx *webpack.config.js* Template
       const prefix = regexp.test(brixx_file_name)
       if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
       const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
+      let component_section = 'head'  
+      try {
+        component_section = brixx_component_section || component_section
+      } catch (error) {
+        // Use default component section
+      }
       let server_port = '8080'  
       try {
-        server_port = webpack_server_port
+        server_port = webpack_server_port || server_port
       } catch (error) {
         // Use default server port
       }
@@ -89,7 +97,7 @@ Brixx *webpack.config.js* Template
             component: brixx_file_name,
             publicPath: '',
             scriptLoading: 'blocking',
-            inject: 'head',
+            inject: component_section',
             minify: { removeComments: false }
           })
         ]
@@ -111,12 +119,17 @@ Die optionale Eigenschaft **`brixx_element_prefix`** legt einen **Prefix** für 
 
 Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert **`(default=null)`**. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**. Dabei wird **`custom-element`** als Name der Brixx Webkomponente zur Brixx Script-Component Datei **`brixx-custom-element.js`** und zum Brixx HTML-Element **`<brixx-custom-element>`**
 
-    // Brixx Components folder
+    // Brixx components folder
     const brixx_component_folder = 'components'
 
 Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente im Projekt erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
 
-    // Brixx build folder
+    // Brixx component section
+    const brixx_component_section = 'head'
+
+Die optionale Eigenschaft **`brixx_component_section`** legt die Section (**`head`**, **`body`**) fest in der die Brixx Script-Component Dateien im HTML-Dokument eingefügt werden **`(default='head')`**.
+
+    // Brixx dist folder
     const brixx_dist_folder = 'dist'
 
 Die optionale Eigenschaft **`brixx_dist_folder`** wird für die Entwicklung benötigt und legt den Ordner fest in der die Brixx Webkomponente erstellt wird **`(default='./dist')`**. Der Ordner entspricht einer Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt. Die HTML-Datei **`index.html`** wird dabei in erster Linie zum testen der Brixx Webkomponente verwendet, kann aber auch für die Live-Umgebung verwenet werden. In der Regel wird nur die JavaScript-Datei der Brixx Webkomponente (Brixx Component script file) im Ordner **`[brixx_component_folder]`** in Projekten verwendet und verteilt.

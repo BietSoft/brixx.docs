@@ -3,9 +3,11 @@
 const brixx_element_prefix = 'brixx'
 // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
 const brixx_component_name = null
-// Brixx Components folder
+// Brixx components folder
 const brixx_component_folder = 'components'
-// Brixx build folder
+// Brixx component section
+const brixx_component_section = 'head'
+// Brixx dist folder
 const brixx_dist_folder = 'dist'
 // Webpack server port
 const webpack_server_port = '8080'
@@ -22,9 +24,15 @@ module.exports = (env, argv) => {
   const prefix = regexp.test(brixx_file_name)
   if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
   const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
+  let component_section = 'head'  
+  try {
+    component_section = brixx_component_section || component_section
+  } catch (error) {
+    // Use default component section
+  }
   let server_port = '8080'  
   try {
-    server_port = webpack_server_port
+    server_port = webpack_server_port || server_port
   } catch (error) {
     // Use default server port
   }
@@ -84,7 +92,7 @@ module.exports = (env, argv) => {
         component: brixx_file_name,
         publicPath: '',
         scriptLoading: 'blocking',
-        inject: 'head',
+        inject: component_section,
         minify: { removeComments: false }
       })
     ]
