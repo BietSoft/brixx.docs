@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.4` (Release 08.01.2023)
+### Version: `1.0.5` (Release 10.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.4 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.5 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 ## Was ist Brixx-Script
 
@@ -138,12 +138,12 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Da
 
 Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen.
 
-    <!-- Load Brixx-Script standalone -->
+    <!-- Load Brixx-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
 Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
 
-    <!-- Include the Brixx Component script files -->
+    <!-- Include the Brixx Component script files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
 Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
@@ -153,15 +153,15 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
     <!DOCTYPE html>
     <html>
       <head>
-        <!-- Load Brixx-Script standalone -->
+        <!-- Load Brixx-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
-        <!-- Include the Brixx Component script files -->
+        <!-- Include the Brixx Component script files for development -->
         <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
       </head>
 
       <body>
         <!-- Add the Brixx HTML-Element -->
-        <brixx-animal-list></brixx-animal-list/>
+        <brixx-animal-list></brixx-animal-list>
       </body>
     </html>
 
@@ -226,10 +226,10 @@ In der _package.json_ ersetzen wir den Platzhalter **`{brixx-component-name}`** 
 Bei den **`dependencies`** ersetzen wir dann noch den Platzhalter **`{brixx-script-version}`** mit der Version für das NPM-Package **`@brixx/script`** das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.4"
+      "@brixx/script": "1.0.5"
     }
 
-Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.4`**
+Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.5`**
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 
@@ -778,7 +778,7 @@ Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren
 
 Get the Brixx version.
 
-`string, readonly, default='1.0.4'`
+`string, readonly, default='1.0.5'`
 
     console.log(Brixx.version)
 
