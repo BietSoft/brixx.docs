@@ -2,15 +2,15 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.5` (Release 10.01.2023)
+### Version: `1.0.6` (Release 10.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.5 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.6 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 ## Was ist Brixx-Script
 
-Brixx-Script ist eine freie JavaScript-Library zur Erstellung eigenständiger Web-Bausteinen. Mit Brixx-Script können **„Smarte“ Web-Bausteine** (Brixx) für Webseiten und Webanwendungen erstellt werden. Dadurch kann der Programmieraufwand und Projektkomplexität für eine **Low-Code-Entwicklung** auf ein Minimum reduziert werden. **Brixx Webkomponenten** (Web-Bausteine) werden mit mit [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) erstellt und können als _Brixx HTML-Element_ im HTML-Dokument oder _Brixx Script-Element_ in JavaScript-Anwendungen und Frameworks verwendet werden. JSX wurde 2014 mit [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) eingeführt und gleicht im Syntax [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zur Integration von XML in JavaSript. Brixx-Script hat 1998 als LaSSiE seinen Ursprung als plattformunabhängige Web-Entwicklung und wurde 2005 mit E4X erweitert. Zeitgleich mit dem Aufkommen von JSX wurde E4X von der Mozilla Foundation 2014 als deprecated gekennzeichnet und folglich auch in LaSSiE durch JSX ersetzt. LaSSiE wurde zunächst als integriertes Baustein-System in anderen Libraries eingesetzt, aber aufgrund der großen Popularität und Verbreitung von JSX im Dezember 2022 als freie JavaScript-Library **Brixx-Script** zur Erstellung von Brixx Webkomponenten veröffentlicht. Brixx-Script dient in erster Linie zur Erstellung einer Baustein-orientierten Projektarchitektur kann aber auch eine Lightweight-Alternative zu anderen Frameworks und Libraries sein.
+Brixx-Script is a free JavaScript library for creating independent web components. **"Smart" web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as Brixx HTML elements in HTML documents or Brixx script components in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
 
 -   [Was wird alles benötigt?](#required)
     -   [Install Visual Studio Code for Windows](../VSCode.md)
@@ -62,9 +62,9 @@ Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[component
     │   └── brixx-animal-list.js
     └── index.html
 
-> Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Baustein** die JavaScript-Datei (_Brixx script component_) vom Brixx Web-Baustein.
+> Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Component** die JavaScript-Datei (_Brixx script component_) vom Brixx Web-Baustein.
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Baustein) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Component) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -143,7 +143,7 @@ Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für d
 
 Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
 
-    <!-- Include the Brixx Component script files for development -->
+    <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
 Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
@@ -155,12 +155,12 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       <head>
         <!-- Load Brixx-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
-        <!-- Include the Brixx Component script files for development -->
+        <!-- Include the Brixx script component files for development -->
         <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
       </head>
 
       <body>
-        <!-- Add the Brixx HTML-Element -->
+        <!-- Add the Brixx HTML element -->
         <brixx-animal-list></brixx-animal-list>
       </body>
     </html>
@@ -226,10 +226,10 @@ In der _package.json_ ersetzen wir den Platzhalter **`{brixx-component-name}`** 
 Bei den **`dependencies`** ersetzen wir dann noch den Platzhalter **`{brixx-script-version}`** mit der Version für das NPM-Package **`@brixx/script`** das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.5"
+      "@brixx/script": "1.0.6"
     }
 
-Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.5`**
+Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.6`**
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 
@@ -326,7 +326,7 @@ Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-simple-element>`*
     // Register the Brixx HTML-Element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
-Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Baustein) **`./index.js`**
+Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) **`./index.js`**
 
     // Imports
     import { Brixx } from '@brixx/script'
@@ -361,12 +361,12 @@ HTML-Template in der HTML-Datei **`index.html`**
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
-        <!-- Include the Brixx Component script files-->
+        <!-- Include the Brixx script component files -->
       </head>
 
       <body>
         <h1>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
-        <!-- Add the Brixx HTML-Element -->
+        <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
       </body>
     </html>
@@ -413,7 +413,7 @@ Visual Studio Code - Brixx Component built
 
 In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente im Ordner **`[dist]`** in Projekten verwendet und verteilt.
 
-Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Baustein** in das HTML-Dokument importiert werden.
+Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-simple-element.zip]](../downloads/brixx-simple-element.zip)
 
@@ -517,12 +517,12 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
-        <!-- Include the Brixx Component script files-->
+        <!-- Include the Brixx script component files -->
       </head>
 
       <body>
         <h1>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
-        <!-- Add the Brixx HTML-Element -->
+        <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
         <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
       </body>
@@ -735,7 +735,7 @@ Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und
 
 ### Brixx Webkomponente verwenden
 
-Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Baustein** in das HTML-Dokument importiert und verwendet werden.
+Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
 Komplettes Beispiel als ZIP-Archiv herunterladen [[brixx-complex-element.zip]](../downloads/brixx-complex-element.zip)
 
@@ -778,7 +778,7 @@ Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren
 
 Get the Brixx version.
 
-`string, readonly, default='1.0.5'`
+`string, readonly`
 
     console.log(Brixx.version)
 
@@ -794,7 +794,7 @@ Get the Brixx component folder.
 
 Get the Brixx element prefix.
 
-`string, readonly`, `default='brixx'`
+`string, readonly`
 
     console.log(Brixx.elementPrefix)
 

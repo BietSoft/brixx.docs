@@ -4,7 +4,7 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 #
 
-## [Brixx-Script Version 1.0.5](./brixx-script/README.md)
+## [Brixx-Script Version 1.0.6](./brixx-script/README.md)
 - ### [Projekt-Konfiguration package.json](./NPM-config.md)
 - ### [NPM-Packages installieren](./NPM-install.md)
 - ### [Webpack-Konfiguration webpack.config.js](./Webpack-config.md)
