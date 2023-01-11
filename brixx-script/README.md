@@ -359,13 +359,13 @@ HTML-Template in der HTML-Datei **`index.html`**
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
-        <!-- Include the Brixx script component files -->
       </head>
 
       <body>
         <h1>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
+        <!-- Include the Brixx script component files -->
       </body>
     </html>
 
@@ -501,7 +501,13 @@ Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzel
 
 ### HTML-Dokument erweitern
 
-Wir erweitern das HTML-Dokument nur mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
+Wir erweitern das HTML-Dokument im `<head>`-Tag mit einem HTML-Kommentar. Hier wird die im **Build**-Prozess erstellte CSS-Datei eingefügt und dient zur Verdeutlichung.
+
+    ...
+    <!-- Include the Brixx script component files -->
+    ...
+
+Im `<body>`-Tag eweitern wir das HTML-Dokument mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
 
     ...
     <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
@@ -523,6 +529,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
         <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
+        <!-- Include the Brixx script component files -->
       </body>
     </html>
 

@@ -6,7 +6,7 @@ const brixx_component_name = null
 // Brixx components folder
 const brixx_component_folder = 'components'
 // Brixx component section
-const brixx_component_section = 'head'
+const brixx_component_section = 'body'
 // Brixx dist folder
 const brixx_dist_folder = 'dist'
 // Webpack server port
@@ -24,7 +24,7 @@ module.exports = (env, argv) => {
   const prefix = regexp.test(brixx_file_name)
   if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
   const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-  let component_section = 'head'  
+  let component_section = 'body'  
   try {
     component_section = brixx_component_section || component_section
   } catch (error) {

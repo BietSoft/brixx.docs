@@ -11,7 +11,7 @@ Brixx *webpack.config.js* Template
     // Brixx components folder
     const brixx_component_folder = 'components'
     // Brixx component section
-    const brixx_component_section = 'head'
+    const brixx_component_section = 'body'
     // Brixx dist folder
     const brixx_dist_folder = 'dist'
     // Webpack server port
@@ -29,7 +29,7 @@ Brixx *webpack.config.js* Template
       const prefix = regexp.test(brixx_file_name)
       if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
       const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-      let component_section = 'head'  
+      let component_section = 'body'  
       try {
         component_section = brixx_component_section || component_section
       } catch (error) {
@@ -125,9 +125,9 @@ Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ 
 Die optionale Eigenschaft **`brixx_component_folder`** legt den Ordner fest in der die Brixx Webkomponente im Projekt erwartet wird **`(default='./components')`** und sollte im Projektordner angelegt werden.
 
     // Brixx component section
-    const brixx_component_section = 'head'
+    const brixx_component_section = 'body'
 
-Die optionale Eigenschaft **`brixx_component_section`** legt die Section (**`head`**, **`body`**) fest in der die Brixx Script-Component Dateien im HTML-Dokument eingefügt werden **`(default='head')`**.
+Die optionale Eigenschaft **`brixx_component_section`** legt die Section (**`head`**, **`body`**) fest in der die Brixx Script-Component Dateien im HTML-Dokument eingefügt werden **`(default='body')`**.
 
     // Brixx dist folder
     const brixx_dist_folder = 'dist'
