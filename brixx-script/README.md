@@ -109,7 +109,7 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-L
 
 Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** registriert.
 
-    // Register the Brixx HTML-Element <brixx-animal-list>
+    // Register the Brixx HTML element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
 Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Datei) **`./components/brixx-animal-list.js`**
@@ -131,7 +131,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Da
       </div>
     );
 
-    // Register the Brixx HTML-Element <brixx-animal-list>
+    // Register the Brixx HTML element <brixx-animal-list>
     Brixx.registerElement({ name: "brixx-animal-list" });
 
 ### Brixx Web-Baustein verwenden
@@ -321,7 +321,7 @@ Als nächstes erstellen ein **`Brixx.element`** mit dem JSX-Element **`<Greeting
 
 Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-simple-element>`** registriert.
 
-    // Register the Brixx HTML-Element <brixx-simple-element>
+    // Register the Brixx HTML element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
 Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) **`./index.js`**
@@ -346,7 +346,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) *
       </div>
     )
 
-    // Register the Brixx HTML-Element <brixx-simple-element>
+    // Register the Brixx HTML element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
 WirBei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template für den **Build**-Prozess mit Webpack und wird in der Regel nur zum testen mit dem _Webpack DevServer_ verwendet. Wir nutzen im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Datei als **`index.html`** im Projektordner. Dabei sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
@@ -520,12 +520,12 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
+        <title>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
         <!-- Include the Brixx script component files -->
       </head>
 
       <body>
-        <h1>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
+        <h1>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
         <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
@@ -543,7 +543,7 @@ Wir erweitern die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und
 
 Danach registrieren wir das Brixx HTML-Element unter dem neuen Namen **`brixx-complex-element`**
 
-    // Register the Brixx HTML-Element <brixx-complex-element>
+    // Register the Brixx HTML element <brixx-complex-element>
     Brixx.registerElement({ name: 'brixx-complex-element' })
 
 Bevor wir das Beispiel mit einer **Brixx Class Component** erweitern machen wir die restlichen notwendigen Anpassungen und Erweiterungen.
@@ -709,7 +709,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei **`./index.js`**
       </div>
     )
 
-    // Register the Brixx HTML-Element <brixx-complex-element>
+    // Register the Brixx HTML element <brixx-complex-element>
     Brixx.registerElement({ name: 'brixx-complex-element' })
 
 ### Brixx Webkomponente bauen
