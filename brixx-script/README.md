@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.6` (Release 10.01.2023)
+### Version: `1.0.7` (Release 12.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.6 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.7 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 ## Was ist Brixx-Script
 
@@ -99,18 +99,17 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-L
     ...
     {
       animals.map((animal) => (
-          <li>
-            <h3>{animal}</h3>
-          </li>
-        )
-      )
+        <li>
+          <h3>{animal}</h3>
+        </li>
+      ))
     }
     ...
 
 Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** registriert.
 
     // Register the Brixx HTML element <brixx-animal-list>
-    Brixx.registerElement({ name: "brixx-animal-list" });
+    Brixx.registerElement({ name: "animal-list" });
 
 Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Datei) **`./components/brixx-animal-list.js`**
 
@@ -122,17 +121,19 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Da
       <div>
         <h2>Animals</h2>
         <ul>
-          {animals.map((animal) => (
-            <li>
-              <h3>{animal}</h3>
-            </li>
-          ))}
+          {
+            animals.map((animal) => (
+              <li>
+                <h3>{animal}</h3>
+              </li>
+            ))
+          }
         </ul>
       </div>
     );
 
     // Register the Brixx HTML element <brixx-animal-list>
-    Brixx.registerElement({ name: "brixx-animal-list" });
+    Brixx.registerElement({ name: "animal-list" });
 
 ### Brixx Web-Baustein verwenden
 
@@ -226,10 +227,10 @@ In der _package.json_ ersetzen wir den Platzhalter **`{brixx-component-name}`** 
 Bei den **`dependencies`** ersetzen wir dann noch den Platzhalter **`{brixx-script-version}`** mit der Version für das NPM-Package **`@brixx/script`** das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.6"
+      "@brixx/script": "1.0.7"
     }
 
-Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.6`**
+Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.7`**
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 
@@ -358,14 +359,14 @@ HTML-Template in der HTML-Datei **`index.html`**
       <head>
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
+        <title>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
       </head>
-
+      
       <body>
-        <h1>Brixx HTML-Element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
+        <h1>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
-        <!-- Include the Brixx script component files -->
+        <!-- Include the Brixx script component files-->
       </body>
     </html>
 
@@ -535,13 +536,13 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
 ### Brixx Webkomponente erweitern
 
-Wir erweitern die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und importieren zuerst die CSS-Dateien.
+Wir erweitern die Brixx Webkomponente in der JavaScript-Datei **`index.js`** und importieren zusätzlich die CSS-Dateien.
 
     // Styles
     import './styles/bootstrap.min.css'
     import './styles/index.css'
 
-Danach registrieren wir das Brixx HTML-Element unter dem neuen Namen **`brixx-complex-element`**
+Danach registrieren wir das Brixx HTML-Element unter dem neuen Namen **`brixx-complex-element`** und sind schon fertig.
 
     // Register the Brixx HTML element <brixx-complex-element>
     Brixx.registerElement({ name: 'brixx-complex-element' })
