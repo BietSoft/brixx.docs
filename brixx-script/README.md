@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.7` (Release, 12.01.2023)
+### Version: `1.0.8` (Release, 15.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.7 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.8 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Script
 
@@ -227,10 +227,10 @@ In der _package.json_ ersetzen wir den Platzhalter **`{brixx-component-name}`** 
 Bei den **`dependencies`** ersetzen wir dann noch den Platzhalter **`{brixx-script-version}`** mit der Version für das NPM-Package **`@brixx/script`** das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.7"
+      "@brixx/script": "1.0.8"
     }
 
-Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.7`**
+Die Brixx Webkomponente bekommt den Namen **`brixx-simple-element`** und für das Package **`@brixx/script`** verwenden wir die Version **`1.0.8`**
 
 Die Abhängigkeiten **`devDependencies`** werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit **`npm install --save-dev  <package>`** installiert werden.
 

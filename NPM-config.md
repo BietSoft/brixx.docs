@@ -20,7 +20,7 @@ Beispiel für eine *package.json* Datei
       "author": "Frank Biet",
       "license": "MIT",
       "dependencies": {
-        "@brixx/script": "1.0.7"
+        "@brixx/script": "1.0.8"
       },
       "devDependencies": {
         "@babel/core": "7.19.6",
@@ -99,7 +99,7 @@ Das Feld **`license`** ist eine wichtige, oft übersehene Eigenschaft. Mit der E
 Mit dem Feld **`repository`** kann man angeben wo sich der Code für das Projekt befindet. Das Feld enthält ein Objekt, das eine URL definiert, unter der sich der Quellcode befindet, und welche Art von Versionskontrollsystem verwendet wird. Die Eigenschaft für die URL soll darauf hinweisen, von wo aus auf die Versionskontrolle zugegriffen werden kann, nicht nur auf die freigegebene Codebasis. Das Feld wird nicht benötigt und ist optional, wenn das Package nicht in der npm-Registry veröffentlicht wird.
 
     "dependencies": {
-      "@brixx/script": "1.0.7"
+      "@brixx/script": "1.0.8"
     }
 
 Mit dem Feld **`dependencies`** werden alle Abhängigkeiten im Projekt aufgelistet, ist eines der wichtigsten Felder, und der Grund warum wir die *package.json* benötigen. Wird ein Package mit npm installiert, werden alle Abhängigkeiten im Ordner **`[node_modules]`** heruntergeladen und ein Eintrag zur Eigenschaft **`dependencies`** hinzugefügt. Das Feld enthält ein Objekt mit dem Namen der Packages als Schlüssel und einer Version oder einem Versionsbereich als Wert. Damit „weiß“ npm, welche Packages in welchen Versionen installiert werden müssen, wenn **`npm install`** im Ordner ausgeführt in der sich die package.json befindet. 
