@@ -64,7 +64,7 @@ Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[component
 
 > Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Component** die JavaScript-Datei (_Brixx script component_) vom Brixx Web-Baustein.
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Component) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein symbolisieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei (Brixx Script-Component) **`brixx-animal-list.js`** . Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein repräsentieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];

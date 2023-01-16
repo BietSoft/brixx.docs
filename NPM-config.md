@@ -127,7 +127,7 @@ Mit dem Feld **`devDependencies`** kann man angeben welche Abhängigkeiten für 
 
 Eine *package.json* Datei muss gültiges **JSON-Format** sein. Das bedeutet, dass fehlende Kommas, nicht geschlossene Anführungszeichen oder andere Formatierungsfehler npm hindern, mit der *package.json* zu interagieren und beim nächsten Ausführen eines npm-Befehls wird ein Fehler angezeigt.
 
-npm-Packages werden mit den npm-Befehlen **`npm install`**, **`npm uninstall`** und **`npm update`** verwaltet, so dass die Datei *package.json* und der Ordner **`[node_modules]`** synchron gehalten werden. Wenn man eine Abhängigkeit manuell hinzufüget, muss man **`npm install`** ausführen, bevor man die Abhängigkeit im Projekt verwenden kann.
+NPM-Packages werden mit den npm-Befehlen **`npm install`**, **`npm uninstall`** und **`npm update`** verwaltet, so dass die Datei *package.json* und der Ordner **`[node_modules]`** synchron gehalten werden. Wenn man eine Abhängigkeit manuell hinzufüget, muss man **`npm install`** ausführen, bevor man die Abhängigkeit im Projekt verwenden kann.
 
   > Packages für die Entwicklung können aternativ im „globalen“ Ordner **`[node_modules]`** mit **`npm install <package> -g`** installiert werden, müssen dann nicht im Projekt bereitgestellt werden, und sind in allen Projekten verfügbar. Das ist aber nicht empfohlen, wenn man mehreren Entwicklern an einem Projekt arbeiten. Das kann auch zu Konflikten in Projekten kommen die eine spezielle Package Version benötigen. Es ist kein Nachteil Packages für ein Projekte bereitzustellen. Zuerst werden Packages im Projektordner gesucht, werden diese nicht gefunden wird im globalen Package Ordner gesucht.
 

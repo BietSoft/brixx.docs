@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `0.9.1` (Release candidate, 15.01.2023)
+### Version: `1.0.0` (Stable, 16.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 0.9.1 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.0 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -25,6 +25,22 @@ Fast integration into any HTML document is possible, especially with our [Brixx-
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
+
+Under Construction ...
+
+## Decision table definition
+
+`@param {string} [name='Decision table']`  
+`@param {string} [description='Decision table']`  
+`@param {string} [hitPolicy='Priority']`  
+`@param {string} [definition={ input: {}, output: {}, rules: {} }]`  
+`@param {string} [data={}]`
+
+## input
+
+## output
+
+## rules
 
 # <div id='downloads'/> Downloads
 
