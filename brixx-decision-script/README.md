@@ -287,6 +287,15 @@ Komplette Styles der CSS-Datei **`brixx-check-age.css`**
         margin-top: 2px;
     }
 
+Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzelnen betrachtet werden. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+
+    brixx-check-age-web/
+    ├── components/
+    │   └── brixx-check-age.js
+    ├── styles/
+    │   └── brixx-check-age.css
+    └── index.html
+
 Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
 
     <!DOCTYPE html>
@@ -306,15 +315,6 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
             <brixx-check-age></brixx-check-age>
         </body>
     </html>
-
-Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzelnen betrachtet werden. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
-
-    brixx-check-age-web/
-    ├── components/
-    │   └── brixx-check-age.js
-    ├── styles/
-    │   └── brixx-check-age.css
-    └── index.html
 
 ### Brixx Webkomponente testen
 
