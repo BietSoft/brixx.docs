@@ -264,7 +264,7 @@ Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und e
 
 Dann erstellen eine weitere CSS-Datei **`brixx-check-age.css`** im Ordner **`[styles]`** für die Brixx Entscheidungstabelle und fügen die CSS-Datei auch mit einem HTML Stylesheet `<link>` im HTML-Dokument ein
 
-    <link href="./brixx-check-age.css" rel="stylesheet"></head>
+    <link href="./styles/brixx-check-age.css" rel="stylesheet"></head>
 
 Komplette Styles der CSS-Datei **`brixx-check-age.css`**
 
