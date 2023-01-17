@@ -307,7 +307,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
             <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
             <!-- Include the Brixx script component files for development -->
             <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
-            <link href="./brixx-check-age.css" rel="stylesheet"></head>
+            <link href="./styles/brixx-check-age.css" rel="stylesheet"></head>
         </head>
 
         <body>
