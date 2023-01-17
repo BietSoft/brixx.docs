@@ -10,7 +10,7 @@
 
 # Was ist Brixx-Script
 
-Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as *Brixx HTML elements* in HTML documents or *Brixx script components* in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
+Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as _Brixx HTML elements_ in HTML documents or _Brixx script components_ in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
 
 -   [Was wird alles benötigt?](#required)
     -   [Install Visual Studio Code for Windows](../VSCode.md)
@@ -147,9 +147,9 @@ Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component D
   <!-- Include the Brixx script component files for development -->
   <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute *data-type* ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-animal-list>`** in den `<body>`-Tag  einfügen und sind fertig.
+Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-animal-list>`** in den `<body>`-Tag einfügen und sind fertig.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -368,7 +368,7 @@ HTML-Template in der HTML-Datei **`index.html`**
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
       </head>
-      
+
       <body>
         <h1>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
@@ -464,7 +464,7 @@ Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt
 
 ### HTML Styles hinzufügen
 
-Wir „stylen“ die Brixx-Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen dafür zum einen [Bootstrap](https://getbootstrap.com/) und kopieren die [`bootstrap.min.css`](../downloads/bootstrap.min.css) in den Ordner **`[styles]`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
+Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen zum einen [Bootstrap](https://getbootstrap.com/), kopieren die [`bootstrap.min.css`](../downloads/bootstrap.min.css) in den Ordner **`[styles]`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
 
 Komplette Styles der CSS-Datei **`index.css`**
 
@@ -594,7 +594,7 @@ Nach der Änderung der _package.json_ installieren wir die NPM-Packages mit **`n
 
 ### Brixx Webkomponente testen
 
-Die Brixx Webkomponente können wir während der Entwicklung immer mit **`npm run start`** testen, ohne vorher die Brixx Webkomponente erstellen zu müssen.
+Die Brixx Webkomponente können wir während der Entwicklung jederzeit mit **`npm run start`** testen, ohne vorher die Brixx Webkomponente erstellen zu müssen.
 
 <img src="../images/vscode-complex-element-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -826,6 +826,7 @@ Creates and returns the Brixx root element.
     const root = Brixx.createRoot(rootElement)
 
 ### `setComponentFolder(folder)`
+
 Set the Brixx Component folder.
 
 `default='components'`
@@ -833,6 +834,7 @@ Set the Brixx Component folder.
     Brixx.setComponentFolder('components')
 
 ### `setElementPrefix(prefix)`
+
 Set the Brixx HTML-Element prefix.
 
 `default='brixx'`
@@ -848,12 +850,14 @@ Returns the file data.
     const date = Brixx.load(file)
 
 ### `registerElement({name = `brixx-element`, script = null})`
+
 Register a Brixx HTML-Element.
 
     Brixx.registerElement({ name: 'brixx-animal-list' })
 
 ### `run({file = 'index.bs', load = false, rootElement = null})`
- Run a Brixx app
+
+Run a Brixx app
 
     Brixx.run()
 
@@ -899,14 +903,16 @@ Brixx Component class sample
 ## Class Methods
 
 ### `render({ element = null, rootElement = null })`
+
 Render a Brixx element.
 
     const instance.render()
 
 # <div id='downloads'/> Downloads
-- ### [Beispiel v1.0.6 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
-- ### [Beispiel v1.0.6 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
-- ### [Beispiel v1.0.6 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+
+-   ### [Beispiel v1.0.6 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+-   ### [Beispiel v1.0.6 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+-   ### [Beispiel v1.0.6 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ## Copyright and License
 

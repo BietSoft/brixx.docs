@@ -33,7 +33,7 @@ Wir erstellen eine einfache Brixx Entscheidungstabelle für eine Altersüberprü
     │   └── brixx-check-age.js
     └── index.html
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`**. Die verwenden wir als sogenannte *Callback*-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`**. Die verwenden wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.
 
     // Check decision table callback function (optional)
     const checkDecisionTable = (output) => {
@@ -42,7 +42,7 @@ Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx 
 
 Eine Callback-Funktion kann optional verwendet werden, und wird nach Überprüfung der Entscheidungstabelle aufgerufen (Callback). Die Funktion erhält im Beispiel das Ergebnis (Output) der Überprüfung im Parameter **`output`** und gibt das Ergebnis in der Browserkonsole aus.
 
-> **Tip:** Browserkonsole öffnen mit  `Strg + Shift + J` bei Windows oder `Command [⌘] + Option-Taste + J` bei MacOS
+> **Tip:** Browserkonsole öffnen mit `Strg + Shift + J` bei Windows oder `Command [⌘] + Option-Taste + J` bei MacOS
 
 <img src="../images/browserconsole.webp" style="margin-bottom: -5px; width: 600px;" />
   
@@ -115,9 +115,9 @@ Mit dem HTML-Element **`<Input>`** erstellen wir ein Eingabefeld zur Dateneingab
 
 Eingabefelder sind optional und müssen nicht verwendet werden. Dateneingaben können auch aus einem HTML-Formular, Webservice oder einer Datenbank kommen, und die verschiedenen Eingabearten mit Brixx-Deision-Script kombiniert werden.
 
-> **Tip:** Brixx-Decision-Schript HTML-Elemente können wie normale HTML-Elemente mit CSS-Stylesheets für eigen Anforderungen angepasst werden. 
+> **Tip:** Brixx-Decision-Schript HTML-Elemente können wie normale HTML-Elemente mit CSS-Stylesheets für eigen Anforderungen angepasst werden.
 
-Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTML-Element **`<Output>`** für das Beispiel zwei Ausgabefelder mit den Namen **`info`** und **`url`**. Für eine Entscheidungstabelle kann es beliebig viele unterschiedliche Ausgabefelder geben. Wir verwenden für das Ausgabefeld *`info`* wieder ein HTML-Element **`<Field>`**, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich das Attribut *`readonly`*. Dadurch kann das Feld als Datenausgabe verwendet und nicht beschrieben werden. Eine Besonderheit ist das optionale HTML-Element **`<Link>`** für das Ausgabefeld *`url`*. Enthält die Datenausgabe eine gültige URL-Adresse wird diese automatisch im Browser-Fenster geöffnet. Hierfür gibt weitere Konfigurationsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
+Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTML-Element **`<Output>`** für das Beispiel zwei Ausgabefelder mit den Namen **`info`** und **`url`**. Für eine Entscheidungstabelle kann es beliebig viele unterschiedliche Ausgabefelder geben. Wir verwenden für das Ausgabefeld _`info`_ wieder ein HTML-Element **`<Field>`**, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich das Attribut _`readonly`_. Dadurch kann das Feld als Datenausgabe verwendet und nicht beschrieben werden. Eine Besonderheit ist das optionale HTML-Element **`<Link>`** für das Ausgabefeld _`url`_. Enthält die Datenausgabe eine gültige URL-Adresse wird diese automatisch im Browser-Fenster geöffnet. Hierfür gibt weitere Konfigurationsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
 
     ...
     <Output name={"info"}>
@@ -130,7 +130,7 @@ Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTM
 
 Ausgabefelder sind optional und müssen nicht verwendet werden. Datenausgaben können wie im Beispiel mit einer Callback-Funktion verarbeitet und die verschiedenen Ausgabeearten mit Brixx-Deision-Script kombiniert werden.
 
-Ein Herzstück einer Brixx-Decision-Script Entscheidungstabelle sind die **Regeln** (rules) und werden wie in anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Eine Regel wird mit dem HTML-Element **`<Rule>`** erstellt. Dabei werden die Bedingungen für die Dateneingabe, in unserem Beispiel für das Eingabefeld *`age`*, sowie die Ergebnisswerte für die Ausgabefelder definiert. Dabei müssen nicht alle Eingabe- oder Ausgabefelder in einer Regel verwendet werden. 
+Ein Herzstück einer Brixx-Decision-Script Entscheidungstabelle sind die **Regeln** (rules) und werden wie in anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Eine Regel wird mit dem HTML-Element **`<Rule>`** erstellt. Dabei werden die Bedingungen für die Dateneingabe, in unserem Beispiel für das Eingabefeld _`age`_, sowie die Ergebnisswerte für die Ausgabefelder definiert. Dabei müssen nicht alle Eingabe- oder Ausgabefelder in einer Regel verwendet werden.
 
     ...
     <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
@@ -140,9 +140,9 @@ Ein Herzstück einer Brixx-Decision-Script Entscheidungstabelle sind die **Regel
     <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
     ...
 
-Für eine Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft *`priority`* vergeben werden. Das ist notwendig da wir im Beispiel keine explizite **`hitPolicy`** definiert haben und *`Priority`* als Default verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
+Für eine Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft _`priority`_ vergeben werden. Das ist notwendig da wir im Beispiel keine explizite **`hitPolicy`** definiert haben und _`Priority`_ als Default verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
 
-Mit dem HTML-Element **`<Check>`** wird dann noch mit dem HTML-Attribut *`button`* eine Schaltfläche mit der Eigenschaft *`label`* erstellt. Die optionale Eigenschaft *`action`* legt die *Callback*-Funktion fest, die nach der Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird unsere Funktion *`checkDecisionTable`* vom Anfang aufgerufen.
+Mit dem HTML-Element **`<Check>`** wird dann noch mit dem HTML-Attribut _`button`_ eine Schaltfläche mit der Eigenschaft _`label`_ erstellt. Die optionale Eigenschaft _`action`_ legt die _Callback_-Funktion fest, die nach der Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird unsere Funktion _`checkDecisionTable`_ vom Anfang aufgerufen.
 
     ...
     <Check button label={"Check age"} action={checkDecisionTable} />
@@ -206,9 +206,9 @@ Der Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Dat
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Decision-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-check-age>`** verwendet werden. Das Attribute *data-type* ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Decision-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-check-age>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-check-age>`** in den `<body>`-Tag  einfügen und sind fertig.
+Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-check-age>`** in den `<body>`-Tag einfügen und sind fertig.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -251,9 +251,78 @@ Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-check-
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
-    <img src="../images/brixx-check-age-web.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../images/brixx-check-age-web-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
+
+### HTML Styles hinzufügen
+
+Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen zum einen [Bootstrap](https://getbootstrap.com/) und fügen zusätzlich die CSS-Datei **`bootstrap.min.css`** direkt vom Cloudflare CDN-(Content Delivery Network)-Server mit einem HTML Stylesheet `<link>` im HTML-Dokument ein.
+
+    <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"></head>
+
+Dann erstellen eine weitere CSS-Datei **`brixx-check-age.css`** im Ordner **`[styles]`** für die Brixx Entscheidungstabelle und fügen die CSS-Datei auch mit einem HTML Stylesheet `<link>` im HTML-Dokument ein
+
+    <link href="./brixx-check-age.css" rel="stylesheet"></head>
+
+Komplette Styles der CSS-Datei **`brixx-check-age.css`**
+
+    body {
+        margin: 10px;
+    }
+
+    .brixx-decision-button {
+        padding: 0px 10px 5px;
+        margin-top: 5px;
+    }
+
+    div.brixx-decision-field {
+        color: #8ebf42;
+        font-size: 14px;
+        margin-top: 0px;
+    }
+
+    input.brixx-decision-field {
+        margin-top: 2px;
+    }
+
+Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"></head>
+            <!-- Load Brixx-Decision-Script standalone for development-->
+            <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
+            <!-- Include the Brixx script component files for development -->
+            <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
+            <link href="./brixx-check-age.css" rel="stylesheet"></head>
+        </head>
+
+        <body>
+            <!-- Add the Brixx HTML element -->
+            <brixx-check-age></brixx-check-age>
+        </body>
+    </html>
+
+Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzelnen betrachtet werden. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+
+    brixx-check-age-web/
+    ├── components/
+    │   └── brixx-check-age.js
+    ├── styles/
+    │   └── brixx-check-age.css
+    └── index.html
+
+### Brixx Webkomponente testen
+
+Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen und starten die HTML-Datei **`index.html`** mit dem _Live Server_.
+
+<img src="../images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
 
