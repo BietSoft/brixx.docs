@@ -336,14 +336,134 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## Node.js app `[brixx-check-age]` erstellen
 
-Um die Brixx Entscheidungstabelle wie im Beispiel vorher als Node.js app zu verwenden erstellen wir zuerst den Projektordner **`[brixx-check-age-node]`**. Als „Ersatz” für die Konfiguration mit den HTML-Elementen verwenden wir in diesem Beispiel die JSON Konfigrationsdatei **`brixx-check-age.json`** für die Brixx Entscheidungstabelle (Brixx decision table definition) im Projektordner.
+Um die Brixx Entscheidungstabelle wie im Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner **`[brixx-check-age-node]`** und weil wir mit JavaScript keine HTML-Elemete zur Konfiguration verwenden können erstellen wir als „Ersatz” die JSON Konfigrationsdatei (Brixx decision table definition) **`brixx-check-age.json`** für die Brixx Entscheidungstabelle im Projektordner.
 
+Komplette JSON Konfigrationsdatei **`brixx_check_age.json`**
 
+    {
+        "description": "Check age",
+        "hitPolicy": "Priority",
+        "input": {
+            "age": {
+            "description": "The age to check",
+            "type": "number",
+            "default": 0
+            }
+        },
+        "output": {
+            "info": {
+            "description": "An additional information"
+            },
+            "url": {
+            "description": "The url to link to"
+            }
+        },
+        "rules": {
+            "No entry": {
+            "age": "",
+            "info": "Please enter a valid age!",
+            "url": "https://github.com/BietSoft/brixx.docs/",
+            "priority": 30
+            },
+            "Baby": {
+            "age": "0",
+            "info": "It's is still a baby!",
+            "priority": 40
+            },
+            "Preschool": {
+            "age": "< 5",
+            "info": "Unfortunately too young!",
+            "priority": 20
+            },
+            "Teens": {
+            "age": ">= 13",
+            "url": "https://www.youtube.com/"
+            },
+            "Kids": {
+            "age": "< 13",
+            "info": "Internet Safety for Kids",
+            "url": "https://www.youtube.com/kids/",
+            "priority": 10
+            }
+        }
+    }
 
+Anschließend erstellen wir die JavaScript-Datei (Node.js app) **`brixx-check-age.js`** im Projektordner und importieren das Brixx-Decision-Script Package mit `require("@brixx/decision-script/node")` für Node.js in der Konstanten **`BrixxDecisionTable`**.
 
+    // Imports
+    const BrixxDecisionTable = require("@brixx/decision-script/node").default
 
-Darin die JavaScript-Datei **`brixx-check-age.js`**.
-"
+Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren zu können muss es vorher installiert werden. Dafür installieren wir das NPM-Package **`@brixx/decision-script`**, z.B. mit Visual Studio Code im Terminal-Fenster, im Projektordner mit `npm i @brixx/decision-script` (siehe [NPM-Packages installieren](../NPM-install.md)). 
+
+    > npm i @brixx/decision-script
+
+Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die *npm*-Konfigurationsdateien `package.json` und `package-lock.json` im Projektordner erstellt und die Projekt-Ordnerstruktur sieht wie folgt aus.
+
+    brixx-check-age-web/
+    ├── node_modules
+    ├── brixx-check-age.json
+    ├── brixx-check-age.js
+    ├── package-lock.json
+    └── package.json 
+
+Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen wir eine Liste **`input_data`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für die Node.js app repräsentieren soll z. B. aus einem Webservice oder einer Datenbank.
+
+    /**
+    *  Set the decision table input data list to check
+    *  represents e.g. data from a web service or a database
+    */
+    const input_data = [
+        { age: "" },
+        { age: 0 },
+        { age: 3 },
+        { age: 12 },
+        { age: 13 }
+    ]
+
+Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im *Constructor* mit der Eigenschaft `file` die JSON Konfigurationsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
+
+    // Create a BrixxDecisionTable instance
+    const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" }) 
+
+Die einzelnen Einträge **`input`** der Liste **`input_data`** werden dann mit **`const output = table.check(input)`** mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert und mit Unterstützung einer *`JavaScript Array map()`* nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
+
+    // Imports
+    const BrixxDecisionTable = require("@brixx/decision-script/node").default
+
+    // Check the decision table input data list
+    input_data.map((input) => {
+        // Get the output from decision table input data
+        const output = table.check(input)
+        // Prints the output to console
+        console.log(output)
+    })
+
+Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
+
+    /**
+    *  Set the decision table input data list to check
+    *  represents e.g. data from a web service or a database
+    */
+    const input_data = [
+        { age: "" },
+        { age: 0 },
+        { age: 3 },
+        { age: 12 },
+        { age: 13 }
+    ]
+
+    // Create a BrixxDecisionTable instance
+    const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })            
+
+    // Check the decision table input data list
+    input_data.map((input) => {
+        // Get the output from decision table input data
+        const output = table.check(input)
+        // Prints the output to console
+        console.log(output)
+    })
+
+Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
 
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
 

@@ -5,7 +5,7 @@ Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Termi
 
 Windows Eingabeaufforderung
 
-  > **Tip:** Die Abhängigkeiten der *package.json* können auch in Entwicklungsumgebung in Visual Studio Code in einem  Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
+  > **Tip:** Die Abhängigkeiten der *package.json* können auch in der Entwicklungsumgebung in Visual Studio Code in einem  Terminal-Fenster (Eingabeaufforderung) installiert werden. Dadurch kann man innerhalb der Entwicklungsumgebung bleiben und muss diese nicht für andere Aufgaben verlassen. Das gilt für alle Betriebssysteme.
 
 <img src="./images/vscode-npm-install-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
