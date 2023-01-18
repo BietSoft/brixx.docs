@@ -440,6 +440,9 @@ Die einzelnen Einträge **`input`** der Liste **`input_data`** werden dann mit *
 
 Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
 
+    // Imports
+    const BrixxDecisionTable = require("@brixx/decision-script/node").default
+
     /**
     *  Set the decision table input data list to check
     *  represents e.g. data from a web service or a database
@@ -462,6 +465,7 @@ Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
         // Prints the output to console
         console.log(output)
     })
+
 
 Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
 
