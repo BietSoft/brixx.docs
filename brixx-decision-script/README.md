@@ -465,6 +465,15 @@ Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
 
 Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
 
+### Node.js app testen
+
+Um die Node.js app zu testen können wir diese z.B. mit Visual Studio Code im Terminal-Fenster im Projektordner mit **`node brixx-check-age.js`** starten.
+
+<img src="../images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Die Node.js abb  `[brixx-check-age]` in der Browserkonsole
+
+
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
