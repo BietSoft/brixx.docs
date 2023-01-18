@@ -33,12 +33,22 @@ Wir erstellen eine einfache Brixx Entscheidungstabelle für eine Altersüberprü
     │   └── brixx-check-age.js
     └── index.html
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`**. Die verwenden wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`** als *`JavaScript Arrow Function`*. Die verwenden wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.  
 
     // Check decision table callback function (optional)
     const checkDecisionTable = (output) => {
         console.log("Output:", output);
     }
+
+>Wir verwenden in den Beispiel JavaScript mit mindestens [ES6 (ECMAScript 6)](https://en.wikipedia.org/wiki/ECMAScript) Standard und im aktuellen Beispiel für die Callback-Funktion eine [JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard noch nicht, und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben und unseren Code später nicht ändern sondern nur Babel weglassen müssen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+
+Die Callback-Funktion alternativ als Function-Object
+
+    // Check decision table callback function (optional)
+    function checkDecisionTable(output) {
+        console.log("Output:", output);
+    }
+
 
 Eine Callback-Funktion kann optional verwendet werden, und wird nach Überprüfung der Entscheidungstabelle aufgerufen (Callback). Die Funktion erhält im Beispiel das Ergebnis (Output) der Überprüfung im Parameter **`output`** und gibt das Ergebnis in der Browserkonsole aus.
 
@@ -323,6 +333,17 @@ Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen un
 <img src="../images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
+
+## Node.js app `[brixx-check-age]` erstellen
+
+Um die Brixx Entscheidungstabelle wie im Beispiel vorher als Node.js app zu verwenden erstellen wir zuerst den Projektordner **`[brixx-check-age-node]`**. Als „Ersatz” für die Konfiguration mit den HTML-Elementen verwenden wir in diesem Beispiel die JSON Konfigrationsdatei **`brixx-check-age.json`** für die Brixx Entscheidungstabelle (Brixx decision table definition) im Projektordner.
+
+
+
+
+
+Darin die JavaScript-Datei **`brixx-check-age.js`**.
+"
 
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
 

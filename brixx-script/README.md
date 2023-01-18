@@ -94,7 +94,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`**
       </div>
     );
 
-Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung der JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp) nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
+Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung der JavaScript *`Array map()`* nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
 
     ...
     {
@@ -105,6 +105,8 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-L
       ))
     }
     ...
+
+>Wir verwenden in den Beispiel JavaScript mit mindestens [ES6 (ECMAScript 6)](https://en.wikipedia.org/wiki/ECMAScript) Standard und im aktuellen Beispiel für die Schleife eine JavaScript [Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen noch nicht ES6, und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben und unseren Code später nicht ändern sondern nur Babel weglassen müssen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
 
 Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** registriert.
 
