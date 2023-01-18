@@ -26,21 +26,21 @@ Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (
 
 ## Brixx Web-Baustein `[brixx-check-age]` erstellen
 
-Wir erstellen eine einfache Brixx Entscheidungstabelle für eine Altersüberprüfung mit einem direktem Aufruf der entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-check-age-web]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Wir erstellen eine einfache Brixx Entscheidungstabelle zur Altersüberprüfung mit direktem Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-check-age-web]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-check-age-web/
     ├── components/
     │   └── brixx-check-age.js
     └── index.html
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`** als *`JavaScript Arrow Function`*. Die verwenden wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.  
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Datei **`brixx-check-age.js`** und zuerst die Funktion **`checkDecisionTable`** ([JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp)). Die verwenden wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung, dient Gleichzeitig aber auch als Beispiel für eine weiterführende Programmierung.  
 
     // Check decision table callback function (optional)
     const checkDecisionTable = (output) => {
         console.log("Output:", output);
     }
 
->Wir verwenden in den Beispiel JavaScript mit mindestens [ES6 (ECMAScript 6)](https://en.wikipedia.org/wiki/ECMAScript) Standard und im aktuellen Beispiel für die Callback-Funktion eine [JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard noch nicht, und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben und unseren Code später nicht ändern sondern nur Babel weglassen müssen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+>Wir verwenden in den Beispiel JavaScript mit mindestens [ES6 (ECMAScript 6)](https://en.wikipedia.org/wiki/ECMAScript) Standard und im aktuellen Beispiel für die Callback-Funktion eine *JavaScript Arrow Function*. Ältere Browser unterstützen den aktuellen ECMAScript-Standard noch nicht, und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben und unseren Code später nicht ändern sondern nur Babel weglassen müssen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
 
 Die Callback-Funktion alternativ als Function-Object
 
@@ -471,7 +471,7 @@ Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](.
 
 ### Node.js app testen
 
-Um die Node.js app zu testen können wir diese z.B. mit Visual Studio Code im Terminal-Fenster im Projektordner mit **`node brixx-check-age.js`** starten.
+Um die Node.js app zu testen können wir die JavaScript-Datei `brixx-check-age.js` z.B. mit Visual Studio Code in einem Terminal-Fenster im Projektordner mit **`node brixx-check-age.js`** starten.
 
 <img src="../images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
 
