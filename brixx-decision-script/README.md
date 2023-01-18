@@ -471,7 +471,7 @@ Um die Node.js app zu testen können wir diese z.B. mit Visual Studio Code im Te
 
 <img src="../images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Die Node.js abb  `[brixx-check-age]` in der Browserkonsole
+Die Node.js app  `[brixx-check-age]` in der Browserkonsole
 
 
 # <div id='tutorial'/> Brixx-Decision-Script Tutorial
