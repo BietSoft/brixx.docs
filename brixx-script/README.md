@@ -16,6 +16,7 @@ Brixx-Script is a free JavaScript library for creating independent web component
     -   [Install Visual Studio Code for Windows](../VSCode.md)
     -   [Install Node.js and npm for Windows](../Nodejs.md)
 -   [Erste Schritte](#getstarted)
+    -   [Brixx Web-Baustein [brixx-check-age] erstellen](#getstarted-web-component)
 -   [Brixx-Script Tutorial](#tutorial)
     -   [Projekt-Konfiguration package.json](../NPM-config.md)
     -   [NPM-Packages installieren](../NPM-install.md)
@@ -53,7 +54,7 @@ Der JavaScript Compiler [Babel](https://babeljs.io/ "Opensource JavaScript trans
 
 Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") und [npm](https://www.npmjs.com/ "Node package manager") auch [Webpack](https://webpack.js.org/ "Opensource JavaScript modul packer") und [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler"). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
-## Brixx Web-Baustein `[brixx-animal-list]` erstellen
+## <div id='getstarted-web-component'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
 
 Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
