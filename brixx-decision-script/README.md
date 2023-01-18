@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.0` (Stable, 16.01.2023)
+### Version: `1.0.1` (Stable, 18.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.0 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.1 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
