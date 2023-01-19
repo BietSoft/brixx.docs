@@ -10,17 +10,19 @@
 
 # Was ist Brixx-Script
 
-Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as _Brixx HTML elements_ in HTML documents or _Brixx script components_ in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
+Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as _Brixx HTML elements_ in HTML documents or _Brixx script components_ in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (ECMAScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
 
 -   [Was wird alles benötigt?](#required)
     -   [Install Visual Studio Code for Windows](../VSCode.md)
     -   [Install Node.js and npm for Windows](../Nodejs.md)
 -   [Erste Schritte](#getstarted)
-    -   [Brixx Web-Baustein [brixx-check-age] erstellen](#getstarted-web-component)
+    -   [Brixx Web-Baustein [brixx-animal-list] erstellen](#brixx-animal-list)
 -   [Brixx-Script Tutorial](#tutorial)
     -   [Projekt-Konfiguration package.json](../NPM-config.md)
     -   [NPM-Packages installieren](../NPM-install.md)
     -   [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
+    -   [Brixx Web-Baustein [brixx-simple-element] erstellen](#brixx-simple-element)
+    -   [Brixx Web-Baustein [brixx-complex-element] erstellen](#brixx-complex-element)
 -   [Brixx-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
@@ -48,13 +50,13 @@ Mit dem Modul-Bundler [Webpack](https://webpack.js.org/ "Opensource JavaScript m
 
 ## Babel
 
-Der JavaScript Compiler [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler") wird verwendet ECMAScript 2015+ um Code in eine Version für nicht kompatible oder ältere Browser zu konvertieren. Dadurch können Brixx Webkomponenten in allen Browsern und JavaScript-Umgebungen verwendet werden. Babel wird als Erweiterung mit Webpack verwendet und für die Verwendung stehen Beispiele und Templates zur Verfügung. Babel erfordert für die Verwendung mit Brixx-Sript keine Vorkenntnisse.
+Der JavaScript Compiler [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler") wird verwendet um aktuellen JavaSript Code (ECMAScript 2015+) in eine Version für nicht kompatible oder ältere Browser zu konvertieren. Dadurch können Brixx Webkomponenten in allen Browsern und JavaScript-Umgebungen verwendet werden. Babel wird als Erweiterung mit Webpack verwendet und für die Verwendung stehen Beispiele und Templates zur Verfügung. Babel erfordert für die Verwendung mit Brixx-Sript keine Vorkenntnisse.
 
 # <div id='getstarted'/> Erste Schritte
 
 Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") und [npm](https://www.npmjs.com/ "Node package manager") auch [Webpack](https://webpack.js.org/ "Opensource JavaScript modul packer") und [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler"). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
-## <div id='getstarted-web-component'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
+## <div id='brixx-animal-list'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
 
 Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -95,7 +97,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`**
       </div>
     );
 
-Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-Listenelement mit **`<h3>{animal}</h3>`** und Unterstützung einer *`JavaScript Array map()`* nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
+Die einzelnen Einträge **`anial`** der Liste **`anials`** werden in einer Schleife im HTML-Listenelement **`<h3>{animal}</h3>`** mit der *`JavaScript Array map()`* Funktion nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
 
     ...
     {
@@ -107,7 +109,21 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden dann im HTML-L
     }
     ...
 
->Wir verwenden in den Beispiel JavaScript mit mindestens [ES6 (ECMAScript 6)](https://en.wikipedia.org/wiki/ECMAScript) Standard und im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard noch nicht, und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben und unseren Code später nicht ändern sondern nur Babel weglassen müssen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+>Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard teilweise nicht und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben. Den Code muss man so später nicht ändern sondern „nur“ Babel weglassen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+
+Die Schleife alternativ als JavaScript-for-Schleife, oder was Babel daraus macht.
+
+    ...
+    {
+      for (var i = 0; i < animals.length; i++) {
+        return (
+          <li>
+            <h3>{animals[i]}</h3>
+          </li>
+        )
+      }
+    }
+    ...
 
 Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** registriert.
 
@@ -150,7 +166,7 @@ Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component D
   <!-- Include the Brixx script component files for development -->
   <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ES6 Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-animal-list>`** in den `<body>`-Tag einfügen und sind fertig.
 
@@ -176,11 +192,11 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       </body>
     </html>
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
 
 ### Brixx Web-Baustein testen
 
-Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten die HTML-Datei **`index.html`** mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
+Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und starten die HTML-Datei **`index.html`** mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
 
 1. Klick auf **`[Go Live]`** in der Visual Studio Code Status Bar (**`Click to run live server`**
 2. Öffnen der HTML-Datei im Editor-Fenster mit der Tastenkombination **`[ALT+L Alt+O]`**
@@ -201,7 +217,7 @@ Zum testen vom Brixx Web-Baustein öffnen wir den Projektordner **`[brixx-elemen
 
 # <div id='tutorial'/> Brixx-Script Tutorial
 
-## Brixx Webkomponente `[brixx-simple-element]` erstellen
+## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
 Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
@@ -424,7 +440,7 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -461,7 +477,7 @@ Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkom
 
     Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
-## Brixx Webkomponente `[brixx-complex-element]` erstellen
+## <div id='brixx-complex-element'/> Brixx Webkomponente `[brixx-complex-element]` erstellen
 
 Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit zusätzlichen CSS-Dateien und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner **`[brixx-complex-element]`** und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
@@ -753,7 +769,7 @@ Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -913,9 +929,9 @@ Render a Brixx element.
 
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.6 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
--   ### [Beispiel v1.0.6 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
--   ### [Beispiel v1.0.6 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+-   ### [Beispiel v1.0.8 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+-   ### [Beispiel v1.0.8 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+-   ### [Beispiel v1.0.8 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
 
 ## Copyright and License
 

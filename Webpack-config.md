@@ -104,7 +104,7 @@ Brixx *webpack.config.js* Template
       }
     }
 
-Um die Webpack-Konfiguration anzupassen stehen spezielle Eigenschaften im Bereich **`Edit the Brixx Component optional build settings here!`** in der Konfigurationsdatei zur Verfügung.
+Um die Webpack-Konfiguration anzupassen stehen spezielle Eigenschaften im Bereich **`Edit the Brixx Component optional build settings here!`** zur Verfügung.
 
   > Anwender ohne Webpack Kentnisse sollten Anpassungen an der Webpack-Konfiguration ausschließlich über die spezielle Eigenschaften machen.
 
@@ -117,7 +117,7 @@ Die optionale Eigenschaft **`brixx_element_prefix`** legt einen **Prefix** für 
     // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
     const brixx_component_name = null
 
-Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert **`(default=null)`**. In dem Fall wird die Eigenschaft **`name`** der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**. Dabei wird **`custom-element`** als Name der Brixx Webkomponente zur Brixx Script-Component Datei **`brixx-custom-element.js`** und zum Brixx HTML-Element **`<brixx-custom-element>`**
+Die optionale Eigenschaft **`brixx_component_name`** legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert **`(default=null)`**. In dem Fall wird die Eigenschaft **`name`** in aus der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist **`{brixx_element_prefix}-element`**. Dabei wird **`custom-element`** als Name der Brixx Webkomponente zur Brixx Script-Component Datei **`brixx-custom-element.js`** und zum Brixx HTML-Element **`<brixx-custom-element>`**
 
     // Brixx components folder
     const brixx_component_folder = 'components'

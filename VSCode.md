@@ -25,7 +25,7 @@ If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https:
 Visual Studio Code - Get started
 
 ## Visual Studio Code Erweiterungen
-Erhöhen Sie die Leistung von Visual Studio Code durch Erweiterungen (Extensions). Die Features, die Visual Studio Code standardmäßig enthält, sind nur der „Anfang“. Mit VS Code-Erweiterungen können Sie Ihrer Installation Sprachen, Debugger und Tools hinzufügen, um Ihren Entwicklungsworkflow zu unterstützen, beispielsweise die Sprache in Visual Studio Code mit der Erweiterung [German Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de) auf Deutsch umzustellen. 
+Man kann die Leistung von Visual Studio Code durch Erweiterungen (Extensions) erhöhen. Features die Visual Studio Code standardmäßig enthält sind nur der „Anfang“. Mit VS Code-Erweiterungen kann man der Installation Sprachen, Debugger und Tools hinzufügen, um den Entwicklungsworkflow zu unterstützen, beispielsweise die Sprache in Visual Studio Code mit der Erweiterung [German Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-de) auf Deutsch umzustellen. 
 
  > **Tip:** Wer mit unterschiedlichen Editoren arbeitet sollte die Sprache nicht umstellen. Das erleichtert den Umgang mit anderen Editoren, die in der Regel die selben englischen Menübezeichnungen verwenden, aber nicht bei allen Editoren ist eine Umstellung der Sprache möglich.
 
@@ -52,7 +52,7 @@ Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio C
   Ein lokaler Webserver (Entwicklungsserver) mit Auto Reload (Live reload) Funktion bei Änderungen am Quellcode. Der *Live Server*    ermöglicht es bei der Entwicklung das Verhalten der Brixx Webkomponente  in einer Browserumgebung zu testen, und verhindert die *blocked by CORS policy* ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
 
 - [NPM-Scripts](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.vscode-npm-scripts) (Visual Studio Code bis Version 1.22)  
-  Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter *NPM Script Explorer* zur Verfügung und eine zusätzliche Installation der Erweiterung *NPM-Scripts* wird nicht mehr benötigt.
+  Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter *NPM Script Explorer* zur Verfügung und eine zusätzliche Installation der Erweiterung *NPM-Scripts* wird dann nicht mehr benötigt.
 
   Der *NPM Script Explorer* kann in im Menü in der Explorer-Ansicht aktiviert werden.
 
