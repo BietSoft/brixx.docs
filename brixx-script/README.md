@@ -446,7 +446,7 @@ Komplettes Beispiel v1.0.8 herunterladen [[brixx-simple-element] (ZIP-Archiv)](.
 
 Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung angepaßt und verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
 
--   Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten (testen) die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
+-   Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
 
     <img src="../images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
 

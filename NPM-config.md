@@ -105,7 +105,7 @@ Mit dem Feld **`repository`** kann man angeben wo sich der Code für das Projekt
 
 Mit dem Feld **`dependencies`** werden die Abhängigkeiten im Projekt aufgelistet, ist eines der wichtigsten Felder, und der Grund warum wir die *package.json* benötigen. Wird ein Package mit npm installiert, werden alle Abhängigkeiten im Ordner **`[node_modules]`** heruntergeladen und ein Eintrag zur Eigenschaft **`dependencies`** hinzugefügt. Das Feld enthält ein Objekt mit dem Namen der Packages als Schlüssel und einer Version oder einem Versionsbereich als Wert. Damit „weiß“ npm, welches Package in welcher Versioner installiert werden muss, wenn **`npm install`** im Ordner ausgeführt in der sich die package.json befindet. 
 
-  > Das Caretzeichen ( **`^`** ) und die Tilde ( **`~`** ) sind zusätzliche Notationen für Versionsbereiche in der *package.json*. [Mehr über Versionen in npm](https://docs.npmjs.com/cli/v6/using-npm/semver)
+  > Das Caretzeichen ( **`^`** ) und die Tilde ( **`~`** ) sind zusätzliche Notationen für Versionsbereiche in der *package.json* ([mehr über Versionen in npm](https://docs.npmjs.com/cli/v6/using-npm/semver)).
 
     "devDependencies": {
       "@babel/core": "7.19.6",

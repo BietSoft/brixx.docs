@@ -231,7 +231,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
     </body>
     </html>
 
-Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../downloads/brixx-check-age-web.zip)
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../downloads/brixx-check-age-web.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -258,7 +258,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
 ## <div id='brixx-check-age-styles'/> Brixx Web-Baustein `[brixx-check-age]` erweitern
 
-Wie erweitern die Brixx Webkomponente [brixx-check-age] mit zusätzlichen CSS-Dateien.
+Wie erweitern die Brixx Webkomponente [brixx-check-age] mit zusätzlichen CSS-Dateien. Dafür erstellen wir zuerst einen Projektordner **`[brixx-check-age-styles]`** und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
 ### HTML Styles hinzufügen
 
@@ -307,12 +307,12 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
     <html>
         <head>
             <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"></head>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
             <!-- Load Brixx-Decision-Script standalone for development-->
             <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
             <!-- Include the Brixx script component files for development -->
             <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
-            <link href="./styles/brixx-check-age.css" rel="stylesheet"></head>
+            <link href="./styles/brixx-check-age.css" rel="stylesheet">
         </head>
 
         <body>
@@ -320,6 +320,8 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
             <brixx-check-age></brixx-check-age>
         </body>
     </html>
+
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../downloads/brixx-check-age-styles.zip)
 
 ### Brixx Webkomponente testen
 
@@ -392,7 +394,53 @@ Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren
 
     > npm i @brixx/decision-script
 
-Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-Konfigurationsdatei `package.json` und `package-lock.json` im Projektordner erstellt und die Projekt-Ordnerstruktur sieht wie folgt aus.
+Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-Konfigurationsdatei `package.json` und `package-lock.json` im Projektordner erstellt. In der `package.json` Datei wird das NPM-Package mit `@brixx/decision-script` im Feld `dependencies` eingetragen.
+
+    {
+        "dependencies": {
+            "@brixx/decision-script": "^1.0.1"
+        }
+    }
+
+Wir erweitern die `package.json` Datei ein wenig. Das ist nicht erforderlich, aber wir können dadurch u. a. für eine weitere Bearbeitung in Visual Studio Code in der Explorer-Ansicht die Erweiterung **`[NPM-SCRIPTS]`** verwenden. 
+
+Wir legen zuerst den Namen des Package fest mit `brixx-check-age` und definieren den Einstiegspunkt für den Projektstart mit `brixx-check-age.js`
+
+    ...
+    "name": "brixx-check-age",
+    "main": "brixx-check-age.js",
+    ...
+
+Danach erstellen wir das NPM-Script `start` zu starten der Node.js app.
+
+    ...
+    "scripts": {
+        "start": "node brixx-check-age.js"
+    },
+    ...
+
+Abschließend entfernen das Caretzeichen ( **`^`** ) bei der Version wodurch nicht mehr automatisch die neueste Version von Brixx-Decision-Script installiert wird ([mehr über Versionen in npm](https://docs.npmjs.com/cli/v6/using-npm/semver)).
+
+    ...
+    "dependencies": {
+        "@brixx/decision-script": "1.0.1"
+    }
+    ...
+
+Komplette `package.json` Datei
+
+    {
+        "name": "brixx-check-age",
+        "main": "brixx-check-age.js",
+        "scripts": {
+            "start": "node brixx-check-age.js"
+        },
+        "dependencies": {
+            "@brixx/decision-script": "1.0.1"
+        }
+    }
+
+Die Projekt-Ordnerstruktur sieht damit wie folgt aus.
 
     brixx-check-age-web/
     ├── node_modules
@@ -461,15 +509,17 @@ Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.0 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
 
 ### Node.js app testen
 
-Um die Node.js app zu testen können wir die JavaScript-Datei `brixx-check-age.js` z.B. mit Visual Studio Code in einem Terminal-Fenster im Projektordner mit **`node brixx-check-age.js`** starten.
+Die Node.js app kann in der Eingabeaufforderung mit **`node brixx-check-age.js`** im Projektordner **`[brixx-check-age-node]`** getestet werden, oder direkt in der Entwicklungsumgebung Visual Studio Code. Wir starten die Node.js app durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
 
 <img src="../images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Die Node.js app `[brixx-check-age]` in der Browserkonsole
+Visual Studio Code - Run start
+
+Die Node.js app `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
 
