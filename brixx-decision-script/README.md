@@ -542,6 +542,7 @@ Under Construction ...
 # <div id='downloads'/> Downloads
 
 -   ### [Beispiel v1.0.1 [brixx-check-age-web] (ZIP-Archiv)](../downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.1 [brixx-check-age-styles] (ZIP-Archiv)](../downloads/brixx-check-age-styles.zip)
 -   ### [Beispiel v1.0.1 [brixx-check-age-node] (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
