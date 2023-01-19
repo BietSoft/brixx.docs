@@ -331,9 +331,9 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-node'/> Node.js app `[brixx-check-age]` erstellen
 
-Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner **`[brixx-check-age-node]`** und weil wir mit JavaScript keine HTML-Elemete zur Definition verwenden können erstellen wir als „Ersatz” die JSON Konfigrationsdatei (Brixx decision table definition) **`brixx-check-age.json`** für die Brixx Entscheidungstabelle im Projektordner.
+Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner **`[brixx-check-age-node]`** und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) **`brixx-check-age.json`** im Projektordner.
 
-Komplette JSON Konfigrationsdatei **`brixx_check_age.json`**
+Komplette JSON-Definitionsdatei **`brixx_check_age.json`**
 
     {
         "description": "Check age",
@@ -392,7 +392,7 @@ Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren
 
     > npm i @brixx/decision-script
 
-Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-Konfigurationsdateien `package.json` und `package-lock.json` im Projektordner erstellt und die Projekt-Ordnerstruktur sieht wie folgt aus.
+Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-Konfigurationsdatei `package.json` und `package-lock.json` im Projektordner erstellt und die Projekt-Ordnerstruktur sieht wie folgt aus.
 
     brixx-check-age-web/
     ├── node_modules
@@ -415,7 +415,7 @@ Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen
         { age: 13 }
     ]
 
-Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _Constructor_ mit der Eigenschaft `file` die JSON Konfigurationsatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
+Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _Constructor_ mit der Eigenschaft `file` die JSON-Definitionsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
 
     // Create a BrixxDecisionTable instance
     const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })
