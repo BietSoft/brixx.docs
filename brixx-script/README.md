@@ -58,7 +58,7 @@ Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung
 
 ## <div id='brixx-animal-list'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
 
-Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Brixx Web-Bausteine (Brixx Webkomponenten) werden in der Regel im Ordner **`[components]`** erstellt und erwartet. Dazu erstellen wir einen Ordner **`./components`** im Projektordner **`[brixx-element-sample]`** wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-element-sample/
     ├── components/
@@ -67,7 +67,7 @@ Brixx Web-Bausteine (Webkomponenten) werden in der Regel im Ordner **`[component
 
 > Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Component** die JavaScript-Datei (_Brixx script component_) vom Brixx Web-Baustein.
 
-Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-(Brixx Script-Component)-Datei **`brixx-animal-list.js`**. Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein repräsentieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
+Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der JavaScript-Datei **`brixx-animal-list.js`** (Brixx Script-Component). Zuerst erstellen wir eine Liste **`anials`** ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein repräsentieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -130,7 +130,7 @@ Abschließend wird das Brixx Element als HTML-Elemet **`<brixx-animal-list>`** r
     // Register the Brixx HTML element <brixx-animal-list>
     Brixx.registerElement({ name: "animal-list" });
 
-Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei (JavaScript-Datei) **`./components/brixx-animal-list.js`**
+Kompletter Brixx Web-Baustein in der Brixx Script-Component-Datei **`./components/brixx-animal-list.js`**
 
     // Set an animal list
     const animals = ["Dog", "Cat", "Mouse"];
@@ -161,7 +161,7 @@ Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für d
     <!-- Load Brixx-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
+Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component-Datei **`./components/brixx-animal-list.js"`** wird mit einen HTML-**`<script>`**-Element im HTML-Dokument eingefügt.
 
   <!-- Include the Brixx script component files for development -->
   <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
@@ -219,7 +219,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
 ## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
-Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als **`package.json`** im  des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx _package.json_ Template für Windows
 
@@ -785,12 +785,12 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
 ## Brixx-Script Standalone
 
-Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach in einem `<script>`-Tag vom Brixx CDN-(Content Delivery Network)-Server referenziert werden.
+Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach mit einem `<script>`-Tag vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Ein Brixx Web-Baustein (_Brixx web component_) kann dann in einem `<script>`-Tag importiert werden. Wie in den Beispielen die externe Brixx Script-Component-Datei `./components/brixx-animal-list.js` 
+Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden,  wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js` 
 
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
@@ -835,22 +835,23 @@ Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu 
 
 ## Brixx-Script Package
 
-### Brixx-Script Package installieren
+### Brixx-Script Package mit npm installieren
 
-`npm i @brixx/script`
+    `npm i @brixx/script`
 
 ### Brixx-Script Package importieren
 
-Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren  
-`import { Brixx } from '@brixx/script'`
+Das Modul `Brixx` vom Package `@brixx/script` importieren 
+
+    `import { Brixx } from '@brixx/script'`
 
 ## Brixx-Script Library
 
-Brixx-Script Modul `Brixx` von der Brixx-Script Library Datei importieren. Dafür kann man die Brixx-Script Library (minified) [`brixx.js`](https://brixx.it/@brixx/script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server beispielsweise in das Stammverzeichniss (`root`) des Projekts kopieren und importieren.
+Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die Brixx-Script Library (minified) [`brixx.js`](https://brixx.it/@brixx/script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend importieren.
 
     import { Brixx } from './brixx'
 
-> **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die *Latest* Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu verwenden.
+> **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die *Latest* Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 ## Static Variables
 
