@@ -9,7 +9,7 @@ This is the BRIXX.it documentation repository. For further information please fe
 - ### [NPM-Packages installieren](./docs/NPM-install.md)
 - ### [Webpack-Konfiguration webpack.config.js](./docs/Webpack-config.md)
 ## [Brixx-Decision-Script Version 1.0.1](./brixx-decision-script/README.md)
-## [Install Visual Studio Code for Windows](./docs/VSCode.md)
+## [Install Visual Studio Code for Windows](./docs/VSCode-install.md)
 ## [Install Node.js and npm for Windows](./docs/Nodejs-install.md)
 
 #
