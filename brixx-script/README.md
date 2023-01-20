@@ -97,7 +97,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`**
       </div>
     );
 
-Die einzelnen Einträge **`anial`** der Liste **`anials`** werden in einer Schleife im HTML-Listenelement **`<h3>{animal}</h3>`** mit der *`JavaScript Array map()`* Funktion nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
+Die einzelnen Einträge **`anial`** der Liste **`anials`** werden in einer Schleife im HTML-Listenelement **`<h3>{animal}</h3>`** mit der _`JavaScript Array map()`_ Funktion nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ **`{}`** als _Code-Block_ integriert werden.
 
     ...
     {
@@ -109,7 +109,7 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden in einer Schle
     }
     ...
 
->Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard teilweise nicht und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben. Den Code muss man so später nicht ändern sondern „nur“ Babel weglassen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+> Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard teilweise nicht und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben. Den Code muss man so später nicht ändern sondern „nur“ Babel weglassen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
 
 Die Schleife alternativ als JavaScript-for-Schleife, oder was Babel daraus macht.
 
@@ -166,7 +166,7 @@ Der Brixx Web-Baustein **`[brixx-animal-list]`** in der Brixx Script-Component D
   <!-- Include the Brixx script component files for development -->
   <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-animal-list>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-animal-list>`** in den `<body>`-Tag einfügen und sind fertig.
 
@@ -781,17 +781,57 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
 ## Brixx Script-Component
 
-Under Construction ...
-
 # <div id='reference'/> Brixx-Script Referenz
-
-Under Construction ...
 
 ## Brixx-Script Standalone
 
-Brixx-Script Standalone Datei `brixx.min.js` im `<script>`-Tag referenzieren
+Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach in einem `<script>`-Tag vom Brixx CDN-(Content Delivery Network)-Server referenziert werden.
 
-`<src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>`
+    <!-- Load Brixx-Script standalone for development -->
+    <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
+
+Ein Brixx Web-Baustein (_Brixx web component_) kann dann in einem `<script>`-Tag importiert werden. Wie in den Beispielen die externe Brixx Script-Component-Datei `./components/brixx-animal-list.js` 
+
+    <!-- Include the Brixx script component files for development -->
+    <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
+
+### Das Attribut **`type`**  
+
+Brixx-Script Standalone verwendet Babel um Brixx-Script in den unterschiedlichen Browsern nutzen zu können. Hierfür wird das Attribut `type` mit **`type="text/babel"`** angegeben.
+
+### Das Attribut **`data-type`**
+
+Das Attribute `data-type` ist optional und wird beim Import von ECMAScript 2015+ (ES6) Modulen mit **`data-type="module"`** angegeben.
+
+### Das Attribut **`data-preset`**
+
+Damit Brixx-Script verwendet werden kann wird das Attribut `data-preset` für das `<script>`-Tag mit **`data-presets="brixx"`** angegeben.
+
+Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Das Attribut `data-type` muss in diesem Beispiel nicht angegeben werden, da kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
+
+    <!-- Include the Brixx script component for development -->
+    <script type="text/babel" data-presets="brixx">
+      const animals = ["Dog", "Cat", "Mouse"];
+
+      Brixx.element = (
+      <div>
+          <h2>Animals</h2>
+          <ul>
+          {animals.map((animal) => (
+              <li>
+              <h3>{animal}</h3>
+              </li>
+          ))}
+          </ul>
+      </div>
+      );
+
+      Brixx.registerElement({ name: "animal-list" });
+    </script>
+
+Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu verwenden. Beim Start wird in der Browserkonsole folgende Information ausgegeben.
+
+> `You are using the in-browser Brixx transformer. Be sure to precompile scripts for production - https://brixx.it/brixx-script`
 
 ## Brixx-Script Package
 
@@ -803,6 +843,14 @@ Brixx-Script Standalone Datei `brixx.min.js` im `<script>`-Tag referenzieren
 
 Brixx-Script Modul `Brixx` vom Package `@brixx/script` importieren  
 `import { Brixx } from '@brixx/script'`
+
+## Brixx-Script Library
+
+Brixx-Script Modul `Brixx` von der Brixx-Script Library Datei importieren. Dafür kann man die Brixx-Script Library (minified) [`brixx.js`](https://brixx.it/@brixx/script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server beispielsweise in das Stammverzeichniss (`root`) des Projekts kopieren und importieren.
+
+    import { Brixx } from './brixx'
+
+> **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die *Latest* Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu verwenden.
 
 ## Static Variables
 

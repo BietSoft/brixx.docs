@@ -205,7 +205,7 @@ Der Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx Script-Component Dat
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Decision-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browserversionen nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-check-age>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Decision-Script Standalone verwenden wir Babel mit **`type="text/babel"`** um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Attribute **`data-type="module"`** und **`data-presets="brixx"`** festgelegt, und der Brixx Web-Baustein kann als HTML-Element **`<brixx-check-age>`** verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Zum Schluss müssen wir nur noch das HTML-Element **`<brixx-check-age>`** in den `<body>`-Tag einfügen und sind fertig.
 
