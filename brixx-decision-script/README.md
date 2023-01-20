@@ -25,7 +25,7 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision-makin
 
 # <div id='getstarted'/> Erste Schritte
 
-Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht uns einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](https://github.com/BietSoft/brixx.docs/blob/main/brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js App (`brixx-check-age-node`).
+Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht uns einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js App (`brixx-check-age-node`).
 
 ## <div id='brixx-check-age-web'/> Brixx Web-Baustein `[brixx-check-age]` erstellen
 
@@ -56,7 +56,7 @@ Die Callback-Funktion kann optional verwendet werden, und wird nach Überprüfun
 
 > **Tip:** Browserkonsole öffnen mit `Strg + Shift + J` bei Windows oder `Command [⌘] + Option-Taste + J` bei MacOS
 
-<img src="../images/browserconsole.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/browserconsole.webp" style="margin-bottom: -5px; width: 600px;" />
   
 Werkzeuge für Webentwickler mit Konsole im Firefox Browser ( `Strg + Shift + I`)
 
@@ -231,7 +231,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
     </body>
     </html>
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../downloads/brixx-check-age-web.zip)
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -242,7 +242,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 3. Rechtsklick auf die HTML-Datei im **Editor-Fenster** und Auswahl von **`[Open with Live Server]`**
 4. Rechtsklick auf die HTML-Datei in der **Explorer-Ansicht** und Auswahl von **`[Open with Live Server]`**
 
-    <img src="../images/brixx-check-age.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/brixx-check-age.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
@@ -250,7 +250,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
-    <img src="../images/brixx-check-age-web-01.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/brixx-check-age-web-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
@@ -321,13 +321,13 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
         </body>
     </html>
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../downloads/brixx-check-age-styles.zip)
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 
 ### Brixx Webkomponente testen
 
 Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen und starten die HTML-Datei **`index.html`** mit dem _Live Server_.
 
-<img src="../images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
@@ -390,7 +390,7 @@ Anschließend erstellen wir die JavaScript-Datei (Node.js app) **`brixx-check-ag
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
 
-Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren zu können muss es vorher installiert werden. Dafür installieren wir das NPM-Package **`@brixx/decision-script`**, z.B. mit Visual Studio Code im Terminal-Fenster, im Projektordner mit `npm i @brixx/decision-script` (siehe [NPM-Packages installieren](../NPM-install.md)).
+Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren zu können muss es vorher installiert werden. Dafür installieren wir das NPM-Package **`@brixx/decision-script`**, z.B. mit Visual Studio Code im Terminal-Fenster, im Projektordner mit `npm i @brixx/decision-script` (siehe [NPM-Packages installieren](../docs/NPM-install.md)).
 
     > npm i @brixx/decision-script
 
@@ -509,13 +509,13 @@ Komplette Node.js app in der JavaScript-Datei **`./brixx-check-age.js`**
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
+Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ### Node.js app testen
 
-Die Node.js app kann in der Eingabeaufforderung mit **`node brixx-check-age.js`** im Projektordner **`[brixx-check-age-node]`** getestet werden, oder direkt in der Entwicklungsumgebung Visual Studio Code. Wir starten die Node.js app durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
+Die Node.js app kann in der Eingabeaufforderung mit **`node brixx-check-age.js`** im Projektordner **`[brixx-check-age-node]`** getestet werden, oder direkt in der Entwicklungsumgebung Visual Studio Code. Wir starten die Node.js app durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../assets/images/vscode-run.png" width="8px" /> **]**
 
-<img src="../images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Run start
 
@@ -541,9 +541,9 @@ Under Construction ...
 
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.1 [brixx-check-age-web] (ZIP-Archiv)](../downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.1 [brixx-check-age-styles] (ZIP-Archiv)](../downloads/brixx-check-age-styles.zip)
--   ### [Beispiel v1.0.1 [brixx-check-age-node] (ZIP-Archiv)](../downloads/brixx-check-age-node.zip)
+-   ### [Beispiel v1.0.1 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.1 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+-   ### [Beispiel v1.0.1 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
 

@@ -13,14 +13,14 @@
 Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as _Brixx HTML elements_ in HTML documents or _Brixx script components_ in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (ECMAScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
 
 -   [Was wird alles benötigt?](#required)
-    -   [Install Visual Studio Code for Windows](../VSCode.md)
-    -   [Install Node.js and npm for Windows](../Nodejs.md)
+    -   [Install Visual Studio Code for Windows](../docs/VSCode.md)
+    -   [Install Node.js and npm for Windows](../docs/Nodejs-install.md)
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-animal-list] erstellen](#brixx-animal-list)
 -   [Brixx-Script Tutorial](#tutorial)
-    -   [Projekt-Konfiguration package.json](../NPM-config.md)
-    -   [NPM-Packages installieren](../NPM-install.md)
-    -   [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
+    -   [Projekt-Konfiguration package.json](../docs/NPM-config.md)
+    -   [NPM-Packages installieren](../docs/NPM-install.md)
+    -   [Webpack-Konfiguration webpack.config.js](../docs/Webpack-config.md)
     -   [Brixx Web-Baustein [brixx-simple-element] erstellen](#brixx-simple-element)
     -   [Brixx Web-Baustein [brixx-complex-element] erstellen](#brixx-complex-element)
 -   [Brixx-Script Referenz](#reference)
@@ -30,11 +30,11 @@ Brixx-Script is a free JavaScript library for creating independent web component
 
 ## Quellcode Editor
 
-Für die Entwicklung kann ein einfacher Texteditor, wie der in der Linux Community beliebte [Vim](https://www.vim.org/), oder ein Quellcode Editor wie [Notpad++](https://notepad-plus-plus.org/downloads/) oder [Sublime Text](https://www.sublimetext.com/) verwendet werden. Ein kostenfreie Alternative zu einer professionellen integrierten Entwicklungsumgebung (IDE) ist [Visual Studio Code](https://code.visualstudio.com/) (VS Code) als leichtgewichtiger Quellcode Editor mit vielen IDE Erweiterungen. Visual Studio Code ist damit mehr als nur ein Quellcode Bearbeitungstool und derzeit der wohl der beliebteste Quellcode Editor ([Install Visual Studio Code for Windows](../VSCode.md)).
+Für die Entwicklung kann ein einfacher Texteditor, wie der in der Linux Community beliebte [Vim](https://www.vim.org/), oder ein Quellcode Editor wie [Notpad++](https://notepad-plus-plus.org/downloads/) oder [Sublime Text](https://www.sublimetext.com/) verwendet werden. Ein kostenfreie Alternative zu einer professionellen integrierten Entwicklungsumgebung (IDE) ist [Visual Studio Code](https://code.visualstudio.com/) (VS Code) als leichtgewichtiger Quellcode Editor mit vielen IDE Erweiterungen. Visual Studio Code ist damit mehr als nur ein Quellcode Bearbeitungstool und derzeit der wohl der beliebteste Quellcode Editor ([Install Visual Studio Code for Windows](../docs/VSCode.md)).
 
 ## Node.js und npm
 
-Um Brixx Webkomponenten zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ "Node package manager") (Node Package Manager) als Entwicklungswerkzeuge ([Install Node.js and npm for Windows](../Nodejs.md)).
+Um Brixx Webkomponenten zu erstellen verwenden wir [Node.js®](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") (cross-platform JavaScript runtime environment) und [npm](https://www.npmjs.com/ "Node package manager") (Node Package Manager) als Entwicklungswerkzeuge ([Install Node.js and npm for Windows](../docs/Nodejs-install.md)).
 
 ### Node.js
 
@@ -192,7 +192,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
       </body>
     </html>
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -203,7 +203,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 3. Rechtsklick auf die HTML-Datei im **Editor-Fenster** und Auswahl von **`[Open with Live Server]`**
 4. Rechtsklick auf die HTML-Datei in der **Explorer-Ansicht** und Auswahl von **`[Open with Live Server]`**
 
-    <img src="../images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/brixx-element-sample.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
@@ -211,7 +211,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter **`[Custom Browser]`** festgelegt werden (**`default=null`**).
 
-    <img src="../images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
@@ -219,7 +219,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
 ## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
-Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als **`package.json`** im Stammverzeichnis des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx _package.json_ Template für Windows
 
@@ -284,7 +284,7 @@ Mit den NPM **`scripts`** können wir die Brixx Webkomponente mit **`npm run bui
       "start": "webpack-dev-server --env package_name=%npm_package_name%"
     }
 
-### [NPM-Packages installieren](../NPM-install.md)
+### [NPM-Packages installieren](../docs/NPM-install.md)
 
 Wenn die Erweiterung _NPM-Scripts_ installiert ist können die NPM-Scripts direkt aus der Explorer-Ansicht ausgeführt werden. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter _NPM Script Explorer_ zur Verfügung.
 
@@ -292,21 +292,21 @@ Wenn die Erweiterung _NPM-Scripts_ installiert ist können die NPM-Scripts direk
 
 Wir öffnen den Projektordner **`[brixx-element-sample]`** in Visual Studio Code und installieren die NPM-Packages der Abhängigkeiten in der _package.json_ durch Klick mit der rechten Maustaste auf den Eintrag **`[package.json]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run Intall]`** im Kontextmenü.
 
-<img src="../images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-npm-install-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - NPM-SCRIPTS (_NPM Script Explorer_)
 
 Nach der Installation der Abhängigkeiten in der _package.json_ für das Projekt sehen wir in der Explorer-Ansicht den Ordner **`[node_modules]`** mit den NPM-Packages und die Datei **`package-lock.json`**
 
-<img src="../images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Explorer-Ansicht
 
-### [Webpack-Konfiguration webpack.config.js](../Webpack-config.md)
+### [Webpack-Konfiguration webpack.config.js](../docs/Webpack-config.md)
 
-Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Zur Erstellung einer „einfachen“ **Brixx Webkomponente** nutzen wir das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. In diesem Fall wird die Eigenschaft **`name`** der _package.json_ als Name für die Brixx Webkomponente verwendet.
+Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Zur Erstellung einer „einfachen“ **Brixx Webkomponente** nutzen wir das Template [webpack.config.template.js](../assets/downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. In diesem Fall wird die Eigenschaft **`name`** der _package.json_ als Name für die Brixx Webkomponente verwendet.
 
-<img src="../images/vscode-webpack-config.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-webpack-config.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - webpack.config.js
 
@@ -376,7 +376,7 @@ Komplette Brixx Webkomponente in der JavaScript-Datei (Brixx Script-Component) *
     // Register the Brixx HTML element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })
 
-WirBei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template für den **Build**-Prozess mit Webpack und wird in der Regel nur zum testen mit dem _Webpack DevServer_ verwendet. Wir nutzen im Beispiel das Template [index.element.template.html](../downloads/index.element.template.html) und speichern die Datei als **`index.html`** im Projektordner. Dabei sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
+WirBei der Erstellung einer Brixx Webkomponente dient die HTML-Datei als Template für den **Build**-Prozess mit Webpack und wird in der Regel nur zum testen mit dem _Webpack DevServer_ verwendet. Wir nutzen im Beispiel das Template [index.element.template.html](../assets/downloads/index.element.template.html) und speichern die Datei als **`index.html`** im Projektordner. Dabei sind keine Anpassungen für das Template erforderlich und kann direkt verwendet werden.
 
 HTML-Template in der HTML-Datei **`index.html`**
 
@@ -408,9 +408,9 @@ Vor der Erstellung der Brixx Webkomponente mit Webpack sieht die Projekt-Ordners
 
 ### Brixx Webkomponente bauen
 
-Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-simple-element]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
+Die Brixx Webkomponente wird mit **`npm run build`** erstellt. Wir öffnen den Projektordner **`[brixx-simple-element]`** in Visual Studio Code und bauen (erstellen) die Brixx Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[build]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../assets/images/vscode-run.png" width="8px" /> **]**
 
-<img src="../images/vscode-npm-build-01.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-npm-build-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Run build
 
@@ -430,7 +430,7 @@ Nach dem **`Build`**-Prozess sieht die Projekt-Ordnerstruktur abschließend wie 
 
 Beim **Build**-Prozess wird der Ordner **`[dist]`** erstellt. Darin die Brixx Webkomponente als **Brixx Script-Component** im Ordner **`[components]`** in der JavaScript-Datei **`brixx-simple-element.js`**. Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und wird zur Distribution der Brixx Webkomponente erstellt.
 
-<img src="../images/vscode-npm-build-02.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-npm-build-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Brixx Component built
 
@@ -440,21 +440,21 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner **`[dist]`** identisch zum Brixx Web-Baustein **`[brixx-animal-list]`** zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
 
 ### Brixx Webkomponente testen
 
 Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkomponente während der Entwicklung verwendet, kann aber auch für die Live-Umgebung angepaßt und verwenet werden. Wir haben zwei Möglichkeiten die Webkomponente zu testen.
 
--   Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../images/vscode-run.png" width="8px" /> **]**
+-   Die Brixx Webkomponente kann mit **`npm run start`** während der Entwicklung mit dem **Webpack DevServer** getestet werden und muss vorher nicht erstellt werden. Wir starten die Webkomponente durch Klick mit der rechten Maustaste auf den Eintrag **`[start]`** in der Explorer-Ansicht unter **`[NPM-SCRIPTS]`** und Auswahl von **`[Run]`** im Kontextmenü oder Klick auf das Symbol **[** <img src="../assets/images/vscode-run.png" width="8px" /> **]**
 
-    <img src="../images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/vscode-npm-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual Studio Code - Run start
 
     Die HTML-Datei **`index.html`** wird mit dem _Webpack DevServer_ unter der Adresse **`http://127.0.0.1:8080/index.html`** bereitgestellt und im Standard-Browser geöffnet.
 
-    <img src="../images/vscode-webpack-devserver.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/vscode-webpack-devserver.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
@@ -467,13 +467,13 @@ Die HTML-Datei **`index.html`** wird in erster Linie zum testen der Brixx Webkom
     └── index.html
     ```
 
-    <img src="../images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/vscode-open-live-server.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Visual-Studio-Code - Explorer-Ansicht **`[Open with Live Server]`**
 
     Die HTML-Datei **`index.html`** wird mit dem _Live Server_ unter der Adresse **`http://127.0.0.1:5500/index.html`** bereitgestellt und im Standard-Browser geöffnet.
 
-    <img src="../images/vscode-live-server-02.webp" style="margin-bottom: -5px; width: 600px;" />
+    <img src="../assets/images/vscode-live-server-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
     Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
@@ -483,7 +483,7 @@ Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt
 
 ### HTML Styles hinzufügen
 
-Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen zum einen [Bootstrap](https://getbootstrap.com/), kopieren die [`bootstrap.min.css`](../downloads/bootstrap.min.css) in den Ordner **`[styles]`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
+Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner **`./styles`** im Projektordner. Wir nutzen zum einen [Bootstrap](https://getbootstrap.com/), kopieren die [`bootstrap.min.css`](../assets/downloads/bootstrap.min.css) in den Ordner **`[styles]`** und erstellen eine weitere CSS-Datei **`index.css`** für die Brixx Webkomponente.
 
 Komplette Styles der CSS-Datei **`index.css`**
 
@@ -537,7 +537,7 @@ Wir erweitern das HTML-Dokument im `<head>`-Tag mit einem HTML-Kommentar. Hier w
 Im `<body>`-Tag eweitern wir das HTML-Dokument mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
 
     ...
-    <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
+    <a href="https://brixx.it/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
     ...
 
 Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
@@ -555,7 +555,7 @@ Komplettes HTML-Dokument in der HTML-Datei **`index.html`**
         <h1>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
-        <a href="https://brixx.it/docs/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
+        <a href="https://brixx.it/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
         <!-- Include the Brixx script component files -->
       </body>
     </html>
@@ -615,7 +615,7 @@ Nach der Änderung der _package.json_ installieren wir die NPM-Packages mit **`n
 
 Die Brixx Webkomponente können wir während der Entwicklung jederzeit mit **`npm run start`** testen, ohne vorher die Brixx Webkomponente erstellen zu müssen.
 
-<img src="../images/vscode-complex-element-01.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-complex-element-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
@@ -769,13 +769,13 @@ Der Ordner **`[dist]`** entspricht der Live-Umgebung von einem Projektordner und
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner **`[components]`** und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+Komplettes Beispiel v1.0.8 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
 
 ### Brixx Webkomponente testen
 
 Wir testen die Brixx Webkomponente noch einmal mit **`npm run start`** bevor wir die Brixx Webkomponente endgültig erstellen.
 
-<img src="../images/vscode-complex-element-02.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-complex-element-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
@@ -977,9 +977,9 @@ Render a Brixx element.
 
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.8 [brixx-element-sample] (ZIP-Archiv)](../downloads/brixx-element-sample.zip)
--   ### [Beispiel v1.0.8 [brixx-simple-element] (ZIP-Archiv)](../downloads/brixx-simple-element.zip)
--   ### [Beispiel v1.0.8 [brixx-complex-element] (ZIP-Archiv)](../downloads/brixx-complex-element.zip)
+-   ### [Beispiel v1.0.8 [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
+-   ### [Beispiel v1.0.8 [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
+-   ### [Beispiel v1.0.8 [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
 
 ## Copyright and License
 

@@ -1,5 +1,5 @@
 # Webpack-Konfiguration webpack.config.js
-Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Dafür verwenden wir zur Erstellung einer **„Standard“ Brixx Webkomponente** das Template [webpack.config.template.js](../downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. Fortgeschrittene Anwender mit Webpack Kentnissen haben aber die Möglichkeit die Webpack-Konfiguration für eigene Zwecke anzupassen.
+Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Dafür verwenden wir zur Erstellung einer **„Standard“ Brixx Webkomponente** das Template [webpack.config.template.js](../assets/downloads/webpack.config.template.js) und speichern die Datei als **`webpack.config.js`** im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. Fortgeschrittene Anwender mit Webpack Kentnissen haben aber die Möglichkeit die Webpack-Konfiguration für eigene Zwecke anzupassen.
 
 Brixx *webpack.config.js* Template
 

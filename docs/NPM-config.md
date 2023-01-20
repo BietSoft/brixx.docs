@@ -134,20 +134,20 @@ NPM-Packages werden mit den npm-Befehlen **`npm install`**, **`npm uninstall`** 
 
 Mit Hilfe von **`npm init`** zum Erstellen der *package.json* kann man sicherstellen, dass Sie eine gültige *package.json* Datei erstellt wird. Dazu erstellen als Beispiel einen neuen Ordner **`[brixx-npm-sample]`** und wechseln in die Eingabeaufforderung, oder einer anderen Terminal Anwendung in das erstellte Verzeichnis und starten **`npm init`**
 
-<img src="./images/npm-init-01.webp" style="margin-bottom: 15px; width: 600px;" />
+<img src="../assets/images/npm-init-01.webp" style="margin-bottom: 15px; width: 600px;" />
 
 Anschliessend wird man aufgefordert Angaben zum Projekt zu machen.  
 
-<img src="./images/npm-init-02.webp" style="margin-bottom: 15px; width: 600px;" />
+<img src="../assets/images/npm-init-02.webp" style="margin-bottom: 15px; width: 600px;" />
 
 Wir können Eingabevorschläge bestätigen und später anpassen oder erweiten.
 
-<img src="./images/npm-init-03.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/npm-init-03.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Wir betätigen die Eingaben in der Eingabeaufforderung und sind fertig.
 
   > **TIP:** Die *package.json* kann auch im Projektordner **`[brixx-npm-sample]`** in Visual Studio Code in einem Terminal-Fenster (`Ctrl+Shift+ö`) erstellt werden.
 
-<img src="./images/npm-init-04.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/npm-init-04.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Terminal-Fenster

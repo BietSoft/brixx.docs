@@ -56,7 +56,7 @@ Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio C
 
   Der *NPM Script Explorer* kann in im Menü in der Explorer-Ansicht aktiviert werden.
 
-  <img src="./images/vscode-npm-explorer.webp" style="margin-bottom: -5px; width: 400px;" />
+  <img src="../assets/images/vscode-npm-explorer.webp" style="margin-bottom: -5px; width: 400px;" />
 
   Visual Studio Code - Menü in der Explorer-Ansicht
 
