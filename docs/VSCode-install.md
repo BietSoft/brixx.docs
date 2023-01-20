@@ -20,7 +20,7 @@ See the [Download Visual Studio Code](https://code.visualstudio.com/download) pa
 ## 32-bit versions
 If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https://go.microsoft.com/fwlink/?LinkId=723965) and [Zip archive](https://go.microsoft.com/fwlink/?LinkID=733265) are available.
 
-<img src="images/vscode-start.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Get started
 
@@ -32,18 +32,18 @@ Man kann die Leistung von Visual Studio Code durch Erweiterungen (Extensions) er
 ### Erweiterungen installieren
 Erweiterung kann man im [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs) oder in Visual Studio Code z. B. in der Aktivitätsleiste unter Extensions (`Ctrl+Shift+X`) mit dem Suchfeld `[Search Extensions in Marktplace]` suchen und installieren. Im Beispiel exemplarisch mit der Erweiterung *German Language Pack*.
 
-<img src="images/vscode-plugins.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-plugins.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Extensions
 
 Nach der Installation wird man zu einem Restart aufgefordert.
 
-<img src="images/vscode-restart.webp" style="margin-bottom: 10px; width: 400px;" />
+<img src="../assets/images/vscode-restart.webp" style="margin-bottom: 10px; width: 400px;" />
 
 ### Erweiterungen deinstallieren
 Genauso einfach kann man in Visual Studio Code eine Erweiterung auch wieder deinstallieren.
 
-<img src="images/vscode-german.webp" style="margin-bottom: 10px; width: 600px;" />
+<img src="../assets/images/vscode-german.webp" style="margin-bottom: 10px; width: 600px;" />
 
 ## Empfohlene Erweiterungen für die Entwicklung
 Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio Code die einem die Arbeit bei der Entwicklung erleichten. Für die Erstellung von Brixx Webkomponenten sind folgende Erweiterungen nahezu unverzichtbar.
@@ -56,7 +56,7 @@ Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio C
 
   Der *NPM Script Explorer* kann in im Menü in der Explorer-Ansicht aktiviert werden.
 
-  <img src="../assets/images/vscode-npm-explorer.webp" style="margin-bottom: -5px; width: 400px;" />
+  <img src="../assets/images/vscode-npm-explorer.webp" style="margin-bottom: -5px; width: 450px;" />
 
   Visual Studio Code - Menü in der Explorer-Ansicht
 
