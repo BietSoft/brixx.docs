@@ -885,7 +885,7 @@ Returns the Brixx component folder. Brixx web components are usually created and
 
 ## .elementPrefix
 
-Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
+Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
 
 **`Readonly`**
 
@@ -921,55 +921,53 @@ Creates and returns the Brixx root element node. The Brixx root element is used 
 **Parameters**  
 `{Node} [rootElement] (optional)` - the Brixx root element node.
 
-**Returns**
-
+**Returns**  
 `{Node}` - Brixx root element node.
 
 **Example**
 
     const root = Brixx.createRoot(rootElement)
 
-#
-
-Uer construction ...
-
 ## .setComponentFolder(folder)
 
-Set the Brixx Component folder.
+Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
 
 **Parameters**  
-
-`default='components'`
+`{String} [folder='components'] (optional)` - the Brixx component folder.
 
 **Example**
 
-    Brixx.setComponentFolder('components')
+    Brixx.setComponentFolder('my-component-folder')
 
 ## .setElementPrefix(prefix)
 
-Set the Brixx HTML-Element prefix.
+Set the Brixx HTML-Element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
 
 **Parameters**  
-
-`default='brixx'`
+`{String} [prefix='brixx'] (optional)` - the Brixx element prefix.
 
 **Example**
 
-    Brixx.setComponentFolder('brixx')
+    Brixx.setElementPrefix('web')
 
 ## .load(file)
 
 Load Text/JSON files.
 
 **Parameters**  
+`{String} [file]` - the file name.
 
 **Returns**
-
-Returns the file data.
+`{String}` - File data.
 
 **Example**
 
-    const date = Brixx.load(file)
+    const data = Brixx.load('./settings.json')  
+    const settings = JSON.parse(data)
+
+#
+
+Uer construction ...
 
 ## .registerElement({name = `brixx-element`, script = null})
 
