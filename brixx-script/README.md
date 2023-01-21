@@ -109,7 +109,7 @@ Die einzelnen Einträge **`anial`** der Liste **`anials`** werden in einer Schle
     }
     ...
 
-> Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Ältere Browser unterstützen den aktuellen ECMAScript-Standard teilweise nicht und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben. Den Code muss man so später nicht ändern sondern „nur“ Babel weglassen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+> Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Das wird nicht in allen älteren Browsern oder Umgebungen unterstützt und gleichen wir mit Babel aus. Das hat den Vorteil dass man mit Brixx-Script mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss. Dadurch muss man den Code später nicht ändern sondern „nur“ Babel weglassen; ist aber auch notwendig, da Benutzer unterschiedliche Browser und Versionen verwenden.
 
 Die Schleife alternativ als JavaScript-for-Schleife, oder was Babel daraus macht.
 
@@ -795,19 +795,17 @@ Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden,  wi
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-### Das Attribut **`type`**  
+Brixx-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
 
-Brixx-Script Standalone verwendet Babel um Brixx-Script in den unterschiedlichen Browsern nutzen zu können. Hierfür wird das Attribut `type` mit **`type="text/babel"`** angegeben.
+Mit dem Attribut **`type`** gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit **`type="text/babel"`** und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
 
-### Das Attribut **`data-type`**
+Das Attribut **`src`** gibt die URL einer extern verwendeten Script-Component Datei an, im Beispiel mit **`src="`**`./components/brixx-animal-list.js`**`"`**
 
-Das Attribute `data-type` ist optional und wird beim Import von ECMAScript 2015+ (ES6) Modulen mit **`data-type="module"`** angegeben.
+Das Attribut **`data-type`** ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit **`data-type="module"`** angegeben.
 
-### Das Attribut **`data-preset`**
+Mit dem Attribut **`data-preset`** wird angegeben dass Brixx-Script verwendet wird und für Babel mit **`data-preset="brixx"`** angegeben.
 
-Damit Brixx-Script verwendet werden kann wird das Attribut `data-preset` für das `<script>`-Tag mit **`data-presets="brixx"`** angegeben.
-
-Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Das Attribut `data-type` muss in diesem Beispiel nicht angegeben werden, da kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
+Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Dabei muss im folgenden Beispiel das Attribut `data-type` nicht angegeben werden, da für den Beixx Web-Baustein kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
 
     <!-- Include the Brixx script component for development -->
     <script type="text/babel" data-presets="brixx">

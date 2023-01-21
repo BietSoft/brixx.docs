@@ -43,7 +43,7 @@ Darin erstellen wir den Brixx Web-Baustein **`[brixx-check-age]`** in der Brixx 
         console.log("Output:", output);
     }
 
-> Wir verwenden in den Beispielen [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript Standard, und erstellen im aktuellen Beispiel für die Callback-Funktion eine _JavaScript Arrow Function_. Ältere Browser unterstützen den aktuellen ECMAScript-Standard teilweise nicht und wir gleichen das mit Babel als Transpiler aus. Das hat den Vorteil dass wir modern entwickeln können, nicht die Entwicklung alten Browsern anpassen, und trotzdem in allen Browsern kompatibel bleiben. Den Code muss man so später nicht ändern sondern „nur“ Babel weglassen. Das ist ohnehin notwendig, da man nicht wissen kann welchen der unzähligen Browser und Versionen der Benutzer verwendet.
+> Wir verwenden in den Beispiel [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript-Standard und erstellen im aktuellen Beispiel für die Schleife eine [JavaScript Array map()](https://www.w3schools.com/jsref/jsref_map.asp). Das wird nicht in allen älteren Browsern oder Umgebungen unterstützt und gleichen wir mit Babel aus. Das hat den Vorteil dass man mit Brixx-Script mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss. Dadurch muss man den Code später nicht ändern sondern „nur“ Babel weglassen; ist aber auch notwendig, da Benutzer unterschiedliche Browser und Versionen verwenden.
 
 Die Callback-Funktion alternativ als Function-Object, oder was Babel daraus macht.
 
