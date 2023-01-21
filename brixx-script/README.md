@@ -219,7 +219,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner **`[brix
 
 ## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
-Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als **`package.json`** im  des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner **`[brixx-simple-element]`** und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als **`package.json`** im des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx _package.json_ Template für Windows
 
@@ -790,7 +790,7 @@ Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden,  wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js` 
+Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
@@ -839,7 +839,7 @@ Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu 
 
 ### Brixx-Script Package importieren
 
-Das Modul `Brixx` vom Package `@brixx/script` importieren 
+Das Modul `Brixx` vom Package `@brixx/script` importieren
 
     `import { Brixx } from '@brixx/script'`
 
@@ -849,41 +849,87 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
     import { Brixx } from './brixx'
 
-> **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die *Latest* Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
+> **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-## Static Variables
+## Brixx class properties
 
-### `version`
+#
 
-Get the Brixx version.
+## `.version`
 
-`string, readonly`
+Returns the Brixx version in semantic versioning format.
 
-    console.log(Brixx.version)
+**`Readonly`**
 
-### `componentFolder`
+**`Returns`**
 
-Get the Brixx component folder.
+`String`: The Brixx version string.
 
-`string, readonly`
+Usage
 
-    console.log(Brixx.componentFolder)
+    console.log('Brixx version: ', Brixx.version)
 
-### `elementPrefix`
+    > Brixx version: 1.0.8
 
-Get the Brixx element prefix.
+#
 
-`string, readonly`
+## `.componentFolder`
 
-    console.log(Brixx.elementPrefix)
+Returns the Brixx component folder.
 
-## Static Methods
+**`Readonly`**
 
-### `UUID()`
+**`Returns`**
 
-Returns an uuid id string.
+`String`: The Brixx component folder string.
+
+Usage
+
+    console.log('Brixx component folder: ', Brixx.componentFolder)
+
+    > Brixx component folder: components
+
+## `.elementPrefix`
+
+Returns the Brixx element prefix.
+
+**`Readonly`**
+
+**`Returns`**
+
+`String`: The Brixx element prefix string.
+
+Usage
+
+    console.log('Brixx element prefix: ', Brixx.elementPrefix)
+
+    > Brixx element prefix: brixx
+
+## Brixx class methods
+
+#
+
+## `.UUID()`
+
+Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens. The number of characters per hyphen is 8-4-4-4-12. The last section of four, or the N position, indicates the format and encoding in either one to three bits.
+
+`XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`  
+`└──────┘ └──┘ └──┘ └──┘ └──────────┘`  
+ &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5
+
+**`Returns`**
+
+`String`: The Brixx uuid string.
+
+Usage
 
     const uuid = Brixx.UUID()
+    console.log('uuid:', uuid)
+
+    > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
+
+#
+#
 
 ### `createRoot(rootElement)`
 
