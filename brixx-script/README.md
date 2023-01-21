@@ -916,7 +916,7 @@ Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters wi
 
 ## createRoot(rootElement)
 
-Creates and returns the Brixx root element node. The Brixx root element is used as a container element to render a Brixx web component. If the `rootElement` parameter is not used, an existing Brixx root element with `id='brixx-root'` is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
+Creates and returns the Brixx root element node. The Brixx root element is used as a container element to render a Brixx web component. If the `rootElement` parameter is not used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
 
 **Parameters**  
 `{Node} [rootElement] (optional)` - the Brixx root element node.
@@ -933,55 +933,85 @@ Creates and returns the Brixx root element node. The Brixx root element is used 
 
 Uer construction ...
 
-### `setComponentFolder(folder)`
+## .setComponentFolder(folder)
 
 Set the Brixx Component folder.
 
+**Parameters**  
+
 `default='components'`
+
+**Example**
 
     Brixx.setComponentFolder('components')
 
-### `setElementPrefix(prefix)`
+## .setElementPrefix(prefix)
 
 Set the Brixx HTML-Element prefix.
 
+**Parameters**  
+
 `default='brixx'`
+
+**Example**
 
     Brixx.setComponentFolder('brixx')
 
-### `load(file)`
+## .load(file)
 
 Load Text/JSON files.
 
+**Parameters**  
+
+**Returns**
+
 Returns the file data.
+
+**Example**
 
     const date = Brixx.load(file)
 
-### `registerElement({name = `brixx-element`, script = null})`
+## .registerElement({name = `brixx-element`, script = null})
 
 Register a Brixx HTML-Element.
 
+**Parameters**  
+
+**Example**
+
     Brixx.registerElement({ name: 'brixx-animal-list' })
 
-### `run({file = 'index.bs', load = false, rootElement = null})`
+## .run({file = 'index.bs', load = false, rootElement = null})
 
 Run a Brixx app
+
+**Parameters**  
+
+**Example**
 
     Brixx.run()
 
 ## Static objects
 
-### `element`
+## .element
 
 The Brixx default element.
 
+**Parameters**  
+
 `object, default=null`
+
+**Example**
 
     Brixx.element = <div>...</div>
 
-### `console`
+## .console
 
 The Brixx console object.
+
+**Parameters**  
+
+**Example**
 
     Brixx.console.setLogEnabled(true)
     Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
@@ -990,9 +1020,13 @@ The Brixx console object.
     Brixx.console.out('https://brixx.it/brixx-script')
     Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
 
-### `Component`
+## .Component
 
 The Brixx Component class.
+
+**Parameters**  
+
+**Example**
 
 Brixx Component class sample
 
@@ -1006,13 +1040,23 @@ Brixx Component class sample
 
 ## Create an instance
 
+**Parameters**  
+
+**Returns**
+
+**Example**
+
     const instance = new Brixx()
 
 ## Class Methods
 
-### `render({ element = null, rootElement = null })`
+## .render({ element = null, rootElement = null })
 
 Render a Brixx element.
+
+**Parameters**  
+
+**Example**
 
     const instance.render()
 
