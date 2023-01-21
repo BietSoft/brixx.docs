@@ -868,31 +868,31 @@ Returns the Brixx version in semantic versioning format.
 
     > Brixx version: 1.0.8
 
-## `.componentFolder`
+## .componentFolder
 
 Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
 
 **`Readonly`**
 
-**`Returns`**  
+**Returns**  
 `{String}` - Brixx component folder string.
 
-**`Example`**
+**Example**
 
     console.log('Brixx component folder: ', Brixx.componentFolder)
 
     > Brixx component folder: components
 
-## `.elementPrefix`
+## .elementPrefix
 
 Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
 
 **`Readonly`**
 
-**`Returns`**  
+**Returns**  
 `{String}` - Brixx element prefix string.
 
-**`Example`**
+**Example**
 
     console.log('Brixx element prefix: ', Brixx.elementPrefix)
 
@@ -900,32 +900,32 @@ Returns the Brixx element prefix. The Brixx element identifier is preceded by th
 
 ## Brixx class methods
 
-## `.UUID()`
+## .UUID()
 
 Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
 
-**`Returns`**  
+**Returns**  
 `{String}` - Brixx uuid string.
 
-**`Example`**
+**Example**
 
     const uuid = Brixx.UUID()
     console.log('uuid:', uuid)
 
     > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
-## `createRoot(rootElement)`
+## createRoot(rootElement)
 
 Creates and returns the Brixx root element node. The Brixx root element is used as a container element to render a Brixx web component. If the `rootElement` parameter is not used, an existing Brixx root element with `id='brixx-root'` is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
 
-**`Parameters`**  
+**Parameters**  
 `{Node} [rootElement] (optional)` - the Brixx root element node.
 
-**`Returns`**
+**Returns**
 
 `{Node}` - Brixx root element node.
 
-**`Example`**
+**Example**
 
     const root = Brixx.createRoot(rootElement)
 
