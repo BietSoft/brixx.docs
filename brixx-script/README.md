@@ -871,7 +871,7 @@ Usage
 
 ## `.componentFolder`
 
-Returns the Brixx component folder.
+Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`.
 
 **`Readonly`**
 
@@ -887,7 +887,7 @@ Usage
 
 ## `.elementPrefix`
 
-Returns the Brixx element prefix.
+Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`.
 
 **`Readonly`**
 
@@ -905,11 +905,7 @@ Usage
 
 ## `.UUID()`
 
-Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups.
-
-`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`
-
-The number of characters per group is 8-4-4-4-12.
+Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
 
 **`Returns`**
 
@@ -923,6 +919,8 @@ Usage
     > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
 #
+
+Uer construction ...
 
 ### `createRoot(rootElement)`
 
