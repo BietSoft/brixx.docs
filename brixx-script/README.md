@@ -853,16 +853,16 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 ## Brixx class properties
 
-## `.version`
+## .version
 
 Returns the Brixx version in semantic versioning format.
 
-**`Readonly`**
+**Readonly**
 
-**`Returns`**  
+**Returns**  
 `{String}` - Brixx version string.
 
-**`Example`**
+**Example**
 
     console.log('Brixx version: ', Brixx.version)
 
