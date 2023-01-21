@@ -869,8 +869,6 @@ Usage
 
     > Brixx version: 1.0.8
 
-#
-
 ## `.componentFolder`
 
 Returns the Brixx component folder.
@@ -913,7 +911,6 @@ Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters wi
 
 The number of characters per group is 8-4-4-4-12.
 
-
 **`Returns`**
 
 `String`: The Brixx uuid string.
@@ -925,7 +922,6 @@ Usage
 
     > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
-#
 #
 
 ### `createRoot(rootElement)`
