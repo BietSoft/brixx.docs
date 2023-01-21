@@ -853,8 +853,6 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 ## Brixx class properties
 
-#
-
 ## `.version`
 
 Returns the Brixx version in semantic versioning format.
@@ -906,8 +904,6 @@ Usage
     > Brixx element prefix: brixx
 
 ## Brixx class methods
-
-#
 
 ## `.UUID()`
 
