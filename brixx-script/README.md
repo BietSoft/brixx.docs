@@ -911,7 +911,11 @@ Usage
 
 ## `.UUID()`
 
-Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups `XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX` The number of characters per group is 8-4-4-4-12
+Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups.
+
+`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`
+
+The number of characters per group is 8-4-4-4-12.
 
 
 **`Returns`**
