@@ -1038,8 +1038,7 @@ Brixx Component class sample
 
 ## Create a Brixx instance
 
-**Costructor**  
-No parameter expected
+### Costructor
 
 **Returns**  
 `{Object}` - Brixx instance.
@@ -1072,7 +1071,7 @@ Renders a Brixx element.
     const instance = new Brixx()
     instance.render()
 
-#
+###
 
     const instance = new Brixx()
     instance.render(
@@ -1081,38 +1080,34 @@ Renders a Brixx element.
       </div>
     )
 
-#
+###
 
     const element = (
-      <div>
-        <h1>Brixx component element</h1>
-      </div>
+      ...
     )
 
     const instance = new Brixx()
     instance.render({element})
 
-#
+###
 
     const rootElement = document.getElementById('root')
 
     const instance = new Brixx()
     instance.render({element: Brixx.element, rootElement})
 
-#
+###
 
     const my-root-element = document.getElementById('my-root-element')
 
     const my-component = (
-      <div>
-        <h1>Brixx component element</h1>
-      </div>
+      ...
     )
 
     const instance = new Brixx()
     instance.render({element: my-component, rootElement: my-root-element})
 
-#
+###
 
     ...
     const config = {element: my-component, rootElement: my-root-element}
@@ -1120,12 +1115,10 @@ Renders a Brixx element.
     const instance = new Brixx()
     instance.render(config)
 
-#
+###
 
     const my-component = (
-      <div>
-        <h1>Brixx component element</h1>
-      </div>
+      ...
     )
 
     Brixx.element = my-component
@@ -1133,13 +1126,13 @@ Renders a Brixx element.
     const instance = new Brixx()
     instance.render()
 
-#
+###
 
     Brixx.element = (
-      <div>
-        <h1>Brixx component element</h1>
-      </div>
+      ...
     )
+
+    const element = Brixx.element
 
     const instance = new Brixx()
     instance.render({element, rootElement: document.getElementById('my-root-element')})
