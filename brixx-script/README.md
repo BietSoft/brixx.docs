@@ -74,7 +74,7 @@ Darin erstellen wir den Brixx Web-Baustein **`[brixx-animal-list]`** in der Java
 
 Anschließend erstellen wir ein Brixx „Standard“-Element **`Brixx.element`** mit einer untergeordneten HTML-Liste.
 
-> Ein **`Brixx.element`** kann besonders für „einfache“ Brixx Web-Bausteine verwendet werden und einmal pro Web-Baustein vorkommen. Mit dem Brixx Standard-Element wird eine schnelle Entwicklung mit Brixx-Script ermöglicht, und reduziert Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung).
+> Ein **`Brixx.element`** kann für „einfache“ Brixx Web-Bausteine verwendet werden und einmal pro Web-Baustein vorkommen. Mit dem Brixx Standard-Element wird eine schnelle Entwicklung mit Brixx-Script ermöglicht, und reduziert Programmieraufwand und Projektkomplexität auf ein Minimum (Low-Code-Entwicklung).
 
     // Create a Brixx default element
     Brixx.element =
@@ -991,16 +991,16 @@ Run a Brixx app
 
 ## Static objects
 
-### .element
-
-The Brixx default element.
-
-**Parameters**  
-`object, default=null`
+### .element 
+`{Object} [element=null] - the Brixx element`. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
 
 **Example**
 
-    Brixx.element = <div>...</div>
+    Brixx.element = (
+      <div>
+        <h1>Brixx default component element</h1>
+      </div>
+    )
 
 ### .console
 
@@ -1017,7 +1017,7 @@ The Brixx console object.
     Brixx.console.out('https://brixx.it/brixx-script')
     Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
 
-##s# .Component
+### .Component
 
 The Brixx Component class.
 
@@ -1063,7 +1063,7 @@ Renders a Brixx element.
 
     Brixx.element = (
       <div>
-        <h1>Brixx component element</h1>
+        <h1>Brixx default component element</h1>
       </div>
     )
 
