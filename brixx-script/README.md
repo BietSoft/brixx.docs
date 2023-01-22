@@ -797,13 +797,13 @@ Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden, wie
 
 Brixx-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
 
-Mit dem Attribut **`type`** gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit **`type="text/babel"`** und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
+Mit dem Attribut `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
 
-Das Attribut **`src`** gibt die URL einer extern verwendeten Script-Component Datei an, im Beispiel mit **`src="`**`./components/brixx-animal-list.js`**`"`**
+Das Attribut `src` gibt die URL einer extern verwendeten Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
 
-Das Attribut **`data-type`** ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit **`data-type="module"`** angegeben.
+Das Attribut `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
 
-Mit dem Attribut **`data-preset`** wird angegeben dass Brixx-Script verwendet wird und für Babel mit **`data-preset="brixx"`** angegeben.
+Mit dem Attribut `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
 
 Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Dabei muss im folgenden Beispiel das Attribut `data-type` nicht angegeben werden, da für den Beixx Web-Baustein kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
 
@@ -857,7 +857,7 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 Returns the Brixx version in semantic versioning format.
 
-**Readonly**
+`Readonly`
 
 **Returns**  
 `{String}` - Brixx version.
