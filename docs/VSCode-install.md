@@ -36,7 +36,7 @@ Man kann die Leistung von Visual Studio Code durch Erweiterungen (Extensions) er
 
 ### Erweiterungen installieren
 
-Erweiterung kann man im [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs) oder in Visual Studio Code z. B. in der Aktivitätsleiste unter Extensions (`Ctrl+Shift+X`) mit dem Suchfeld `[Search Extensions in Marktplace]` suchen und installieren. Im Beispiel exemplarisch mit der Erweiterung _German Language Pack_.
+Erweiterung kann man im [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs) oder in Visual Studio Code z. B. in der Aktivitätsleiste unter Extensions (`Ctrl+Shift+X`) mit dem Suchfeld `[Search Extensions in Marktplace]` suchen und installieren. Im Beispiel exemplarisch mit der Erweiterung **German Language Pack**.
 
 <img src="../assets/images/vscode-plugins.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -60,7 +60,7 @@ Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio C
     Ein lokaler Webserver (Entwicklungsserver) mit Auto Reload (Live reload) Funktion bei Änderungen am Quellcode. Der _Live Server_ ermöglicht es bei der Entwicklung das Verhalten der Brixx Webkomponente in einer Browserumgebung zu testen, und verhindert die _blocked by CORS policy_ ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
 
 -   [NPM-Scripts](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.vscode-npm-scripts) (Visual Studio Code bis Version 1.22)  
-    Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter _NPM Script Explorer_ zur Verfügung und eine zusätzliche Installation der Erweiterung _NPM-Scripts_ wird dann nicht mehr benötigt.
+    Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter **NPM Script Explorer** zur Verfügung und eine zusätzliche Installation der Erweiterung _NPM-Scripts_ wird dann nicht mehr benötigt.
 
     Der _NPM Script Explorer_ kann in im Menü in der Explorer-Ansicht aktiviert werden.
 
