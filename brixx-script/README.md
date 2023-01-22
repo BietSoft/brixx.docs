@@ -125,7 +125,7 @@ Die Schleife alternativ als JavaScript-for-Schleife, oder was Babel daraus macht
     }
     ...
 
-Abschließend wird das Brixx Element als HTML-Elemet `<brixx-animal-list>` registriert.
+Abschließend wird das `Brixx.element` als HTML-Elemet `<brixx-animal-list>` registriert.
 
     // Register the Brixx HTML element <brixx-animal-list>
     Brixx.registerElement({ name: "animal-list" });
@@ -346,7 +346,7 @@ Als nächstes erstellen ein `Brixx.element` mit dem JSX-Element `<Greeting>` und
       </div>
     )
 
-Abschließend wird das Brixx Element als HTML-Elemet `<brixx-simple-element>` registriert.
+Abschließend wird das `Brixx.element` als HTML-Elemet `<brixx-simple-element>` registriert.
 
     // Register the Brixx HTML element <brixx-simple-element>
     Brixx.registerElement({ name: 'brixx-simple-element' })

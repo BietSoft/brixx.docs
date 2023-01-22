@@ -147,7 +147,7 @@ Mit dem HTML-Element `<Check>` wird zum Schluß mit dem HTML-Attribut _`button`_
     <Check button label={"Check age"} action={checkDecisionTable} />
     ...
 
-Abschließend wird das Brixx Element als HTML-Elemet `<brixx-chack-age>` registriert.
+Abschließend wird das `Brixx.element` als HTML-Elemet `<brixx-chack-age>` registriert.
 
     // Register a Brixx HTML-Element <brixx-check-age>
     Brixx.registerElement({ name: "check-age" });
