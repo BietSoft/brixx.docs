@@ -921,7 +921,6 @@ Creates and returns the Brixx root element. The Brixx root element is used as a 
 **Parameters**  
 `{Node} [rootElement] (optional)` - the Brixx root element. If the parameter `rootElement` is not specified, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
 
-
 **Returns**  
 `{Node}` - Brixx root element.
 
@@ -1039,6 +1038,8 @@ Brixx Component class sample
 ## Create a Brixx instance
 
 ### Costructor
+
+Creates a Brixx instance.
 
 **Returns**  
 `{Object}` - Brixx instance.
