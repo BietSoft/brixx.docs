@@ -991,7 +991,8 @@ Run a Brixx app
 
 ## Static objects
 
-### .element 
+### .element
+
 `{Object} [element=null]` - the Brixx element. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
 
 **Example**
