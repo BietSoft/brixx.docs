@@ -860,7 +860,7 @@ Returns the Brixx version in semantic versioning format.
 **Readonly**
 
 **Returns**  
-`{String}` - Brixx version string.
+`{String}` - Brixx version.
 
 **Example**
 
@@ -875,7 +875,7 @@ Returns the Brixx component folder. Brixx web components are usually created and
 **`Readonly`**
 
 **Returns**  
-`{String}` - Brixx component folder string.
+`{String}` - Brixx component folder.
 
 **Example**
 
@@ -890,7 +890,7 @@ Returns the Brixx element prefix. The Brixx element identifier is preceded by th
 **`Readonly`**
 
 **Returns**  
-`{String}` - Brixx element prefix string.
+`{String}` - Brixx element prefix.
 
 **Example**
 
@@ -905,7 +905,7 @@ Returns the Brixx element prefix. The Brixx element identifier is preceded by th
 Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
 
 **Returns**  
-`{String}` - Brixx uuid string.
+`{String}` - Brixx uuid.
 
 **Example**
 
@@ -916,19 +916,20 @@ Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters wi
 
 ## createRoot(rootElement)
 
-Creates and returns the Brixx root element node. The Brixx root element is used as a container element to render a Brixx web component. If the `rootElement` parameter is not used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
+Creates and returns the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component.
 
 **Parameters**  
-`{Node} [rootElement] (optional)` - the Brixx root element node.
+`{Node} [rootElement] (optional)` - the Brixx root element. If the parameter `rootElement` is not specified, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
+
 
 **Returns**  
-`{Node}` - Brixx root element node.
+`{Node}` - Brixx root element.
 
 **Example**
 
     const root = Brixx.createRoot(rootElement)
 
-## .setComponentFolder(folder)
+## .setComponentFolder(folder = 'components')
 
 Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
 
@@ -939,7 +940,7 @@ Set the Brixx Component folder. Brixx web components are usually created and exp
 
     Brixx.setComponentFolder('my-component-folder')
 
-## .setElementPrefix(prefix)
+## .setElementPrefix(prefix = 'brixx')
 
 Set the Brixx HTML-Element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
 
@@ -962,28 +963,28 @@ Load Text/JSON files.
 
 **Example**
 
-    const data = Brixx.load('./settings.json')  
+    const data = Brixx.load('./settings.json')
     const settings = JSON.parse(data)
 
 #
 
 Uer construction ...
 
-## .registerElement({name = `brixx-element`, script = null})
+## .registerElement({ name = `brixx-element`, script = null })
 
 Register a Brixx HTML-Element.
 
-**Parameters**  
+**Parameters**
 
 **Example**
 
     Brixx.registerElement({ name: 'brixx-animal-list' })
 
-## .run({file = 'index.bs', load = false, rootElement = null})
+## .run({file = 'index.bs', load=false, rootElement=null})
 
 Run a Brixx app
 
-**Parameters**  
+**Parameters**
 
 **Example**
 
@@ -996,7 +997,6 @@ Run a Brixx app
 The Brixx default element.
 
 **Parameters**  
-
 `object, default=null`
 
 **Example**
@@ -1007,7 +1007,7 @@ The Brixx default element.
 
 The Brixx console object.
 
-**Parameters**  
+**Parameters**
 
 **Example**
 
@@ -1022,7 +1022,7 @@ The Brixx console object.
 
 The Brixx Component class.
 
-**Parameters**  
+**Parameters**
 
 **Example**
 
@@ -1036,27 +1036,113 @@ Brixx Component class sample
       }
     }
 
-## Create an instance
+## Create a Brixx instance
 
-**Parameters**  
+**Costructor**  
+No parameter expected
 
-**Returns**
+**Returns**  
+`{Object}` - Brixx instance.
 
 **Example**
 
     const instance = new Brixx()
 
-## Class Methods
+## Brixx methods
 
-## .render({ element = null, rootElement = null })
+## .render(element = Brixx.element || { element = null, rootElement = null })
 
-Render a Brixx element.
+Renders a Brixx element.
 
 **Parameters**  
+`{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
 
-**Example**
+`{Object} [object.element=Brixx.element] (optional)` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
 
-    const instance.render()
+`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
+
+**Examples**
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+    const instance = new Brixx()
+    instance.render()
+
+#
+
+    const instance = new Brixx()
+    instance.render(
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+#
+
+    const element = (
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+    const instance = new Brixx()
+    instance.render({element})
+
+#
+
+    const rootElement = document.getElementById('root')
+
+    const instance = new Brixx()
+    instance.render({element: Brixx.element, rootElement})
+
+#
+
+    const my-root-element = document.getElementById('my-root-element')
+
+    const my-component = (
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+    const instance = new Brixx()
+    instance.render({element: my-component, rootElement: my-root-element})
+
+#
+
+    ...
+    const config = {element: my-component, rootElement: my-root-element}
+
+    const instance = new Brixx()
+    instance.render(config)
+
+#
+
+    const my-component = (
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+    Brixx.element = my-component
+
+    const instance = new Brixx()
+    instance.render()
+
+#
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+    const instance = new Brixx()
+    instance.render({element, rootElement: document.getElementById('my-root-element')})
 
 # <div id='downloads'/> Downloads
 
