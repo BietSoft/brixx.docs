@@ -56,7 +56,7 @@ Der JavaScript Compiler [Babel](https://babeljs.io/ "Opensource JavaScript trans
 
 Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") und [npm](https://www.npmjs.com/ "Node package manager") auch [Webpack](https://webpack.js.org/ "Opensource JavaScript modul packer") und [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler"). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
-## <div id='brixx-animal-list'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
+## <div id='brixx-animal-list'/> Brixx Web-Baustein [brixx-animal-list] erstellen
 
 Brixx Web-Bausteine (Brixx Webkomponenten) werden in der Regel im Ordner `[components]` erstellt und erwartet. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-element-sample]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -65,7 +65,7 @@ Brixx Web-Bausteine (Brixx Webkomponenten) werden in der Regel im Ordner `[compo
     │   └── brixx-animal-list.js
     └── index.html
 
-> Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Component** die JavaScript-Datei (_Brixx script component_) vom Brixx Web-Baustein.
+> Als **Brixx Web-Baustein** bezeichnet man eine nicht compilierte Brixx Webkomponente (_Brixx web component_) und als **Brixx Script-Component** die JavaScript-Datei (_Brixx script component_) von einem Brixx Web-Baustein.
 
 Darin erstellen wir den Brixx Web-Baustein `[brixx-animal-list]` in der JavaScript-Datei `brixx-animal-list.js` (Brixx Script-Component). Zuerst erstellen wir eine Liste `anials` ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für den Web-Baustein repräsentieren soll z. B. aus einem HTML-Formular, Webservice oder einer Datenbank.
 
@@ -97,7 +97,7 @@ Anschließend erstellen wir ein Brixx „Standard“-Element `Brixx.element` mit
       </div>
     );
 
-Die einzelnen Einträge `anial` der Liste `anials` werden in einer Schleife im HTML-Listenelement `<h3>{animal}</h3>` mit der _`JavaScript Array map()`_ Funktion nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ `{}` als _Code-Block_ integriert werden.
+Die einzelnen Einträge `anial` der Liste `anials` werden in einer Schleife im HTML-Listenelement `<h3>{animal}</h3>` mit der JavaScript `Array map()` Funktion nacheinander ausgegeben. JavaScript-Erweiterungen können in JSX sehr einfach mit _Curly Brackets_ `{}` als _Code-Block_ integriert werden.
 
     ...
     {
@@ -217,7 +217,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner `[brixx-
 
 # <div id='tutorial'/> Brixx-Script Tutorial
 
-## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
+## <div id='brixx-simple-element'/> Brixx Webkomponente [brixx-simple-element] erstellen
 
 Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner `[brixx-simple-element]` und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als `package.json` im des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
@@ -477,7 +477,7 @@ Die HTML-Datei `index.html` wird in erster Linie zum testen der Brixx Webkompone
 
     Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
-## <div id='brixx-complex-element'/> Brixx Webkomponente `[brixx-complex-element]` erstellen
+## <div id='brixx-complex-element'/> Brixx Webkomponente [brixx-complex-element] erstellen
 
 Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit zusätzlichen CSS-Dateien und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner `[brixx-complex-element]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
@@ -621,7 +621,7 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
 ### Brixx Class Component hinzufügen
 
-Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir die Webkomponente mit der **Brixx Class Component** (Klassen-Komponente) und erstellen im Ordner **[`components`]** die Class Component `Counter` in der JavaScript-Datei `Counter.js` Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir die Webkomponente mit der **Brixx Class Component** (Klassen-Komponente) und erstellen im Ordner `[components]` die Class Component `Counter` in der JavaScript-Datei `Counter.js` Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
     ├── components/
@@ -691,7 +691,7 @@ Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
       }
     }
 
-Um die Brixx Class Component `Counter` zu verwenden wird die JavaScript-Datei `Counter.js` im Ordner **[`components`]** in die Brixx Webkomponente importiert.
+Um die Brixx Class Component `Counter` zu verwenden wird die JavaScript-Datei `Counter.js` im Ordner `[components]` in die Brixx Webkomponente importiert.
 
     import Counter from './components/Counter'
 
