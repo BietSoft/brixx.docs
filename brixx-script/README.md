@@ -1047,9 +1047,7 @@ Brixx Component class sample
 
     const instance = new Brixx()
 
-## Brixx methods
-
-## .render(element = Brixx.element || { element = null, rootElement = null })
+### .render(element = Brixx.element || { element = null, rootElement = null })
 
 Renders a Brixx element.
 
