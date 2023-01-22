@@ -872,7 +872,7 @@ Returns the Brixx version in semantic versioning format.
 
 Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
 
-**`Readonly`**
+`Readonly`
 
 **Returns**  
 `{String}` - Brixx component folder.
@@ -887,7 +887,7 @@ Returns the Brixx component folder. Brixx web components are usually created and
 
 Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
 
-**`Readonly`**
+`Readonly`
 
 **Returns**  
 `{String}` - Brixx element prefix.
@@ -992,7 +992,7 @@ Run a Brixx app
 ## Static objects
 
 ### .element 
-`{Object} [element=null] - the Brixx element`. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
+`{Object} [element=null]` - the Brixx element. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
 
 **Example**
 
