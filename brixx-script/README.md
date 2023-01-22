@@ -853,7 +853,7 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 ## Brixx class properties
 
-## .version
+### .version
 
 Returns the Brixx version in semantic versioning format.
 
@@ -868,7 +868,7 @@ Returns the Brixx version in semantic versioning format.
 
     > Brixx version: 1.0.8
 
-## .componentFolder
+### .componentFolder
 
 Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
 
@@ -883,7 +883,7 @@ Returns the Brixx component folder. Brixx web components are usually created and
 
     > Brixx component folder: components
 
-## .elementPrefix
+### .elementPrefix
 
 Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
 
@@ -900,7 +900,7 @@ Returns the Brixx element prefix. The Brixx element identifier is preceded by th
 
 ## Brixx class methods
 
-## .UUID()
+### .UUID()
 
 Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
 
@@ -914,7 +914,7 @@ Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters wi
 
     > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
-## createRoot(rootElement)
+### createRoot(rootElement)
 
 Creates and returns the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component.
 
@@ -928,7 +928,7 @@ Creates and returns the Brixx root element. The Brixx root element is used as a 
 
     const root = Brixx.createRoot(rootElement)
 
-## .setComponentFolder(folder = 'components')
+### .setComponentFolder(folder = 'components')
 
 Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
 
@@ -939,7 +939,7 @@ Set the Brixx Component folder. Brixx web components are usually created and exp
 
     Brixx.setComponentFolder('my-component-folder')
 
-## .setElementPrefix(prefix = 'brixx')
+### .setElementPrefix(prefix = 'brixx')
 
 Set the Brixx HTML-Element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
 
@@ -950,7 +950,7 @@ Set the Brixx HTML-Element prefix. The Brixx element identifier is preceded by t
 
     Brixx.setElementPrefix('web')
 
-## .load(file)
+### .load(file)
 
 Load Text/JSON files.
 
@@ -969,7 +969,7 @@ Load Text/JSON files.
 
 Uer construction ...
 
-## .registerElement({ name = `brixx-element`, script = null })
+### .registerElement({ name = `brixx-element`, script = null })
 
 Register a Brixx HTML-Element.
 
@@ -979,7 +979,7 @@ Register a Brixx HTML-Element.
 
     Brixx.registerElement({ name: 'brixx-animal-list' })
 
-## .run({file = 'index.bs', load=false, rootElement=null})
+### .run({file = 'index.bs', load=false, rootElement=null})
 
 Run a Brixx app
 
@@ -991,7 +991,7 @@ Run a Brixx app
 
 ## Static objects
 
-## .element
+### .element
 
 The Brixx default element.
 
@@ -1002,7 +1002,7 @@ The Brixx default element.
 
     Brixx.element = <div>...</div>
 
-## .console
+### .console
 
 The Brixx console object.
 
@@ -1017,7 +1017,7 @@ The Brixx console object.
     Brixx.console.out('https://brixx.it/brixx-script')
     Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
 
-## .Component
+##s# .Component
 
 The Brixx Component class.
 
