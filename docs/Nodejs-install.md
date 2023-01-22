@@ -31,7 +31,7 @@
 
    Click `[Finish]`
 
-You can verify the installation in the command prompt with **`node --version`** and **`npm --version`**
+You can verify the installation in the command prompt with `node --version` and `npm --version`
 
    <img src="../assets/images/node-versions.webp" style="margin-bottom: 15px; width: 600px;" />
 
