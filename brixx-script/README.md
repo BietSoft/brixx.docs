@@ -1122,15 +1122,29 @@ The Brixx Component class.
 
 **Example**
 
-Brixx Component class sample
+Create a Brixx class component in the JavaScript file `MyComponent.js`
 
     import { Brixx } from '@brixx/script'
 
-    export default class Test extends Brixx.Component {
+    export default class MyComponent extends Brixx.Component {
       render() {
-        return <div>...</div>
+        return <div>Brixx class component</div>
       }
     }
+
+Use the Brixx class component
+
+    import { MyComponent } from './MyComponent'
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx default component element</h1>
+        <MyComponent>
+      </div>
+    )
+    
+    Brixx.element =
+
 
 ## Create a Brixx instance
 
