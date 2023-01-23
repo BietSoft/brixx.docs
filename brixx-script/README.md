@@ -853,21 +853,6 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 ## Brixx static properties
 
-### .version
-
-Returns the Brixx version in semantic versioning format.
-
-`Readonly`
-
-**Returns**  
-`{String}` - Brixx version.
-
-**Example**
-
-    console.log('Brixx version: ', Brixx.version)
-
-    > Brixx version: 1.0.8
-
 ### .componentFolder
 
 Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
@@ -910,21 +895,22 @@ Returns the Brixx element prefix. The Brixx HTML element identifier is preceded 
 
     > Brixx element prefix: brixx
 
-## Brixx static methods
+### .version
 
-### .UUID()
+Returns the Brixx version in semantic versioning format.
 
-Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
+`Readonly`
 
 **Returns**  
-`{String}` - Brixx uuid.
+`{String}` - Brixx version.
 
 **Example**
 
-    const uuid = Brixx.UUID()
-    console.log('uuid:', uuid)
+    console.log('Brixx version: ', Brixx.version)
 
-    > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
+    > Brixx version: 1.0.8
+
+## Brixx static methods
 
 ### createRoot(rootElement)
 
@@ -940,28 +926,6 @@ Creates and returns the Brixx root element. The Brixx root element is used as a 
 
     const rootElement = document.getElementById('root')
     const root = Brixx.createRoot(rootElement)
-
-### .setComponentFolder(folder='components')
-
-Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
-
-**Parameters**  
-`{String} [folder='components'] (optional)` - the Brixx component folder.
-
-**Example**
-
-    Brixx.setComponentFolder('my-component-folder')
-
-### .setElementPrefix(prefix='brixx')
-
-Set the Brixx HTML element prefix. The Brixx HTML element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
-
-**Parameters**  
-`{String} [prefix='brixx'] (optional)` - the Brixx element prefix.
-
-**Example**
-
-    Brixx.setElementPrefix('web')
 
 ### .load(file)
 
@@ -980,7 +944,7 @@ Load Text/JSON files.
 
 ### .registerElement(name='{Brixx.elementPrefix}-element' || { name='{Brixx.elementPrefix}-element', script=null })
 
-Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name. 
+Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name.
 
 **Parameters**
 `{Object} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
@@ -1005,7 +969,7 @@ Registers the Brixx HTML element `<brixx-element-sample>`
 ###
 
     Brixx.registerElement('brixx-element-sample')
- 
+
 Registers the Brixx HTML element `<brixx-element-sample>`
 
 ###
@@ -1039,6 +1003,42 @@ Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script 
     Brixx.registerElement(config)
 
 Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script component `./components/brixx-element-sample.js`
+
+### .setComponentFolder(folder='components')
+
+Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
+
+**Parameters**  
+`{String} [folder='components'] (optional)` - the Brixx component folder.
+
+**Example**
+
+    Brixx.setComponentFolder('my-component-folder')
+
+### .setElementPrefix(prefix='brixx')
+
+Set the Brixx HTML element prefix. The Brixx HTML element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
+
+**Parameters**  
+`{String} [prefix='brixx'] (optional)` - the Brixx element prefix.
+
+**Example**
+
+    Brixx.setElementPrefix('web')
+
+### .UUID()
+
+Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
+
+**Returns**  
+`{String}` - Brixx uuid.
+
+**Example**
+
+    const uuid = Brixx.UUID()
+    console.log('uuid:', uuid)
+
+    > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
 #
 
@@ -1108,7 +1108,7 @@ Creates a Brixx instance.
 
 ### .render(element=Brixx.element || { element=Brixx.element, rootElement=null })
 
-Renders a Brixx element. It is recommended to use the configuration object for the settings. 
+Renders a Brixx element. It is recommended to use the configuration object for the settings.
 
 **Parameters**  
 `{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
