@@ -866,7 +866,9 @@ Returns the Brixx component folder. Brixx web components are usually created and
 
     console.log('Brixx component folder: ', Brixx.componentFolder)
 
-    > Brixx component folder: components
+Console output
+
+    Brixx component folder: components
 
 ### .element
 
@@ -893,7 +895,9 @@ Returns the Brixx element prefix. The Brixx HTML element identifier is preceded 
 
     console.log('Brixx element prefix: ', Brixx.elementPrefix)
 
-    > Brixx element prefix: brixx
+Console output
+
+    Brixx element prefix: brixx
 
 ### .version
 
@@ -908,13 +912,15 @@ Returns the Brixx version in semantic versioning format.
 
     console.log('Brixx version: ', Brixx.version)
 
-    > Brixx version: 1.0.8
+Console output
+
+    Brixx version: 1.0.8
 
 ## Brixx static methods
 
 ### createRoot(rootElement)
 
-Creates and returns the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component.
+Creates and returns the Brixx root element. The Brixx root element is be used as a container element to render a Brixx web component.
 
 **Parameters**  
 `{Node} [rootElement] (optional)` - the Brixx root element. If the parameter `rootElement` is not specified, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
@@ -1004,6 +1010,27 @@ Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script 
 
 Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script component `./components/brixx-element-sample.js`
 
+### .run({~~_file='index.bs'_~~, ~~_load=false_~~, rootElement=null})
+
+Run a Brixx app. It is a shortcut to create and render a Brixx instance and will used for a Brixx default element.
+
+**Parameters**  
+`{String} [object.file='index.bs'] (optional)` - the Brixx script component file name (_for future use_).
+
+`{Boolean} [object.load=false] (optional)` - the load at start option (_for future use_).
+
+`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
+
+**Example**
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx default component element</h1>
+      </div>
+    )
+
+    Brixx.run()
+
 ### .setComponentFolder(folder='components')
 
 Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
@@ -1038,23 +1065,15 @@ Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters wi
     const uuid = Brixx.UUID()
     console.log('uuid:', uuid)
 
-    > uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
+Console output
+
+    uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
+
+## Brixx static objects
 
 #
 
 Under construction ...
-
-### .run({file='index.bs', load=false, rootElement=null})
-
-Run a Brixx app
-
-**Parameters**
-
-**Example**
-
-    Brixx.run()
-
-## Brixx static objects
 
 ### .console
 

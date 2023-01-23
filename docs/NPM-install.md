@@ -1,5 +1,5 @@
 # NPM-Packages installieren 
-Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Terminal Anwendung in einem anderen Betriebssystem, und wechseln in den Projektordner, im Beispiel `[brixx-simple-element]`. Anschließend werden die NPM-Packages der Abhängigkeiten `dependencies` und `devDependencies` in der *package.json* mit `npm install` oder dem Shortcut `npm i` installiert und im Ordner `[node_modules]` für die Entwicklung im Projektordner bereitgestellt.
+Wir öffnen die Eingabeaufforderung unter Windows, oder eine entsprechende Terminal Anwendung in einem anderen Betriebssystem, und wechseln in den Projektordner, im Beispiel `[brixx-simple-element]`. Anschließend werden die NPM-Packages der Abhängigkeiten `dependencies` und `devDependencies` in der *package.json* mit `npm install` oder mit der Abkürzung (Shorthand) `npm i` installiert und im Ordner `[node_modules]` für die Entwicklung im Projektordner bereitgestellt.
 
 <img src="../assets/images/npm-install.webp" style="margin-bottom: -5px; width: 600px;" />
 
