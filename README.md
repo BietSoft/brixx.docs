@@ -10,11 +10,11 @@ This is the BRIXX.it documentation repository. For further information please fe
 - ### [Projekt-Konfiguration package.json](./docs/NPM-config.md)
 - ### [NPM-Packages installieren](./docs/NPM-install.md)
 - ### [Webpack-Konfiguration webpack.config.js](./docs/Webpack-config.md)
-## [Brixx-Decision-Script Version 1.0.1](./brixx-decision-script/README.md)
+## [Brixx-Decision-Script Version 1.0.2](./brixx-decision-script/README.md)
 
 #
 
-Cooming soon ...
+Cooming soon ... 
 
 ## Brixx-Process-Srcript
 ## PDFX-Collection

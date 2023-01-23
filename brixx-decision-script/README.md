@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.1` (Stable, 18.01.2023)
+### Version: `1.0.2` (Stable, 23.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.1 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.2 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -231,7 +231,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -321,7 +321,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         </body>
     </html>
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 
 ### Brixx Webkomponente testen
 
@@ -398,7 +398,7 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
 
     {
         "dependencies": {
-            "@brixx/decision-script": "^1.0.1"
+            "@brixx/decision-script": "^1.0.2"
         }
     }
 
@@ -423,7 +423,7 @@ Abschließend entfernen das Caretzeichen ( `^` ) bei der Version wodurch nicht m
 
     ...
     "dependencies": {
-        "@brixx/decision-script": "1.0.1"
+        "@brixx/decision-script": "1.0.2"
     }
     ...
 
@@ -436,7 +436,7 @@ Komplette `package.json` Datei
             "start": "node brixx-check-age.js"
         },
         "dependencies": {
-            "@brixx/decision-script": "1.0.1"
+            "@brixx/decision-script": "1.0.2"
         }
     }
 
@@ -509,7 +509,7 @@ Komplette Node.js app in der JavaScript-Datei `./brixx-check-age.js`
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.1 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-]node (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ### Node.js app testen
 
@@ -522,6 +522,8 @@ Visual Studio Code - Run start
 Die Node.js app `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
+
+#
 
 Under Construction ...
 
@@ -539,11 +541,15 @@ Under Construction ...
 
 ## rules
 
+... under Construction
+
+#
+
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.1 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.1 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
--   ### [Beispiel v1.0.1 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+-   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.2 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+-   ### [Beispiel v1.0.2 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
 
