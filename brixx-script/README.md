@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.8` (Release, 15.01.2023)
+### Version: `1.0.9` (Release, 15.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.8 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Script version 1.0.9 available for use. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Script
 
@@ -192,7 +192,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
       </body>
     </html>
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
+Komplettes Beispiel v1.0.9 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -253,10 +253,10 @@ In der _package.json_ ersetzen wir den Platzhalter `{brixx-component-name}` für
 Bei den `dependencies` ersetzen wir dann noch den Platzhalter `{brixx-script-version}` mit der Version für das NPM-Package `@brixx/script` das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.8"
+      "@brixx/script": "1.0.9"
     }
 
-Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.0.8`
+Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.0.9`
 
 Die Abhängigkeiten `devDependencies` werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit `npm install --save-dev  <package>` installiert werden.
 
@@ -440,7 +440,7 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner `[dist]` identisch zum Brixx Web-Baustein `[brixx-animal-list]` zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
+Komplettes Beispiel v1.0.9 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -769,7 +769,7 @@ Der Ordner `[dist]` entspricht der Live-Umgebung von einem Projektordner und wir
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel v1.0.8 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
+Komplettes Beispiel v1.0.9 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
 
 ### Brixx Webkomponente testen
 
@@ -914,7 +914,7 @@ Returns the Brixx version in semantic versioning format.
 
 Console output
 
-    Brixx version: 1.0.8
+    Brixx version: 1.0.9
 
 ## Brixx static methods
 
@@ -1159,14 +1159,14 @@ Creates a Brixx instance.
 
     const instance = new Brixx()
 
-### .render(element=Brixx.element || { element=Brixx.element, rootElement=null })
+### .render(element=Brixx.element || { element, rootElement=null })
 
 Renders a Brixx element. It is recommended to use the configuration object for the settings.
 
 **Parameters**  
 `{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
 
-`{Object} [object.element=Brixx.element] (optional)` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
+`{Object} [object.element]` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
 
 `{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
 
@@ -1258,10 +1258,9 @@ Renders a Brixx element. It is recommended to use the configuration object for t
 
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.8 [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
--   ### [Beispiel v1.0.8 [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
--   ### [Beispiel v1.0.8 [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
-
+-   ### [Beispiel v1.0.9 [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
+-   ### [Beispiel v1.0.9 [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
+-   ### [Beispiel v1.0.9 [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
 ## Copyright and License
 
 #
