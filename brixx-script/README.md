@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.9` (Release, 15.01.2023)
+### Version: `1.0.9` (Release, 23.01.2023)
 
 #
 
