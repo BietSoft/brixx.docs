@@ -946,7 +946,7 @@ Load Text/JSON files.
 
 Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name.
 
-**Parameters**
+**Parameters**  
 `{Object} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
 
 `{Object} [object.name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If a configuration object is used and the parameter "name" is not specified, the default Brix HTML element identifier is used.
