@@ -851,7 +851,7 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 > **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-## Brixx class properties
+## Brixx static properties
 
 ### .version
 
@@ -883,9 +883,21 @@ Returns the Brixx component folder. Brixx web components are usually created and
 
     > Brixx component folder: components
 
+### .element
+
+`{Object} [element=null]` - the Brixx element. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
+
+**Example**
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx default component element</h1>
+      </div>
+    )
+
 ### .elementPrefix
 
-Returns the Brixx element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
+Returns the Brixx element prefix. The Brixx HTML element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`. Use `setElementPrefix` to change the default element prefix `[elementPrefix='brixx']`
 
 `Readonly`
 
@@ -898,7 +910,7 @@ Returns the Brixx element prefix. The Brixx element identifier is preceded by th
 
     > Brixx element prefix: brixx
 
-## Brixx class methods
+## Brixx static methods
 
 ### .UUID()
 
@@ -926,6 +938,7 @@ Creates and returns the Brixx root element. The Brixx root element is used as a 
 
 **Example**
 
+    const rootElement = document.getElementById('root')
     const root = Brixx.createRoot(rootElement)
 
 ### .setComponentFolder(folder='components')
@@ -941,7 +954,7 @@ Set the Brixx Component folder. Brixx web components are usually created and exp
 
 ### .setElementPrefix(prefix='brixx')
 
-Set the Brixx HTML-Element prefix. The Brixx element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
+Set the Brixx HTML element prefix. The Brixx HTML element identifier is preceded by the Brixx element prefix with a hyphen and will be used with `registerElement`.
 
 **Parameters**  
 `{String} [prefix='brixx'] (optional)` - the Brixx element prefix.
@@ -965,19 +978,71 @@ Load Text/JSON files.
     const data = Brixx.load('./settings.json')
     const settings = JSON.parse(data)
 
-#
+### .registerElement(name='{Brixx.elementPrefix}-element' || { name='{Brixx.elementPrefix}-element', script=null })
 
-Uer construction ...
-
-### .registerElement({ name=`brixx-element`, script=null })
-
-Register a Brixx HTML-Element.
+Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name. 
 
 **Parameters**
+`{Object} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
 
-**Example**
+`{Object} [object.name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If a configuration object is used and the parameter "name" is not specified, the default Brix HTML element identifier is used.
 
-    Brixx.registerElement({ name: 'brixx-animal-list' })
+`{String} [object.script=null] (optional)` - the Brixx script component. The file name of the Brixx script component to set as Brixx HTML element.
+
+**Examples**
+
+    // The default Brixx element prefix is 'brixx'
+    Brixx.registerElement()
+
+Registers the Brixx HTML element `<brixx-element>`
+
+###
+
+    Brixx.registerElement('element-sample')
+
+Registers the Brixx HTML element `<brixx-element-sample>`
+
+###
+
+    Brixx.registerElement('brixx-element-sample')
+ 
+Registers the Brixx HTML element `<brixx-element-sample>`
+
+###
+
+    Brixx.registerElement({})
+
+Registers the Brixx HTML element `<brixx-element>`
+
+###
+
+    Brixx.registerElement({name})
+
+Registers the Brixx HTML element `<brixx-element>`
+
+###
+
+    Brixx.registerElement({name: 'element-sample'})
+
+Registers the Brixx HTML element `<brixx-element-sample>`
+
+###
+
+    Brixx.registerElement({name: 'element-sample', script: './components/brixx-element-sample.js'})
+
+Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script component `./components/brixx-element-sample.js`
+
+###
+
+    const config = {name: 'element-sample', script: './components/brixx-element-sample.js'}
+
+    Brixx.registerElement(config)
+
+Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script component `./components/brixx-element-sample.js`
+
+#
+
+Under construction ...
 
 ### .run({file='index.bs', load=false, rootElement=null})
 
@@ -989,19 +1054,7 @@ Run a Brixx app
 
     Brixx.run()
 
-## Static objects
-
-### .element
-
-`{Object} [element=null]` - the Brixx element. The Brixx element is a default Brixx web component, can appear once per web application and is the fallback object for some operations. The Brixx default element enables rapid development with Brixx script and reduces programming effort and project complexity to a minimum (low-code development).
-
-**Example**
-
-    Brixx.element = (
-      <div>
-        <h1>Brixx default component element</h1>
-      </div>
-    )
+## Brixx static objects
 
 ### .console
 
@@ -1036,6 +1089,10 @@ Brixx Component class sample
       }
     }
 
+... under construction
+
+#
+
 ## Create a Brixx instance
 
 ### Costructor
@@ -1049,9 +1106,9 @@ Creates a Brixx instance.
 
     const instance = new Brixx()
 
-### .render(element=Brixx.element || { element=null, rootElement=null })
+### .render(element=Brixx.element || { element=Brixx.element, rootElement=null })
 
-Renders a Brixx element.
+Renders a Brixx element. It is recommended to use the configuration object for the settings. 
 
 **Parameters**  
 `{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
@@ -1079,6 +1136,15 @@ Renders a Brixx element.
         <h1>Brixx component element</h1>
       </div>
     )
+
+###
+
+    Brixx.element = (
+      ...
+    )
+
+    const instance = new Brixx()
+    instance.render({})
 
 ###
 
