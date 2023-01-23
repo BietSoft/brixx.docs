@@ -1069,32 +1069,56 @@ Console output
 
     uuid: 51599071-9c39-fbab-356c-9cbd6e476f6c
 
-## Brixx static objects
+## Brixx.console (object)
 
-#
+... under construction ...
 
-Under construction ...
+The Brixx console object. A special Brixx console object, based on the browser console object, typically used for system information during development or for debugging and to be disabled at runtime. 
 
-### .console
+> The browser console object should be used very carefully so that no unwanted information is output at runtime. 
 
-The Brixx console object.
+### .console.dot
 
-**Parameters**
+**Example**
+
+    Brixx.console.dot(30)
+
+###
+
+    Brixx.console.dot(30, '-')
+
+### .console.log
+
+**Example**
+
+    Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
+
+### .console.out
+
+**Example**
+
+    Brixx.console.out('Brixx-Script v' + Brixx.version)
+    Brixx.console.out('https://brixx.it/brixx-script')
+
+### .console.setLogEnabled
 
 **Example**
 
     Brixx.console.setLogEnabled(true)
-    Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
-    Brixx.console.dot(30, '-')
-    Brixx.console.out('Brixx-Script v' + Brixx.version)
-    Brixx.console.out('https://brixx.it/brixx-script')
-    Brixx.console.log('Brixx logger is', Brixx.console.getLogEnabled())
 
-### .Component
+### .console.setLogLevel
+
+**Example**
+
+    Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
+
+## Brixx.Component (object)
+
+**Example**
+
+... under construction ...
 
 The Brixx Component class.
-
-**Parameters**
 
 **Example**
 
@@ -1107,10 +1131,6 @@ Brixx Component class sample
         return <div>...</div>
       }
     }
-
-... under construction
-
-#
 
 ## Create a Brixx instance
 
