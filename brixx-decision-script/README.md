@@ -557,9 +557,9 @@ Es wird empfohlen Brixx-Decision-Script Standalone nicht in einer Produktionsumg
 
 ### Brixx-Decision-Script Package importieren
 
-Das Modul `DecisionTable` vom Package `@brixx/decision-script` für eine Web-Anwendung importieren.
+Das Modul `BrixxDecisionTable` vom Package `@brixx/decision-script` für eine Web-Anwendung importieren.
 
-    `import { DecisionTable } from '@brixx/decision-script'`
+    `import { BrixxDecisionTable } from '@brixx/decision-script'`
 
 Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
@@ -567,9 +567,9 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 ## Brixx-Decision-Script Library
 
-Das Modul `DecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [`brixx-decision.js`](https://brixx.it/@brixx/decision-script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
+Das Modul `BrixxDecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [`brixx-decision.js`](https://brixx.it/@brixx/decision-script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
 
-    import { DecisionTable } from './brixx-decision'
+    import { BrixxDecisionTable } from './brixx-decision'
 
 Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
@@ -577,6 +577,19 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
+
+## BrixxDecisionTable class
+
+### Constructor
+
+Creates a BrixxDecisionTable instance.
+
+**Returns**  
+`{Object}` - BrixxDecisionTable instance.
+
+**Example**
+
+    const instance = new BrixxDecisionTable()
 
 #
 

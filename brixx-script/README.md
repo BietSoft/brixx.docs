@@ -851,6 +851,116 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 > **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
+## Brixx class
+
+### Constructor
+
+Creates a Brixx instance.
+
+**Returns**  
+`{Object}` - Brixx instance.
+
+**Example**
+
+    const instance = new Brixx()
+
+### .render(element=Brixx.element || { element, rootElement=null })
+
+Renders a Brixx element. It is recommended to use the configuration object for the settings.
+
+**Parameters**  
+`{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
+
+`{Object} [object.element]` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
+
+`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
+
+**Examples**
+
+    Brixx.element = (
+      <div>
+        <h1>Brixx default component element</h1>
+      </div>
+    )
+
+    const instance = new Brixx()
+    instance.render()
+
+###
+
+    const instance = new Brixx()
+    instance.render(
+      <div>
+        <h1>Brixx component element</h1>
+      </div>
+    )
+
+###
+
+    Brixx.element = (
+      ...
+    )
+
+    const instance = new Brixx()
+    instance.render({})
+
+###
+
+    const element = (
+      ...
+    )
+
+    const instance = new Brixx()
+    instance.render({element})
+
+###
+
+    const rootElement = document.getElementById('root')
+
+    const instance = new Brixx()
+    instance.render({element: Brixx.element, rootElement})
+
+###
+
+    const my-root-element = document.getElementById('my-root-element')
+
+    const my-component = (
+      ...
+    )
+
+    const instance = new Brixx()
+    instance.render({element: my-component, rootElement: my-root-element})
+
+###
+
+    ...
+    const config = {element: my-component, rootElement: my-root-element}
+
+    const instance = new Brixx()
+    instance.render(config)
+
+###
+
+    const my-component = (
+      ...
+    )
+
+    Brixx.element = my-component
+
+    const instance = new Brixx()
+    instance.render()
+
+###
+
+    Brixx.element = (
+      ...
+    )
+
+    const element = Brixx.element
+
+    const instance = new Brixx()
+    instance.render({element, rootElement: document.getElementById('my-root-element')})
+
 ## Brixx static properties
 
 ### .componentFolder
@@ -1142,119 +1252,8 @@ Use the Brixx class component
         <MyComponent>
       </div>
     )
-    
-    Brixx.element =
 
-
-## Create a Brixx instance
-
-### Costructor
-
-Creates a Brixx instance.
-
-**Returns**  
-`{Object}` - Brixx instance.
-
-**Example**
-
-    const instance = new Brixx()
-
-### .render(element=Brixx.element || { element, rootElement=null })
-
-Renders a Brixx element. It is recommended to use the configuration object for the settings.
-
-**Parameters**  
-`{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
-
-`{Object} [object.element]` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
-
-`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
-
-**Examples**
-
-    Brixx.element = (
-      <div>
-        <h1>Brixx default component element</h1>
-      </div>
-    )
-
-    const instance = new Brixx()
-    instance.render()
-
-###
-
-    const instance = new Brixx()
-    instance.render(
-      <div>
-        <h1>Brixx component element</h1>
-      </div>
-    )
-
-###
-
-    Brixx.element = (
-      ...
-    )
-
-    const instance = new Brixx()
-    instance.render({})
-
-###
-
-    const element = (
-      ...
-    )
-
-    const instance = new Brixx()
-    instance.render({element})
-
-###
-
-    const rootElement = document.getElementById('root')
-
-    const instance = new Brixx()
-    instance.render({element: Brixx.element, rootElement})
-
-###
-
-    const my-root-element = document.getElementById('my-root-element')
-
-    const my-component = (
-      ...
-    )
-
-    const instance = new Brixx()
-    instance.render({element: my-component, rootElement: my-root-element})
-
-###
-
-    ...
-    const config = {element: my-component, rootElement: my-root-element}
-
-    const instance = new Brixx()
-    instance.render(config)
-
-###
-
-    const my-component = (
-      ...
-    )
-
-    Brixx.element = my-component
-
-    const instance = new Brixx()
-    instance.render()
-
-###
-
-    Brixx.element = (
-      ...
-    )
-
-    const element = Brixx.element
-
-    const instance = new Brixx()
-    instance.render({element, rootElement: document.getElementById('my-root-element')})
+    Brixx.run()
 
 # <div id='downloads'/> Downloads
 
