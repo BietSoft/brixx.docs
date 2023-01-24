@@ -790,7 +790,7 @@ Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Ein Brixx Web-Baustein kann auch mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
+Ein Brixx Web-Baustein kann danach mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
@@ -799,7 +799,7 @@ Brixx-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwär
 
 Mit dem Attribut `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
 
-Das Attribut `src` gibt die URL einer extern verwendeten Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
+Das Attribut `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
 
 Das Attribut `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
 
@@ -839,7 +839,7 @@ Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu 
 
 ### Brixx-Script Package importieren
 
-Das Modul `Brixx` vom Package `@brixx/script` importieren
+Das Modul `Brixx` vom Package `@brixx/script` importieren.
 
     `import { Brixx } from '@brixx/script'`
 
