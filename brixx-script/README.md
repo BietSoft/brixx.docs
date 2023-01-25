@@ -853,9 +853,9 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 
 ## Brixx class
 
-### Constructor
+### constructor()
 
-Creates a Brixx instance.
+Constructs a Brixx instance.
 
 **Returns**  
 `{Object}` - Brixx instance.
@@ -864,16 +864,16 @@ Creates a Brixx instance.
 
     const instance = new Brixx()
 
-### .render(element=Brixx.element || { element, rootElement=null })
+### .render(element=Brixx.element || { element=Brixx.element, rootElement=Brixx.rootElement })
 
 Renders a Brixx element. It is recommended to use the configuration object for the settings.
 
 **Parameters**  
 `{Object} [element=Brixx.element] (optional)` - the Brixx element. If no parameter is specified, the default Brixx element is used.
 
-`{Object} [object.element]` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
+`{Object} [object.element=Brixx.element] (optional)` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
 
-`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
+`{Node} [object.rootElement=Brixx.rootElement] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
 
 **Examples**
 
@@ -1063,9 +1063,9 @@ Load Text/JSON files.
 Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name.
 
 **Parameters**  
-`{Object} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
+`{String} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
 
-`{Object} [object.name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If a configuration object is used and the parameter "name" is not specified, the default Brix HTML element identifier is used.
+`{String} [object.name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If a configuration object is used and the parameter "name" is not specified, the default Brix HTML element identifier is used.
 
 `{String} [object.script=null] (optional)` - the Brixx script component. The file name of the Brixx script component to set as Brixx HTML element.
 
@@ -1120,7 +1120,7 @@ Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script 
 
 Registers the Brixx HTML element `<brixx-element-sample>` with the Brixx script component `./components/brixx-element-sample.js`
 
-### .run({~~_file='index.bs'_~~, ~~_load=false_~~, rootElement=null})
+### .run({~~_file='index.bs'_~~, ~~_load=false_~~, rootElement=Brixx.rootElement})
 
 Run a Brixx app. It is a shortcut to create and render a Brixx instance and will used for a Brixx default element.
 
@@ -1129,7 +1129,7 @@ Run a Brixx app. It is a shortcut to create and render a Brixx instance and will
 
 `{Boolean} [object.load=false] (optional)` - the load at start option (_for future use_).
 
-`{Node} [object.rootElement=null] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
+`{Node} [object.rootElement=Brixx.rootElement] (optional)` - the Brixx root element. The Brixx root element is used as a container element to render a Brixx web component. If a configuration object is used and the parameter "rootElement" is not specified and the element is a Brixx script component, the Brixx element is inserted at the current script position. If no Brixx script component is used, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section. Use `createRoot` to change the default Brixx root element `[id='brixx-root']`
 
 **Example**
 

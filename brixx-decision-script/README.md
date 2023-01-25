@@ -197,7 +197,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
 Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Decision-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
 
-    <!-- Load Brixx-Decision-Script standalone for development-->
+    <!-- Load Brixx-Decision-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
 
 Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `./components/brixx-check-age.js"` wird mit einen HTML-`<script>`-Element im HTML-Dokument eingefügt.
@@ -219,7 +219,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     <!DOCTYPE html>
     <html>
     <head>
-        <!-- Load Brixx-Decision-Script standalone for development-->
+        <!-- Load Brixx-Decision-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
         <!-- Include the Brixx script component files for development -->
         <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
@@ -308,7 +308,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <head>
             <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-            <!-- Load Brixx-Decision-Script standalone for development-->
+            <!-- Load Brixx-Decision-Script standalone for development -->
             <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
             <!-- Include the Brixx script component files for development -->
             <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
@@ -463,7 +463,7 @@ Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen
         { age: 13 }
     ]
 
-Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _Constructor_ mit der Eigenschaft `file` die JSON-Definitionsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
+Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _constructor_ mit der Eigenschaft `file` die JSON-Definitionsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
 
     // Create a BrixxDecisionTable instance
     const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })
@@ -575,14 +575,20 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
     const BrixxDecisionTable = require("./brixx-decision/node").default;
 
-
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 ## BrixxDecisionTable class
 
-### Constructor
+### constructor(table=null || { file=null, table=null })
 
-Creates a BrixxDecisionTable instance.
+Constructs a BrixxDecisionTable instance and creates a Brixx decision table with the optional given decision table definition.
+
+**Parameters**  
+`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a json string or a json object.
+
+`{String|Object} [object.table=null] (optional)` - the Brixx decision table json string or json object. This can be a json string or a json object.
+
+`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table json format.
 
 **Returns**  
 `{Object}` - BrixxDecisionTable instance.
@@ -590,6 +596,110 @@ Creates a BrixxDecisionTable instance.
 **Example**
 
     const instance = new BrixxDecisionTable()
+
+###
+
+    const instance = new BrixxDecisionTable({ file: './brixx_decision_table.json' })
+
+### .create(table=null || { file=null, table=null })
+
+Creates a Brixx decision table with the given decision table definition.
+
+**Parameters**  
+`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a json string or a json object.
+
+`{String|Object} [object.table=null] (optional)` - the Brixx decision table json string or json object. This can be a json string or a json object.
+
+`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table json format.
+
+**Returns**  
+`{Object}` - Brixx decision table.
+
+**Example**
+
+    const instance = new BrixxDecisionTable()
+    instance.create({ file: './brixx_decision_table.json' })
+
+### .parse(table)
+
+Creates a Brixx decision table with the given decision table definition.
+
+**Parameters**  
+`{Object} [table]` - the Brixx decision table definition as json object.
+
+**Returns**
+`{Object}` - Brixx decision table.
+
+**Example**
+
+    const brixx_check_age = {
+        "description": "Check age",
+        "hitPolicy": "Priority",
+        "input": {
+            "age": {
+                "description": "The age to check",
+                "type": "number",
+                "default": 0
+            }
+        },
+        "output": {
+            "info": {
+                "description": "An additional information"
+            },
+            "url": {
+                "description": "The url to link to"
+            }
+        },
+        "rules": {
+            "No entry": {
+                "age": "",
+                "info": "Please enter a valid age!",
+                "url": "https://github.com/BietSoft/brixx.docs/",
+                "priority": 30
+            },
+            "Baby": {
+                "age": "0",
+                "info": "It's is still a baby!",
+                "priority": 40
+            },
+            "Preschool": {
+                "age": "< 5",
+                "info": "Unfortunately too young!",
+                "priority": 20
+            },
+            "Teens": {
+                "age": ">= 13",
+                "url": "https://www.youtube.com/"
+            },
+            "Kids": {
+                "age": "< 13",
+                "info": "Internet Safety for Kids",
+                "url": "https://www.youtube.com/kids/",
+                "priority": 10
+            }
+        }
+    }
+
+    instance.parse(brixx_check_age)
+
+### .check(input)
+
+Cheks the input data with the Brixx decition table.
+
+**Parameters**  
+`{Object} [input]` - the data to check as json object.
+
+**Returns**
+`{Object}` - Output data as json object.
+
+**Example**
+
+    const input = { age: 3 }
+    const output = instance.check(input)
+
+###
+
+    > Object { age: 3, info: "Unfortunately too young!", url: undefined }
 
 #
 
