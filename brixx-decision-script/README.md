@@ -577,6 +577,8 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
+# The JavaScript way
+
 ## BrixxDecisionTable class
 
 ### constructor(table=null || { file=null, table=null })
@@ -701,7 +703,7 @@ Cheks the input data with the Brixx decition table.
 
     > Object { age: 3, info: "Unfortunately too young!", url: undefined }
 
-#
+# The HTML way
 
 Under Construction ...
 

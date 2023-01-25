@@ -852,7 +852,6 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 > **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 ## Brixx class
-
 ### constructor()
 
 Constructs a Brixx instance.
