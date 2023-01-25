@@ -579,7 +579,7 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 # The HTML way
 
-Under Construction ...
+Under construction ...
 
 ## Decision table definition
 

@@ -636,7 +636,7 @@ Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir
     ├── package.json
     └── webpack.config.js
 
-Under Construction ...
+Under construction ...
 
 Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
 
