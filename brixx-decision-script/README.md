@@ -533,7 +533,7 @@ Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dab
 
 Under construction ...
 
-Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+Komplettes Beispiel v1.0.3rc2 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
 
@@ -752,7 +752,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.0.3
+    BrixxDecisionTable version: 1.0.3rc2
 
 ## DecisionTable static class
 
@@ -785,6 +785,7 @@ Cheks the Brixx decition table.
 
 # <div id='downloads'/> Downloads
 
+-   ### [Beispiel v1.0.3rc2 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
