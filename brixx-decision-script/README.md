@@ -758,6 +758,17 @@ Console output
 
 The static Brixx class `DecisionTable` is available with the HTML element `<DecisionTable>`.
 
+### .check(name)
+
+Cheks the Brixx decition table.
+
+**Parameters**  
+`{String} [name] (optional)` - the name of the Brixx decision table to check.
+
+**Example**
+
+    DecisionTable.check()
+
 ### .load(file)
 
 Load Brixx decision table definition The file must be in Brixx decision table json format.
@@ -771,17 +782,6 @@ Load Brixx decision table definition The file must be in Brixx decision table js
 **Example**
 
     const DecisionTableDefinition =  DecisionTable.load('./brixx_check_age.json')
-
-### .check(name)
-
-Cheks the Brixx decition table.
-
-**Parameters**  
-`{String} [name] (optional)` - the name of the Brixx decision table to check.
-
-**Example**
-
-    DecisionTable.check()
 
 ### .version
 
