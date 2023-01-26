@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.3rc2` (Stable, 23.01.2023)
+### Version: `1.0.3` (rc2, 23.01.2023)
 
 #
 
