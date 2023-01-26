@@ -783,6 +783,24 @@ Cheks the Brixx decition table.
 
     DecisionTable.check()
 
+
+### .version
+
+Returns the DecisionTable version in semantic versioning format.
+
+`Readonly`
+
+**Returns**  
+`{String}` - DecisionTable version.
+
+**Example**
+
+    console.log('DecisionTable version: ', DecisionTable.version)
+
+Console output
+
+    DecisionTable version: 1.0.3rc2
+
 # <div id='downloads'/> Downloads
 
 -   ### [Beispiel v1.0.3rc2 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
