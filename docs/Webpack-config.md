@@ -1,7 +1,8 @@
 # Webpack-Konfiguration webpack.config.js
+
 Für die Webpack-Konfiguration benötigen wir eine Konfigurationsdatei im Stammverzeichnis des Projekts. Dafür verwenden wir zur Erstellung einer **„Standard“ Brixx Webkomponente** das Template [webpack.config.template.js](../assets/downloads/webpack.config.template.js) und speichern die Datei als `webpack.config.js` im Projektordner. Damit sind keine Webpack Kentnisse und Anpassungen der Konfigurationsdatei notwendig. Fortgeschrittene Anwender mit Webpack Kentnissen haben aber die Möglichkeit die Webpack-Konfiguration für eigene Zwecke anzupassen.
 
-Brixx *webpack.config.js* Template
+Brixx _webpack.config.js_ Template
 
     // Edit the Brixx Component optional build settings here!
     // Brixx element prefix
@@ -29,19 +30,19 @@ Brixx *webpack.config.js* Template
       const prefix = regexp.test(brixx_file_name)
       if (!prefix) brixx_file_name = `${brixx_element_prefix}-${brixx_file_name}`
       const brixx_script_file = `./${brixx_component_folder}/${brixx_file_name}.js`
-      let component_section = 'body'  
+      let component_section = 'body'
       try {
         component_section = brixx_component_section || component_section
       } catch (error) {
         // Use default component section
       }
-      let server_port = '8080'  
+      let server_port = '8080'
       try {
         server_port = webpack_server_port || server_port
       } catch (error) {
         // Use default server port
       }
-      
+
       return {
         mode: 'production',
         entry: './index.js',
@@ -106,18 +107,18 @@ Brixx *webpack.config.js* Template
 
 Um die Webpack-Konfiguration anzupassen stehen spezielle Eigenschaften im Bereich `Edit the Brixx Component optional build settings here!` zur Verfügung.
 
-  > Anwender ohne Webpack Kentnisse sollten Anpassungen an der Webpack-Konfiguration ausschließlich über die spezielle Eigenschaften machen.
+> Anwender ohne Webpack Kentnisse sollten Anpassungen an der Webpack-Konfiguration ausschließlich über die spezielle Eigenschaften machen.
 
     // Edit the Brixx Component optional build settings here!
     // Brixx element prefix
     const brixx_element_prefix = 'brixx'
 
-Die optionale Eigenschaft `brixx_element_prefix` legt einen **Prefix** für den Namen der Brixx Webkomponente fest und wird bei Verwendung als Brixx HTML-Element benötigt `(default='brixx')`. Der Brixx HTML-Element Prefix wird dabei dem HTML-Element Namen mit einem Bindestrich (hyphen) vorangestellt. 
+Die optionale Eigenschaft `brixx_element_prefix` legt einen **Prefix** für den Namen der Brixx Webkomponente fest und wird bei Verwendung als Brixx HTML-Element benötigt `(default='brixx')`. Der Brixx HTML-Element Prefix wird dabei dem HTML-Element Namen mit einem Bindestrich (hyphen) vorangestellt.
 
     // Bixx component name e.g. 'custom-element' become brixx-custom-element.js, <brixx-custom-element>
     const brixx_component_name = null
 
-Die optionale Eigenschaft `brixx_component_name` legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert `(default=null)`. In dem Fall wird die Eigenschaft `name` in aus der *package.json* als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist `{brixx_element_prefix}-element`. Dabei wird `custom-element` als Name der Brixx Webkomponente zur Brixx Script-Component Datei `brixx-custom-element.js` und zum Brixx HTML-Element `<brixx-custom-element>`
+Die optionale Eigenschaft `brixx_component_name` legt den „technischen“ Namen der Brixx Webkomponente fest und ist nicht definiert `(default=null)`. In dem Fall wird die Eigenschaft `name` in aus der _package.json_ als Name für die Brixx Webkomponente verwendet. Der Falback für den Namen der Brixx Webkomponente ist `{brixx_element_prefix}-element`. Dabei wird `custom-element` als Name der Brixx Webkomponente zur Brixx Script-Component Datei `brixx-custom-element.js` und zum Brixx HTML-Element `<brixx-custom-element>`
 
     // Brixx components folder
     const brixx_component_folder = 'components'
@@ -137,4 +138,4 @@ Die optionale Eigenschaft `brixx_dist_folder` wird für die Entwicklung benötig
     // Webpack server port
     const webpack_server_port = '8080'
 
-Die optionale Eigenschaft `webpack_server_port` legt den Port `(default='8080')` für die Adresse `http://127.0.0.1:{webpack_server_port}/index.html` fest unter dem der *Webpack DevServer* die HTML-Datei `(default='index.html')` zum testen der Brixx Webkomponente bereitstellt und im Standard-Browser öffnet Mit der Eigenschaft hat man die Möglichkeit z. B. bei einem konkurierenden lokalen Webserver den Port für den Webpack DevServer anzupassen.
+Die optionale Eigenschaft `webpack_server_port` legt den Port `(default='8080')` für die Adresse `http://127.0.0.1:{webpack_server_port}/index.html` fest unter dem der _Webpack DevServer_ die HTML-Datei `(default='index.html')` zum testen der Brixx Webkomponente bereitstellt und im Standard-Browser öffnet Mit der Eigenschaft hat man die Möglichkeit z. B. bei einem konkurierenden lokalen Webserver den Port für den Webpack DevServer anzupassen.

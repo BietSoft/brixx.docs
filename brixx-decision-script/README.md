@@ -635,6 +635,25 @@ Constructs a BrixxDecisionTable instance and creates a Brixx decision table with
 
     const instance = new BrixxDecisionTable({ file: './brixx_decision_table.json' })
 
+### .check(input)
+
+Cheks the input data with the Brixx decition table.
+
+**Parameters**  
+`{Object} [input]` - the data to check as json object.
+
+**Returns**
+`{Object}` - Output data as json object.
+
+**Example**
+
+    const input = { age: 3 }
+    const output = instance.check(input)
+
+###
+
+    > Object { age: 3, info: "Unfortunately too young!", url: undefined }
+
 ### .create(table=null || { file=null, table=null })
 
 Creates a Brixx decision table with the given decision table definition.
@@ -716,25 +735,6 @@ Creates a Brixx decision table with the given decision table definition.
 
     instance.parse(brixx_check_age)
 
-### .check(input)
-
-Cheks the input data with the Brixx decition table.
-
-**Parameters**  
-`{Object} [input]` - the data to check as json object.
-
-**Returns**
-`{Object}` - Output data as json object.
-
-**Example**
-
-    const input = { age: 3 }
-    const output = instance.check(input)
-
-###
-
-    > Object { age: 3, info: "Unfortunately too young!", url: undefined }
-
 ## BrixxDecisionTable static properties
 
 ### .version
@@ -782,7 +782,6 @@ Cheks the Brixx decition table.
 **Example**
 
     DecisionTable.check()
-
 
 ### .version
 
