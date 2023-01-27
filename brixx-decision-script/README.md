@@ -591,23 +591,48 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-# The HTML way
+# Decision table definition
 
 Under construction ...
 
-## Decision table definition
+The Bixx decision table can be defined in JSON format and is used like other [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) based systems.
 
-`@param {string} [name='Decision table']`  
-`@param {string} [description='Decision table']`  
-`@param {string} [hitPolicy='Priority']`  
-`@param {string} [definition={ input: {}, output: {}, rules: {} }]`  
-`@param {string} [data={}]`
+## name
+
+## decription
+
+## hitPolicy
 
 ## input
 
 ## output
 
 ## rules
+
+# The HTML way
+
+Under construction ...
+
+The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script.
+
+## The HTML element &lt;DecisionTable&gt;
+
+## &lt;Check&gt;
+
+## &lt;Field&gt;
+
+## &lt;Input&gt;
+
+## &lt;Output&gt;
+
+## &lt;Action&gt;
+
+## &lt;Link&gt;
+
+## &lt;Rule&gt;
+
+## &lt;Condition&gt;
+
 
 # The JavaScript way
 
@@ -618,11 +643,11 @@ Under construction ...
 Constructs a BrixxDecisionTable instance and creates a Brixx decision table with the optional given decision table definition.
 
 **Parameters**  
-`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a json string or a json object.
+`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
 
-`{String|Object} [object.table=null] (optional)` - the Brixx decision table json string or json object. This can be a json string or a json object.
+`{String|Object} [object.table=null] (optional)` - the Brixx decision table JSON string or JSON object. This can be a JSON string or a JSON object.
 
-`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table json format.
+`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
 `{Object}` - BrixxDecisionTable instance.
@@ -640,10 +665,10 @@ Constructs a BrixxDecisionTable instance and creates a Brixx decision table with
 Cheks the input data with the Brixx decition table.
 
 **Parameters**  
-`{Object} [input]` - the data to check as json object.
+`{Object} [input]` - the data to check as JSON object.
 
 **Returns**
-`{Object}` - Output data as json object.
+`{Object}` - Output data as JSON object.
 
 **Example**
 
@@ -659,11 +684,11 @@ Cheks the input data with the Brixx decition table.
 Creates a Brixx decision table with the given decision table definition.
 
 **Parameters**  
-`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a json string or a json object.
+`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
 
-`{String|Object} [object.table=null] (optional)` - the Brixx decision table json string or json object. This can be a json string or a json object.
+`{String|Object} [object.table=null] (optional)` - the Brixx decision table JSON string or JSON object. This can be a JSON string or a JSON object.
 
-`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table json format.
+`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
 `{Object}` - Brixx decision table.
@@ -678,7 +703,7 @@ Creates a Brixx decision table with the given decision table definition.
 Creates a Brixx decision table with the given decision table definition.
 
 **Parameters**  
-`{Object} [table]` - the Brixx decision table definition as json object.
+`{Object} [table]` - the Brixx decision table definition as JSON object.
 
 **Returns**
 `{Object}` - Brixx decision table.
@@ -771,13 +796,13 @@ Cheks the Brixx decition table.
 
 ### .load(file)
 
-Load Brixx decision table definition The file must be in Brixx decision table json format.
+Load Brixx decision table definition The file must be in Brixx decision table JSON format.
 
 **Parameters**  
 `{String} [file]` - the Brixx decision table definition file name.
 
 **Returns**
-`{Object}` - Brixx decision table json object.
+`{Object}` - Brixx decision table JSON object.
 
 **Example**
 
