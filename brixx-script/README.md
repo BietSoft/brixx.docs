@@ -156,7 +156,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component-Datei `./components/
 
 ### Brixx Web-Baustein verwenden
 
-Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen.
+Die Integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration von unserem Brixx Web-Baustein zu ermöglichen.
 
     <!-- Load Brixx-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>

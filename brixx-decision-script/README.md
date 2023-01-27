@@ -18,13 +18,14 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision-makin
     -   [Brixx Web-Baustein [brixx-check-age] erstellen](#brixx-check-age-web)
 -   [Brixx-Decision-Script Tutorial](#tutorial)
     -   [Brixx Web-Baustein [brixx-check-age] erweitern](#brixx-check-age-styles)
-    -   [Node.js App [brixx-check-age] erstellen](#brixx-check-age-node)
+    -   [Node.js Application [brixx-check-age] erstellen](#brixx-check-age-node)
+    -   [JavaScript Web-Application [brixx-check-age] erstellen](#brixx-check-age-class)
 -   [Brixx-Decision-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
 # <div id='getstarted'/> Erste Schritte
 
-Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js App (`brixx-check-age-node`).
+Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js Application (`brixx-check-age-node`).
 
 ## <div id='brixx-check-age-web'/> Brixx Web-Baustein [brixx-check-age] erstellen
 
@@ -194,7 +195,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
 ### Brixx Web-Baustein verwenden
 
-Die integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel <b>Brixx-Decision-Script Standalone</b> vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
+Die Integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel **Brixx-Decision-Script Standalone** vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
 
     <!-- Load Brixx-Decision-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
@@ -330,7 +331,7 @@ Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen un
 
 Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
-## <div id='brixx-check-age-node'/> Node.js App [brixx-check-age] erstellen
+## <div id='brixx-check-age-node'/> Node.js Application [brixx-check-age] erstellen
 
 Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
 
@@ -384,7 +385,7 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         }
     }
 
-Anschließend erstellen wir die JavaScript-Datei (Node.js App) `brixx-check-age.js` im Projektordner und importieren das Brixx-Decision-Script Package mit `require("@brixx/decision-script/node")` für Node.js in der Konstanten `BrixxDecisionTable`.
+Anschließend erstellen wir die JavaScript-Datei (Node.js Application) `brixx-check-age.js` im Projektordner und importieren das Brixx-Decision-Script Package mit `require("@brixx/decision-script/node")` für Node.js in der Konstanten `BrixxDecisionTable`.
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
@@ -410,7 +411,7 @@ Wir legen zuerst den Namen des Package fest mit `brixx-check-age` und definieren
     "main": "brixx-check-age.js",
     ...
 
-Danach erstellen wir das NPM-Script `start` zu starten der Node.js App.
+Danach erstellen wir das NPM-Script `start` zu starten der Node.js Application.
 
     ...
     "scripts": {
@@ -448,7 +449,7 @@ Die Projekt-Ordnerstruktur sieht damit wie folgt aus.
     ├── package-lock.json
     └── package.json
 
-Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen wir eine Liste `input_data` ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für die Node.js App repräsentieren soll z. B. aus einem Webservice oder einer Datenbank.
+Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen wir eine Liste `input_data` ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für die Node.js Application repräsentieren soll z. B. aus einem Webservice oder einer Datenbank.
 
     /**
     *  Set the decision table input data list to check
@@ -480,7 +481,7 @@ Die einzelnen Einträge `input` der Liste `input_data` werden dann mit `const ou
         console.log(output)
     })
 
-Komplette Node.js App in der JavaScript-Datei `./brixx-check-age.js`
+Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
@@ -510,19 +511,21 @@ Komplette Node.js App in der JavaScript-Datei `./brixx-check-age.js`
 
 Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
-### Node.js App testen
+### Node.js Application testen
 
-Die Node.js App kann in der Eingabeaufforderung mit `node brixx-check-age.js` im Projektordner `[brixx-check-age-node]` getestet werden, oder direkt in der Entwicklungsumgebung Visual Studio Code. Wir starten die Node.js App durch Klick mit der rechten Maustaste auf den Eintrag `[start]` in der Explorer-Ansicht unter `[NPM-SCRIPTS]` und Auswahl von `[Run]` im Kontextmenü oder Klick auf das Symbol **[** <img src="../assets/images/vscode-run.png" width="8px" /> **]**
+Die Node.js Application kann in der Eingabeaufforderung mit `node brixx-check-age.js` im Projektordner `[brixx-check-age-node]` getestet werden, oder direkt in der Entwicklungsumgebung Visual Studio Code. Wir starten die Node.js Application durch Klick mit der rechten Maustaste auf den Eintrag `[start]` in der Explorer-Ansicht unter `[NPM-SCRIPTS]` und Auswahl von `[Run]` im Kontextmenü oder Klick auf das Symbol **[** <img src="../assets/images/vscode-run.png" width="8px" /> **]**
 
 <img src="../assets/images/brixx-check-age-node.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Visual Studio Code - Run start
 
-Die Node.js App `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
+Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
 
-## <div id='brixx-check-age-class'/> JavaScript Web-App [brixx-check-age] erstellen
+## <div id='brixx-check-age-class'/> JavaScript Web-Application [brixx-check-age] erstellen
 
-Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamische Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-App mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die Brixx Entscheidungstabelle der Datei `brixx_check_age.json` aus dem Beispiel vorher. Dann erstellen auch hier wieder den Ordner `[components]` und darin die Brixx Script-Component Datei `brixx-check-age.js`. Abschließend kopieren wir noch die HTML-Datei `index.html` aus dem ersten Beispiel für eienen Brixx Web-Baustein und die Projekt-Ordnerstruktur sieht wie folgt aus.
+Under construction ...
+
+Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamische Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei für die Brixx Entscheidungstabelle der Datei `brixx_check_age.json` aus dem Beispiel vorher. Dann erstellen auch hier wieder den Ordner `[components]` und darin die Brixx Script-Component Datei `brixx-check-age.js`. Abschließend kopieren wir noch die HTML-Datei `index.html` aus dem ersten Beispiel für eienen Brixx Web-Baustein und die Projekt-Ordnerstruktur sieht wie folgt aus.
 
     brixx-check-age-slass/
         ├── components/
@@ -530,9 +533,115 @@ Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dab
         ├── brixx-check-age.json
         └── index.html
 
-Under construction ...
+Wir verwenden aus der die JSON-Definitionsdatei für die Brixx Entscheidungstabelle nur die Beschreibung, Hit-Policy und zwei „Basis”-Regeln `'No entry'` und `'Baby'` als eine Art „Basis”-Konfiguration. Die „individuelle” Konfiguration erstellen wir in der Web-Application
+
+Komplette JSON-Definitionsdatei `brixx_check_age.json`
+
+    {
+        "description": "Check age",
+        "hitPolicy": "Priority",
+        "rules": {
+            "No entry": {
+            "age": "",
+            "info": "Please enter a valid age!",
+            "url": "https://github.com/BietSoft/brixx.docs/",
+            "priority": 30
+            },
+            "Baby": {
+            "age": "0",
+            "info": "It's is still a baby!",
+            "priority": 40
+            }
+        }
+    }
+
+Wir erstellen die Web-Application mit dem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js`. Zuerst importieren wir die JSON-Definitionsdatei für die Brixx Entscheidungstabelle in der Variablen `DecisionTableDefinition`.
+
+    // Load the decision table definitions
+    const DecisionTableDefinition = DecisionTable.load('./brixx_check_age.json')
+
+Alternativ ist es natürlich auch möglich die Definition für die Brixx Entscheidungstabelle auch im Code zu erstellen.
+
+    // Set the  decision table definitions
+    const DecisionTableDefinition = {
+        "description": "Check age",
+        "hitPolicy": "Priority",
+        "rules": {
+            "No entry": {
+                "age": "",
+                "info": "Please enter a valid age!",
+                "url": "https://github.com/BietSoft/brixx.docs/",
+                "priority": 30
+            },
+            "Baby": {
+                "age": "0",
+                "info": "It's is still a baby!",
+                "priority": 40
+            }
+        }
+    }
+
+Anschließend erstellen wir die Brixx Entscheidungstabelle mit dem Brixx Standard-Element.
+
+    // Create a Brixx default element
+    Brixx.element = (
+        <div>
+            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+            <DecisionTable definition={DecisionTableDefinition}>
+                <ul>
+                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
+                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
+                    <li>Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i></li>
+                    <li>Teens (13 years or older) - <i>https://www.youtube.com/</i></li>
+                </ul>
+                <Input name={"age"} type={"number"}>
+                    <div>Please enter age</div>
+                    <Field />
+                </Input>
+                <Output name={"info"}>
+                    <Field readonly />
+                </Output>
+                <Output name={"url"}>
+                    <Link />
+                </Output>
+                <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+                <Rule age={">= 13"} url={"https://www.youtube.com/"} />
+                <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
+                <Check button label={"Check age"} />
+            </DecisionTable>
+        </div >
+    )
+
+### JavaScript Web-Application verwenden
+
+Für die Integration in ein HTML-Dokument nutzen wir wieder die *Brixx-Decision-Script Standalone* Version und kopieren die HTML-Datei `index.html` aus dem Beispiel für einen Brixx Web-Baustein in den Projektordner.
+
+Komplettes HTML-Dokument in der HTML-Datei `index.html`
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <!-- Load Brixx-Decision-Script standalone for development -->
+        <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
+        <!-- Include the Brixx script component files for development -->
+        <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
+    </head>
+
+    <body>
+        <!-- Add the Brixx HTML element -->
+        <brixx-check-age></brixx-check-age>
+    </body>
+    </html>
 
 Komplettes Beispiel v1.0.3rc2 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+
+### JavaScript Web-Application testen
+
+Die JavaScript Web-Application können wir während der Entwicklung jederzeit testen und starten die HTML-Datei `index.html` mit dem _Live Server_.
+
+<img src="../assets/images/brixx-check-age-class.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Die JavaScript Web-Application `<brixx-check-age>` im Browser-Fenster
 
 # <div id='reference'/> Brixx-Decision-Script Referenz
 
