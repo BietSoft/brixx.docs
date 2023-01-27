@@ -560,7 +560,7 @@ Wir erstellen die Web-Application mit dem Brixx Web-Baustein in der Brixx Script
     // Load the decision table definitions
     const DecisionTableDefinition = DecisionTable.load('./brixx_check_age.json')
 
-Alternativ kann die Definition für die Brixx Entscheidungstabelle im Code zu erstellt werden. 
+Alternativ kann die Definition für die Brixx Entscheidungstabelle im Code zu erstellt werden.
 
     // Set the  decision table definitions
     const DecisionTableDefinition = {
@@ -581,7 +581,7 @@ Alternativ kann die Definition für die Brixx Entscheidungstabelle im Code zu er
         }
     }
 
-> Quellcode- und Konfigurationsdateien ermöglichen als Baustein (Bricks) System eine bessere Projektorganisation. Quellcode und Konfigurationen können leichter bearbeitet, getestet, versioniert werden, aber auch einfacher veröffentlicht und verteilt werden. 
+> Quellcode- und Konfigurationsdateien ermöglichen als Baustein (Bricks) System eine bessere Projektorganisation. Quellcode und Konfigurationen können leichter bearbeitet, getestet, versioniert werden, aber auch einfacher veröffentlicht und verteilt werden.
 
 Anschließend erstellen wir die Brixx Entscheidungstabelle mit dem Brixx Standard-Element.
 
@@ -616,7 +616,7 @@ Anschließend erstellen wir die Brixx Entscheidungstabelle mit dem Brixx Standar
 
 ### JavaScript Web-Application verwenden
 
-Für die Integration in ein HTML-Dokument nutzen wir wieder die *Brixx-Decision-Script Standalone* Version und kopieren die HTML-Datei `index.html` aus dem Beispiel für einen Brixx Web-Baustein in den Projektordner.
+Für die Integration in ein HTML-Dokument nutzen wir wieder die _Brixx-Decision-Script Standalone_ Version und kopieren die HTML-Datei `index.html` aus dem Beispiel für einen Brixx Web-Baustein in den Projektordner.
 
 Komplettes HTML-Dokument in der HTML-Datei `index.html`
 
@@ -725,23 +725,59 @@ Under construction ...
 
 The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script.
 
-## The HTML element &lt;DecisionTable&gt;
+## The HTML elements
+
+## &lt;DecisionTable&gt;
+
+Defines a Brixx decision table.
+
+**Attributes**
+
+`{Object} [check]` - the Brixx decision table check callback function.
+
+`{Boolean} [checkAtStart]` - the check decition table at start flag.
+
+`{Object} [data]` - the Brixx decision table input data.
+
+`{String|Object} [definition] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+
+`{String} [description]` - the Brixx decision table description.
+
+`{String} [hitPolicy='First']` - the Brixx decision table hit policy.
+
+`{String} [name]` - the Brixx decision table identifier.
 
 ## &lt;Check&gt;
 
+**Attributes**
+
 ## &lt;Field&gt;
+
+**Attributes**
 
 ## &lt;Input&gt;
 
+**Attributes**
+
 ## &lt;Output&gt;
+
+**Attributes**
 
 ## &lt;Action&gt;
 
+**Attributes**
+
 ## &lt;Link&gt;
+
+**Attributes**
 
 ## &lt;Rule&gt;
 
+**Attributes**
+
 ## &lt;Condition&gt;
+
+**Attributes**
 
 # The JavaScript way
 
