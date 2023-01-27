@@ -735,7 +735,7 @@ Defines a Brixx decision table.
 
 `{Object} [check]` - the Brixx decision table check callback function.
 
-`{Boolean} [checkAtStart]` - the check decition table at start flag.
+`{Boolean} [checkAtStart]` - the Brixx decition table check at start flag.
 
 `{Object} [data]` - the Brixx decision table input data.
 
@@ -743,15 +743,46 @@ Defines a Brixx decision table.
 
 `{String} [description]` - the Brixx decision table description.
 
-`{String} [hitPolicy='First']` - the Brixx decision table hit policy.
+`{String} [hitPolicy='First']` - the rixx decision table hit policy.
 
 `{String} [name]` - the Brixx decision table identifier.
 
+## &lt;Action&gt;
+
+**Attributes**
+
 ## &lt;Check&gt;
+
+Adds a check configuraion element for the Brixx decision table (optional). Must be enclosed in the DecisionTable section.
+
+`{Object} [action]` - the Brixx decision table check callback function.
+
+`{Boolean} [button]` - the Brixx decision table check button flag.
+
+`{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
+
+`{String} [label='Check decision table']` - the Brixx decision table check button label.
+
+**Attributes**
+
+## &lt;Condition&gt;
 
 **Attributes**
 
 ## &lt;Field&gt;
+
+Adds a Field element for the Brixx decision table. Can be used for input and output elements.
+
+`{String} [default]` - the Brixx decision table field default input value.
+
+`{String} [description]` - the Brixx decision table field input description.
+
+`{Boolean} [readonly]` - the decition table field readonly flag.
+
+`{String} [type='text']` - the Brixx decision table field input type.
+
+`{String} [value]` - the Brixx decision table field default output value.
+
 
 **Attributes**
 
@@ -759,23 +790,15 @@ Defines a Brixx decision table.
 
 **Attributes**
 
-## &lt;Output&gt;
-
-**Attributes**
-
-## &lt;Action&gt;
-
-**Attributes**
-
 ## &lt;Link&gt;
 
 **Attributes**
 
-## &lt;Rule&gt;
+## &lt;Output&gt;
 
 **Attributes**
 
-## &lt;Condition&gt;
+## &lt;Rule&gt;
 
 **Attributes**
 
