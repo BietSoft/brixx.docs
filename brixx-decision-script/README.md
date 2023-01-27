@@ -533,7 +533,7 @@ Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dab
         ├── brixx-check-age.json
         └── index.html
 
-Wir verwenden aus der die JSON-Definitionsdatei für die Brixx Entscheidungstabelle nur die Beschreibung, Hit-Policy und zwei „Basis”-Regeln `'No entry'` und `'Baby'` als eine Art „Basis”-Konfiguration. Die „individuelle” Konfiguration erstellen wir in der Web-Application
+Wir verwenden von der Definitionsdatei die Beschreibung, Hit-Policy und zwei „Basis”-Regeln als „Basis”-Konfiguration. Die „individuelle” Konfiguration erstellen wir in der Web-Application
 
 Komplette JSON-Definitionsdatei `brixx_check_age.json`
 
@@ -555,12 +555,12 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         }
     }
 
-Wir erstellen die Web-Application mit dem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js`. Zuerst importieren wir die JSON-Definitionsdatei für die Brixx Entscheidungstabelle in der Variablen `DecisionTableDefinition`.
+Wir erstellen die Web-Application mit dem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js` und importieren zuerst die JSON-Definitionsdatei in die Variable `DecisionTableDefinition`.
 
     // Load the decision table definitions
     const DecisionTableDefinition = DecisionTable.load('./brixx_check_age.json')
 
-Alternativ ist es natürlich auch möglich die Definition für die Brixx Entscheidungstabelle auch im Code zu erstellen.
+Alternativ kann die Definition für die Brixx Entscheidungstabelle im Code zu erstellt werden. 
 
     // Set the  decision table definitions
     const DecisionTableDefinition = {
@@ -580,6 +580,8 @@ Alternativ ist es natürlich auch möglich die Definition für die Brixx Entsche
             }
         }
     }
+
+> Quellcode- und Konfigurationsdateien ermöglichen als Baustein (Bricks) System eine bessere Projektorganisation. Quellcode und Konfigurationen können leichter bearbeitet, getestet, versioniert werden, aber auch einfacher veröffentlicht und verteilt werden. 
 
 Anschließend erstellen wir die Brixx Entscheidungstabelle mit dem Brixx Standard-Element.
 
