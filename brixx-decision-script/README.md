@@ -783,7 +783,6 @@ Adds a Field element for the Brixx decision table. Can be used for input and out
 
 `{String} [value]` - the Brixx decision table field default output value.
 
-
 **Attributes**
 
 ## &lt;Input&gt;
@@ -792,11 +791,24 @@ Adds a Field element for the Brixx decision table. Can be used for input and out
 
 ## &lt;Link&gt;
 
+Adds a Link element for the Brixx decision table. Can be used for output elements to open a link in a browser window directly. The decision table output value must be a valid link (URL) adress.
+
 **Attributes**
+
+`{String} [target='_blank']` - the Brixx decision table link target.
+
 
 ## &lt;Output&gt;
 
 **Attributes**
+
+## &lt;Process&gt;
+
+Adds a Process element for the Brixx decision table. Can be used for output elements to run a process (_for future use_).
+
+**Attributes**
+
+`{String} [id]` - the Brixx decision table process id.
 
 ## &lt;Rule&gt;
 
