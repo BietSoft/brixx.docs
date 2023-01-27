@@ -709,15 +709,39 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 ## name
 
+**Attributes**
+
+**Example**
+
 ## decription
+
+**Attributes**
+
+**Example**
 
 ## hitPolicy
 
+**Attributes**
+
+**Example**
+
 ## input
+
+**Attributes**
+
+**Example**
 
 ## output
 
+**Attributes**
+
+**Example**
+
 ## rules
+
+**Attributes**
+
+**Example**
 
 # The HTML way
 
@@ -747,9 +771,13 @@ Defines a Brixx decision table.
 
 `{String} [name]` - the Brixx decision table identifier.
 
+**Example**
+
 ## &lt;Action&gt;
 
 **Attributes**
+
+**Example**
 
 ## &lt;Check&gt;
 
@@ -765,9 +793,13 @@ Adds a check configuraion element for the Brixx decision table (optional). Must 
 
 **Attributes**
 
+**Example**
+
 ## &lt;Condition&gt;
 
 **Attributes**
+
+**Example**
 
 ## &lt;Field&gt;
 
@@ -785,9 +817,13 @@ Adds a Field element for the Brixx decision table. Can be used for input and out
 
 **Attributes**
 
+**Example**
+
 ## &lt;Input&gt;
 
 **Attributes**
+
+**Example**
 
 ## &lt;Link&gt;
 
@@ -797,10 +833,13 @@ Adds a Link element for the Brixx decision table. Can be used for output element
 
 `{String} [target='_blank']` - the Brixx decision table link target.
 
+**Example**
 
 ## &lt;Output&gt;
 
 **Attributes**
+
+**Example**
 
 ## &lt;Process&gt;
 
@@ -810,9 +849,13 @@ Adds a Process element for the Brixx decision table. Can be used for output elem
 
 `{String} [id]` - the Brixx decision table process id.
 
+**Example**
+
 ## &lt;Rule&gt;
 
 **Attributes**
+
+**Example**
 
 # The JavaScript way
 
