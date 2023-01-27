@@ -12,8 +12,7 @@
 
 ## “Decisions make up more than 90% of programming!”
 
-Brixx-Decision-Script is a free JavaScript library for rule-based decision-making systems. With Brixx-Decision-Script, the programming can be reduced to a minimum and replaced by a technical configuration (low-code development) for extensions and adjustments via rules with a **Brixx decision table**. In particular, with [Brixx-Script (smarte web components)](https://brixx.it/brixx-script.html) as Brixx HTML elements or as Brixx-Script components in JavaScript applications and frameworks, rapid integration into any HTML document is possible and also supports JavaScript environments such as [Node.js®](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment").
-(cross-platform JavaScript runtime environment).
+Brixx-Decision-Script is a free JavaScript library for rule-based decision-making systems. With Brixx-Decision-Script, the programming can be reduced to a minimum and replaced by a technical configuration (low-code development) for extensions and adjustments via rules with a **Brixx decision table**. In particular, with [Brixx-Script (smarte web components)](https://brixx.it/brixx-script.html) as Brixx HTML elements or as Brixx-Script components in JavaScript applications and frameworks, rapid integration into any HTML document is possible and also supports JavaScript environments such as [Node.js®](https://nodejs.org/en/]("Opensource cross platform JavaScript runtime environment"). Brixx-Decision-Script was developed for systems for automation and process control with [BPMN (Business Process Model and Notation)](https://de.wikipedia.org/wiki/Business_Process_Model_and_Notation) and is used for our web-based process engine **Brixx-Process-Script**. With Brixx-Decision-Script you can easily map processes in your own systems or web projects with JavaScript.
 
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-check-age] erstellen](#brixx-check-age-web)
@@ -632,7 +631,6 @@ The other way to define a Brixx decision table are the special HTML elements tha
 ## &lt;Rule&gt;
 
 ## &lt;Condition&gt;
-
 
 # The JavaScript way
 
