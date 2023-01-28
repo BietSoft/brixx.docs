@@ -785,7 +785,7 @@ Adds an `Action` object for the Brixx decision table. Can be used for `output` o
 
 `{Boolean} [link]` - the Brixx decision table output action link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output action process id.
+`{String} [process]` - the Brixx decision table output action process id. Runs a Brixx process (for future use).
 
 `{String} [target='_blank']` - the Brixx decision table output action link target.
 
@@ -883,7 +883,7 @@ Adds a `Output` object for the Brixx decision table.
 
 `{Boolean} [link]` - the decition table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output process id.
+`{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (for future use).
 
 `{String} [target='_blank']` - the Brixx decision table output link target.
 
