@@ -747,13 +747,13 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 Under construction ...
 
-The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecitionTable` element.
+The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecitionTable` element. Each Brixx-Decision-Script HTML element can contain subordinate elements and enables free design in the HTML document.
 
 ## The HTML elements
 
 ## &lt;DecisionTable&gt;
 
-Defines a Brixx decision table.
+Defines a Brixx decision table `root` element.
 
 **Attributes**
 
@@ -769,35 +769,35 @@ Defines a Brixx decision table.
 
 `{String} [hitPolicy='First']` - the rixx decision table hit policy.
 
-`{String} [name]` - the Brixx decision table identifier.
+`{String} [name]` - the Brixx decision table object identifier.
 
 **Example**
 
 ## &lt;Action&gt;
 
-Adds an `Action` object for the Brixx decision table and can be used for output elements.
+Adds an `Action` object for the Brixx decision table. Can be used for `output` objects. Must be included in the `output` section.
 
 **Attributes**
 
-`{Object} [callback]` - the Brixx decision table action callback function.
+`{Object} [callback]` - the Brixx decision table output action callback function.
 
-`{Object} [data]` - the Brixx decision table action callback function.
+`{Object} [data]` - the Brixx decision table output data callback function.
 
-`{Boolean} [link]` - the Brixx decision table action link flag.
+`{Boolean} [link]` - the Brixx decision table output action link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table action process id.
+`{String} [process]` - the Brixx decision table output action process id.
 
-`{String} [target='_blank']` - the Brixx decision table action link target.
+`{String} [target='_blank']` - the Brixx decision table output action link target.
 
 **Example**
 
 ## &lt;Check&gt;
 
-Adds a `Check` configuraion object for the Brixx decision table. Must be enclosed in the DecisionTable section.
+Adds a `Check` object for the Brixx decision table. Must be included in the `root` section.
 
 `{Object} [action]` - the Brixx decision table check callback function.
 
-`{Boolean} [button]` - the Brixx decision table check button flag.
+`{Boolean} [button]` - the Brixx decision table check button flag. Defines the check object as a button. 
 
 `{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
 
@@ -809,11 +809,11 @@ Adds a `Check` configuraion object for the Brixx decision table. Must be enclose
 
 ## &lt;Condition&gt;
 
-Adds an `Condition` object for the Brixx decision table rule and can be used for rule elements. For the available rule conditions, see [Decision table definition](#definition).
+Adds an `Condition` object for the Brixx decision table. Can be used for `input` and `output` objects. Must be included in the `rule` section. For the available rule conditions, see [Decision table definition](#definition).
 
 **Attributes**
 
-`{Object} [input_element={condition_string}]` - the Brixx decision table input condition attribut.
+`{Object} [element={condition}]` - the Brixx decision table rule condition attribut.
 
 **Example**
 
@@ -821,7 +821,7 @@ Adds an `Condition` object for the Brixx decision table rule and can be used for
 
 ## &lt;Field&gt;
 
-Adds a `Field` object for the Brixx decision table. Can be used for input and output elements.
+Adds a `Field` object for the Brixx decision table. Must be included in a `input` or `output` section.
 
 `{String} [default]` - the Brixx decision table field default input value.
 
@@ -839,13 +839,27 @@ Adds a `Field` object for the Brixx decision table. Can be used for input and ou
 
 ## &lt;Input&gt;
 
+Adds a `Input` object for the Brixx decision table.
+
 **Attributes**
+
+`{Object} [data]` - the Brixx decision table input object data.
+
+`{String} [default]` - the Brixx decision table input object default value.
+
+`{String} [element]` - the Brixx decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
+
+`{String} [description]` - the Brixx decision table input object description.
+
+`{String} [name]` - the Brixx decision table input object identifier.
+
+`{String} [type='text']` - the Brixx decision table input object type.
 
 **Example**
 
 ## &lt;Link&gt;
 
-Adds a `Link` object for the Brixx decision table. Can be used for output elements to open a link in a browser window directly. The decision table output value must be a valid link (URL) adress.
+Adds a `Link` object for the Brixx decision table. Can be used for `output` objects. Opens a link in a browser window. The output value must be a valid link (URL) adress. Must be included in the `output` section.
 
 **Attributes**
 
@@ -855,13 +869,31 @@ Adds a `Link` object for the Brixx decision table. Can be used for output elemen
 
 ## &lt;Output&gt;
 
+Adds a `Output` object for the Brixx decision table.
+
 **Attributes**
+
+`{Object} [action]` - the Brixx decision table output action callback function.
+
+`{Object} [data]` - the Brixx decision table output data callback function.
+
+`{String} [description]` - the Brixx decision table output object description.
+
+`{String} [element]` - the Brixx decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
+
+`{Boolean} [link]` - the decition table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
+
+`{String} [process]` - the Brixx decision table output process id.
+
+`{String} [target='_blank']` - the Brixx decision table output link target.
+
+`{String} [name]` - the Brixx decision table output identifier.
 
 **Example**
 
 ## &lt;Process&gt;
 
-Adds a `Process` object for the Brixx decision table. Can be used for output elements to run a process (_for future use_).
+Adds a `Process` object for the Brixx decision table. Runs a Brixx process (_for future use_). Must be included in the `output` section.
 
 **Attributes**
 
@@ -871,7 +903,13 @@ Adds a `Process` object for the Brixx decision table. Can be used for output ele
 
 ## &lt;Rule&gt;
 
+Adds an `Rule` object for the Brixx decision table. Can be used for `input` and `output` objects. Must be included in the `rule` section. For the available rule conditions, see [Decision table definition](#definition).
+
 **Attributes**
+
+`{String} [name]` - the Brixx decision table rule object identifier.
+
+`{Object} [element={condition}]` - the Brixx decision table rule condition attribut.
 
 **Example**
 
