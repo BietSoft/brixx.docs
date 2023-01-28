@@ -729,13 +729,13 @@ The field `description` defines Brixx decision table description and could be us
 
 ## hitPolicy
 
-The field `hitPolicy` defines the Brixx decision table hit policy. The field is optional and not required. If `hitPolicy` is not set it will set to the `Priority`.
+The field `hitPolicy` defines the Brixx decision table hit policy. The field is optional and not required. If `hitPolicy` is not set it will set to `Priority`.
 
--   `Any`: Multiple matching rules must not make a difference: all matching rules must lead to the same output. (_not available in this version_).
--   `Collect`: Rules do not overlap. Only a single rule can match (_not available in this version_).
--   `First`: Rules are evaluated from top to bottom. Rules may overlap, but only the first match counts.
--   `Priority` (default): Rule outputs are prioritized. Rules may overlap, but only the match with the highest output priority counts.
--   `Unique`: Rules do not overlap. Only a single rule can match. (_not available in this version_).
+-   `Any` - Multiple matching rules must not make a difference: all matching rules must lead to the same output. (_not available in this version_).
+-   `Collect` - Rules do not overlap. Only a single rule can match (_not available in this version_).
+-   `First` - Rules are evaluated from top to bottom. Rules may overlap, but only the first match counts.
+-   `Priority` (default) - Rule outputs are prioritized. Rules may overlap, but only the match with the highest output priority counts.
+-   `Unique` - Rules do not overlap. Only a single rule can match. (_not available in this version_).
 
 **Example**
 
