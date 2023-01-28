@@ -342,9 +342,9 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         "hitPolicy": "Priority",
         "input": {
             "age": {
-            "description": "The age to check",
-            "type": "number",
-            "default": 0
+                "description": "The age to check",
+                "type": "number",
+                "default": 0
             }
         },
         "output": {
@@ -709,47 +709,139 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 ## name
 
-The field `name` defines Brixx decision table object identifier and will be used for the decision table class [check](#decision-table-check) method. The field is optional and not required. If the name is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
+The field `name` defines Brixx decision table object identifier and will be used for the decision table class [check](#decision-table-check) method. The field is optional and not required. If `name` is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
 
 **Example**
 
     {
-        "name": "BrixxDecisionTable",
+        "name": "BrixxDecisionTable"
     }
 
-## decription
+## description
 
-The field `decription` defines Brixx decision table decription and could be used for the decision table output. The field is optional () and not required. If the decription is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
+The field `description` defines Brixx decision table description and could be used for the decision table output. The field is optional and not required. If `description` is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
 
 **Example**
 
     {
-        "decription": "The Brixx decision table",
+        "description": "Check age"
     }
 
 ## hitPolicy
 
-**Attributes**
+The field `hitPolicy` defines the Brixx decision table hit policy. The field is optional and not required. If `hitPolicy` is not set it will set to the `Priority`.
+
+-   `Any`: Multiple matching rules must not make a difference: all matching rules must lead to the same output. (_not available in this version_).
+-   `Collect`: Rules do not overlap. Only a single rule can match (_not available in this version_).
+-   `First`: Rules are evaluated from top to bottom. Rules may overlap, but only the first match counts.
+-   `Priority` (default): Rule outputs are prioritized. Rules may overlap, but only the match with the highest output priority counts.
+-   `Unique`: Rules do not overlap. Only a single rule can match. (_not available in this version_).
 
 **Example**
+
+    {
+        "hitPolicy": "Priority"
+    }
 
 ## input
 
-**Attributes**
+The field `input` defines the Brixx decision table input data.
 
 **Example**
+
+    {
+        "input": {
+            "age": {
+                "description": "The age to check",
+                "type": "number",
+                "default": 0
+            }
+        }
+    }
 
 ## output
 
-**Attributes**
+The field `output` defines the Brixx decision table output data.
 
 **Example**
+
+    {
+        "output": {
+            "info": {
+            "description": "An additional information"
+            },
+            "url": {
+            "description": "The url to link to"
+            }
+        }
+    }
 
 ## rules
 
-**Attributes**
+The field `rules` defines the Brixx decision table rule object list. 
+
+**Rule**
+
+A rule object sample. 
+
+    {  
+        "No entry": {
+            "age": "",
+            "info": "Please enter a valid age!",
+            "url": "https://github.com/BietSoft/brixx.docs/",
+            "priority": 30
+        }
+    }
+
+
+**Condition**
+
+The input oject rule conditions. Multiple conditions can be used and combined for a rule. However, it is recommended to use one rule per condition.
+
+"`{value}`" (equal)
+
+"`not {value}`" or "`! {value}`"
+
+"`>= {value}`"
+
+"`<= {value}`"
+
+"`< {value}`"
+
+"`> {value}`"
 
 **Example**
+
+    {
+        "rules": {
+            "No entry": {
+                "age": "",
+                "info": "Please enter a valid age!",
+                "url": "https://github.com/BietSoft/brixx.docs/",
+                "priority": 30
+            },
+            "Baby": {
+                "age": "0",
+                "info": "It's is still a baby!",
+                "priority": 40
+            },
+            "Preschool": {
+                "age": "< 5",
+                "info": "Unfortunately too young!",
+                "priority": 20
+            },
+            "Teens": {
+                "age": ">= 13",
+                "url": "https://www.youtube.com/"
+            },
+            "Kids": {
+                "age": "< 13",
+                "info": "Internet Safety for Kids",
+                "url": "https://www.youtube.com/kids/",
+                "priority": 10
+            }
+        }            
+    }
 
 # The HTML way
 
@@ -793,7 +885,7 @@ Adds an `Action` object for the Brixx decision table. Can be used for `output` o
 
 `{Boolean} [link]` - the Brixx decision table output action link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output action process id. Runs a Brixx process (for future use).
+`{String} [process]` - the Brixx decision table output action process id. Runs a Brixx process (_not available in this version_).
 
 `{String} [target='_blank']` - the Brixx decision table output action link target.
 
@@ -891,7 +983,7 @@ Adds a `Output` object for the Brixx decision table.
 
 `{Boolean} [link]` - the decision table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (for future use).
+`{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (_not available in this version_).
 
 `{String} [target='_blank']` - the Brixx decision table output link target.
 
@@ -901,7 +993,7 @@ Adds a `Output` object for the Brixx decision table.
 
 ## &lt;Process&gt;
 
-Adds a `Process` object for the Brixx decision table. Runs a Brixx process (_for future use_). Must be included in the `output` section.
+Adds a `Process` object for the Brixx decision table. Runs a Brixx process (_not available in this version_). Must be included in the `output` section.
 
 **Attributes**
 
