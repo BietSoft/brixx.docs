@@ -701,7 +701,7 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-# Decision table definition
+# <div id='definition'/> Decision table definition
 
 Under construction ...
 
@@ -747,7 +747,7 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 Under construction ...
 
-The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script.
+The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecitionTable` element.
 
 ## The HTML elements
 
@@ -763,7 +763,7 @@ Defines a Brixx decision table.
 
 `{Object} [data]` - the Brixx decision table input data.
 
-`{String|Object} [definition] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+`{String|Object} [definition]` - the Brixx decision table definition. This can be a JSON string or a JSON object.
 
 `{String} [description]` - the Brixx decision table description.
 
@@ -775,13 +775,25 @@ Defines a Brixx decision table.
 
 ## &lt;Action&gt;
 
+Adds an `Action` object for the Brixx decision table and can be used for output elements.
+
 **Attributes**
+
+`{Object} [callback]` - the Brixx decision table action callback function.
+
+`{Object} [data]` - the Brixx decision table action callback function.
+
+`{Boolean} [link]` - the Brixx decision table action link flag.
+
+`{String} [process]` - the Brixx decision table action process id.
+
+`{String} [target='_blank']` - the Brixx decision table action link target.
 
 **Example**
 
 ## &lt;Check&gt;
 
-Adds a check configuraion element for the Brixx decision table (optional). Must be enclosed in the DecisionTable section.
+Adds a `Check` configuraion object for the Brixx decision table. Must be enclosed in the DecisionTable section.
 
 `{Object} [action]` - the Brixx decision table check callback function.
 
@@ -797,13 +809,19 @@ Adds a check configuraion element for the Brixx decision table (optional). Must 
 
 ## &lt;Condition&gt;
 
+Adds an `Condition` object for the Brixx decision table rule and can be used for rule elements. For the available rule conditions, see [Decision table definition](#definition).
+
 **Attributes**
+
+`{Object} [input_element={condition_string}]` - the Brixx decision table input condition attribut.
 
 **Example**
 
+    <Condition x={'> 5'}>
+
 ## &lt;Field&gt;
 
-Adds a Field element for the Brixx decision table. Can be used for input and output elements.
+Adds a `Field` object for the Brixx decision table. Can be used for input and output elements.
 
 `{String} [default]` - the Brixx decision table field default input value.
 
@@ -827,7 +845,7 @@ Adds a Field element for the Brixx decision table. Can be used for input and out
 
 ## &lt;Link&gt;
 
-Adds a Link element for the Brixx decision table. Can be used for output elements to open a link in a browser window directly. The decision table output value must be a valid link (URL) adress.
+Adds a `Link` object for the Brixx decision table. Can be used for output elements to open a link in a browser window directly. The decision table output value must be a valid link (URL) adress.
 
 **Attributes**
 
@@ -843,7 +861,7 @@ Adds a Link element for the Brixx decision table. Can be used for output element
 
 ## &lt;Process&gt;
 
-Adds a Process element for the Brixx decision table. Can be used for output elements to run a process (_for future use_).
+Adds a `Process` object for the Brixx decision table. Can be used for output elements to run a process (_for future use_).
 
 **Attributes**
 
