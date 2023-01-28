@@ -23,11 +23,11 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision-makin
 -   [Brixx-Decision-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
-# <div id='getstarted'/> Erste Schritte
+# <div id='getstarted' /> Erste Schritte
 
 Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js Application (`brixx-check-age-node`).
 
-## <div id='brixx-check-age-web'/> Brixx Web-Baustein [brixx-check-age] erstellen
+## <div id='brixx-check-age-web' /> Brixx Web-Baustein [brixx-check-age] erstellen
 
 Wir erstellen eine einfache Brixx Entscheidungstabelle zur Altersüberprüfung mit Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-check-age-web]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -254,9 +254,9 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner `[brixx-
 
     Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
-# <div id='tutorial'/> Brixx-Decision-Script Tutorial
+# <div id='tutorial' /> Brixx-Decision-Script Tutorial
 
-## <div id='brixx-check-age-styles'/> Brixx Web-Baustein [brixx-check-age] erweitern
+## <div id='brixx-check-age-styles' /> Brixx Web-Baustein [brixx-check-age] erweitern
 
 Wie erweitern die Brixx Webkomponente [brixx-check-age] mit zusätzlichen CSS-Dateien. Dafür erstellen wir zuerst einen Projektordner `[brixx-check-age-styles]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
@@ -331,7 +331,7 @@ Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen un
 
 Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
-## <div id='brixx-check-age-node'/> Node.js Application [brixx-check-age] erstellen
+## <div id='brixx-check-age-node' /> Node.js Application [brixx-check-age] erstellen
 
 Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
 
@@ -521,7 +521,7 @@ Visual Studio Code - Run start
 
 Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
 
-## <div id='brixx-check-age-class'/> JavaScript Web-Application [brixx-check-age] erstellen
+## <div id='brixx-check-age-class' /> JavaScript Web-Application [brixx-check-age] erstellen
 
 Under construction ...
 
@@ -645,7 +645,7 @@ Die JavaScript Web-Application können wir während der Entwicklung jederzeit te
 
 Die JavaScript Web-Application `<brixx-check-age>` im Browser-Fenster
 
-# <div id='reference'/> Brixx-Decision-Script Referenz
+# <div id='reference' /> Brixx-Decision-Script Referenz
 
 ## Brixx-Decision-Script Standalone
 
@@ -701,7 +701,7 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-# <div id='definition'/> Decision table definition
+# <div id='definition' /> Decision table definition
 
 Under construction ...
 
@@ -709,15 +709,23 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 ## name
 
-**Attributes**
+The field `name` defines Brixx decision table object identifier and will be used for the decision table class [check](#decision-table-check) method. The field is optional and not required. If the name is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
 
 **Example**
+
+    {
+        "name": "BrixxDecisionTable",
+    }
 
 ## decription
 
-**Attributes**
+The field `decription` defines Brixx decision table decription and could be used for the decision table output. The field is optional () and not required. If the decription is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
 
 **Example**
+
+    {
+        "decription": "The Brixx decision table",
+    }
 
 ## hitPolicy
 
@@ -747,7 +755,7 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 Under construction ...
 
-The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecitionTable` element. Each Brixx-Decision-Script HTML element can contain subordinate elements and enables free design in the HTML document.
+The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecisionTable` element. Each Brixx-Decision-Script HTML element can contain subordinate elements and enables free design in the HTML document.
 
 ## The HTML elements
 
@@ -759,7 +767,7 @@ Defines a Brixx decision table `root` element.
 
 `{Object} [check]` - the Brixx decision table check callback function.
 
-`{Boolean} [checkAtStart]` - the Brixx decition table check at start flag.
+`{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
 
 `{Object} [data]` - the Brixx decision table input data.
 
@@ -797,7 +805,7 @@ Adds a `Check` object for the Brixx decision table. Must be included in the `roo
 
 `{Object} [action]` - the Brixx decision table check callback function.
 
-`{Boolean} [button]` - the Brixx decision table check button flag. Defines the check object as a button. 
+`{Boolean} [button]` - the Brixx decision table check button flag. Defines the check object as a button.
 
 `{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
 
@@ -827,7 +835,7 @@ Adds a `Field` object for the Brixx decision table. Must be included in a `input
 
 `{String} [description]` - the Brixx decision table field input description.
 
-`{Boolean} [readonly]` - the decition table field readonly flag.
+`{Boolean} [readonly]` - the decision table field readonly flag.
 
 `{String} [type='text']` - the Brixx decision table field input type.
 
@@ -881,7 +889,7 @@ Adds a `Output` object for the Brixx decision table.
 
 `{String} [element]` - the Brixx decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
 
-`{Boolean} [link]` - the decition table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
+`{Boolean} [link]` - the decision table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
 `{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (for future use).
 
@@ -941,7 +949,7 @@ Constructs a BrixxDecisionTable instance and creates a Brixx decision table with
 
 ### .check(input)
 
-Cheks the input data with the Brixx decition table.
+Cheks the input data with the Brixx decision table.
 
 **Parameters**  
 `{Object} [input]` - the data to check as JSON object.
@@ -1062,16 +1070,24 @@ Console output
 
 The static Brixx class `DecisionTable` is available with the HTML element `<DecisionTable>`.
 
-### .check(name)
+### <div id='decision-table-check' /> .check(name)
 
-Cheks the Brixx decition table.
+Cheks the found Brixx decision tables in the browser window with the given `name`. If the name is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table'). Usually only one Brixx decision table is used in an HTML document, but several decision tables can also exist at the same time.
 
 **Parameters**  
-`{String} [name] (optional)` - the name of the Brixx decision table to check.
+`{String} [name='Decision table'] (optional)` - the name of the Brixx decision table to check. Checks all
 
-**Example**
+**Examples**
 
     DecisionTable.check()
+
+###
+
+    <DecisionTable name={'BrixxDecisionTable'}>
+        ...
+    </DecisionTable>
+    ...
+    DecisionTable.check('BrixxDecisionTable')
 
 ### .load(file)
 
@@ -1104,7 +1120,7 @@ Console output
 
     DecisionTable version: 1.0.3rc2
 
-# <div id='downloads'/> Downloads
+# <div id='downloads' /> Downloads
 
 -   ### [Beispiel v1.0.3rc2 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
