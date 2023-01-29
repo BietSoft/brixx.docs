@@ -745,7 +745,35 @@ The field `hitPolicy` defines the Brixx decision table hit policy. The field is 
 
 ## input
 
-The field `input` defines the Brixx decision table input data.
+The field `input` defines the Brixx decision table input object list.
+
+### The input object
+
+**Attributes**
+
+`{String} [name]` - the Brixx decision table input object identifier.
+
+`{String} [default]` - the Brixx decision table input object default value.
+
+`{String} [description]` - the Brixx decision table input object description.
+
+`{String} [type='text']` - the Brixx decision table input object type.
+
+The input object format.
+
+    {name}: {
+        {description}: {value},
+        {type}: {value},
+        {default}: {value}
+    }
+
+An input object sample.
+
+    "age": {
+        "description": "The age to check",
+        "type": "number",
+        "default": 0
+    }
 
 **Example**
 
@@ -761,38 +789,76 @@ The field `input` defines the Brixx decision table input data.
 
 ## output
 
-The field `output` defines the Brixx decision table output data.
+The field `output` defines the Brixx decision table output object list.
+
+### The output object
+
+**Attributes**
+
+`{String} [name]` - the Brixx decision table output object identifier.
+
+`{String} [description]` - the Brixx decision table output object description.
+
+The output object format.
+
+    {name}: {
+        {description}: {value}
+    }
+
+An output object sample.
+
+    "info": {
+        "description": "An additional information"
+    }
 
 **Example**
 
     {
         "output": {
-            "info": {
-            "description": "An additional information"
+                "info": {
+                "description": "An additional information"
             },
-            "url": {
-            "description": "The url to link to"
+                "url": {
+                "description": "The url to link to"
             }
         }
     }
 
 ## rules
 
-The field `rules` defines the Brixx decision table rule object list. 
+The field `rules` defines the Brixx decision table rule object list.
 
-**Rule**
+### The rule object
 
-A rule object sample. 
+**Attributes**
 
-    {  
-        "No entry": {
-            "age": "",
-            "info": "Please enter a valid age!",
-            "url": "https://github.com/BietSoft/brixx.docs/",
-            "priority": 30
-        }
+`{String} [name]` - the Brixx decision table rule object identifier.
+
+`{String} [input]` - the Brixx decision table rule input condition attribut.
+
+`{String} [output]` - the Brixx decision table rule output value attribut.
+
+`{Number} [priority]` - the Brixx decision table rule priority attribut.
+
+The rule object format.
+
+    {name}: {
+        {input}: {value},
+        ...
+        {output}: {value},
+        ...
+        {priority}: {value}
     }
 
+A rule object sample.
+
+    {
+        "Preschool": {
+            "age": "< 5",
+            "info": "Unfortunately too young!",
+            "priority": 20
+        }
+    }
 
 **Condition**
 
@@ -840,7 +906,7 @@ The input oject rule conditions. Multiple conditions can be used and combined fo
                 "url": "https://www.youtube.com/kids/",
                 "priority": 10
             }
-        }            
+        }
     }
 
 # The HTML way
@@ -1009,7 +1075,11 @@ Adds an `Rule` object for the Brixx decision table. Can be used for `input` and 
 
 `{String} [name]` - the Brixx decision table rule object identifier.
 
-`{Object} [element={condition}]` - the Brixx decision table rule condition attribut.
+`{String} [input]` - the Brixx decision table rule input condition attribut.
+
+`{String} [output]` - the Brixx decision table rule output attribut.
+
+`{Number} [priority]` - the Brixx decision table rule priority attribut.
 
 **Example**
 
