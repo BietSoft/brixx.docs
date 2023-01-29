@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.3` (rc3, 23.01.2023)
+### Version: `1.0.3` (Release, 29.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.3rc3 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.3 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -635,7 +635,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.3rc3 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
 
 ### JavaScript Web-Application testen
 
@@ -1243,7 +1243,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.0.3rc3
+    BrixxDecisionTable version: 1.0.3
 
 ## DecisionTable static class
 
@@ -1314,11 +1314,11 @@ Returns the DecisionTable version in semantic versioning format.
 
 Console output
 
-    DecisionTable version: 1.0.3rc3
+    DecisionTable version: 1.0.3
 
 # <div id='downloads' /> Downloads
 
--   ### [Beispiel v1.0.3rc3 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.3 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
