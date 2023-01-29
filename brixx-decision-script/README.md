@@ -864,7 +864,7 @@ A rule object sample.
 
 The input oject rule conditions. Multiple conditions can be used and combined for a rule. However, it is recommended to use one rule per condition.
 
-"`{value}`" - The value is equal.
+"`{value}`" - The value is equal ...
 
     "age": ""
 
