@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.3` (rc2, 23.01.2023)
+### Version: `1.0.3` (rc3, 23.01.2023)
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.3rc2 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.3rc3 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -635,7 +635,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.3rc2 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+Komplettes Beispiel v1.0.3rc3 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
 
 ### JavaScript Web-Application testen
 
@@ -683,7 +683,7 @@ Es wird empfohlen Brixx-Decision-Script Standalone nicht in einer Produktionsumg
 
 Das Modul `BrixxDecisionTable` vom Package `@brixx/decision-script` für eine Web-Anwendung importieren.
 
-    `import { BrixxDecisionTable } from '@brixx/decision-script'`
+    import { BrixxDecisionTable } from '@brixx/decision-script'
 
 Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
@@ -691,7 +691,7 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 ## Brixx-Decision-Script Library
 
-Das Modul `BrixxDecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [`brixx-decision.js`](https://brixx.it/@brixx/decision-script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
+Das Modul `BrixxDecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [brixx-decision.js](https://brixx.it/@brixx/decision-script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
 
     import { BrixxDecisionTable } from './brixx-decision'
 
@@ -709,7 +709,7 @@ The Bixx decision table can be defined in JSON format and is used like other [DM
 
 ## name
 
-The field `name` defines Brixx decision table object identifier and will be used for the decision table class [check](#decision-table-check) method. The field is optional and not required. If `name` is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
+The field `name` defines Brixx decision table object identifier and will be used for the [DecisionTable.check](#decision-table-check) method. The field is optional and not required. If `name` is not set it will set to the `DecisionTable.defaults.description`.
 
 **Example**
 
@@ -719,7 +719,7 @@ The field `name` defines Brixx decision table object identifier and will be used
 
 ## description
 
-The field `description` defines Brixx decision table description and could be used for the decision table output. The field is optional and not required. If `description` is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table').
+The field `description` defines Brixx decision table description and could be used for the decision table output. The field is optional and not required. If `description` is not set it will set to the `DecisionTable.defaults.description`.
 
 **Example**
 
@@ -1211,6 +1211,23 @@ Creates a Brixx decision table with the given decision table definition.
 
 ## BrixxDecisionTable static properties
 
+### .defaults
+
+Returns the BrixxDecisionTable default values in JSON format.
+
+`Readonly`
+
+**Returns**  
+`{Object}` - BrixxDecisionTable default values.
+
+**Example**
+
+    console.log('BrixxDecisionTable defaults: ', BrixxDecisionTable.defaults)
+
+Console output
+
+    BrixxDecisionTable defaults: Object {"checkLabel": "Check decision table", "description": "Decision table", "hitPolicy": "Priority"}
+
 ### .version
 
 Returns the BrixxDecisionTable version in semantic versioning format.
@@ -1226,7 +1243,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.0.3rc2
+    BrixxDecisionTable version: 1.0.3rc3
 
 ## DecisionTable static class
 
@@ -1234,7 +1251,7 @@ The static Brixx class `DecisionTable` is available with the HTML element `<Deci
 
 ### <div id='decision-table-check' /> .check(name)
 
-Cheks the found Brixx decision tables in the browser window with the given `name`. If the name is not set it will set to the `BrixxDecisionTable.defaults.description` ('Decision table'). Usually only one Brixx decision table is used in an HTML document, but several decision tables can also exist at the same time.
+Cheks the found Brixx decision tables in the browser window with the given `name`. If the name is not set it will set to the `DecisionTable.defaults.description`. Usually only one Brixx decision table is used in an HTML document, but several decision tables can also exist at the same time.
 
 **Parameters**  
 `{String} [name='Decision table'] (optional)` - the name of the Brixx decision table to check. Checks all
@@ -1250,6 +1267,23 @@ Cheks the found Brixx decision tables in the browser window with the given `name
     </DecisionTable>
     ...
     DecisionTable.check('BrixxDecisionTable')
+
+### .defaults
+
+Returns the DecisionTable default values in JSON format.
+
+`Readonly`
+
+**Returns**  
+`{Object}` - DecisionTable default values.
+
+**Example**
+
+    console.log('DecisionTable defaults: ', DecisionTable.defaults)
+
+Console output
+
+    DecisionTable defaults: Object {"checkLabel": "Check decision table", "description": "Decision table", "hitPolicy": "Priority"}
 
 ### .load(file)
 
@@ -1280,11 +1314,11 @@ Returns the DecisionTable version in semantic versioning format.
 
 Console output
 
-    DecisionTable version: 1.0.3rc2
+    DecisionTable version: 1.0.3rc3
 
 # <div id='downloads' /> Downloads
 
--   ### [Beispiel v1.0.3rc2 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.3rc3 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 -   ### [Beispiel v1.0.2 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
