@@ -27,7 +27,7 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision-makin
 
 Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js Application (`brixx-check-age-node`).
 
-## <div id='`brixx-check-age-web`' /> Brixx Web-Baustein [brixx-check-age] erstellen
+## <div id='brixx-check-age-web' /> Brixx Web-Baustein [`brixx-check-age`] erstellen
 
 Wir erstellen eine einfache Brixx Entscheidungstabelle zur Altersüberprüfung mit Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-check-age-web]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -256,7 +256,7 @@ Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner `[brixx-
 
 # <div id='tutorial' /> Brixx-Decision-Script Tutorial
 
-## <div id='`brixx-check-age-styles`' /> Brixx Web-Baustein [brixx-check-age] erweitern
+## <div id='brixx-check-age-styles' /> Brixx Web-Baustein [brixx-check-age] erweitern
 
 Wie erweitern die Brixx Webkomponente [brixx-check-age] mit zusätzlichen CSS-Dateien. Dafür erstellen wir zuerst einen Projektordner `[brixx-check-age-styles]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
@@ -521,7 +521,7 @@ Visual Studio Code - Run start
 
 Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkonsole ausgeführt.
 
-## <div id='`brixx-check-age-class`' /> JavaScript Web-Application [brixx-check-age] erstellen
+## <div id='brixx-check-age-class' /> JavaScript Web-Application [brixx-check-age] erstellen
 
 Under construction ...
 
@@ -1103,7 +1103,7 @@ Adds an `Rule` object for the Brixx decision table. Can be used for `input` and 
 
 ## BrixxDecisionTable class
 
-### constructor(`table=null || { file=null, table=null }`)
+### constructor(table=null || { file=null, table=null })
 
 Constructs a BrixxDecisionTable instance and creates a Brixx decision table with the optional given decision table definition.
 
