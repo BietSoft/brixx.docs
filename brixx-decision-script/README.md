@@ -751,13 +751,13 @@ The field `input` defines the Brixx decision table input object list.
 
 **Attributes**
 
-`{String} [name]` - the Brixx decision table input object identifier.
+`{String} [{name}: {...}]` - the Brixx decision table input object identifier.
 
-`{String} [default]` - the Brixx decision table input object default value.
+`{String} [default] (optional)` - the Brixx decision table input object default value.
 
 `{String} [description]` - the Brixx decision table input object description.
 
-`{String} [type='text']` - the Brixx decision table input object type.
+`{String} [type='text'] (optional)` - the Brixx decision table input object type.
 
 The input object format.
 
@@ -795,7 +795,7 @@ The field `output` defines the Brixx decision table output object list.
 
 **Attributes**
 
-`{String} [name]` - the Brixx decision table output object identifier.
+`{String} [{name}: {...}]` - the Brixx decision table output object identifier.
 
 `{String} [description]` - the Brixx decision table output object description.
 
@@ -832,18 +832,18 @@ The field `rules` defines the Brixx decision table rule object list.
 
 **Attributes**
 
-`{String} [name]` - the Brixx decision table rule object identifier.
+`{String} [{name}: {...}]` - the Brixx decision table rule object identifier.
 
-`{String} [input]` - the Brixx decision table rule input condition attribut.
+`{String} [input] (1,...,n)` - the Brixx decision table rule input condition attribut.
 
-`{String} [output]` - the Brixx decision table rule output value attribut.
+`{String} [output] (1,...,n)` - the Brixx decision table rule output value attribut.
 
-`{Number} [priority]` - the Brixx decision table rule priority attribut.
+`{Number} [priority] (optional)` - the Brixx decision table rule priority attribut.
 
 The rule object format.
 
     {name}: {
-        {input}: {value},
+        {input}: {condition},
         ...
         {output}: {value},
         ...
@@ -864,17 +864,33 @@ A rule object sample.
 
 The input oject rule conditions. Multiple conditions can be used and combined for a rule. However, it is recommended to use one rule per condition.
 
-"`{value}`" (equal)
+"`{value}`" - The value is equal.
 
-"`not {value}`" or "`! {value}`"
+    "age": ""
 
-"`>= {value}`"
+###
 
-"`<= {value}`"
+    "age": "0"
 
-"`< {value}`"
+"`not {value}`" or "`! {value}`" - The value is not ...
 
-"`> {value}`"
+    "age": "not 0"
+
+"`>= {value}`" -  The value is greater than or equal...
+
+    "age": ">= 13"
+
+"`<= {value}`" - The value is lower than or equal...
+
+    "age": "<= 12"
+
+"`< {value}`" - The value is lower than ...
+
+    "age": "< 6"
+
+"`> {value}`" - The value is greater than ...
+
+    "age": "> 0"
 
 **Example**
 
