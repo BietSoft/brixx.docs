@@ -202,12 +202,12 @@ Die Integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für d
 
 Brixx-Decision-Script kann auch von alternativen CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Vielen Dank dafür! Hier muss aber wie immer genauer hinschauet werden, da es sich bei _jsDelivr_ um in automatisiertes System handelt, und dort etwa nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert beispielsweise gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
 
-> **Info:** Der import von _jsDelivr_ darf so verwendet werden, auch wenn die Lizenzbestimmungen nicht beachtet werden.
-
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.3/dist/index.min.js"></script>
+
+> **Info:** Der import von _jsDelivr_ darf so verwendet werden, auch wenn die Lizenzbestimmungen nicht beachtet werden.
 
 Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `./components/brixx-check-age.js"` wird mit einen HTML-`<script>`-Element im HTML-Dokument eingefügt.
 
