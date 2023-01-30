@@ -127,7 +127,7 @@ Danach werden Ausgabefelder erstellt und wir erstellen mit dem HTML-Element `<Ou
 
 Ausgabefelder sind optional und müssen nicht verwendet werden. Datenausgaben können auch, wie im Beispiel, mit einer Callback-Funktion verarbeitet werden, und die verschiedenen Ausgabeearten mit Brixx-Deision-Script auch kombiniert werden.
 
-Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln** (rules). Eine Regel wird mit dem HTML-Element `<Rule>` erstellt und wie bei anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Dabei werden die Bedingungen für die Dateneingabe, im Beispiel das Eingabefeld _age_, sowie die Ergebnisswerte für die Ausgabefelder _info_ und _url_ erstellt (definiert). Dabei müssen nicht für jede Regel alle Eingabe- oder Ausgabefelder verwendet werden.
+Das Herzstück der Brixx Entscheidungstabelle sind die **Regeln** (rules). Eine Regel wird mit dem HTML-Element `<Rule>` erstellt und wie bei anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Dabei werden die Bedingungen für die Dateneingabe, im Beispiel für das Eingabefeld _age_, sowie die Ergebnisswerte für die Ausgabefelder _info_ und _url_ erstellt. Dabei müssen nicht für jede Regel alle Eingabe- oder Ausgabefelder verwendet werden.
 
     ...
     <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
@@ -139,9 +139,9 @@ Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln*
 
 Für die Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft `priority` vergeben werden. Das ist notwendig da wir keine `hitPolicy` definiert haben und standardmäßig `Priority` verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
 
-Mit dem HTML-Element `<Check>` wird zum Schluß eine Schaltfläche mit den Eigenschaften `button` und `label` erstellt. Die Eigenschaft `action` ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion `checkDecisionTable` vom Anfang aufgerufen.
+Mit dem HTML-Element `<Check>` und den Eigenschaften `button` und `label` wird eine Schaltfläche erstellt. Die Eigenschaft `action` ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion `checkDecisionTable` vom Anfang aufgerufen.
 
-> Die Callback-Funktion wird für die Eignenschaft `action` als Objekt (ohne Anführungszeichen) übergeben und nicht als Objektname (String)
+> Die Callback-Funktion wird für die Eignenschaft `action` als Objekt (ohne Anführungszeichen) übergeben und nicht der Objektbezeichner (String)
 
     ...
     <Check button label={"Check age"} action={checkDecisionTable} />
