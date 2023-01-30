@@ -6,13 +6,13 @@
 
 #
 
-> This document is being processed and is currently only available in German. However, we have decided to make Brixx-Decision-Script version 1.0.3 available for use. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. However, we have decided to release it for Brixx-Decision-Script Version 1.0.3. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
 ## “Decisions make up more than 90% of programming!”
 
-Brixx-Decision-Script is a free JavaScript library for rule-based decision-making systems. With Brixx-Decision-Script, the programming can be reduced to a minimum and replaced by a technical configuration (low-code development) for extensions and adjustments via rules with a **Brixx decision table**. In particular, with [Brixx-Script (smarte web components)](https://brixx.it/brixx-script.html) as Brixx HTML elements or as Brixx-Script components in JavaScript applications and frameworks, rapid integration into any HTML document is possible and also supports JavaScript environments such as [Node.js®](https://nodejs.org/en/)(cross platform JavaScript runtime environment). Rules can be easily managed in an external decision table definition file with the decision model notation ([DMN](https://en.wikipedia.org/wiki/Decision_Model_and_Notation)). No programming tasks or complicated deployments are required for changes or adjustments and basic configurations from a decision table definition file can also be expanded with Brixx-Decision-Script HTML elements. Brixx-Decision-Script was developed for systems for automation and process control with [BPMN (Business Process Model and Notation)](https://de.wikipedia.org/wiki/Business_Process_Model_and_Notation) and is used for our web-based process engine **Brixx-Process-Script**. With Brixx-Decision-Script you can implement processes in your web projects or your own process engine systems with JavaScript. For this we use our Brixx script to create a building bricks-oriented project architecture.
+Brixx-Decision-Script is a free JavaScript library for rule-based decision systems. With Brixx-Decision-Script, the programming can be reduced to a minimum and replaced by a technical configuration (low-code development) for extensions and adjustments via rules with a **Brixx decision table**. In particular, with [Brixx-Script (smarte web components)](https://brixx.it/brixx-script.html) as Brixx HTML elements or as Brixx-Script components in JavaScript applications and frameworks, rapid integration into any HTML document is possible and also supports JavaScript environments such as [Node.js®](https://nodejs.org/en/)(cross platform JavaScript runtime environment). Rules can be easily managed in an external decision table definition file with the ([DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation)). No programming tasks or complicated deployments are required for changes or adjustments and basic configurations from a decision table definition file can also be expanded with Brixx-Decision-Script HTML elements. Brixx-Decision-Script was developed for systems for automation and process control with [BPMN (Business Process Model and Notation)](https://de.wikipedia.org/wiki/Business_Process_Model_and_Notation) and is used for our web-based process engine **Brixx-Process-Script**. With Brixx-Decision-Script you can implement processes in your web projects or your own process engine systems with JavaScript. For this we use our Brixx script to create a building bricks-oriented project architecture.
 
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-check-age] erstellen](#brixx-check-age-web)
@@ -25,34 +25,34 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision-makin
 
 # <div id='getstarted' /> Erste Schritte
 
-Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Programmierer und erfahrene Webentwickler auch eine komplette Erstellung im HTML-Code möglich. Es können auch beide Systeme kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und danach das Beispiel auch als Node.js Application (`brixx-check-age-node`).
+Wir verwenden Brixx-Script zur Erstellung einer **Brixx Entscheidungstabelle** (Brixx decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Decision-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und anschließend das Beispiel auch als Node.js Application (`brixx-check-age-node`).
 
 ## <div id='brixx-check-age-web' /> Brixx Web-Baustein [brixx-check-age] erstellen
 
-Wir erstellen eine einfache Brixx Entscheidungstabelle zur Altersüberprüfung mit Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-check-age-web]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Wir erstellen eine Brixx Entscheidungstabelle für eine Altersüberprüfung mit Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-check-age-web]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-check-age-web/
     ├── components/
     │   └── brixx-check-age.js
     └── index.html
 
-Darin erstellen wir den Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `brixx-check-age.js`. Zuersterstellen wir die Funktion `checkDecisionTable` ([JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp)) die wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse in der Entwicklung verwenden, dient aber auchgleichzeitig als Beispiel für eine weiterführende Programmierung.
+Darin erstellen wir den Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `brixx-check-age.js`, und zuerst die Funktion `checkDecisionTable` ([JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp)), die wir als sogenannte _Callback_-Funktion nur zur Überprüfung der Ergebnisse während der Entwicklung verwenden (dient aber auch als Beispiel für eine weiterführende Programmierung).
 
     // Check decision table callback function (optional)
     const checkDecisionTable = (output) => {
         console.log("Output:", output);
     }
 
-> Wir verwenden in den Beispielen [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript Standard und erstellen im aktuellen Beispiel für die Callback-Funktion eine [JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp). Das wird nicht in allen älteren Browsern oder Umgebungen unterstützt und gleichen wir mit Babel aus. Das hat den Vorteil dass man mit Brixx-Script mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss. Dadurch muss man den Code später nicht ändern sondern „nur“ Babel weglassen; ist aber auch notwendig, da Benutzer unterschiedliche Browser und Versionen verwenden.
+> Wir verwenden in den Beispielen [ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript) (ES6) als JavaScript Standard und erstellen im Beispiel für die Callback-Funktion eine [JavaScript Arrow Function](https://www.w3schools.com/js/js_arrow_function.asp). Das wird nicht in allen älteren Browsern oder Umgebungen unterstützt, und gleichen wir mit Babel aus. Das hat den Vorteil dass man mit dem aktuellem Standard entwickeln kann, und sich nicht um eine Abwärtskompatibilität kümmern muss. Dadurch muss man den Code später nicht anpassen sondern „nur“ Babel weglassen; ist aber auch notwendig, da Benutzer unterschiedliche Browser und Versionen verwenden, und man oftmals keinen Einfluss darauf hat.
 
-Die Callback-Funktion alternativ als Function-Object, oder was Babel daraus macht.
+Die Callback-Funktion als klassisches Function-Object, oder was Babel daraus macht.
 
     // Check decision table callback function (optional)
     function checkDecisionTable(output) {
         console.log("Output:", output);
     }
 
-Die Callback-Funktion kann optional verwendet werden, und wird nach Überprüfung der Entscheidungstabelle aufgerufen (Callback). Die Callback-Funktion erhält im Beispiel das Ergebnis (Output) der Überprüfung im Parameter `output` und gibt das Ergebnis in der Browserkonsole aus.
+Die Callback-Funktion kann optional verwendet werden, und wird nach Überprüfung der Entscheidungstabelle aufgerufen (Callback). Die Funktion erhält im Beispiel das Ergebnis (Output) der Überprüfung im Parameter `output` und gibt das Ergebnis in der Browserkonsole aus.
 
 > **Tip:** Browserkonsole öffnen mit `Strg + Shift + J` bei Windows oder `Command [⌘] + Option-Taste + J` bei MacOS
 
@@ -60,7 +60,7 @@ Die Callback-Funktion kann optional verwendet werden, und wird nach Überprüfun
   
 Werkzeuge für Webentwickler mit Konsole im Firefox Browser ( `Strg + Shift + I`)
 
-Anschließend erstellen wir ein `Brixx.element` mit der Brixx Entscheidungstabelle.
+Anschließend erstellen wir ein Standard `Brixx.element` mit der Brixx Entscheidungstabelle.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -93,7 +93,7 @@ Anschließend erstellen wir ein `Brixx.element` mit der Brixx Entscheidungstabel
         </div>
     );
 
-Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung einer Brixx Entscheidungstabelle im HTML-Dokument bereitgestellt und wir erstellen die Entscheidungstabelle mit dem HTML-Element `<DecisionTable>`.
+Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung einer Brixx Entscheidungstabelle im HTML-Dokument zur Verfügung gestellt, und wir erstellen die Brixx Entscheidungstabelle mit dem HTML-Element `<DecisionTable>`.
 
     ...
     <DecisionTable>
