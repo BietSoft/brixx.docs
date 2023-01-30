@@ -790,6 +790,15 @@ Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
+Brixx-Script kann auch von alternativen CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Vielen Dank dafür! Hier muss aber wie immer genauer hinschauet werden, da es sich bei _jsDelivr_ um in automatisiertes System handelt, und dort etwa nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert beispielsweise gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
+
+> **Info:** Der import von _jsDelivr_ darf so verwendet werden, auch wenn die Lizenzbestimmungen nicht beachtet werden.
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.0.9/dist/index.min.js"></script>
+
 Ein Brixx Web-Baustein kann danach mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
     <!-- Include the Brixx script component files for development -->
