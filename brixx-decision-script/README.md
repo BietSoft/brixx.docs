@@ -101,7 +101,7 @@ Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung einer Brixx Entsch
     </DecisionTable>
     ...
 
-Mit dem HTML-Element `<Input>` erstellen wir ein Eingabefeld zur Dateneingabe mit dem HTML-Attribut (Eigenschaft) `name` und der Eigenschaft `type` (optional) für die Brixx Entscheidungstabelle. Zusätzlich erstellen wir im `<Input>`-Tag eine Benutzer-Information mit `<div>Please enter age</div>` und mit dem HTML-Element `<Field>` wird ein Eingabefeld erzeugt. Für eine Entscheidungstabelle kann es beliebig viele Eingabefelder geben.
+Mit dem HTML-Element `<Input>` erstellen wir ein Eingabefeld zur Dateneingabe mit dem HTML-Attribut (Eigenschaft) `name` und der optionalen Eigenschaft `type` für die Brixx Entscheidungstabelle. Zusätzlich erstellen wir im `<Input>`-Bereich eine Benutzer-Information und mit dem HTML-Element `<Field>` wird ein Brixx Eingabefeld erzeugt. Für die Entscheidungstabelle kann es beliebig viele Eingabefelder geben.
 
     ...
     <Input name={"age"} type={"number"}>
@@ -110,11 +110,11 @@ Mit dem HTML-Element `<Input>` erstellen wir ein Eingabefeld zur Dateneingabe mi
     </Input>
     ...
 
-Eingabefelder sind optional und müssen nicht verwendet werden. Dateneingaben können auch aus einem HTML-Formular, Webservice oder einer Datenbank kommen, und die verschiedenen Eingabearten mit Brixx-Deision-Script auch kombiniert werden.
+Eingabefelder sind optional und müssen nicht verwendet werden. Dateneingaben können auch aus einem HTML-Formular, Webservice oder einer Datenbank kommen, und die verschiedenen Eingabearten mit Brixx-Decision-Script auch kombiniert werden.
 
-> **Tip:** Brixx-Decision-Schript HTML-Elemente können wie normale HTML-Elemente mit CSS-Stylesheets für eigen Anforderungen angepasst werden.
+> **Tip:** Brixx-Decision-Script HTML-Elemente können wie HTML Standard Elemente mit CSS-Stylesheets für eigen Anforderungen angepasst werden.
 
-Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTML-Element `<Output>` die Ausgabefelder `info` und `url`. Für eine Entscheidungstabelle kann es beliebig viele Ausgabefelder geben. Wir verwenden für das Ausgabefeld _`info`_ wieder ein HTML-Element `<Field>`, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich das Attribut _`readonly`_. Dadurch wird das Feld zur Datenausgabe verwendet und kann nicht beschrieben werden. Eine Besonderheit ist das HTML-Element `<Link>` für das Ausgabefeld _`url`_. Enthält die Datenausgabe eine gültige URL-Adresse wird automatisch ein Browser-Fenster mit der URL geöffnet. Es gibt noch eine Reihe weiterer Einstellungsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
+Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTML-Element `<Output>` die Ausgabefelder `info` und `url`. Für eine Entscheidungstabelle kann es beliebig viele Ausgabefelder geben. Wir verwenden für das Ausgabefeld _`info`_ wieder ein HTML-Element `<Field>`, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich die Eigenschaft _`readonly`_. Dadurch wird das Feld zur Datenausgabe verwendet und kann nicht beschrieben werden. Eine Besonderheit ist das HTML-Element `<Link>` für das Ausgabefeld _`url`_. Enthält die Datenausgabe eine gültige URL-Adresse wird automatisch ein Browser-Fenster mit der URL geöffnet. Es gibt noch eine Reihe weiterer Einstellungsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
 
     ...
     <Output name={"info"}>
@@ -139,7 +139,7 @@ Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln*
 
 Für die Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft _`priority`_ vergeben werden. Das ist notwendig da wir keine `hitPolicy` definiert haben und standardmäßig _`Priority`_ verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
 
-Mit dem HTML-Element `<Check>` wird zum Schluß mit dem HTML-Attribut _`button`_ eine Schaltfläche mit der Eigenschaft _`label`_ erstellt. Die Eigenschaft _`action`_ ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion _`checkDecisionTable`_ vom Anfang aufgerufen.
+Mit dem HTML-Element `<Check>` wird zum Schluß eine Schaltfläche mit den Eigenschaften _`button`_  und  _`label`_ erstellt. Die Eigenschaft _`action`_ ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion _`checkDecisionTable`_ vom Anfang aufgerufen.
 
 > Die Callback-Funktion wird für die Eignenschaft _`action`_ als Objekt (ohne Anführungszeichen) übergeben und nicht als Objektname (String)
 
@@ -205,9 +205,9 @@ Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Decision-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Attribute `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Decision-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element `<brixx-check-age>` in den `<body>`-Tag einfügen und sind fertig.
+Zum Schluss müssen wir nur noch das HTML-Element `<brixx-check-age>` in den `<body>`-Bereich einfügen und sind fertig.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -661,13 +661,13 @@ Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen min
 
 Brixx-Decision-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
 
-Mit dem Attribut `type` gibt den Medientyp des Skripts an. Für Brixx-Decision-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
+Mit der Eigenschaft `type` gibt den Medientyp des Skripts an. Für Brixx-Decision-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
 
-Das Attribut `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
+Die Eigenschaft `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
 
-Das Attribut `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
+Die Eigenschaft `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
 
-Mit dem Attribut `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
+Die Eigenschaft `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
 
 Es wird empfohlen Brixx-Decision-Script Standalone nicht in einer Produktionsumgebung zu verwenden. Beim Start wird in der Browserkonsole folgende Information ausgegeben.
 

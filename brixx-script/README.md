@@ -166,9 +166,9 @@ Der Brixx Web-Baustein `[brixx-animal-list]` in der Brixx Script-Component-Datei
   <!-- Include the Brixx script component files for development -->
   <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Attribute `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-animal-list>` verwendet werden. Das Attribute _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-animal-list>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element `<brixx-animal-list>` in den `<body>`-Tag einfügen und sind fertig.
+Zum Schluss müssen wir nur noch das HTML-Element `<brixx-animal-list>` in den `<body>`-Bereich einfügen und sind fertig.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -325,7 +325,7 @@ Wir erstellen die Brixx Webkomponente in der JavaScript-Datei `index.js` und imp
     // Imports
     import { Brixx } from '@brixx/script'
 
-Anschließend erstellen wir ein **JSX-Element** mit dem HTML Tag Name `<Greeting>` und dem HTML Attribut `name`. Das Attribut _name_ können wir im JSX-Element mit _Curly Brackets_ `{}` verwenden. Ähnlich wie die Liste `animals` im Brixx Web-Baustein `[brixx-animal-list]`.
+Anschließend erstellen wir ein **JSX-Element** mit dem HTML Tag Name `<Greeting>` und der Eigenschaft `name`. Die Eigenschaft _name_ können wir im JSX-Element mit _Curly Brackets_ `{}` verwenden. Ähnlich wie die Liste `animals` im Brixx Web-Baustein `[brixx-animal-list]`.
 
     // Create a Brixx JSX element
     const Greeting = ({ name }) => (
@@ -334,7 +334,7 @@ Anschließend erstellen wir ein **JSX-Element** mit dem HTML Tag Name `<Greeting
       </div>
     )
 
-Als nächstes erstellen ein `Brixx.element` mit dem JSX-Element `<Greeting>` und dem Attribut `name={'Bob the Builder'}` als Basis für die Brixx Webkomponente.
+Als nächstes erstellen ein `Brixx.element` mit dem JSX-Element `<Greeting>` und der Eigenschaft `name={'Bob the Builder'}` als Basis für die Brixx Webkomponente.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -528,13 +528,13 @@ Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzel
 
 ### HTML-Dokument erweitern
 
-Wir erweitern das HTML-Dokument im `<head>`-Tag mit einem HTML-Kommentar. Hier wird die im **Build**-Prozess erstellte CSS-Datei eingefügt und dient zur Verdeutlichung.
+Wir erweitern das HTML-Dokument im `<head>`-Bereich mit einem HTML-Kommentar. Hier wird die im **Build**-Prozess erstellte CSS-Datei eingefügt und dient zur Verdeutlichung.
 
     ...
     <!-- Include the Brixx script component files -->
     ...
 
-Im `<body>`-Tag eweitern wir das HTML-Dokument mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
+Im `<body>`-Bereich eweitern wir das HTML-Dokument mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
 
     ...
     <a href="https://brixx.it/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
@@ -797,15 +797,15 @@ Ein Brixx Web-Baustein kann danach mit einem `<script>`-Tag importiert werden, w
 
 Brixx-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
 
-Mit dem Attribut `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
+Die Eigenschaft `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
 
-Das Attribut `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
+Die Eigenschaft `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
 
-Das Attribut `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
+Die Eigenschaft `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
 
-Mit dem Attribut `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
+Mit der Eigenschaft `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
 
-Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Dabei muss im folgenden Beispiel das Attribut `data-type` nicht angegeben werden, da für den Beixx Web-Baustein kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
+Der Brixx Web-Baustein kann auch inline eingefügt und als Brixx HTML-Element registriert werden. Dabei muss im folgenden Beispiel die `data-type` nicht angegeben werden, da für den Beixx Web-Baustein kein JavaScript (ECMAScript 2015+) Modul verwendet wird.
 
     <!-- Include the Brixx script component for development -->
     <script type="text/babel" data-presets="brixx">
