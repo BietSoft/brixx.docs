@@ -114,7 +114,7 @@ Eingabefelder sind optional und müssen nicht verwendet werden. Dateneingaben k�
 
 > **Tip:** Brixx-Decision-Script HTML-Elemente können wie HTML Standard Elemente mit CSS-Stylesheets für eigen Anforderungen angepasst werden.
 
-Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTML-Element `<Output>` die Ausgabefelder `info` und `url`. Für eine Entscheidungstabelle kann es beliebig viele Ausgabefelder geben. Wir verwenden für das Ausgabefeld _`info`_ wieder ein HTML-Element `<Field>`, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich die Eigenschaft _`readonly`_. Dadurch wird das Feld zur Datenausgabe verwendet und kann nicht beschrieben werden. Eine Besonderheit ist das HTML-Element `<Link>` für das Ausgabefeld _`url`_. Enthält die Datenausgabe eine gültige URL-Adresse wird automatisch ein Browser-Fenster mit der URL geöffnet. Es gibt noch eine Reihe weiterer Einstellungsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
+Danach werden Ausgabefelder erstellt und wir erstellen mit dem HTML-Element `<Output>` die Ausgabefelder `info` und `url`. Für die Entscheidungstabelle kann es beliebig viele Ausgabefelder geben. Wir verwenden für das Ausgabefeld _info_ ein HTML-Element `<Field>`, und wie bei der Dateneingabe wird ein „Eingabefeld” erzeugt, erhält aber zusätzlich die Eigenschaft `readonly`. Dadurch wird das Feld zur Datenausgabe verwendet und kann nicht beschrieben werden. Eine Besonderheit ist das HTML-Element `<Link>` für das Ausgabefeld _url_. Enthält die Datenausgabe eine gültige URL-Adresse wird automatisch ein Browser-Fenster mit der URL geöffnet. Es gibt noch eine Reihe weiterer Einstellungsmöglichkeiten (siehe [Brixx-Decision-Script Referenz](#reference)).
 
     ...
     <Output name={"info"}>
@@ -125,9 +125,9 @@ Danach werden Ausgabefelder zur Datenausgabe erstellt. Wir erstellen mit dem HTM
     </Output>
     ...
 
-Ausgabefelder sind optional und müssen nicht verwendet werden. Datenausgaben können auch wie im Beispiel mit einer Callback-Funktion verarbeitet werden, und die verschiedenen Ausgabeearten mit Brixx-Deision-Script auch kombiniert werden.
+Ausgabefelder sind optional und müssen nicht verwendet werden. Datenausgaben können auch, wie im Beispiel, mit einer Callback-Funktion verarbeitet werden, und die verschiedenen Ausgabeearten mit Brixx-Deision-Script auch kombiniert werden.
 
-Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln** (rules). Eine Regel wird mit dem HTML-Element `<Rule>` erstellt und wie bei anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Dabei werden die Bedingungen für die Dateneingabe, im Beispiel das Eingabefeld _`age`_, sowie die Ergebnisswerte für die Ausgabefelder _`info`_ und _`url`_ erstellt (definiert). Dabei müssen nicht für jede Regel alle Eingabe- oder Ausgabefelder verwendet werden.
+Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln** (rules). Eine Regel wird mit dem HTML-Element `<Rule>` erstellt und wie bei anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Dabei werden die Bedingungen für die Dateneingabe, im Beispiel das Eingabefeld _age_, sowie die Ergebnisswerte für die Ausgabefelder _info_ und _url_ erstellt (definiert). Dabei müssen nicht für jede Regel alle Eingabe- oder Ausgabefelder verwendet werden.
 
     ...
     <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
@@ -137,11 +137,11 @@ Das Herzstück der Brixx-Decision-Script Entscheidungstabelle sind die **Regeln*
     <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
     ...
 
-Für die Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft _`priority`_ vergeben werden. Das ist notwendig da wir keine `hitPolicy` definiert haben und standardmäßig _`Priority`_ verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
+Für die Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft `priority` vergeben werden. Das ist notwendig da wir keine `hitPolicy` definiert haben und standardmäßig `Priority` verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
 
-Mit dem HTML-Element `<Check>` wird zum Schluß eine Schaltfläche mit den Eigenschaften _`button`_  und  _`label`_ erstellt. Die Eigenschaft _`action`_ ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion _`checkDecisionTable`_ vom Anfang aufgerufen.
+Mit dem HTML-Element `<Check>` wird zum Schluß eine Schaltfläche mit den Eigenschaften `button` und `label` erstellt. Die Eigenschaft `action` ist optional und legt die _Callback_-Funktion fest, die nach Überprüfung der Entscheidungstabelle aufgerufen werden soll. Im Beispiel wird die Funktion `checkDecisionTable` vom Anfang aufgerufen.
 
-> Die Callback-Funktion wird für die Eignenschaft _`action`_ als Objekt (ohne Anführungszeichen) übergeben und nicht als Objektname (String)
+> Die Callback-Funktion wird für die Eignenschaft `action` als Objekt (ohne Anführungszeichen) übergeben und nicht als Objektname (String)
 
     ...
     <Check button label={"Check age"} action={checkDecisionTable} />
@@ -468,7 +468,7 @@ Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit de
     // Create a BrixxDecisionTable instance
     const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })
 
-Die einzelnen Einträge `input` der Liste `input_data` werden dann mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert und mit Unterstützung einer _`JavaScript Array map()`_ nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
+Die einzelnen Einträge `input` der Liste `input_data` werden dann mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert und mit Unterstützung einer _JavaScript Array map()_ nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
@@ -876,7 +876,7 @@ The input oject rule conditions. Multiple conditions can be used and combined fo
 
     "age": "not 0"
 
-"`>= {value}`" -  The value is greater than or equal...
+"`>= {value}`" - The value is greater than or equal...
 
     "age": ">= 13"
 
