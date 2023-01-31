@@ -195,19 +195,19 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
 ### Brixx Web-Baustein verwenden
 
-Die Integration in ein HTML-Dokument ist nicht kompliziert. Wir verwenden für das Beispiel **Brixx-Decision-Script Standalone** vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
+Zur Integration in ein HTML-Dokument verwenden wir für das Beispiel **Brixx-Decision-Script Standalone** vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
 
     <!-- Load Brixx-Decision-Script standalone for development -->
     <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
 
-Brixx-Decision-Script kann auch von alternativen CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Vielen Dank dafür! Hier muss aber wie immer genauer hinschauet werden, da es sich bei _jsDelivr_ um in automatisiertes System handelt, und dort etwa nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert beispielsweise gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
+Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Hier muss beachtet werden, dass es sich z. B. bei _jsDelivr_ um ein automatisiertes System handelt, und dort nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
 
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.3/dist/index.min.js"></script>
 
-> **Info:** Der import von _jsDelivr_ darf so verwendet werden, auch wenn die Lizenzbestimmungen nicht beachtet werden.
+> **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
 Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `./components/brixx-check-age.js"` wird mit einen HTML-`<script>`-Element im HTML-Dokument eingefügt.
 
@@ -216,7 +216,7 @@ Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `
 
 Für Brixx-Decision-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element `<brixx-check-age>` in den `<body>`-Bereich einfügen und sind fertig.
+Jetzt müssen wir nur noch das HTML-Element `<brixx-check-age>` im `<body>`-Bereich einfügen.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -244,7 +244,7 @@ Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](..
 
 ### Brixx Web-Baustein testen
 
-Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Code und starten die HTML-Datei `index.html` mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
+Zum testen öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Code und starten die HTML-Datei `index.html` mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
 
 1. Klick auf `[Go Live]` in der Visual Studio Code Status Bar (`Click to run live server`)
 2. Öffnen der HTML-Datei im Editor-Fenster mit der Tastenkombination `[ALT+L Alt+O]`

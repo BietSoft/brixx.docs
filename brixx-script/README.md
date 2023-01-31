@@ -168,7 +168,7 @@ Der Brixx Web-Baustein `[brixx-animal-list]` in der Brixx Script-Component-Datei
 
 Für Brixx-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-animal-list>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
-Zum Schluss müssen wir nur noch das HTML-Element `<brixx-animal-list>` in den `<body>`-Bereich einfügen und sind fertig.
+Jetzt müssen wir nur noch das HTML-Element `<brixx-animal-list>` im `<body>`-Bereich einfügen.
 
     <body>
       <!-- Add the Brixx HTML element -->
@@ -196,7 +196,7 @@ Komplettes Beispiel v1.0.9 herunterladen [[brixx-element-sample] (ZIP-Archiv)](.
 
 ### Brixx Web-Baustein testen
 
-Zum testen von unserem Brixx Web-Baustein öffnen wir den Projektordner `[brixx-element-sample]` in Visual Studio Code und starten die HTML-Datei `index.html` mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
+Zum testen öffnen wir den Projektordner `[brixx-element-sample]` in Visual Studio Code und starten die HTML-Datei `index.html` mit dem _Live Server_. Dazu gibt es verschiedene Möglichkeiten.
 
 1. Klick auf `[Go Live]` in der Visual Studio Code Status Bar (`Click to run live server`)
 2. Öffnen der HTML-Datei im Editor-Fenster mit der Tastenkombination `[ALT+L Alt+O]`
@@ -790,14 +790,14 @@ Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
-Brixx-Script kann auch von alternativen CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Vielen Dank dafür! Hier muss aber wie immer genauer hinschauet werden, da es sich bei _jsDelivr_ um in automatisiertes System handelt, und dort etwa nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert beispielsweise gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
+Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Hier muss beachtet werden, dass es sich z. B. bei _jsDelivr_ um ein automatisiertes System handelt, und dort nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
 
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.0.9/dist/index.min.js"></script>
 
-> **Info:** Der import von _jsDelivr_ darf so verwendet werden, auch wenn die Lizenzbestimmungen nicht beachtet werden.
+> **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
 Ein Brixx Web-Baustein kann danach mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
