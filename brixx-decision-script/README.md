@@ -342,7 +342,7 @@ Die Brixx Webkomponente können wir mit dem _Live Server_ testen und starten die
 
 <img src="../assets/images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Der Brixx Web-Baustein <a href='../assets/live/brixx-check-age-styles/index.html' target='_blank'>`<brixx-check-age>`</a> im Browser-Fenster
+Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-node' /> Node.js Application [brixx-check-age] erstellen
 
