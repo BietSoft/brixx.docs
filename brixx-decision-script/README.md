@@ -534,7 +534,7 @@ Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkon
 
 Under construction ...
 
-Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamische Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei für die Brixx Entscheidungstabelle der Datei `brixx_check_age.json` aus dem Beispiel vorher. Dann erstellen auch hier wieder den Ordner `[components]` und darin die Brixx Script-Component Datei `brixx-check-age.js`. Abschließend kopieren wir noch die HTML-Datei `index.html` aus dem ersten Beispiel für eienen Brixx Web-Baustein und die Projekt-Ordnerstruktur sieht wie folgt aus.
+Wir können auch beide „Welten” verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamisch neue Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei in der Datei `brixx_check_age.json` aus dem Beispiel vorher. Danach erstellen wir auch hier wieder einen Ordner `[components]`, darin die Brixx Script-Component Datei `brixx-check-age.js`, und kopieren die HTML-Datei `index.html` aus dem Beispiel für den Brixx Web-Baustein. Die Projekt-Ordnerstruktur sieht dann wie folgt aus.
 
     brixx-check-age-slass/
         ├── components/
@@ -542,7 +542,7 @@ Wir können auch beide „Welten” auch verbinden und beliebig kombinieren. Dab
         ├── brixx-check-age.json
         └── index.html
 
-Wir verwenden von der Definitionsdatei die Beschreibung, Hit-Policy und zwei „Basis”-Regeln als „Basis”-Konfiguration. Die „individuelle” Konfiguration erstellen wir in der Web-Application
+Von der Definitionsdatei verwenden wir die Beschreibung, Hit-Policy und zwei „Basis”-Regeln als „Basis”-Konfiguration. Die „individuelle” Konfiguration erstellen wir anschließed in der Web-Application.
 
 Komplette JSON-Definitionsdatei `brixx_check_age.json`
 
@@ -564,7 +564,7 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         }
     }
 
-Wir erstellen die Web-Application mit dem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js` und importieren zuerst die JSON-Definitionsdatei in die Variable `DecisionTableDefinition`.
+Wir erstellen die Web-Application mit einem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js` und importieren zuerst die JSON-Definitionsdatei in die Variable `DecisionTableDefinition`.
 
     // Load the decision table definitions
     const DecisionTableDefinition = DecisionTable.load('./brixx_check_age.json')
@@ -590,9 +590,9 @@ Alternativ kann die Definition für die Brixx Entscheidungstabelle im Code zu er
         }
     }
 
-> Quellcode- und Konfigurationsdateien ermöglichen als Baustein (Bricks) System eine bessere Projektorganisation. Quellcode und Konfigurationen können leichter bearbeitet, getestet, versioniert werden, aber auch einfacher veröffentlicht und verteilt werden.
+> Quellcode- und Konfigurationsdateien ermöglichen als Baustein (Bricks) System eine bessere Projektorganisation. Quellcode und Konfigurationen können leichter bearbeitet, getestet, versioniert werden, aber auch einfacher veröffentlicht und verteilt.
 
-Anschließend erstellen wir die Brixx Entscheidungstabelle mit dem Brixx Standard-Element.
+Anschließend erstellen wir die Brixx Entscheidungstabelle als Brixx Standard-Element.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -648,7 +648,7 @@ Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](
 
 ### JavaScript Web-Application testen
 
-Die JavaScript Web-Application können wir während der Entwicklung jederzeit testen und starten die HTML-Datei `index.html` mit dem _Live Server_.
+Die JavaScript Web-Application können wir jederzeit während der Entwicklung testen und starten die HTML-Datei `index.html` mit dem _Live Server_.
 
 <img src="../assets/images/brixx-check-age-class.webp" style="margin-bottom: -5px; width: 600px;" />
 
