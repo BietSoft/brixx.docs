@@ -240,7 +240,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -330,7 +330,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         </body>
     </html>
 
-Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 
 ### Brixx Webkomponente testen
 
@@ -407,7 +407,7 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
 
     {
         "dependencies": {
-            "@brixx/decision-script": "^1.0.2"
+            "@brixx/decision-script": "^1.0.3"
         }
     }
 
@@ -432,7 +432,7 @@ Abschließend entfernen das Caretzeichen ( `^` ) bei der Version wodurch nicht m
 
     ...
     "dependencies": {
-        "@brixx/decision-script": "1.0.2"
+        "@brixx/decision-script": "1.0.3"
     }
     ...
 
@@ -445,7 +445,7 @@ Komplette `package.json` Datei
             "start": "node brixx-check-age.js"
         },
         "dependencies": {
-            "@brixx/decision-script": "1.0.2"
+            "@brixx/decision-script": "1.0.3"
         }
     }
 
@@ -518,7 +518,7 @@ Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+Komplettes Beispiel v1.0.3 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ### Node.js Application testen
 
@@ -1344,9 +1344,9 @@ Console output
 # <div id='downloads' /> Downloads
 
 -   ### [Beispiel v1.0.3 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.2 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.2 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
--   ### [Beispiel v1.0.2 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+-   ### [Beispiel v1.0.3 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.3 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+-   ### [Beispiel v1.0.3 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
 
