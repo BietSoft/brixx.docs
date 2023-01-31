@@ -785,7 +785,7 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 
 ## Brixx-Script Standalone
 
-Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach mit einem `<script>`-Tag vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
+Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
 
     <!-- Load Brixx-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
@@ -799,14 +799,14 @@ Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://ww
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
-Ein Brixx Web-Baustein kann danach mit einem `<script>`-Tag importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
+Ein Brixx Web-Baustein kann danach mit einem HTML-`<script>`-Element importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
 
 Brixx-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
 
-Die Eigenschaft `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss da Benutzer unterschiedliche Browser und Versionen verwenden.
+Die Eigenschaft `type` gibt den Medientyp des Skripts an. Für Brixx-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss, da Benutzer unterschiedliche Browser und Versionen verwenden.
 
 Die Eigenschaft `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
 
