@@ -267,16 +267,16 @@ Zum testen öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Co
 
 ## <div id='brixx-check-age-styles' /> Brixx Web-Baustein [brixx-check-age] erweitern
 
-Wie erweitern die Brixx Webkomponente [brixx-check-age] mit zusätzlichen CSS-Dateien. Dafür erstellen wir zuerst einen Projektordner `[brixx-check-age-styles]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
+Wie erweitern die Brixx Webkomponente `[brixx-check-age]` mit HTML Styles. Dafür erstellen wir einen Projektordner `[brixx-check-age-styles]` und kopieren die Dateien aus dem vorherigen Beispiel in den Projektordner.
 
 ### HTML Styles hinzufügen
 
-Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./styles` im Projektordner. Wir nutzen zum einen [Bootstrap](https://getbootstrap.com/) und fügen die CSS-Datei `bootstrap.min.css` vom Cloudflare CDN-(Content Delivery Network)-Server mit einem HTML Stylesheet `<link>` im HTML-Dokument ein.
+Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./styles` im Projektordner. Wir nutzen [Bootstrap](https://getbootstrap.com/) und fügen die CSS-Datei `bootstrap.min.css` vom Cloudflare CDN-(Content Delivery Network)-Server mit einem HTML Stylesheet `<link>` im HTML-Dokument ein.
 
     <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"></head>
 
-Dann erstellen eine weitere CSS-Datei `brixx-check-age.css` im Ordner `[styles]` für die Brixx Entscheidungstabelle und fügen die CSS-Datei auch mit einem HTML Stylesheet `<link>` im HTML-Dokument ein
+Danach erstellen eine CSS-Datei `brixx-check-age.css` im Ordner `[styles]` für die Brixx Entscheidungstabelle und fügen die CSS-Datei im HTML-Dokument ein
 
     <link href="./styles/brixx-check-age.css" rel="stylesheet"></head>
 
@@ -301,7 +301,7 @@ Komplette Styles der CSS-Datei `brixx-check-age.css`
         margin-top: 2px;
     }
 
-Die verwendeten Styles dienen als einfaches Beispiel und müssen nicht im Einzelnen betrachtet werden. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-check-age-web/
     ├── components/
@@ -334,7 +334,7 @@ Komplettes Beispiel v1.0.2 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](
 
 ### Brixx Webkomponente testen
 
-Die Brixx Webkomponente können wir während der Entwicklung jederzeit testen und starten die HTML-Datei `index.html` mit dem _Live Server_.
+Die Brixx Webkomponente können wir mit dem _Live Server_ testen und starten die HTML-Datei `index.html`
 
 <img src="../assets/images/brixx-check-age-web-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -342,7 +342,7 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-node' /> Node.js Application [brixx-check-age] erstellen
 
-Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir zuerst den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
+Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir für das Beispiel den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
 
 Komplette JSON-Definitionsdatei `brixx_check_age.json`
 
@@ -358,48 +358,48 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         },
         "output": {
             "info": {
-            "description": "An additional information"
+                "description": "An additional information"
             },
             "url": {
-            "description": "The url to link to"
+                "description": "The url to link to"
             }
         },
         "rules": {
             "No entry": {
-            "age": "",
-            "info": "Please enter a valid age!",
-            "url": "https://github.com/BietSoft/brixx.docs/",
-            "priority": 30
+                "age": "",
+                "info": "Please enter a valid age!",
+                "url": "https://github.com/BietSoft/brixx.docs/",
+                "priority": 30
             },
             "Baby": {
-            "age": "0",
-            "info": "It's is still a baby!",
-            "priority": 40
+                "age": "0",
+                "info": "It's is still a baby!",
+                "priority": 40
             },
             "Preschool": {
-            "age": "< 5",
-            "info": "Unfortunately too young!",
-            "priority": 20
+                "age": "< 5",
+                "info": "Unfortunately too young!",
+                "priority": 20
             },
             "Teens": {
-            "age": ">= 13",
-            "url": "https://www.youtube.com/"
+                "age": ">= 13",
+                "url": "https://www.youtube.com/"
             },
             "Kids": {
-            "age": "< 13",
-            "info": "Internet Safety for Kids",
-            "url": "https://www.youtube.com/kids/",
-            "priority": 10
+                "age": "< 13",
+                "info": "Internet Safety for Kids",
+                "url": "https://www.youtube.com/kids/",
+                "priority": 10
             }
         }
     }
 
-Anschließend erstellen wir die JavaScript-Datei (Node.js Application) `brixx-check-age.js` im Projektordner und importieren das Brixx-Decision-Script Package mit `require("@brixx/decision-script/node")` für Node.js in der Konstanten `BrixxDecisionTable`.
+Dann erstellen wir die JavaScript-Datei (Node.js Application) `brixx-check-age.js` im Projektordner und importieren das Brixx-Decision-Script Package mit `require("@brixx/decision-script/node")` für Node.js in der Konstanten `BrixxDecisionTable`.
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
 
-Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren zu können muss es vorher installiert werden. Dafür installieren wir das NPM-Package `@brixx/decision-script`, z.B. mit Visual Studio Code im Terminal-Fenster, im Projektordner mit `npm i @brixx/decision-script` (siehe [NPM-Packages installieren](../docs/NPM-install.md)).
+Um das Package `@brixx/decision-script/node` in der JavaScript-Datei importieren zu können muss es installiert werden. Wir installieren das NPM-Package `@brixx/decision-script`, z.B. mit Visual Studio Code im Terminal-Fenster, im Projektordner mit `npm i @brixx/decision-script` (siehe [NPM-Packages installieren](../docs/NPM-install.md)).
 
     > npm i @brixx/decision-script
 
@@ -411,9 +411,9 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
         }
     }
 
-Wir erweitern die `package.json` Datei ein wenig. Das ist nicht erforderlich, aber wir können dadurch u. a. für eine weitere Bearbeitung in Visual Studio Code in der Explorer-Ansicht die Erweiterung `[NPM-SCRIPTS]` verwenden.
+Wir erweitern die `package.json` Datei, das ist nicht erforderlich, aber wir können dadurch u. a. für eine weitere Bearbeitung in Visual Studio Code in der Explorer-Ansicht die Erweiterung `[NPM-SCRIPTS]` verwenden.
 
-Wir legen zuerst den Namen des Package fest mit `brixx-check-age` und definieren den Einstiegspunkt für den Projektstart mit `brixx-check-age.js`
+Wir legen einen Namen für das Package mit dem Feld `name` fest und den Einstiegspunkt `main` für den Projektstart.
 
     ...
     "name": "brixx-check-age",
@@ -458,7 +458,7 @@ Die Projekt-Ordnerstruktur sieht damit wie folgt aus.
     ├── package-lock.json
     └── package.json
 
-Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen wir eine Liste `input_data` ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)) die mögliche Eingabe- oder Datenquellen für die Node.js Application repräsentieren soll z. B. aus einem Webservice oder einer Datenbank.
+Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen wir eine Liste `input_data` ([JavaScript Array](https://www.w3schools.com/js/js_arrays.asp)), die mögliche Eingabe- oder Datenquellen für die Node.js Application repräsentieren soll, z. B. aus einem Webservice oder einer Datenbank.
 
     /**
     *  Set the decision table input data list to check
@@ -472,12 +472,12 @@ Nach dem Import vom Brixx-Decision-Script Package `BrixxDecisionTable` erstellen
         { age: 13 }
     ]
 
-Anschließend erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _constructor_ mit der Eigenschaft `file` die JSON-Definitionsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
+Danach erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Instanznamen `table` und geben mit einem Konfigurationsobjekt im _constructor_ mit der Eigenschaft `file` die JSON-Definitionsdatei an, die für die Erstellung der Brixx Entscheidungstabelle verwendet werden soll.
 
     // Create a BrixxDecisionTable instance
     const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })
 
-Die einzelnen Einträge `input` der Liste `input_data` werden dann mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert und mit Unterstützung einer _JavaScript Array map()_ nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
+Die einzelnen Einträge `input` der Liste `input_data` werden mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert, und mit einer _JavaScript Array map()_ nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
