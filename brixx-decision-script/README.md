@@ -1084,7 +1084,7 @@ Adds a `Component` object for the Brixx decision table. Can be used for `output`
 
 **Attributes**
 
-`{Object} [target]` - the Brixx decision table component target. Renders a Brixx element as default in the `component` section and if the attribut `target` is set for the `output` object renders in the `output` section.
+`{Object} [target]` - the Brixx decision table component target. Renders a Brixx element as default in the component section and if the attribut target is set in the output object renders in the `output` section.
 
 **Example**
 
