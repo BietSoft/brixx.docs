@@ -245,7 +245,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+Komplettes Beispiel [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip) herunterladen.
 
 ### Brixx Web-Baustein testen
 
@@ -335,7 +335,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         </body>
     </html>
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+Komplettes Beispiel [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip) herunterladen.
 
 ### Brixx Webkomponente testen
 
@@ -523,7 +523,7 @@ Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+Komplettes Beispiel [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip) herunterladen.
 
 ### Node.js Application testen
 
@@ -649,7 +649,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+Komplettes Beispiel [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip) herunterladen.
 
 ### JavaScript Web-Application testen
 
@@ -720,7 +720,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
     Brixx.registerElement({ name: "check-age" });
 
 
-Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip)
+Komplettes Beispiel [[brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip) herunterladen.
 
 # <div id='reference' /> Brixx-Decision-Script Referenz
 
@@ -1424,11 +1424,11 @@ Console output
 
 # <div id='downloads' /> Downloads
 
--   ### [Beispiel v1.0.6 [brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip)
--   ### [Beispiel v1.0.6 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
--   ### [Beispiel v1.0.6 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.6 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
--   ### [Beispiel v1.0.6 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+-   ### [Beispiel [brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip)
+-   ### [Beispiel [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+-   ### [Beispiel [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+-   ### [Beispiel [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
 

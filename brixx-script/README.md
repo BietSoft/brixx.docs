@@ -192,7 +192,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
       </body>
     </html>
 
-Komplettes Beispiel v1.0.9 herunterladen [[brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
+Komplettes Beispiel [[brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip) herunterladen.
 
 ### Brixx Web-Baustein testen
 
@@ -440,7 +440,7 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner `[dist]` identisch zum Brixx Web-Baustein `[brixx-animal-list]` zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel v1.0.9 herunterladen [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
+Komplettes Beispiel [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip) herunterladen.
 
 ### Brixx Webkomponente testen
 
@@ -769,7 +769,7 @@ Der Ordner `[dist]` entspricht der Live-Umgebung von einem Projektordner und wir
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel v1.0.9 herunterladen [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
+Komplettes Beispiel [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip) herunterladen.
 
 ### Brixx Webkomponente testen
 
@@ -1265,9 +1265,9 @@ Use the Brixx class component
 
 # <div id='downloads'/> Downloads
 
--   ### [Beispiel v1.0.9 [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
--   ### [Beispiel v1.0.9 [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
--   ### [Beispiel v1.0.9 [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
+-   ### [Beispiel [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
+-   ### [Beispiel [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
+-   ### [Beispiel [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
 ## Copyright and License
 
 #
