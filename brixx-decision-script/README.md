@@ -24,7 +24,7 @@ We have decided to publish Brixx-Decision-Script as a decision table and rule en
     -   [Brixx Web-Baustein [brixx-check-age] erweitern](#brixx-check-age-styles)
     -   [Node.js Application [brixx-check-age] erstellen](#brixx-check-age-node)
     -   [JavaScript Web-Application [brixx-check-age] erstellen](#brixx-check-age-class)
-    -   [Brixx Web-Baustein [brixx-check-age] mit dynymischem content](#brixx-check-age-dynamic)
+    -   [Brixx Web-Baustein mit dynamischem content erstellen](#brixx-check-age-dynamic)
 -   [Brixx-Decision-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
@@ -659,11 +659,11 @@ Die JavaScript Web-Application können wir jederzeit während der Entwicklung te
 
 Die JavaScript Web-Application `<brixx-check-age>` im Browser-Fenster
 
-## <div id='brixx-check-age-dynamic' /> Brixx Web-Baustein [brixx-check-age] mit dynymischem content
+## <div id='brixx-check-age-dynamic' /> Brixx Web-Baustein mit dynamischem content erstellen
 
 Under construction ...
 
-Als Basis kopieren wir den mit HTML Styles erweiterten Brixx Web-Baustein.
+Wir erstellen den Projektordner `[brixx-check-age-dynamic]` und kopieren die Dateien von dem erweiterten Brixx Web-Baustein aus Projektordner `[brixx-check-age-styles]`. Darin bearbeiten wir nur die Brixx Script-Component Datei `./components/brixx-check-age.js`.
 
 Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/brixx-check-age.js`
 
