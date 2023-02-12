@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.4` (Release, 31.01.2023)
+### Version: `1.0.6` (Release, 12.02.2023)
 
 #
 
-> This document is in progress. However, we have decided to release it for Brixx-Decision-Script Version 1.0.4. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. However, we have decided to release it for Brixx-Decision-Script Version 1.0.6. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -16,7 +16,7 @@ Brixx-Decision-Script is a free JavaScript library for rule-based decision syste
 
 ## Why JavaScript
 
-We decided to publish Brixx-Decision-Script as decision table and rule engine with JavaScript. This enables Brixx-Decision-Script to be used in frameworks, development environments, programming languages and platforms as a web application or web service. Ask about our solutions, e.g. for integration into your projects with Python, Java, as a REST-API or Docker solution ...
+We have decided to publish Brixx-Decision-Script as a decision table and rule engine for JavaScript. As a result, Brixx-Decision-Script can be used in common frameworks, development environments, programming languages and platforms as a web application or web service for low-code development without a specially required platform. In addition, Brixx-Decision-Script enables direct integration into an HTML document, which makes it special. This gives beginners and non-programmers the opportunity to design dynamic websites. Ask about our solutions for integration into your applications, e.g. with Python, Java, as RESTful API or Docker solution ...
 
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-check-age] erstellen](#brixx-check-age-web)
@@ -24,6 +24,7 @@ We decided to publish Brixx-Decision-Script as decision table and rule engine wi
     -   [Brixx Web-Baustein [brixx-check-age] erweitern](#brixx-check-age-styles)
     -   [Node.js Application [brixx-check-age] erstellen](#brixx-check-age-node)
     -   [JavaScript Web-Application [brixx-check-age] erstellen](#brixx-check-age-class)
+    -   [Brixx Web-Baustein [brixx-check-age] mit dynymischem content](#brixx-check-age-dynamic)
 -   [Brixx-Decision-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
@@ -209,7 +210,7 @@ Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](h
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.4/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.6/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
@@ -244,7 +245,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.4 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 
 ### Brixx Web-Baustein testen
 
@@ -334,7 +335,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         </body>
     </html>
 
-Komplettes Beispiel v1.0.4 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 
 ### Brixx Webkomponente testen
 
@@ -411,7 +412,7 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
 
     {
         "dependencies": {
-            "@brixx/decision-script": "^1.0.4"
+            "@brixx/decision-script": "^1.0.6"
         }
     }
 
@@ -436,7 +437,7 @@ Abschließend entfernen das Caretzeichen ( `^` ) bei der Version wodurch nicht m
 
     ...
     "dependencies": {
-        "@brixx/decision-script": "1.0.4"
+        "@brixx/decision-script": "1.0.6"
     }
     ...
 
@@ -449,7 +450,7 @@ Komplette `package.json` Datei
             "start": "node brixx-check-age.js"
         },
         "dependencies": {
-            "@brixx/decision-script": "1.0.4"
+            "@brixx/decision-script": "1.0.6"
         }
     }
 
@@ -522,7 +523,7 @@ Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
         console.log(output)
     })
 
-Komplettes Beispiel v1.0.4 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ### Node.js Application testen
 
@@ -648,7 +649,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     </body>
     </html>
 
-Komplettes Beispiel v1.0.4 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
 
 ### JavaScript Web-Application testen
 
@@ -657,6 +658,69 @@ Die JavaScript Web-Application können wir jederzeit während der Entwicklung te
 <img src="../assets/images/brixx-check-age-class.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Die JavaScript Web-Application `<brixx-check-age>` im Browser-Fenster
+
+## <div id='brixx-check-age-dynamic' /> Brixx Web-Baustein [brixx-check-age] mit dynymischem content
+
+Under construction ...
+
+Als Basis kopieren wir den mit HTML Styles erweiterten Brixx Web-Baustein.
+
+Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/brixx-check-age.js`
+
+    // Brixx JSX kids element
+    const kids_element = (
+        <div>
+            <h5>[Kids area]</h5>
+            <h6><a href="https://www.youtube.com/kids/" target="_blank">Go to YouTube for Kids ...</a></h6>
+        </div>
+    )
+
+    // Brixx JSX teens element
+    const teens_element = (
+        <div>
+            <h5>[Teens area]</h5>
+            <h6><a href="https://www.youtube.com/kids/" target="_blank">Go to YouTube ...</a></h6>
+        </div>
+    )
+
+    // Create a Brixx default element
+    Brixx.element = (
+        <div>
+            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+            <DecisionTable>
+                <ul>
+                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
+                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
+                    <li>Kids (under 13 years old) - <i>Show [Kids area] in component section!</i></li>
+                    <li>Teens (13 years or older) - <i>Show [Teens area] in component section!</i></li>
+                </ul>
+                <hr />
+                <Output component name={"element"}>
+                    <i>Decision table component section ...</i>
+                </Output>
+                <hr />
+                <Input name={"age"} type={"number"}>
+                    <div>Please enter age</div>
+                    <Field />
+                </Input>
+                <Output name={"info"}>
+                    <Field readonly />
+                </Output>
+                <Rule age={""} priority={30} info={"Please enter a valid age!"} />
+                <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
+                <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+                <Rule age={">= 13"} element={teens_element} info={""} />
+                <Rule age={"< 13"} priority={10} element={kids_element} info={""} />
+                <Check button label={"Check age"} />
+            </DecisionTable>
+        </div>
+    );
+
+    // Register a Brixx HTML-Element <brixx-check-age>
+    Brixx.registerElement({ name: "check-age" });
+
+
+Komplettes Beispiel v1.0.6 herunterladen [[brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip)
 
 # <div id='reference' /> Brixx-Decision-Script Referenz
 
@@ -958,7 +1022,7 @@ Defines a Brixx decision table `root` element.
 
 `{Object} [data]` - the Brixx decision table input data.
 
-`{String|Object} [definition]` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+`{String|Object} [definition={}]` - the Brixx decision table definition. This can be a JSON string or a JSON object.
 
 `{String} [description]` - the Brixx decision table description.
 
@@ -1014,6 +1078,16 @@ Adds an `Condition` object for the Brixx decision table. Can be used for `input`
 
     <Condition x={'> 5'}>
 
+## &lt;Component&gt;
+
+Adds a `Component` object for the Brixx decision table. Can be used for `output` objects. Renders a Brixx element (component) in the target element section. The output value must be a valid HTML element. Must be included in the `output` section.
+
+**Attributes**
+
+`{String} [target={the component object}]` - the Brixx decision table component target. Renders as default in the `component` section and if the attribut `target` is set for the `output` object renders in the `output` section.
+
+**Example**
+
 ## &lt;Field&gt;
 
 Adds a `Field` object for the Brixx decision table. Must be included in a `input` or `output` section.
@@ -1054,7 +1128,7 @@ Adds a `Input` object for the Brixx decision table.
 
 ## &lt;Link&gt;
 
-Adds a `Link` object for the Brixx decision table. Can be used for `output` objects. Opens a link in a browser window. The output value must be a valid link (URL) adress. Must be included in the `output` section.
+Adds a `Link` object for the Brixx decision table. Can be used for `output` objects. Opens a link in the target browser window. The output value must be a valid link (URL) adress. Must be included in the `output` section.
 
 **Attributes**
 
@@ -1070,17 +1144,20 @@ Adds a `Output` object for the Brixx decision table.
 
 `{Object} [action]` - the Brixx decision table output action callback function.
 
+`{Object} [component]` - the Brixx decision table output component flag. Defines the output value as component and if is set renders a Brixx element (component) in the target element section. The output value must be a valid Brixx element (HTML element).
+
 `{Object} [data]` - the Brixx decision table output data callback function.
 
 `{String} [description]` - the Brixx decision table output object description.
 
-`{String} [element]` - the Brixx decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
+`{String} [element]` - the Brixx decision table input (output) element id. Can be every input (output) element in the HTML document and will be searchd by `getElementById(element)`.
 
-`{Boolean} [link]` - the decision table output link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
+`{Boolean} [link]` - the decision table output link flag. Defines the output value as link and if is set opens a link in the target browser window. The output value must be a valid link (URL) adress.
 
 `{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (_not available in this version_).
 
-`{String} [target='_blank']` - the Brixx decision table output link target.
+`{String} [target]` - the Brixx decision table output target. If the `component` flag is set renders the Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
+
 
 `{String} [name]` - the Brixx decision table output identifier.
 
@@ -1272,7 +1349,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.0.4
+    BrixxDecisionTable version: 1.0.6
 
 ## DecisionTable static class
 
@@ -1343,14 +1420,15 @@ Returns the DecisionTable version in semantic versioning format.
 
 Console output
 
-    DecisionTable version: 1.0.4
+    DecisionTable version: 1.0.6
 
 # <div id='downloads' /> Downloads
 
--   ### [Beispiel v1.0.4 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.4 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
--   ### [Beispiel v1.0.4 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
--   ### [Beispiel v1.0.4 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
+-   ### [Beispiel v1.0.6 [brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip)
+-   ### [Beispiel v1.0.6 [brixx-check-age-class] (ZIP-Archiv)](../assets/downloads/brixx-check-age-class.zip)
+-   ### [Beispiel v1.0.6 [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
+-   ### [Beispiel v1.0.6 [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
+-   ### [Beispiel v1.0.6 [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
 
 ## Copyright and License
 
