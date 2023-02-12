@@ -1084,7 +1084,7 @@ Adds a `Component` object for the Brixx decision table. Can be used for `output`
 
 **Attributes**
 
-`{String} [target={the component object}]` - the Brixx decision table component target. Renders as default in the `component` section and if the attribut `target` is set for the `output` object renders in the `output` section.
+`{Object} [target]` - the Brixx decision table component target. Renders a Brixx element as default in the `component` section and if the attribut `target` is set for the `output` object renders in the `output` section.
 
 **Example**
 
@@ -1156,7 +1156,7 @@ Adds a `Output` object for the Brixx decision table.
 
 `{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (_not available in this version_).
 
-`{String} [target]` - the Brixx decision table output target. If the `component` flag is set renders the Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
+`{String|Object} [target]` - the Brixx decision table output target. If the `component` flag is set renders a Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
 
 
 `{String} [name]` - the Brixx decision table output identifier.
