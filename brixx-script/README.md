@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.9` (Release, 23.01.2023)
+### Version: `1.0.10` (Release, 24.02.2023)
 
 #
 
-> This document is in progress. However, we have decided to release it for Brixx-Script Version 1.0.9. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Script
 
@@ -253,10 +253,10 @@ In der _package.json_ ersetzen wir den Platzhalter `{brixx-component-name}` für
 Bei den `dependencies` ersetzen wir dann noch den Platzhalter `{brixx-script-version}` mit der Version für das NPM-Package `@brixx/script` das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.9"
+      "@brixx/script": "1.0.10"
     }
 
-Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.0.9`
+Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.0.10`
 
 Die Abhängigkeiten `devDependencies` werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit `npm install --save-dev  <package>` installiert werden.
 
@@ -795,7 +795,7 @@ Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://ww
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.0.9/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.0.10/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
@@ -1032,7 +1032,7 @@ Returns the Brixx version in semantic versioning format.
 
 Console output
 
-    Brixx version: 1.0.9
+    Brixx version: 1.0.10
 
 ## Brixx static methods
 
@@ -1066,7 +1066,7 @@ Load Text/JSON files.
     const data = Brixx.load('./settings.json')
     const settings = JSON.parse(data)
 
-### .registerElement(name='{Brixx.elementPrefix}-element' || { name='{Brixx.elementPrefix}-element', script=null })
+### .registerElement(name='{Brixx.elementPrefix}-element' || { name='{Brixx.elementPrefix}-element', element=Brixx.element, script=null })
 
 Register a Brixx HTML element. It is recommended to use the configuration object for the settings. In order to register an HTML element for the web application in the browser, a Brixx HTML element name must be specified as identifier. The Brixx HTML element identifier is prefixed with the Brixx element prefix with a hyphen and can be changed with `setElementPrefix`. The default Brixx element name is created with the Brixx element prefix and if the element prefix is not specified in the element name, the element prefix is prepended to the element name.
 
@@ -1074,6 +1074,8 @@ Register a Brixx HTML element. It is recommended to use the configuration object
 `{String} [name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If no parameter is specified, the default Brixx HTML element identifier used.
 
 `{String} [object.name='{Brixx.elementPrefix}-element'] (optional)` - the Brixx HTML element name. If a configuration object is used and the parameter "name" is not specified, the default Brix HTML element identifier is used.
+
+`{Object} [object.element=Brixx.element] (optional)` - the Brixx element. If a configuration object is used and the parameter "element" is not specified, the default Brix element is used.
 
 `{String} [object.script=null] (optional)` - the Brixx script component. The file name of the Brixx script component to set as Brixx HTML element.
 
