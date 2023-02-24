@@ -2,11 +2,11 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.0.6` (Release, 12.02.2023)
+### Version: `1.0.7` (Release, 24.02.2023)
 
 #
 
-> This document is in progress. However, we have decided to release it for Brixx-Decision-Script Version 1.0.6. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Decision-Script
 
@@ -210,7 +210,7 @@ Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](h
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.6/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.0.7/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
@@ -412,7 +412,7 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
 
     {
         "dependencies": {
-            "@brixx/decision-script": "^1.0.6"
+            "@brixx/decision-script": "1.0.7"
         }
     }
 
@@ -437,7 +437,7 @@ Abschließend entfernen das Caretzeichen ( `^` ) bei der Version wodurch nicht m
 
     ...
     "dependencies": {
-        "@brixx/decision-script": "1.0.6"
+        "@brixx/decision-script": "1.0.7"
     }
     ...
 
@@ -450,7 +450,7 @@ Komplette `package.json` Datei
             "start": "node brixx-check-age.js"
         },
         "dependencies": {
-            "@brixx/decision-script": "1.0.6"
+            "@brixx/decision-script": "1.0.7"
         }
     }
 
@@ -1349,7 +1349,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.0.6
+    BrixxDecisionTable version: 1.0.7
 
 ## DecisionTable static class
 
@@ -1420,7 +1420,7 @@ Returns the DecisionTable version in semantic versioning format.
 
 Console output
 
-    DecisionTable version: 1.0.6
+    DecisionTable version: 1.0.7
 
 # <div id='downloads' /> Downloads
 
