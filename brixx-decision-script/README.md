@@ -556,15 +556,15 @@ Komplette JSON-Definitionsdatei `brixx_check_age.json`
         "hitPolicy": "Priority",
         "rules": {
             "No entry": {
-            "age": "",
-            "info": "Please enter a valid age!",
-            "url": "https://github.com/BietSoft/brixx.docs/",
-            "priority": 30
+                "age": "",
+                "info": "Please enter a valid age!",
+                "url": "https://github.com/BietSoft/brixx.docs/",
+                "priority": 30
             },
             "Baby": {
-            "age": "0",
-            "info": "It's is still a baby!",
-            "priority": 40
+                "age": "0",
+                "info": "It's is still a baby!",
+                "priority": 40
             }
         }
     }
