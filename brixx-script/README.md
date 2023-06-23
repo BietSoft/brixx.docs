@@ -1270,6 +1270,7 @@ Use the Brixx class component
 -   ### [Beispiel [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
 -   ### [Beispiel [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
 -   ### [Beispiel [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
+
 ## Copyright and License
 
 #
