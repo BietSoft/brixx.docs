@@ -4,7 +4,7 @@
 
 ### Package: `@brixx/bpmn-editor`
 
-### Version: `1.0.0` (Release, 22.06.2023)
+### Version: `1.1.0` (Release, 02.07.2023)
 
 #
 
