@@ -4,9 +4,10 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 #
 
-## [Install Visual Studio Code for Windows](./docs/VSCode-install.md)
+## Web Development Tools
 
-## [Install Node.js and npm for Windows](./docs/Nodejs-install.md)
+-   ### [Install Visual Studio Code for Windows](./docs/VSCode-install.md)
+-   ### [Install Node.js and npm for Windows](./docs/Nodejs-install.md)
 
 ## [Brixx-Script Version 1.0.10](./brixx-script/README.md)
 
