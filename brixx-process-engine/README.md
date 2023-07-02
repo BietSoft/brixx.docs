@@ -41,7 +41,7 @@ We have decided to publish a web-based process engine for creating digital proce
 
 With our workflow management system, all types of processes and workflows can be mapped with the [Brixx BPMN editor](../brixx-bpmn-editor/README.md) for process modeling with BPMN (Business Process Model and Notation) and made available in the Brixx Process Engine with one click. 
 
-## Model processes and workflows
+## Create processes and workflows
 
 With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented with **Process Driven Development** and a complete integration into web applications with HTML and JavaScript is possible. For example, applications with the Four Eyes 
 Principle (Two-man rule), multi-level forms, or web applications for processing task stacks in a team can be created quickly and easily.
@@ -57,6 +57,9 @@ Coming soon ...
 # <div id='reference' /> Brixx-Process-Engine Referenz
 
 # <div id='downloads' /> Downloads
+
+<img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;" />
+<b>CDN - Latest Stable Version</b><p />
 
 Version 1.0.0 (Latest)
 
