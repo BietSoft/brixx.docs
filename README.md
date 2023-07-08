@@ -15,7 +15,7 @@ This is the BRIXX.it documentation repository. For further information please fe
 -   ### [NPM-Packages installieren](./docs/NPM-install.md)
 -   ### [Webpack-Konfiguration webpack.config.js](./docs/Webpack-config.md)
 
-## [Brixx-Decision-Script Version 1.0.7](./brixx-decision-script/README.md)
+## [Brixx-Decision-Script Version 1.1.0](./brixx-decision-script/README.md)
 
 ## [Brixx-Process-Engine Version 1.1.0](./brixx-process-engine/README.md)
 
