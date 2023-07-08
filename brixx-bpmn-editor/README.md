@@ -4,7 +4,7 @@
 
 ### Package: `@brixx/bpmn-editor`
 
-### Version: `1.1.0` (Release, 02.07.2023)
+### Version: `1.2.0` (Release, 08.07.2023)
 
 #
 
@@ -26,7 +26,7 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 <a href="https://brixx.it/bpmn-editor/index.html" target="_blank"><img src="../assets/images/bpmn-sample.jpg"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)" style="margin-bottom: -5px; width: 600px;" /></a>
 
-<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.1.0 mit BPMN 2.0 Standard (Try it Online) 
+<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.2.0 mit BPMN 2.0 Standard (Try it Online) 
 
 Coming soon ...
 
@@ -41,13 +41,13 @@ Coming soon ...
 <img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;" />
 <b>CDN - Latest Stable Version</b><p />
 
-Version 1.1.0 (Latest)
+Version 1.2.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
 Download Web-Application Package Installer for Windows (Preview).
 
--   ### [Brixx BPMN-Editor Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.1.0-x64.exe)
+-   ### [Brixx BPMN-Editor Version 1.2.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.2.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 

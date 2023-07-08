@@ -4,7 +4,7 @@
 
 ### Package: `@brixx/process-engine`
 
-### Version: `1.0.0` (Release, 02.07.2023)
+### Version: `1.1.0` (Release, 08.07.2023)
 
 #
 
@@ -61,13 +61,13 @@ Coming soon ...
 <img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;" />
 <b>CDN - Latest Stable Version</b><p />
 
-Version 1.0.0 (Latest)
+Version 1.1.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
 Download Web-Application Package Installer for Windows (Trial).
 
--   ### [Brixx-Process-Engine Version 1.0.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.0.0-trial-x64.exe)
+-   ### [Brixx-Process-Engine Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.1.0-trial-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 

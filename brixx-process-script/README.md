@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/process-script`
 
-### Version: `1.0.0` (Release, 22.06.2023)
+### Version: `1.0.0` (Release, 08.07.2023)
 
 #
 
