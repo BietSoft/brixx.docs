@@ -14,7 +14,7 @@
 
 ## The easiest way to build digital processes and workflows
 
-With **Brixx Process Engine** we bridge the gap to enterprise process orchestration systems, such as Camunda or X4 BPMS, as a lightweight workflow management system for the automation and digitization of business and industrial processes. For processes in web applications up to IoT control. With minimal development, integration and cost effort, the Brixx Process Engine can serve as the basis for applications or be integrated into existing applications as an extension for sub-processes.
+With **Brixx Process Engine** we bridge the gap to enterprise process orchestration systems, such as Camunda or X4 BPMS, as a lightweight workflow management system for the automation and digitization of business and industrial processes, processes in web applications and to IoT process control. With minimal development, integration and cost effort, our process can serve as the basis for applications, or be integrated into existing applications as an extension for sub-processes and is the control center for configuration, process creation and processing.
 
 - Lightweight process enging
 - Simple system integration
@@ -33,18 +33,22 @@ With **Brixx Process Engine** we bridge the gap to enterprise process orchestrat
 - Cloud (FaaS) and Blockchain ready
 - ChatGPT ready
 
-## Why a process engine especially for web technologies?
+## Why a process engine for web technologies?
 
-We have decided to publish a web-based process engine for creating digital processes and workflows. As a result, Brixx Process Engineering can be used in all infrastructure systems for low-code development without a special platform. In addition, **Brixx-Process-Script** allows direct integration into an HTML, which makes it something special. This also gives non-programmers the opportunity to design digital processes and workflows. Ask about integration into your applications, whether Python, Java, as a RESTful API or as a Docker solution.
+We have published our web-based process engine for creating processes and workflows and can therefore be used in all infrastructure systems. In addition, Brixx Process Script enables integration into HTML and gives non-programmers the opportunity to create simple processes and workflows.
+
+## Who is our process engine for?
+
+We are particularly aimed at small and medium-sized companies in order to enable everyone to have a practice-oriented, uncomplicated and affordable digitization, and no specialists, infrastructure investments or confusing follow-up costs are necessary.
 
 ## Model processes and workflows
 
-With our workflow management system, all types of processes and workflows can be mapped with the [Brixx BPMN editor](../brixx-bpmn-editor/README.md) for process modeling with BPMN (Business Process Model and Notation) and made available in the Brixx Process Engine with one click. 
+With our workflow management system, all types of processes and workflows can be processed, and with the [Brixx BPMN editor](../brixx-bpmn-editor/README.md) for process modeling with BPMN (Business Process Model and Notation) can be made available in the Brixx Process Engine with one click. 
 
 ## Create processes and workflows
 
-With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented with **Process Driven Development** and a complete integration into web applications with HTML and JavaScript is possible. For example, applications with the Four Eyes 
-Principle (Two-man rule), multi-level forms, or web applications for processing task stacks in a team can be created quickly and easily.
+With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented and integrated into web applications with HTML and JavaScript. This allows applications with the Four Eyes 
+Principle (Two-man rule), multi-level forms, or web applications for processing with different actors as an example to be created quickly and easily.
 
 Coming soon ...
 

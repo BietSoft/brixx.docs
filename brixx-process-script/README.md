@@ -16,15 +16,15 @@ With <b>Brixx-Process-Script</b>, complete integration in HTML is supported in a
 
 -   [Get started](#getstarted)
 -   [Install BrixxProcess-Script](#installation)
--   [BrixxProcess-Script Tutorial](#tutorial)
--   [BrixxProcess-Script Referenz](#reference)
+-   [Brixx-Process-Script Tutorial](#tutorial)
+-   [Brixx-Process-Script Referenz](#reference)
 -   [Downloads](#downloads)
 
 # <div id='getstarted' /> Get started
 
-# <div id='tutorial' /> BrixxProcess-Script Tutorial
+# <div id='tutorial' /> Brixx-Process-Script Tutorial
 
-# <div id='reference' /> BrixxProcess-Script Referenz
+# <div id='reference' /> Brixx-Process-Script Referenz
 
 # <div id='downloads' /> Downloads
 
