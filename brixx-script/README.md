@@ -535,7 +535,7 @@ Wir erweitern das HTML-Dokument im `<head>`-Bereich mit einem HTML-Kommentar. Hi
 Im `<body>`-Bereich eweitern wir das HTML-Dokument mit einem einfachen HTML-Hyperlink-Element um die Styles in der CSS-Datei zu testen.
 
     ...
-    <a href="https://brixx.it/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
+    <a href="https://github.com/BietSoft/brixx.docs/tree/main/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
     ...
 
 Komplettes HTML-Dokument in der HTML-Datei `index.html`
@@ -553,7 +553,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <h1>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</h1>
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
-        <a href="https://brixx.it/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
+        <a href="https://github.com/BietSoft/brixx.docs/tree/main/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
         <!-- Include the Brixx script component files -->
       </body>
     </html>
