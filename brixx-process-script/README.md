@@ -35,17 +35,17 @@ Wir ben&ouml;tigen eine laufende [Brixx Prozess Engine](../brixx-process-engine/
 
 Brixx Prozess Script - Windows-Installer
 
-Die Brixx Prozess Engine steht direkt nach der Installation lokal unter http://localhost:5000 f&uuml;r die Entwicklung zur Verf&uuml;gung.
+Die Brixx Prozess Engine steht anschlie&szlig;end lokal unter http://localhost:5000 f&uuml;r die Entwicklung zur Verf&uuml;gung.
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Brixx Prozess Script im Power-Shell Fenster
 
-Zudem verwenden wir f&uuml;r den Benutzer-Login Gesch&auml;ftsprozess ein [BPMN Model](../assets/downloads/brixx-login-process.bpmn) (`brixx-login-process.bpmn`), das wir bequem mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) &ouml;ffnen und direkt ver&ouml;ffentlichen k&ouml;nnen.
+F&uuml;r den Benutzer-Login Gesch&auml;ftsprozess verwenden wir die BPMN Model Datei [brixx-login-process.bpmn](../assets/downloads/brixx-login-process.bpmn), die wir bequem mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) &ouml;ffnen und den Gesch&auml;ftsprozess direkt ver&ouml;ffentlichen k&ouml;nnen.
 
 <img src="../assets/images/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Benutzer-Login Model `brixx-login-process.bpmn` im Brixx BPMN-Editor
+Benutzer-Login Model `brixx-login-process` im Brixx BPMN-Editor
 
 ## <div id='brixx-login-process' /> Brixx Web-Baustein [brixx-login-process] erstellen
 
