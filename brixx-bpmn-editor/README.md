@@ -7,10 +7,9 @@
 ### Version: `1.2.0` (Release, 08.07.2023)
 
 #
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Define your process without programming
-
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 ## Model processes and workflows
 

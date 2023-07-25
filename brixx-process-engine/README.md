@@ -7,10 +7,9 @@
 ### Version: `1.1.0` (Release, 08.07.2023)
 
 #
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Process-Engine
-
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 ## The easiest way to build digital processes and workflows
 
@@ -71,7 +70,7 @@ Version 1.1.0 (Latest)
 
 Download Web-Application Package Installer for Windows (Trial).
 
--   ### [Brixx-Process-Engine Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.1.0-trial-x64.exe)
+-   ### [Brixx-Process-Engine Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.1.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 
