@@ -47,7 +47,7 @@ Danach modelieren wir einen einen Gesch&auml;ftsprozess für einen Benutzer-Logi
 
 Benutzer-Login Model `brixx-login-process` im Brixx BPMN-Editor
 
-Zusätzlich erstellen wir ein HTML-Dokument als Brixx-Process-Engine *Admin Console* zur Erstellung einer neuen Prozessinstanz. Hier wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Wir verwenden im HTML-Dokument *Brixx-Process-Script standalone for development* und kann, beispielsweise mit dem *Live Server* in Visual Studio Code, direkt im Browser gestartet werden. Die Funktion wird zu einem späteren Zeitpunkt noch genauer erklärt. 
+Zusätzlich erstellen wir ein HTML-Dokument als eine Art Brixx-Process-Engine *Admin Console* zur Erstellung einer neuen Prozessinstanz. Hier wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Wir verwenden im HTML-Dokument *Brixx-Process-Script standalone for development* und kann dadurch, beispielsweise mit dem *Live Server* in Visual Studio Code, direkt im Browser gestartet werden. Die Funktion wird zu einem späteren Zeitpunkt genauer erklärt; hier kann u.a. eine Mail mit der Prozess URL als QR-Code an den Ersteller der Projektinstanz gesendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei `admin.html`
 
@@ -65,15 +65,15 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
             <h3>Create a new process instance</h3>
             <table>
                 <tr>
-                    <td>Model identifier</td>
+                    <td>Model identifier (ID)</td>
                     <td>
                         <input type="text" id="mid" size="35" />
                     </td>
                 </tr>
                 <tr>
-                    <td>or Model key</td>
+                    <td>Model key (Name)</td>
                     <td>
-                        <input type="text" id="key" size="35" />
+                        <input type="text" id="key" size="35"/>
                     </td>
                 </tr>
                 <tr>
@@ -86,7 +86,7 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
                     <td colspan="2">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Process identifier</td>
+                    <td>Process-ID (PID)</td>
                     <td>
                         <input type="text" id="pid" size="35" />
                     </td>
@@ -124,6 +124,8 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
 <img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 400px;" />
 
 Die Brixx-Process-Engine *Admin Console* im Browser-Fenster
+
+Mit Angabe des *Model identifiers (ID)* oder dem optionalen *Model key (Name)*, aus dem Brixx BPMN-Editor, kann eine neue Prozessinstanz in der Brixx Prozess Engine mit Klick auf die Schaltfläche `[Create Process]` erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` wird die *Process-ID (PID)* in die Zwischenablage kopiert. 
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
