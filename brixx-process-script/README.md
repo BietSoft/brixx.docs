@@ -31,7 +31,7 @@ Wir verwenden Brixx-Script zum Erstellen von einem einfachen Gesch&auml;ftsproze
 
 Wir ben&ouml;tigen eine laufende [Brixx Prozess Engine](../brixx-process-engine/README.md) und kann zum Beispiel f&uuml;r die Entwicklung unter Windows mit dem [Windows Installer](https://brixx.it/brixx-process-engine.html) lokal installiert werden.
 
-<img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 300px;" />
+<img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 350px;" />
 
 Brixx Prozess Script - Windows-Installer
 
