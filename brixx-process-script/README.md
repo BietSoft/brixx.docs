@@ -125,7 +125,7 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
 
 Die Brixx-Process-Engine *Admin Console* im Browser-Fenster
 
-Mit Angabe des *Model identifiers (ID)* oder dem optionalen *Model key (Name)*, aus dem Brixx BPMN-Editor, kann eine neue Prozessinstanz in der Brixx Prozess Engine mit Klick auf die Schaltfläche `[Create Process]` erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` wird die *Process-ID (PID)* in die Zwischenablage kopiert. 
+Mit Angabe des *Model identifiers (ID)* oder dem optionalen *Model key (Name)*, aus dem Benutzer-Login Model im Brixx BPMN-Editor, kann eine neue Prozessinstanz in der Brixx Prozess Engine mit Klick auf die Schaltfläche `[Create Process]` erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` wird die *Process-ID (PID)* in die Zwischenablage kopiert. 
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
