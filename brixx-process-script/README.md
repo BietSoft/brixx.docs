@@ -145,7 +145,7 @@ und suchen zuerst mit der Funktion `BrixxProcessDefinition.getSearchParam` nach 
 
 <img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 400px;" />
 
-Eingabedialog für eine g&uuml;ltige Process-ID mit der Funktion `getSearchParam` im Browser-Fenster. Das kann eine Process-ID sein, oder ein Teilprozess Idendifier, z. B. eine Task-ID.
+Eingabedialog für eine g&uuml;ltige Process-ID mit der Funktion `getSearchParam` im Browser-Fenster. Das kann eine Process-ID, oder ein Identifier von einem einzelnen Process-Element sein, z. B. eine Task-ID. Hier können wir bequem die Process-ID aus der Zwischenablage einfügen, die mit der Brixx-Process-Engine *Admin Console* erstellt und in die Zwischenablage kopiert werden kann.
 
 ## <div id='brixx-login-process-javascript' /> Brixx Web-Baustein [brixx-login-process] erstellen (JavaScript based)
 
