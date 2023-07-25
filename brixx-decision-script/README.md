@@ -256,7 +256,7 @@ Zum testen öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Co
 
     <img src="../assets/images/brixx-check-age.webp" style="margin-bottom: -5px; width: 600px;" />
 
-    Visual-Studio-Code - Explorer-Ansicht `[Open with Live Server]`
+    Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
     Die HTML-Datei `index.html` wird mit dem _Live Server_ unter der Adresse `http://127.0.0.1:5500/index.html` bereitgestellt und im Standard-Browser geöffnet.
 
