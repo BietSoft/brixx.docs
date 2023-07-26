@@ -42,15 +42,15 @@ Nach der Installation steht die Prozess Engine unter http://localhost:5000 für 
 
 Brixx Prozess Script im Windows Terminal (PowerShell)
 
-Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [brixx-login-process.bpmn](../assets/downloads/brixx-login-process.bpmn). Wir öffnen die BPMN Datei mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für die Entwicklung das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
+Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn). Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Die Details im Benutzer-Login Prozess werden wir später betrachten, und erstellen vorher ein HTML-Dokument als _Admin Console_ für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse. Im ersten Schritt nur zur Erstellung einer Prozessinstanz. Wir erstellen eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` und geben die Process-ID (Process instance identifier) aus. Für die _Admin Console_ verwenden wir _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, zum Beispiel mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden. Die Funktionen werden späteren noch genauer erklärt; dabei kann u. a. auch eine Mail mit der Prozess-URL und Projektinstanz als QR-Code versendet werden.
+Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als _Helper_ für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) ausgegeben. Die _Admin Console_ verwendt _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
-Komplettes HTML-Dokument in der HTML-Datei `admin.html`
+Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../assets/downloads/brixx-create-process.html)
 
     <!DOCTYPE html>
     <html>
@@ -123,6 +123,8 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
         </body>
     </html>
 
+Komplette Datei [[brixx-create-process.html] (HTML Datei)](../assets/downloads/brixx-create-process.html) herunterladen.
+
 <img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 400px;" />
 
 Die _Admin Console_ im Browser-Fenster
@@ -131,12 +133,11 @@ Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_ aus dem Benutzer-Lo
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
-Wir erstellen einen einfachen Benutzer-Login als Geschäftsprozess mit privaten und öffentlichen Bereich. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-login-process-html]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Wir erstellen einen einfachen Benutzer-Login Prozess mit einem privaten und öffentlichen Bereich. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-login-process-html]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-login-process-html/
     ├── components/
     │   └── brixx-login-process.js
-    ├── admin.html
     └── index.html
 
 Darin erstellen wir den Brixx Web-Baustein `[brixx-login-process]` in der Brixx Script-Component Datei `brixx-login-process.js`
@@ -149,7 +150,7 @@ und suchen zuerst mit der Funktion `BrixxProcessDefinition.getSearchParam` nach 
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
-Das kann eine Process-ID oder ein Identifier von einem Process-Element sein, beispielsweise eine Task-ID. Hier können wir die Process-ID aus der Zwischenablage einfügen, die wir mit der Brixx-Process-Engine _Admin Console_ erstellen und in die Zwischenablage kopieren können.
+Das kann eine Process-ID oder ein Identifier von einem Process-Element sein, beispielsweise eine Task-ID. Hier können wir die Process-ID einfügen, die wir mit der _Admin Console_ aus den Vorbereitungen erstellen und in die Zwischenablage kopieren können.
 
 Anschließend erstellen wir ein Standard Brixx.element mit dem Benutzer-Login Prozess.
 
@@ -458,6 +459,8 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 # <div id='reference' /> Brixx-Process-Script Referenz
 
 # <div id='downloads' /> Downloads
+
+-   ### [Helper [brixx-create-process.html] (HTML Datei)](../assets/downloads/brixx-create-process.html)
 
 -   ### [Beispiel [brixx-login-process.bpmn] (BPMN Datei)](../assets/downloads/brixx-login-process.bpmn)
 
