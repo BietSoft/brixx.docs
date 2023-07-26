@@ -205,7 +205,7 @@ Zum testen öffnen wir den Projektordner `[brixx-element-sample]` in Visual Stud
 
     Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
-    Die HTML-Datei `index.html` wird mit dem _Live Server_ unter der Adresse `http://127.0.0.1:5500/index.html` bereitgestellt und im Standard-Browser geöffnet.
+    Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
@@ -469,7 +469,7 @@ Die HTML-Datei `index.html` wird in erster Linie zum testen der Brixx Webkompone
 
     Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
-    Die HTML-Datei `index.html` wird mit dem _Live Server_ unter der Adresse `http://127.0.0.1:5500/index.html` bereitgestellt und im Standard-Browser geöffnet.
+    Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
 
     <img src="../assets/images/vscode-live-server-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -633,8 +633,6 @@ Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir
     ├── package.json.lock
     ├── package.json
     └── webpack.config.js
-
-Under construction ...
 
 Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
 
@@ -1190,8 +1188,6 @@ Console output
 
 ## Brixx.console (object)
 
-Under construction ...
-
 The Brixx console object. A special Brixx console object, based on the browser console object, typically used for system information during development or for debugging and to be disabled at runtime.
 
 > The browser console object should be used very carefully so that no unwanted information is output at runtime.
@@ -1234,8 +1230,6 @@ The Brixx console object. A special Brixx console object, based on the browser c
 ## Brixx.Component (object)
 
 **Example**
-
-Under construction ...
 
 The Brixx Component class.
 

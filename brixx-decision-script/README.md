@@ -258,7 +258,7 @@ Zum testen öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Co
 
     Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
-    Die HTML-Datei `index.html` wird mit dem _Live Server_ unter der Adresse `http://127.0.0.1:5500/index.html` bereitgestellt und im Standard-Browser geöffnet.
+    Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
@@ -535,8 +535,6 @@ Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkon
 
 ## <div id='brixx-check-age-class' /> JavaScript Web-Application [brixx-check-age] erstellen
 
-Under construction ...
-
 Wir können auch beide „Welten” verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamisch neue Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei in der Datei `brixx_check_age.json` aus dem Beispiel vorher. Danach erstellen wir auch hier wieder einen Ordner `[components]`, darin die Brixx Script-Component Datei `brixx-check-age.js`, und kopieren die HTML-Datei `index.html` aus dem Beispiel für den Brixx Web-Baustein. Die Projekt-Ordnerstruktur sieht dann wie folgt aus.
 
     brixx-check-age-slass/
@@ -659,8 +657,6 @@ Die JavaScript Web-Application `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-dynamic' /> Brixx Web-Baustein mit dynamischem content erstellen
 
-Under construction ...
-
 Wir erstellen den Projektordner `[brixx-check-age-dynamic]` und kopieren die Dateien von dem erweiterten Brixx Web-Baustein aus Projektordner `[brixx-check-age-styles]`. Darin bearbeiten wir nur die Brixx Script-Component Datei `./components/brixx-check-age.js`.
 
 Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/brixx-check-age.js`
@@ -776,8 +772,6 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 > **Tip:** Die Brixx-Decision-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 # <div id='definition' /> Decision table definition
-
-Under construction ...
 
 The Bixx decision table can be defined in JSON format and is used like other [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) based systems.
 
@@ -1000,8 +994,6 @@ The input oject rule conditions. Multiple conditions can be used and combined fo
     }
 
 # The HTML way
-
-Under construction ...
 
 The other way to define a Brixx decision table are the special HTML elements that are available with Brixx-Decision-Script. All HTML elements and attributes are optional. Brixx-Decision-Script HTML elements and attributes override predefined values from the decision table `definition` attribute and child elements and attributes override parent definitions. For example, a `Check` element overrides the `check` attribute in the `DecisionTable` element. Each Brixx-Decision-Script HTML element can contain subordinate elements and enables free design in the HTML document.
 
