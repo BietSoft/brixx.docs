@@ -129,7 +129,7 @@ Mit dem *Model identifiers (ID)* oder dem *Model key (Name)*, aus dem Benutzer-L
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
-Wir erstellen ein Benutzer-Login als Gesch&auml;ftsprozess. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-login-process-html]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
+Wir erstellen einen einfachen Benutzer-Login als Gesch&auml;ftsprozess mit privaten und öffentlichen Bereich. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-login-process-html]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
     brixx-login-process-html/
     ├── components/
