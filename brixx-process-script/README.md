@@ -26,29 +26,29 @@ With our workflow management system, all types of processes and workflows can be
 
 # <div id='getstarted' /> Erste Schritte
 
-Wir verwenden Brixx-Script zum Erstellen von einem **Geschäftsprozess** (Workflow). Brixx-Script ist Bestandteil in Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Process-Script besonders interessannt und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einem Benutzer-Login Prozess (`brixx-login-process-html`) und anschließend das Beispiel als JavaScript Element (`brixx-login-process-javascript`) und Node.js Application (`brixx-login-process-node`).
+Wir verwenden Brixx-Script zur Erstellung von einem **Geschäftsprozess** (business process) oder Workflow. Brixx-Script ist Bestandteil in Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Process-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einem Benutzer-Login Prozess (`brixx-login-process-html`) und anschließend als JavaScript Element (`brixx-login-process-javascript`) und Node.js Application (`brixx-login-process-node`).
 
 ## Vorbereitungen
 
-Für die Ausführung und Verwaltung der Geschäftsprozesse verwenden wir die [Brixx Prozess Engine](../brixx-process-engine/README.md) als Prozess und Workflow Engine, und kann zum Beispiel für die Entwicklung unter Windows mit dem [Windows Installer](https://brixx.it/brixx-process-engine.html) und wenigen Mausklicks installiert und lokal bereitgestellt werden.
+Für die Prozess-Erstellung und -Verarbeitung verwenden wir die [Brixx Prozess Engine](../brixx-process-engine/README.md) als Prozess und Workflow Engine und kann zum Beispiel für die Entwicklung unter Windows mit dem [Windows Installer](https://brixx.it/brixx-process-engine.html) und wenigen Mausklicks installiert und lokal bereitgestellt werden.
 
 <img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 400px;" />
 
 Installation abgeschlossen - Windows-Installer
 
-Nach der Installation steht die Brixx Prozess Engine unter http://localhost:5000 für die lokale Entwicklung zur Verfügung und kann zum Beispiel mit http://localhost:5000/brixx/heartbeat überprüft werden.
+Nach der Installation steht die Prozess Engine unter http://localhost:5000 für die Entwicklung zur Verfügung und kann mit http://localhost:5000/brixx/heartbeat überprüft werden.
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Brixx Prozess Script in der Windows Konsole
+Brixx Prozess Script im Windows Terminal (PowerShell)
 
-Anschlie&szlig;end erstellen wir einen Geschäftsprozess für einen Benutzer-Login und verwenden die BPMN Datei [brixx-login-process.bpmn](../assets/downloads/brixx-login-process.bpmn). Die müssen wir nur mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) öffnen, und das Prozessmodell direkt als Geschäftsprozess in der Brixx Prozess Engine veröffentlichen und für die Entwicklung bereitstellen.
+Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [brixx-login-process.bpmn](../assets/downloads/brixx-login-process.bpmn). Wir öffnen die BPMN Datei mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für die Entwicklung das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Benutzer-Login Model `brixx-login-process` im Brixx BPMN-Editor
+Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Dann erstellen wir ein HTML-Dokument als _Admin Console_ für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse. Im ersten Schritt nur zur Erstellung einer neuen Prozessinstanz, und verwenden dabei nur Funktionen von Brixx-Process-Script. Hier wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) der Prozessinstanz ausgegeben. Wir verwenden auch _Brixx-Process-Script standalone for development_, dadurch kann die _Admin Console_ während der Entwicklung, zum Beispiel mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden. Die Funktionen werden zum späteren Zeitpunkt genauer erklärt; dabei kann auch eine Mail mit der Prozess-URL als QR-Code der Projektinstanz versendet werden.
+Die Details im Benutzer-Login Prozess werden wir später betrachten, und erstellen vorher ein HTML-Dokument als _Admin Console_ für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse. Im ersten Schritt nur zur Erstellung einer Prozessinstanz. Wir erstellen eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` und geben die Process-ID (Process instance identifier) aus. Für die _Admin Console_ verwenden wir _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, zum Beispiel mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden. Die Funktionen werden späteren noch genauer erklärt; dabei kann u. a. auch eine Mail mit der Prozess-URL und Projektinstanz als QR-Code versendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei `admin.html`
 
@@ -127,7 +127,7 @@ Komplettes HTML-Dokument in der HTML-Datei `admin.html`
 
 Die _Admin Console_ im Browser-Fenster
 
-Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_, aus dem Benutzer-Login Model im Brixx BPMN-Editor, kann eine Prozessinstanz mit Klick auf die Schaltfläche `[Create Process]` in der Brixx Prozess Engine erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` kann die _Process-ID (PID)_ in die Zwischenablage kopiert werden.
+Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_ aus dem Benutzer-Login Model im Brixx BPMN-Editor kann eine Prozessinstanz mit Klick auf die Schaltfläche `[Create Process]` in der Brixx Prozess Engine erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` kann die _Process-ID (PID)_ in die Zwischenablage kopiert werden.
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
