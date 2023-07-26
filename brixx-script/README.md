@@ -859,6 +859,7 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 > **Tip:** Die Brixx-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 ## Brixx class
+
 ### constructor()
 
 Constructs a Brixx instance.
@@ -1191,9 +1192,9 @@ Console output
 
 Under construction ...
 
-The Brixx console object. A special Brixx console object, based on the browser console object, typically used for system information during development or for debugging and to be disabled at runtime. 
+The Brixx console object. A special Brixx console object, based on the browser console object, typically used for system information during development or for debugging and to be disabled at runtime.
 
-> The browser console object should be used very carefully so that no unwanted information is output at runtime. 
+> The browser console object should be used very carefully so that no unwanted information is output at runtime.
 
 ### .console.dot
 

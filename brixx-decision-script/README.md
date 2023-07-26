@@ -96,7 +96,7 @@ Anschließend erstellen wir ein Standard `Brixx.element` mit der Brixx Entscheid
         </div>
     );
 
-Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung einer Brixx Entscheidungstabelle im HTML-Dokument zur Verfügung gestellt, und wir erstellen die Brixx Entscheidungstabelle mit dem HTML-Element `<DecisionTable>`.
+Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung für eine Brixx Entscheidungstabelle im HTML-Dokument zur Verfügung gestellt, und wir erstellen die Brixx Entscheidungstabelle mit dem HTML-Element `<DecisionTable>`.
 
     ...
     <DecisionTable>
@@ -717,7 +717,6 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
     // Register a Brixx HTML-Element <brixx-check-age>
     Brixx.registerElement({ name: "check-age" });
 
-
 Komplettes Beispiel [[brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads/brixx-check-age-dynamic.zip) herunterladen.
 
 # <div id='reference' /> Brixx-Decision-Script Referenz
@@ -1156,7 +1155,6 @@ Adds a `Output` object for the Brixx decision table.
 
 `{String|Object} [target]` - the Brixx decision table output target. If the `component` flag is set renders a Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
 
-
 `{String} [name]` - the Brixx decision table output identifier.
 
 **Example**
@@ -1427,7 +1425,6 @@ Console output
 -   ### [Beispiel [brixx-check-age-web] (ZIP-Archiv)](../assets/downloads/brixx-check-age-web.zip)
 -   ### [Beispiel [brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip)
 -   ### [Beispiel [brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip)
-
 
 ## Copyright and License
 

@@ -7,6 +7,7 @@
 ### Version: `1.2.0` (Release, 08.07.2023)
 
 #
+
 > This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Define your process without programming
@@ -20,12 +21,12 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 -   [Brixx BPMN-Editor Tutorial](#tutorial)
 -   [Brixx BPMN-Editor Referenz](#reference)
 -   [Downloads](#downloads)
-  
+
 # <div id='getstarted' /> Get started
 
 <a href="https://brixx.it/bpmn-editor/index.html" target="_blank"><img src="../assets/images/bpmn-sample.jpg"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)" style="margin-bottom: -5px; width: 600px;" /></a>
 
-<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.2.0 mit BPMN 2.0 Standard (Try it Online) 
+<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.2.0 mit BPMN 2.0 Standard (Try it Online)
 
 Coming soon ...
 

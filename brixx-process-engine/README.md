@@ -7,6 +7,7 @@
 ### Version: `1.1.0` (Release, 08.07.2023)
 
 #
+
 > This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Was ist Brixx-Process-Engine
@@ -15,22 +16,22 @@
 
 With **Brixx Process Engine** we bridge the gap to enterprise process orchestration systems, such as Camunda or X4 BPMS, as a lightweight workflow management system for the automation and digitization of business and industrial processes, processes in web applications and to IoT process control. With minimal development, integration and cost effort, our process can serve as the basis for applications, or be integrated into existing applications as an extension for sub-processes and is the control center for configuration, process creation and processing.
 
-- Lightweight process enging
-- Simple system integration
-- No special training needed
-- No special server hardware
-- or installation needed
-- No database required
-- Cross platform development
-- Cross ui development
-- Low Code development
-- Full HTML and JavaScript support
-- IoT (Internet of Things) control and  
-  (Single-Board-Computer) support
-- BPMN 2.0 Standard
-- Suitable for BPMN training
-- Cloud (FaaS) and Blockchain ready
-- ChatGPT ready
+-   Lightweight process enging
+-   Simple system integration
+-   No special training needed
+-   No special server hardware
+-   or installation needed
+-   No database required
+-   Cross platform development
+-   Cross ui development
+-   Low Code development
+-   Full HTML and JavaScript support
+-   IoT (Internet of Things) control and  
+    (Single-Board-Computer) support
+-   BPMN 2.0 Standard
+-   Suitable for BPMN training
+-   Cloud (FaaS) and Blockchain ready
+-   ChatGPT ready
 
 ## Why a process engine for web technologies?
 
@@ -42,11 +43,11 @@ We are particularly aimed at small and medium-sized companies in order to enable
 
 ## Model processes and workflows
 
-With our workflow management system, all types of processes and workflows can be processed, and with the [Brixx BPMN editor](../brixx-bpmn-editor/README.md) for process modeling with BPMN (Business Process Model and Notation) can be made available in the Brixx Process Engine with one click. 
+With our workflow management system, all types of processes and workflows can be processed, and with the [Brixx BPMN editor](../brixx-bpmn-editor/README.md) for process modeling with BPMN (Business Process Model and Notation) can be made available in the Brixx Process Engine with one click.
 
 ## Create processes and workflows
 
-With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented and integrated into web applications with HTML and JavaScript. This allows applications with the Four Eyes 
+With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented and integrated into web applications with HTML and JavaScript. This allows applications with the Four Eyes
 Principle (Two-man rule), multi-level forms, or web applications for processing with different actors as an example to be created quickly and easily.
 
 Coming soon ...
@@ -54,7 +55,7 @@ Coming soon ...
 -   [Brixx-Process-Engine installieren](#installation)
 -   [Brixx-Process-Engine Referenz](#reference)
 -   [Downloads](#downloads)
-  
+
 # <div id='installation' /> Brixx-Process-Engine installieren
 
 # <div id='reference' /> Brixx-Process-Engine Referenz
@@ -79,7 +80,6 @@ Ask for your Linux runtime version.
 ## <i class="fa-brands fa-apple"></i> Mac OS Installer
 
 Ask for your Mac OS runtime version.
-
 
 ## Copyright and License
 

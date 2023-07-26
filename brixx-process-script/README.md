@@ -152,7 +152,7 @@ Eingabedialog für eine Process-ID im Browser-Fenster.
 
 Das kann eine Process-ID oder ein Identifier von einem Process-Element sein, beispielsweise eine Task-ID. Hier können wir die Process-ID einfügen, die wir mit der _Admin Console_ aus den Vorbereitungen erstellen und in die Zwischenablage kopieren können.
 
-Anschließend erstellen wir ein Standard Brixx.element mit dem Benutzer-Login Prozess.
+Anschließend erstellen wir ein Standard `Brixx.element` mit dem Benutzer-Login Prozess.
 
     // Create a Brixx default element
     Brixx.element = (
@@ -187,7 +187,7 @@ Anschließend erstellen wir ein Standard Brixx.element mit dem Benutzer-Login Pr
         </ProcessDefinition>
     );
 
-Mit Brixx-Process-Script werden HTML-Elemente zur Erstellung von einem Geschäftsprozess im HTML-Dokument zur Verfügung gestellt. Wir erstellen den Benutzer-Login Prozess mit dem HTML-Element `<ProcessDefinition>` und dem HTML-Attribut (Eigenschaft) `mid` für die Model-ID in der Brixx Prozess Engine. Mit der Eigenschaft `pid` wird die Process-ID als persönlicher identifier angegeben.
+Mit Brixx-Process-Script werden HTML-Elemente zur Erstellung von einem Geschäftsprozess oder Workflow im HTML-Dokument zur Verfügung gestellt. Wir erstellen den Benutzer-Login Prozess mit dem HTML-Element `<ProcessDefinition>` und dem HTML-Attribut (Eigenschaft) `mid` für die Model-ID in der Brixx Prozess Engine. Mit der Eigenschaft `pid` wird die Process-ID als persönlicher identifier angegeben.
 
     ...
     <ProcessDefinition mid="Process_nehz6cn" pid={pid}>
@@ -203,7 +203,7 @@ Danach erstellen wir einen Task Process mit dem HTML-Element `<Task>` und der Ei
     </Task>
     ...
 
-Im Task-Element erstellen wir einen untergeordnete Prozess mit dem HTML-Element `<Gateway>` und der Eigenschaft `mid` für die Gateway-ID. Der Gateway Prozess im Benutzer-Login Prozess verwendet die integrierte Brixx Entscheidungstabelle, und wie beim übergeordneten Task Process wird mit der Eigenschaft `action` angegeben welche Aktion ausgeführt werden soll sobald der Gateway Process die Entscheidungstabelle verarbeitet hat. Im Beispiel wird der Gateway Process mit der Funktion `BrixxProcessDefinition.process.done` beendet, und mit der Eigenschaft `git` die Gateway-ID übergeben.
+Im Task-Element erstellen wir einen untergeordneten Gateway Prozess mit dem HTML-Element `<Gateway>` und der Eigenschaft `mid` für die Gateway-ID. Der Gateway Prozess verwendet eine integrierte Brixx Entscheidungstabelle, und wie beim Task Process wird mit `action` angegeben welche Aktion ausgeführt werden soll, sobald der Gateway Process die Entscheidungstabelle verarbeitet hat. Im Beispiel wird der Gateway Process mit der Funktion `BrixxProcessDefinition.process.done` beendet, und mit der Objekt Eigenschaft `git` die Gateway-ID übergeben. Anschließend werden alle nachfolgenden Prozess-Elemente im Prozessablauf aktiviert.
 
     ...
     <Gateway
@@ -216,7 +216,7 @@ Im Task-Element erstellen wir einen untergeordnete Prozess mit dem HTML-Element 
     </Gateway>
     ...
 
-Wir erstellen im Gateway-Element weitere untergeordnete Task-Elemente. Dabei wird mit der Eigenschaft `action` die Funktion `addMessageElement` aufgerufen, mit dem Parameter `data` die aktuellen Prozesseigenschaften, und einem weiteren Parameter `message` eine _Nachricht_ übergeben.
+Danach erstellen wir im Gateway-Element untergeordnete Task-Elemente und mit der Eigenschaft `action` wird die Funktion `addMessageElement` aufgerufen, mit dem Parameter `data` die aktuellen Prozesseigenschaften, und einem weiteren Parameter `message` eine _Nachricht_ übergeben.
 
     ...
     <Task
@@ -244,7 +244,7 @@ Abschließend wird das `Brixx.element` als HTML-Elemet `<brixx-login-process>` r
     // Register a Brixx HTML-Element <brixx-login-process>
     Brixx.registerElement({ name: "login-process" });
 
-Die Funktionen `addMessageElement` und `addLoginElement` werden im Beispiel Brixx „Standard“-Element erstellt und erst beim Aufruf gerendert (angezeigt), wobei die Funktion `addMessageElement` keine besondere Aufgabe hat und als Platzhalter für die Action Callback Function dient.
+Die Funktionen `addMessageElement` und `addLoginElement` werden als Brixx „Standard“-Element erstellt und erst beim Aufruf angezeigt (gerendert), wobei die Funktion `addMessageElement` keine besondere Aufgabe hat und im Beispiel nur als Platzhalter für die Action Callback Function dient.
 
     // Message task action callback function
     const addMessageElement = (data, message = `${data.mid} is running.`) => {
@@ -263,7 +263,9 @@ Die Funktionen `addMessageElement` und `addLoginElement` werden im Beispiel Brix
         });
     };
 
-Mit der Funktion `addLoginElement` werden die Benutzerdaten abgefragt und an den nachfolgenden Gateway Process mit dem Parameter `store` weitergegeben und mit der integrierten Entscheidungstbelle verarbeitet.
+Dabei wird die _Nachricht_ aus dem Parameter `message` angezeigt, und die Schaltfläche `[Next]` erzeugt. Mit Klick auf die Schaltfläche wird der Task Prozess mit der Funktion `BrixxProcessDefinition.process.done` und der Objekt Eigenschaft `tid` beendet. Für die Schaltfläche wird eine eindeutige Button-ID `{"btn_" + tid}` generiert, mit der Task-ID aus dem Parameter `data` mit den aktuellen Prozesseigenschaften.
+
+Mit der Funktion `addLoginElement` werden die Benutzerdaten zur Authentifizierung abgefragt Mit Klick auf die Schaltfläche `[Login]` wird der Task Prozess mit der Funktion `BrixxProcessDefinition.process.task.next` und der Objekt Eigenschaft `tid` beendet, und der nachfolgenden Gateway Prozess aktiviert. Dabei werden die Benutzerdaten mit dem Parameter `store` an den Gateway Prozess weitergegeben, und mit der integrierten Entscheidungstabelle verarbeitet. 
 
     // Login task action callback function
     const addLoginElement = (data) => {
@@ -377,16 +379,16 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
 ### Brixx Web-Baustein verwenden
 
-Zur Integration in ein HTML-Dokument verwenden wir für das Beispiel **Brixx-Process-Script Standalone** vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration der Entscheidungstabelle mit dem Brixx Web-Baustein zu ermöglichen.
+Zur Integration in ein HTML-Dokument verwenden wir für das Beispiel **Brixx-Process-Script Standalone** vom Brixx CDN-(Content Delivery Network)-Server um eine direkte Integration vom Benutzer-Login Prozess mit dem Brixx Web-Baustein zu ermöglichen.
 
     <!-- Load Brixx-Process-Script standalone for development-->
     <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
 
-Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Hier muss beachtet werden, dass es sich z. B. bei _jsDelivr_ um ein automatisiertes System handelt, und dort nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
+Brixx-Procss-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Hier muss beachtet werden, dass es sich z. B. bei _jsDelivr_ um ein automatisiertes System handelt, und dort nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
 
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
+    <!-- Load Brixx-Procss-Script from jsDelivr CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@brixx/process-script@1.0.1/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
@@ -396,7 +398,7 @@ Der Brixx Web-Baustein `[brixx-login-process]` in der Brixx Script-Component Dat
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-login-process.js" data-type="module" data-presets="brixx"></script>
 
-Für Brixx-Decision-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
+Für Brixx-Process-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
 Jetzt müssen wir nur noch das HTML-Element `<brixx-login-process>` im `<body>`-Bereich einfügen.
 
