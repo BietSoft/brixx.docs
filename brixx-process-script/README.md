@@ -48,7 +48,7 @@ Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Proze
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) ausgegeben. Die _Admin Console_ verwendt _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
+Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../assets/downloads/brixx-create-process.html)
 
@@ -123,13 +123,13 @@ Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../asse
         </body>
     </html>
 
-Komplette Datei [[brixx-create-process.html] (HTML Datei)](../assets/downloads/brixx-create-process.html) herunterladen.
+Die _Admin Console_ verwendt _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden.
 
 <img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 400px;" />
 
 Die _Admin Console_ im Browser-Fenster
 
-Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_ aus dem Benutzer-Login Model im Brixx BPMN-Editor kann eine Prozessinstanz mit Klick auf die Schaltfläche `[Create Process]` in der Brixx Prozess Engine erstellt werden. Mit Klick auf die Schaltfläche `[Copy to clipboard]` kann die _Process-ID (PID)_ in die Zwischenablage kopiert werden.
+Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_ aus dem Prozessmodell im Brixx BPMN-Editor kann eine Prozessinstanz mit Klick auf die Schaltfläche `[Create Process]` in der Brixx Prozess Engine erstellt, und mit Klick auf die Schaltfläche `[Copy to clipboard]` die _Process-ID (PID)_ in die Zwischenablage kopiert werden.
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
