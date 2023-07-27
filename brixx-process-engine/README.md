@@ -94,8 +94,7 @@ Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 # <div id='downloads' /> Downloads
 
-<img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;" />
-<b>CDN - Latest Stable Version</b><p />
+## <img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;"  /> CDN - Latest Stable Version
 
 Version 1.1.0 (Latest)
 
@@ -115,13 +114,11 @@ Ask for your Mac OS runtime version.
 
 # <div id='docker' /> Docker
 
-## <img src="../assets/images/docker.svg" style="height: 40px; vertical-align: middle;"  /> Docker Hub
+## <img src="../assets/images/docker.svg" style="height: 54px; vertical-align: middle;"  /> Docker Hub
 
 You will soon find all docker images on Docker Hub.  
 Ask for your early access version. 
 
 ## Copyright and License
-
-#
 
 Copyright © BRIXX.it 2022-present
