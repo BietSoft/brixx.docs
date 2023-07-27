@@ -8,8 +8,6 @@
 
 #
 
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
-
 # Define your process without programming
 
 ## Model processes and workflows
@@ -17,7 +15,7 @@
 With our Brixx BPMN editor for process modeling, all types of business and industrial processes can be mapped with Business Process Model and Notation ( BPMN ) and made available with one click.
 
 -   [Get started](#getstarted)
--   [Install Brixx BPMN-Editor](#installation)
+-   [Install Brixx BPMN-Editor](#setup)
     -   [Windows installer](#windows)
 -   [Brixx BPMN-Editor Tutorial](#tutorial)
 -   [Brixx BPMN-Editor Referenz](#reference)
@@ -29,7 +27,7 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 <a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.2.0 mit BPMN 2.0 Standard (Try it Online)
 
-# <div id='installation' /> Install Brixx BPMN-Editor
+# <div id='setup' /> Install Brixx BPMN-Editor
 
 ## <div id='windows' /> <i class="fa-brands fa-windows"></i> Windows Installer
 
@@ -39,23 +37,23 @@ Select [OK]
 
 <img src="../assets/images/bpmn-editor-installer-02.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Weiter]
+Select [Next]
 
 <img src="../assets/images/bpmn-editor-installer-03.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Weiter]
+Select [Next]
 
 <img src="../assets/images/bpmn-editor-installer-04.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Imstallieren]
+Select [Imstall]
 
 <img src="../assets/images/bpmn-editor-installer-05.webp" style="margin-bottom: -5px; width: 450px;" />
 
-BPMN-Editor wird installiert ...
+Installation in progress ...
 
 <img src="../assets/images/bpmn-editor-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Fertigstellen]
+Select [Finish]
 
 Nach der Installation steht der BPMN-Editor unter http://localhost:3000 zur Verfügung und wird im Standard-Browser geöffnet. 
  
