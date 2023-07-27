@@ -451,9 +451,9 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
-    <img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 400px;" />
+<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 400px;" />
 
-    Eingabedialog für eine Process-ID im Browser-Fenster.
+Eingabedialog für eine Process-ID im Browser-Fenster.
 
 Wird kein URL-Parameter `pid` in der Prozess-URL gefunden, z. B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#admin-console))
 
@@ -497,7 +497,7 @@ Es wird empfohlen Brixx-Process-Script Standalone nicht in einer Produktionsumge
 
 ## Brixx-Process-Script Package
 
-### Brixx-Process-Script Package mit npm installieren
+### Brixx-Process-Script Package installieren
 
     `npm i @brixx/process-script`
 

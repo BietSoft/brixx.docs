@@ -209,9 +209,9 @@ Zum testen öffnen wir den Projektordner `[brixx-element-sample]` in Visual Stud
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
-    <img src="../assets/images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
-    Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
+Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 # <div id='tutorial'/> Brixx-Script Tutorial
 
@@ -838,7 +838,7 @@ Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu 
 
 ## Brixx-Script Package
 
-### Brixx-Script Package mit npm installieren
+### Brixx-Script Package installieren
 
     `npm i @brixx/script`
 

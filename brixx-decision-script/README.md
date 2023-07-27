@@ -262,9 +262,9 @@ Zum testen öffnen wir den Projektordner `[brixx-check-age]` in Visual Studio Co
 
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
-    <img src="../assets/images/brixx-check-age-web-01.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/brixx-check-age-web-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
-    Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
+Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 # <div id='tutorial' /> Brixx-Decision-Script Tutorial
 
@@ -745,7 +745,7 @@ Es wird empfohlen Brixx-Decision-Script Standalone nicht in einer Produktionsumg
 
 ## Brixx-Decision-Script Package
 
-### Brixx-Decision-Script Package mit npm installieren
+### Brixx-Decision-Script Package installieren
 
     `npm i @brixx/decision-script`
 
