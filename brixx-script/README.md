@@ -205,9 +205,9 @@ Zum testen öffnen wir den Projektordner `[brixx-element-sample]` in Visual Stud
 
     Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
-    Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
-
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
+
+Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
 
 <img src="../assets/images/vscode-live-server-01.webp" style="margin-bottom: -5px; width: 600px;" />
 

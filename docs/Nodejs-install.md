@@ -8,27 +8,27 @@
 
 2. Once it is downloaded, run the installer. The Node.js Setup wizard will open.
 
-    <img src="../assets/images/node-setup-01.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-01.png" style="margin-bottom: -5px; width: 450px;" />
 
     Select `[Next]`
 
-    <img src="../assets/images/node-setup-02.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-02.png" style="margin-bottom: -5px; width: 450px;" />
 
     Check "I accept the terms in the License Agreement" & Select `[Next]`
 
-    <img src="../assets/images/node-setup-03.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-03.png" style="margin-bottom: -5px; width: 450px;" />
 
     Set the Destination Folder location to install Node.js & Select `[Next]`
 
-    <img src="../assets/images/node-setup-04.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-04.png" style="margin-bottom: -5px; width: 450px;" />
 
     Select `[Next]`
 
-    <img src="../assets/images/node-setup-05.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-05.png" style="margin-bottom: -5px; width: 450px;" />
 
     Select `[Install]`
 
-    <img src="../assets/images/node-setup-06.png" style="margin-bottom: -5px; width: 440px;" />
+    <img src="../assets/images/node-setup-06.png" style="margin-bottom: -5px; width: 450px;" />
 
     Click `[Finish]`
 

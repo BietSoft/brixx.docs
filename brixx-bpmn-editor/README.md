@@ -18,6 +18,7 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 -   [Get started](#getstarted)
 -   [Install Brixx BPMN-Editor](#installation)
+    -   [Windows installer](#windows)
 -   [Brixx BPMN-Editor Tutorial](#tutorial)
 -   [Brixx BPMN-Editor Referenz](#reference)
 -   [Downloads](#downloads)
@@ -28,9 +29,39 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 <a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.2.0 mit BPMN 2.0 Standard (Try it Online)
 
-Coming soon ...
-
 # <div id='installation' /> Install Brixx BPMN-Editor
+
+## <div id='windows' /> <i class="fa-brands fa-windows"></i> Windows Installer
+
+<img src="../assets/images/bpmn-editor-installer-01.webp" style="margin-bottom: -5px; width: 270px;" />
+
+Select [OK]
+
+<img src="../assets/images/bpmn-editor-installer-02.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Weiter]
+
+<img src="../assets/images/bpmn-editor-installer-03.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Weiter]
+
+<img src="../assets/images/bpmn-editor-installer-04.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Imstallieren]
+
+<img src="../assets/images/bpmn-editor-installer-05.webp" style="margin-bottom: -5px; width: 450px;" />
+
+BPMN-Editor wird installiert ...
+
+<img src="../assets/images/bpmn-editor-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Fertigstellen]
+
+Nach der Installation steht der BPMN-Editor unter http://localhost:3000 zur Verfügung und wird im Standard-Browser geöffnet. 
+ 
+<img src="../assets/images/bpmn-editor-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Brixx BPMN-Editor im Windows Terminal (PowerShell)
 
 # <div id='tutorial' /> Brixx BPMN-Editor Tutorial
 

@@ -50,8 +50,6 @@ With our workflow management system, all types of processes and workflows can be
 With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented and integrated into web applications with HTML and JavaScript. This allows applications with the Four Eyes
 Principle (Two-man rule), multi-level forms, or web applications for processing with different actors as an example to be created quickly and easily.
 
-Coming soon ...
-
 -   [Brixx-Process-Engine installieren](#installation)
 -   [Brixx-Process-Engine Referenz](#reference)
 -   [Downloads](#downloads)

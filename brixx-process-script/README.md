@@ -36,7 +36,7 @@ Wir verwenden Brixx-Script zur Erstellung von einem **Geschäftsprozess** (busin
 
 Für die Prozess-Erstellung und -Verarbeitung verwenden wir die [Brixx Prozess Engine](../brixx-process-engine/README.md) als Prozess und Workflow Engine und kann zum Beispiel für die Entwicklung unter Windows mit dem [Windows Installer](https://brixx.it/brixx-process-engine.html) und wenigen Mausklicks installiert und lokal bereitgestellt werden.
 
-<img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 400px;" />
+<img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
 
 Installation abgeschlossen - Windows-Installer
 
@@ -132,7 +132,7 @@ Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../asse
 
 Die _Admin Console_ verwendt Brixx-Process-Script standalone und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden.
 
-<img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 400px;" />
+<img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 450px;" />
 
 Die _Admin Console_ im Browser-Fenster
 
@@ -153,7 +153,7 @@ und suchen zuerst mit der Funktion `BrixxProcessDefinition.getSearchParam` nach 
     // Get search param
     const pid = BrixxProcessDefinition.getSearchParam("pid");
 
-<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 400px;" />
+<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 450px;" />
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
@@ -447,11 +447,11 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 
     Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
-    Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
-
     > **Tip:** Der Browser kann bei den _Live Server_ Einstellungen unter `[Custom Browser]` festgelegt werden (`default=null`).
 
-<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 400px;" />
+Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
+
+<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 450px;" />
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
