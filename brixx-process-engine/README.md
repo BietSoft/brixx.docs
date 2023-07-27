@@ -101,9 +101,9 @@ Version 1.1.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
-Download Web-Application Package Installer for Windows (Trial).
+Download Web-Application Package Installer for Windows.
 
--   ### [Brixx-Process-Engine Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.1.0-x64.exe)
+### [Brixx-Process-Engine Version 1.1.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.1.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 
@@ -117,8 +117,10 @@ Ask for your Mac OS runtime version.
 
 ## <div id='docker-hub' /> <img src="../assets/images/docker.svg" style="height: 48px; vertical-align: middle;"  /> Docker Hub
 
-You will soon find all docker images on Docker Hub.  
-Ask for your early access version. 
+### <a href="https://hub.brixx.it/containers" target="_blank">BRIXX.it docker hub</a>
+
+You will soon find all docker images here.  
+Ask for your early access registered version. 
 
 ## Copyright and License
 
