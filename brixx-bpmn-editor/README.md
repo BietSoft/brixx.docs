@@ -67,8 +67,7 @@ Brixx BPMN-Editor in Windows Terminal (PowerShell)
 
 # <div id='downloads' /> Downloads
 
-<img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;" />
-<b>CDN - Latest Stable Version</b><p />
+## <img src="../assets/images/logo-blue.svg" style="height: 48px; vertical-align: middle;"  /> CDN - Latest Stable Version
 
 Version 1.2.0 (Latest)
 
@@ -87,7 +86,5 @@ Ask for your Linux runtime version.
 Ask for your Mac OS runtime version.
 
 ## Copyright and License
-
-#
 
 Copyright © BRIXX.it 2022-present

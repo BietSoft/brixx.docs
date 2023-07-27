@@ -1266,6 +1266,4 @@ Use the Brixx class component
 
 ## Copyright and License
 
-#
-
 Copyright © BRIXX.it 2022-present

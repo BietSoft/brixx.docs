@@ -55,6 +55,7 @@ Principle (Two-man rule), multi-level forms, or web applications for processing 
 -   [Brixx-Process-Engine Referenz](#reference)
 -   [Downloads](#downloads)
 -   [Docker](#docker)
+    -   [Docker Hub](#docker-hub)
 
 # <div id='setup' /> Install Brixx-Process-Engine
 
@@ -94,7 +95,7 @@ Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 # <div id='downloads' /> Downloads
 
-## <img src="../assets/images/logo-blue.svg" style="height: 54px; vertical-align: middle;"  /> CDN - Latest Stable Version
+## <img src="../assets/images/logo-blue.svg" style="height: 48px; vertical-align: middle;"  /> CDN - Latest Stable Version
 
 Version 1.1.0 (Latest)
 
@@ -114,7 +115,7 @@ Ask for your Mac OS runtime version.
 
 # <div id='docker' /> Docker
 
-## <img src="../assets/images/docker.svg" style="height: 54px; vertical-align: middle;"  /> Docker Hub
+## <div id='docker-hub' /> <img src="../assets/images/docker.svg" style="height: 48px; vertical-align: middle;"  /> Docker Hub
 
 You will soon find all docker images on Docker Hub.  
 Ask for your early access version. 
