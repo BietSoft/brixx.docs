@@ -87,4 +87,4 @@ Ask for your Mac OS runtime version.
 
 ## Copyright and License
 
-Copyright © BRIXX.it 2022-present
+Copyright © <a href="https://brixx.it/" target="_blank">BRIXX.it</a> 2022-present

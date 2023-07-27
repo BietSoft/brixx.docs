@@ -117,11 +117,11 @@ Ask for your Mac OS runtime version.
 
 ## <div id='docker-hub' /> <img src="../assets/images/docker.svg" style="height: 48px; vertical-align: middle;"  /> Docker Hub
 
-### <a href="https://hub.brixx.it/containers" target="_blank">BRIXX.it docker hub</a>
+### <a href="https://hub.brixx.it/" target="_blank">BRIXX.it docker hub</a>
 
 You will soon find all docker images here.  
 Ask for your early access registered version. 
 
 ## Copyright and License
 
-Copyright © BRIXX.it 2022-present
+Copyright © <a href="https://brixx.it/" target="_blank">BRIXX.it</a> 2022-present
