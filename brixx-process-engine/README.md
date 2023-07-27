@@ -124,4 +124,4 @@ Ask for your early access registered version.
 
 ## Copyright and License
 
-Copyright © <a href="https://brixx.it/" target="_blank">BRIXX.it</a> 2022-present
+Copyright © [BRIXX.it](https://brixx.it/) 2022-present
