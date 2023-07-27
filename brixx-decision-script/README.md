@@ -28,7 +28,7 @@ We have decided to publish Brixx-Decision-Script as a decision table and rule en
 
 # <div id='getstarted' /> Erste Schritte
 
-Wir verwenden Brixx-Script zur Erstellung einer **Entscheidungstabelle** (decision table). Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Decision-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und anschließend als Node.js Application (`brixx-check-age-node`).
+Wir verwenden Brixx-Script zur Erstellung einer **Entscheidungstabelle** (decision table). Brixx-Script ist Bestandteil in Brixx-Decision-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Decision-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und anschließend als Node.js Application (`brixx-check-age-node`).
 
 ## <div id='brixx-check-age-web' /> Brixx Web-Baustein [brixx-check-age] erstellen
 
@@ -719,12 +719,12 @@ Komplettes Beispiel [[brixx-check-age-dynamic] (ZIP-Archiv)](../assets/downloads
 
 ## Brixx-Decision-Script Standalone
 
-Für die Entwicklung steht eine Brixx-Decision-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Decision-Script direkt ohne precompiling verwendet werden. Die Brixx-Decision-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx-decision.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
+Für die Entwicklung steht eine Brixx-Decision-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Decision-Script direkt ohne precompiling verwendet werden. Die Brixx-Decision-Script Standalone Datei [`brixx-decision.min.js`](https://brixx.it/@brixx/standalone/brixx-decision.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
 
     <!-- Load Brixx-Decision-Script standalone for development -->
     <src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
 
-Brixx-Script ist Bestandteil in Brixx-Decission-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)) und ein Brixx Web-Baustein kann danach mit einem HTML-`<script>`-Element importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
+Brixx-Script ist Bestandteil in Brixx-Decision-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)) und ein Brixx Web-Baustein kann danach mit einem HTML-`<script>`-Element importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 
     <!-- Include the Brixx script component files for development -->
     <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
@@ -761,7 +761,7 @@ Das Modul `BrixxDecisionTable` für eine Nodejs-Anwendung importieren.
 
 ## Brixx-Decision-Script Library
 
-Das Modul `BrixxDecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [brixx-decision.js](https://brixx.it/@brixx/decision-script/brixx.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
+Das Modul `BrixxDecisionTable` von der Brixx-Decision-Script Library importieren. Dafür kann man die Brixx-Decision-Script Library (minified) [brixx-decision.js](https://brixx.it/@brixx/script/brixx-decision.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
 
     import { BrixxDecisionTable } from './brixx-decision'
 

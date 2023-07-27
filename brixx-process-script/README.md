@@ -32,6 +32,8 @@ Wir verwenden Brixx-Script zur Erstellung von einem **Geschäftsprozess** (busin
 
 ## Vorbereitungen
 
+### Brixx Prozess Engine
+
 Für die Prozess-Erstellung und -Verarbeitung verwenden wir die [Brixx Prozess Engine](../brixx-process-engine/README.md) als Prozess und Workflow Engine und kann zum Beispiel für die Entwicklung unter Windows mit dem [Windows Installer](https://brixx.it/brixx-process-engine.html) und wenigen Mausklicks installiert und lokal bereitgestellt werden.
 
 <img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 400px;" />
@@ -44,11 +46,14 @@ Nach der Installation steht die Prozess Engine unter http://localhost:5000 für 
 
 Brixx Prozess Script im Windows Terminal (PowerShell)
 
+### Brixx BPMN-Editor
 Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
+
+### <div id='admin-console' /> Admin Console
 
 Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
@@ -125,7 +130,7 @@ Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../asse
         </body>
     </html>
 
-Die _Admin Console_ verwendt _Brixx-Process-Script standalone for development_ und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden.
+Die _Admin Console_ verwendt Brixx-Process-Script standalone und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden.
 
 <img src="../assets/images/brixx-process-engine-admin-console.webp" style="margin-bottom: -5px; width: 400px;" />
 
@@ -450,9 +455,11 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 
     Eingabedialog für eine Process-ID im Browser-Fenster.
 
-    <img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 600px;" />
+Wird kein URL-Parameter `pid` in der Prozess-URL gefunden, z. B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#admin-console))
 
-    Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
+<img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 # <div id='tutorial' /> Brixx-Process-Script Tutorial
 
@@ -461,6 +468,60 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 ## <div id='brixx-login-process-node' /> Node.js Application [brixx-login-process] erstellen
 
 # <div id='reference' /> Brixx-Process-Script Referenz
+
+## Brixx-Process-Script Standalone
+
+Für die Entwicklung steht eine Brixx-Process-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Process-Script direkt ohne precompiling verwendet werden. Die Brixx-Process-Script Standalone Datei [`brixx-process.min.js`](https://brixx.it/@brixx/standalone/brixx-process.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
+
+    <!-- Load Brixx-Process-Script standalone for development -->
+    <src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
+
+Brixx-Script ist Bestandteil in Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)) und ein Brixx Web-Baustein kann danach mit einem HTML-`<script>`-Element importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
+
+    <!-- Include the Brixx script component files for development -->
+    <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
+
+Brixx-Process-Script Standalone verwendet Babel, um ECMAScript 2015+ Code in eine abwärtskompatible Version von JavaScript in aktuellen und älteren Browsern oder Umgebungen zu konvertieren.
+
+Die Eigenschaft `type` gibt den Medientyp des Skripts an. Für Brixx-Process-Script verwenden wir Babel mit `type="text/babel"` und hat den Vorteil dass man mit aktuellem Standard entwickeln kann, und sich nicht um Abwärtskompatibilität kümmern muss, da Benutzer unterschiedliche Browser und Versionen verwenden.
+
+Die Eigenschaft `src` gibt die URL einer extern verwendeten Brixx Script-Component Datei an, im Beispiel mit `src="./components/brixx-animal-list.js"`
+
+Die Eigenschaft `data-type` ist optional, wird benötigt wenn ECMAScript 2015+ (ES6) Modulen verwendet werden und für Babel mit `data-type="module"` angegeben.
+
+Die Eigenschaft `data-preset` wird angegeben dass Brixx-Script verwendet wird und für Babel mit `data-preset="brixx"` angegeben.
+
+Es wird empfohlen Brixx-Process-Script Standalone nicht in einer Produktionsumgebung zu verwenden. Beim Start wird in der Browserkonsole folgende Information ausgegeben.
+
+> `You are using the in-browser Brixx transformer. Be sure to precompile scripts for production - https://brixx.it/brixx-script`
+
+## Brixx-Process-Script Package
+
+### Brixx-Process-Script Package mit npm installieren
+
+    `npm i @brixx/process-script`
+
+### Brixx-Process-Script Package importieren
+
+Das Modul `BrixxProcessDefinition` vom Package `@brixx/process-script` für eine Web-Anwendung importieren.
+
+    import { BrixxProcessDefinition } from '@brixx/process-script'
+
+Das Modul `BrixxProcessDefinition` für eine Nodejs-Anwendung importieren.
+
+    const BrixxProcessDefinition = require("@brixx/process-script/node").default;
+
+## Brixx-Process-Script Library
+
+Das Modul `BrixxProcessDefinition` von der Brixx-Process-Script Library importieren. Dafür kann man die Brixx-Process-Script Library (minified) [brixx-process.js](https://brixx.it/@brixx/script/brixx-process.js) vom Brixx CDN-(Content Delivery Network)-Server in den Projektordner kopieren und anschließend für eine Web-Anwendung importieren.
+
+    import { BrixxProcessDefinition } from './brixx-process'
+
+Das Modul `BrixxProcessDefinition` für eine Nodejs-Anwendung importieren.
+
+    const BrixxProcessDefinition = require("./brixx-process/node").default;
+
+> **Tip:** Die Brixx-Process-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
 # <div id='downloads' /> Downloads
 
