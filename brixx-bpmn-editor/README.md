@@ -73,7 +73,7 @@ Version 1.2.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
-Download Web-Application Package Installer for Windows (Preview).
+Download Web-Application Package Installer for Windows.
 
 ### [Brixx BPMN-Editor Version 1.2.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.2.0-x64.exe)
 
