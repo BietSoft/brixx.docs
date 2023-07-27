@@ -40,11 +40,11 @@ Für die Prozess-Erstellung und -Verarbeitung verwenden wir die [Brixx Prozess E
 
 Installation abgeschlossen - Windows-Installer
 
-Nach der Installation steht die Prozess Engine unter http://localhost:5000 für die Entwicklung zur Verfügung und kann mit http://localhost:5000/brixx/heartbeat überprüft werden.
+Nach der Installation steht die Brixx Prozess Engine unter `http://localhost:5000` für die Entwicklung zur Verfügung und kann mit `http://localhost:5000/brixx/heartbeat` überprüft werden.
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
-Brixx Prozess Script im Windows Terminal (PowerShell)
+Brixx-Process-Engine im Windows Terminal (PowerShell)
 
 ### Brixx BPMN-Editor
 Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.

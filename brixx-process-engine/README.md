@@ -1,4 +1,4 @@
-<link href="http//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 # Brixx-Process-Engine
 
@@ -50,11 +50,44 @@ With our workflow management system, all types of processes and workflows can be
 With [Brixx-Process-Script](../brixx-process-script/README.md), processes and workflows can be created requirement-oriented and integrated into web applications with HTML and JavaScript. This allows applications with the Four Eyes
 Principle (Two-man rule), multi-level forms, or web applications for processing with different actors as an example to be created quickly and easily.
 
--   [Brixx-Process-Engine installieren](#setup)
+-   [Install Brixx-Process-Engine](#setup)
+    -   [Windows installer](#windows)
 -   [Brixx-Process-Engine Referenz](#reference)
 -   [Downloads](#downloads)
 
-# <div id='setup' /> Brixx-Process-Engine installieren
+# <div id='setup' /> Install Brixx-Process-Engine
+
+## <div id='windows' /> <i class="fa-brands fa-windows"></i> Windows Installer
+
+<img src="../assets/images/brixx-process-engine-installer-01.webp" style="margin-bottom: -5px; width: 270px;" />
+
+Select [OK]
+
+<img src="../assets/images/brixx-process-engine-installer-02.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Next]
+
+<img src="../assets/images/brixx-process-engine-installer-03.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Next]
+
+<img src="../assets/images/brixx-process-engine-installer-04.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Imstall]
+
+<img src="../assets/images/brixx-process-engine-installer-05.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Installation in progress ...
+
+<img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
+
+Select [Finish]
+
+After installation, the Brixx Process Engine is available for development at `http://localhost:5000` and can be checked at `http://localhost:5000/brixx/heartbeat`.
+
+<img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 # <div id='reference' /> Brixx-Process-Engine Referenz
 
