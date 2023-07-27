@@ -6,7 +6,7 @@
 
 #
 
-# Was ist Brixx-Decision-Script
+# What is Brixx-Decision-Script
 
 ## Decisions are the most important part of programming
 

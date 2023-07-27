@@ -6,7 +6,7 @@
 
 #
 
-# Was ist Brixx-Script
+# What is Brixx-Script
 
 Brixx-Script is a free JavaScript library for creating independent web components. **“Smart” web components** (brixx) publish for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as _Brixx HTML elements_ in HTML documents or _Brixx script components_ in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (ECMAScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building brick system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building brick-oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries. Brixx-Script can also be used to easily create components for low-code or no-code system engines.
 
