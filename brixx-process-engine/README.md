@@ -85,7 +85,8 @@ Installation in progress ...
 
 Select [Finish]
 
-After installation, the Brixx Process Engine is available for development at `http://localhost:5000` and can be checked at `http://localhost:5000/brixx/heartbeat`.
+After installation, the Brixx Process Engine is available at `http://localhost:5000`  
+You can check the status of the Process Engine at http://localhost:5000/brixx/heartbeat
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
