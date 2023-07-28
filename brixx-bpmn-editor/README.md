@@ -56,7 +56,7 @@ Installation in progress ...
 Select [Finish]
 
 After installation, the Brixx BPMN-Editor is available at [`http://localhost:3000`](http://localhost:3000)  
-The Brixx BPMN-Editor is opened in the standard browser or click the link above.
+The Brixx BPMN-Editor is opened in the standard browser or use the link above.
 
 <img src="../assets/images/bpmn-editor-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
