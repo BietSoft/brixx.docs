@@ -606,7 +606,13 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 
 ### .getSearchParam
 
+...
+
 **Example**
+
+    ...
+    BrixxProcessDefinition.process.getSearchParam
+    ...
 
 ### .process 
 
@@ -619,15 +625,23 @@ Returns the BrixxProcessDefinition process object.
 
 ### .create
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.create
+    ...
 
 ### .done
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.done
+    ...
 
 ### .event 
 
@@ -640,27 +654,43 @@ Returns the BrixxProcessDefinition process event object.
 
 ### .done
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.event.done
+    ...
 
 ### .get
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.event.get
+    ...
 
 ### .next
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.event.next
+    ...
 
 ### .set
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.event.set
+    ...
 
 #
 
@@ -686,27 +716,43 @@ Returns the BrixxProcessDefinition process gateway object.
 
 ### .done
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.gateway.done
+    ...
 
 ### .get
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.gateway.get
+    ...
 
 ### .next
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.gateway.next
+    ...
 
 ### .set
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.gateway.set
+    ...
 
 #
 
@@ -719,31 +765,49 @@ Returns the BrixxProcessDefinition process gateway list.
 
 **Example**
 
+    ...
     BrixxProcessDefinition.process.gateways
+    ...
 
 ### .get
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.get
+    ...
 
 ### .iterator
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.iterator
+    ...
 
 ### .set
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.set
+    ...
 
 ### .start
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.start
+    ...
 
 ### .task 
 
@@ -756,27 +820,43 @@ Returns the BrixxProcessDefinition process task object.
 
 ### .done
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.task.done
+    ...
 
 ### .get
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.task.get
+    ...
 
 ### .next
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.task.next
+    ...
 
 ### .set
 
+...
+
 **Example**
 
+    ...
     BrixxProcessDefinition.process.task.set
+    ...
 
 #
 
@@ -789,7 +869,9 @@ Returns the BrixxProcessDefinition process task list.
 
 **Example**
 
+    ...
     BrixxProcessDefinition.process.tasks
+    ...
 
 #
 
