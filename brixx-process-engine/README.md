@@ -94,7 +94,13 @@ Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 # <div id='reference' /> Brixx-Process-Engine API Reference
 
-The Brixx Process Engine comes with an fully integrated RESTful API.
+The Brixx Process Engine comes with an fully integrated RESTful API. With the integrated API, business processes can be modeled, created and managed and is particularly interesting if Brixx-Process-Engine is integrated into another framework or used in a test system, for example. The [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) and [Brixx-Process-Script](../brixx-process-script/README.md) are also available for developers for uncomplicated integration.
+
+Applications like [SoapUI](https://www.soapui.org/tools/soapui/) or [Postman](https://www.postman.com/pricing/) can also be used for the built-in API for development and testing.
+
+<img src="../assets/images/postman-heartbeat.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Postman - Brixx Process Engine API heartbeat request example
 
 ## Basic API information
 
