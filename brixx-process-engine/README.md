@@ -94,7 +94,7 @@ Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 # <div id='reference' /> Brixx-Process-Engine API Reference
 
-The Brixx Process Server comes with an fully integrated RESTful API.
+The Brixx Process Engine comes with an fully integrated RESTful API.
 
 ## Basic API information
 
