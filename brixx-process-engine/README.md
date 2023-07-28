@@ -104,11 +104,17 @@ Brixx-Process-Engine in Windows Terminal (PowerShell)
 
 `/brixx`
 
+## Model
+
+## Process
+
+## Publish
+
 ## Heartbeat
 
-Get the status of the Brixx Process Engine.
-
 ### `GET /brixx/heartbeat`
+
+Get the status of the Brixx Process Engine.
 
 **Method**  
 `GET`  
