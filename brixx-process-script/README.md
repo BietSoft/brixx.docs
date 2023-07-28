@@ -523,6 +523,43 @@ Das Modul `BrixxProcessDefinition` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Process-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
+
+
+# The HTML way
+
+The first way to define a Brixx business process is through the special HTML elements available with Brixx Process Script. All HTML elements and attributes are optional. Each Brixx Process Script HTML element can contain subordinate elements and enables free design in the HTML document.
+
+## The HTML elements
+
+## &lt;ProcessDefinition&gt;
+
+Defines a Brixx business process `root` element.
+
+**Attributes**
+
+`{String} [mid]` - the Brixx business process model identifier.
+
+`{String} [key]` - the Brixx business process model key (name).
+
+`{String} [pid]` - the Brixx business process instance identifier.
+
+**Example**
+
+# The JavaScript way
+
+## BrixxProcessDefinition class
+
+### constructor()
+
+Constructs a BrixxProcessDefinition instance and creates a Brixx business process.
+
+**Parameters**
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition instance.
+
+**Example**
+
 # <div id='downloads' /> Downloads
 
 -   ### [Helper [brixx-create-process.html] (HTML Datei)](../assets/downloads/brixx-create-process.html)

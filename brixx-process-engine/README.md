@@ -52,7 +52,7 @@ Principle (Two-man rule), multi-level forms, or web applications for processing 
 
 -   [Install Brixx-Process-Engine](#setup)
     -   [Windows installer](#windows)
--   [Brixx-Process-Engine Referenz](#reference)
+-   [Brixx-Process-Engine API Reference](#reference)
 -   [Downloads](#downloads)
 -   [Docker](#docker)
     -   [Docker Hub](#docker-hub)
@@ -86,13 +86,45 @@ Installation in progress ...
 Select [Finish]
 
 After installation, the Brixx Process Engine is available at `http://localhost:5000`  
-Get the status at the Process Engine API endpoint http://localhost:5000/brixx/heartbeat
+Get the status at the Process Engine API Ressource http://localhost:5000/brixx/heartbeat
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Brixx-Process-Engine in Windows Terminal (PowerShell)
 
-# <div id='reference' /> Brixx-Process-Engine Referenz
+# <div id='reference' /> Brixx-Process-Engine API Reference
+
+## Basic API information
+
+### API Base URL
+
+`http://127.0.0.1:5000`
+
+### API Root Ressource
+
+`/brixx`
+
+## Heartbeat
+
+Get the status of the Brixx Process Engine.
+
+### `GET /brixx/heartbeat`
+
+**Method**  
+`GET`  
+
+**Ressource**  
+`/brixx/heartbeat`
+
+**Response**  
+Status of the Brixx Process Engine.
+
+    {
+        "appname":"Brixx-Process-Engine",
+        "version":"1.1.0",
+        "status":"started",
+        "success":true
+    }
 
 # <div id='downloads' /> Downloads
 
