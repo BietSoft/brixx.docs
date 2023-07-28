@@ -606,13 +606,19 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 
 ### .getSearchParam
 
-...
+Get a search param with a personl identifier from `window.location.href`. If the search parameter is not found, you will be asked for your personal identifier in an input dialog, which is typically used for development.
+
+**Parameters**  
+`{String} [paramName]` - the name of the sarch param.
+
+**Returns**  
+`{String}` - search param value.
 
 **Example**
 
+    const pid = BrixxProcessDefinition.process.getSearchParam('pid')
     ...
-    BrixxProcessDefinition.process.getSearchParam
-    ...
+    BrixxProcessDefinition.process.start({ pid });
 
 ### .process 
 
