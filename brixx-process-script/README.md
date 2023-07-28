@@ -523,8 +523,6 @@ Das Modul `BrixxProcessDefinition` für eine Nodejs-Anwendung importieren.
 
 > **Tip:** Die Brixx-Process-Script Library vom Brixx CDN-(Content Delivery Network)-Server ist immer die _Latest_ Version und kann die Version in der npm-Registry überholen. Hier hat man die Möglichkeit vorab die neueste Versionen zu testen.
 
-
-
 # The HTML way
 
 The first way to define a Brixx business process is through the special HTML elements available with Brixx Process Script. All HTML elements and attributes are optional. Each Brixx Process Script HTML element can contain subordinate elements and enables free design in the HTML document.
@@ -537,11 +535,55 @@ Defines a Brixx business process `root` element.
 
 **Attributes**
 
+`{Boolean} [checkAtStart=false]` - the Brixx business process check at start flag. Defines if an existing `Start Event` will be checked. If is `true`, the `Start Event` must be handled in the process definition with the HTML element `<Event>`
+
 `{String} [mid]` - the Brixx business process model identifier.
 
 `{String} [key]` - the Brixx business process model key (name).
 
 `{String} [pid]` - the Brixx business process instance identifier.
+
+**Example**
+
+## &lt;Event&gt;
+
+Adds an `Event` object for the Brixx business process.
+
+**Attributes**
+
+`{String} [mid]` - the Brixx business process model event identifier.
+
+`{String} [key]` - the Brixx business process model event key (name).
+
+`{Object} [action]` - the Brixx business process event action callback function.
+
+**Example**
+
+## &lt;Gateway&gt;
+
+Adds an `Gateway` object for the Brixx business process.
+
+**Attributes**
+
+`{String} [mid]` - the Brixx business process model gateway identifier.
+
+`{String} [key]` - the Brixx business process model gateway key (name).
+
+`{Object} [action]` - the Brixx business process gateway action callback function.
+
+**Example**
+
+## &lt;Task&gt;
+
+Adds an `Task` object for the Brixx business process.
+
+**Attributes**
+
+`{String} [mid]` - the Brixx business process model task identifier.
+
+`{String} [key]` - the Brixx business process model task key (name).
+
+`{Object} [action]` - the Brixx business process task action callback function.
 
 **Example**
 
@@ -559,6 +601,210 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 `{Object}` - BrixxProcessDefinition instance.
 
 **Example**
+
+## BrixxProcessDefinition static properties
+
+### .getSearchParam
+
+**Example**
+
+### .process 
+
+Returns the BrixxProcessDefinition process object.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process object
+
+## Process object
+
+### .create
+
+**Example**
+
+    BrixxProcessDefinition.process.create
+
+### .done
+
+**Example**
+
+    BrixxProcessDefinition.process.done
+
+### .event 
+
+Returns the BrixxProcessDefinition process event object.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process event object
+
+## Event object
+
+### .done
+
+**Example**
+
+    BrixxProcessDefinition.process.event.done
+
+### .get
+
+**Example**
+
+    BrixxProcessDefinition.process.event.get
+
+### .next
+
+**Example**
+
+    BrixxProcessDefinition.process.event.next
+
+### .set
+
+**Example**
+
+    BrixxProcessDefinition.process.event.set
+
+#
+
+### .events
+
+Returns the BrixxProcessDefinition process event list.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process event list
+
+**Example**
+
+    BrixxProcessDefinition.process.events
+
+### .gateway 
+
+Returns the BrixxProcessDefinition process gateway object.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process gateway object
+
+## Gateway object
+
+### .done
+
+**Example**
+
+    BrixxProcessDefinition.process.gateway.done
+
+### .get
+
+**Example**
+
+    BrixxProcessDefinition.process.gateway.get
+
+### .next
+
+**Example**
+
+    BrixxProcessDefinition.process.gateway.next
+
+### .set
+
+**Example**
+
+    BrixxProcessDefinition.process.gateway.set
+
+#
+
+### .gateways
+
+Returns the BrixxProcessDefinition process gateway list.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process gateway list
+
+**Example**
+
+    BrixxProcessDefinition.process.gateways
+
+### .get
+
+**Example**
+
+    BrixxProcessDefinition.process.get
+
+### .iterator
+
+**Example**
+
+    BrixxProcessDefinition.process.iterator
+
+### .set
+
+**Example**
+
+    BrixxProcessDefinition.process.set
+
+### .start
+
+**Example**
+
+    BrixxProcessDefinition.process.start
+
+### .task 
+
+Returns the BrixxProcessDefinition process task object.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process task object
+
+## Task object
+
+### .done
+
+**Example**
+
+    BrixxProcessDefinition.process.task.done
+
+### .get
+
+**Example**
+
+    BrixxProcessDefinition.process.task.get
+
+### .next
+
+**Example**
+
+    BrixxProcessDefinition.process.task.next
+
+### .set
+
+**Example**
+
+    BrixxProcessDefinition.process.task.set
+
+#
+
+### .tasks
+
+Returns the BrixxProcessDefinition process task list.
+
+**Returns**  
+`{Object}` - BrixxProcessDefinition process task list
+
+**Example**
+
+    BrixxProcessDefinition.process.tasks
+
+#
+
+### .version
+
+Returns the BrixxProcessDefinition version in semantic versioning format.
+
+`Readonly`
+
+**Returns**  
+`{String}` - BrixxProcessDefinition version.
+
+**Example**
+
+    console.log('BrixxProcessDefinition version: ', BrixxProcessDefinition.version)
 
 # <div id='downloads' /> Downloads
 
