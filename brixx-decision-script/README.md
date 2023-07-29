@@ -819,13 +819,13 @@ The field `input` defines the Brixx decision table input object list.
 
 **Attributes**
 
-`{String} [{name}: {...}]` - the Brixx decision table input object identifier.
+`{String} [{name}: {...}]` - the decision table input object identifier.
 
-`{String} [default] (optional)` - the Brixx decision table input object default value.
+`{String} [default] (optional)` - the decision table input object default value.
 
-`{String} [description]` - the Brixx decision table input object description.
+`{String} [description]` - the decision table input object description.
 
-`{String} [type='text'] (optional)` - the Brixx decision table input object type.
+`{String} [type='text'] (optional)` - the decision table input object type.
 
 The input object format.
 
@@ -863,9 +863,9 @@ The field `output` defines the Brixx decision table output object list.
 
 **Attributes**
 
-`{String} [{name}: {...}]` - the Brixx decision table output object identifier.
+`{String} [{name}: {...}]` - the decision table output object identifier.
 
-`{String} [description]` - the Brixx decision table output object description.
+`{String} [description]` - the decision table output object description.
 
 The output object format.
 
@@ -900,13 +900,13 @@ The field `rules` defines the Brixx decision table rule object list.
 
 **Attributes**
 
-`{String} [{name}: {...}]` - the Brixx decision table rule object identifier.
+`{String} [{name}: {...}]` - the decision table rule object identifier.
 
-`{String} [input] (1,...,n)` - the Brixx decision table rule input condition attribut.
+`{String} [input] (1,...,n)` - the decision table rule input condition attribut.
 
-`{String} [output] (1,...,n)` - the Brixx decision table rule output value attribut.
+`{String} [output] (1,...,n)` - the decision table rule output value attribut.
 
-`{Number} [priority] (optional)` - the Brixx decision table rule priority attribut.
+`{Number} [priority] (optional)` - the decision table rule priority attribut.
 
 The rule object format.
 
@@ -1005,19 +1005,19 @@ Defines a Brixx decision table `root` element.
 
 **Attributes**
 
-`{Object} [check]` - the Brixx decision table check callback function.
+`{Object} [check]` - the decision table check callback function.
 
-`{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
+`{Boolean} [checkAtStart]` - the decision table check at start flag.
 
-`{Object} [data]` - the Brixx decision table input data.
+`{Object} [data]` - the decision table input data.
 
-`{String|Object} [definition={}]` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+`{String|Object} [definition={}]` - the decision table definition. This can be a JSON string or a JSON object.
 
-`{String} [description]` - the Brixx decision table description.
+`{String} [description]` - the decision table description.
 
 `{String} [hitPolicy='First']` - the rixx decision table hit policy.
 
-`{String} [name]` - the Brixx decision table object identifier.
+`{String} [name]` - the decision table object identifier.
 
 **Example**
 
@@ -1027,15 +1027,15 @@ Adds an `Action` object for the Brixx decision table. Can be used for `output` o
 
 **Attributes**
 
-`{Object} [callback]` - the Brixx decision table output action callback function.
+`{Object} [callback]` - the decision table output action callback function.
 
-`{Object} [data]` - the Brixx decision table output data callback function.
+`{Object} [data]` - the decision table output data callback function.
 
-`{Boolean} [link]` - the Brixx decision table output action link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
+`{Boolean} [link]` - the decision table output action link flag. Defines the output value as link and if is set opens a link in a browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output action process id. Runs a Brixx process (_not available in this version_).
+`{String} [process]` - the decision table output action process id. Runs a Brixx process (_not available in this version_).
 
-`{String} [target='_blank']` - the Brixx decision table output action link target.
+`{String} [target='_blank']` - the decision table output action link target.
 
 **Example**
 
@@ -1043,13 +1043,13 @@ Adds an `Action` object for the Brixx decision table. Can be used for `output` o
 
 Adds a `Check` object for the Brixx decision table. Must be included in the `root` section.
 
-`{Object} [action]` - the Brixx decision table check callback function.
+`{Object} [action]` - the decision table check callback function.
 
-`{Boolean} [button]` - the Brixx decision table check button flag. Defines the check object as a button.
+`{Boolean} [button]` - the decision table check button flag. Defines the check object as a button.
 
-`{Boolean} [checkAtStart]` - the Brixx decision table check at start flag.
+`{Boolean} [checkAtStart]` - the decision table check at start flag.
 
-`{String} [label='Check decision table']` - the Brixx decision table check button label.
+`{String} [label='Check decision table']` - the decision table check button label.
 
 **Attributes**
 
@@ -1061,7 +1061,7 @@ Adds an `Condition` object for the Brixx decision table. Can be used for `input`
 
 **Attributes**
 
-`{Object} [element={condition}]` - the Brixx decision table rule condition attribut.
+`{Object} [element={condition}]` - the decision table rule condition attribut.
 
 **Example**
 
@@ -1073,7 +1073,7 @@ Adds a `Component` object for the Brixx decision table. Can be used for `output`
 
 **Attributes**
 
-`{Object} [target]` - the Brixx decision table component target. Renders a Brixx element as default in the component section and if the attribut target is set in the output object renders in the `output` section.
+`{Object} [target]` - the decision table component target. Renders a Brixx element as default in the component section and if the attribut target is set in the output object renders in the `output` section.
 
 **Example**
 
@@ -1081,15 +1081,15 @@ Adds a `Component` object for the Brixx decision table. Can be used for `output`
 
 Adds a `Field` object for the Brixx decision table. Must be included in a `input` or `output` section.
 
-`{String} [default]` - the Brixx decision table field default input value.
+`{String} [default]` - the decision table field default input value.
 
-`{String} [description]` - the Brixx decision table field input description.
+`{String} [description]` - the decision table field input description.
 
 `{Boolean} [readonly]` - the decision table field readonly flag.
 
-`{String} [type='text']` - the Brixx decision table field input type.
+`{String} [type='text']` - the decision table field input type.
 
-`{String} [value]` - the Brixx decision table field default output value.
+`{String} [value]` - the decision table field default output value.
 
 **Attributes**
 
@@ -1101,17 +1101,17 @@ Adds a `Input` object for the Brixx decision table.
 
 **Attributes**
 
-`{Object} [data]` - the Brixx decision table input object data.
+`{Object} [data]` - the decision table input object data.
 
-`{String} [default]` - the Brixx decision table input object default value.
+`{String} [default]` - the decision table input object default value.
 
-`{String} [element]` - the Brixx decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
+`{String} [element]` - the decision table input element id. Can be every input element in the HTML document and will be searchd by `getElementById(element)`.
 
-`{String} [description]` - the Brixx decision table input object description.
+`{String} [description]` - the decision table input object description.
 
-`{String} [name]` - the Brixx decision table input object identifier.
+`{String} [name]` - the decision table input object identifier.
 
-`{String} [type='text']` - the Brixx decision table input object type.
+`{String} [type='text']` - the decision table input object type.
 
 **Example**
 
@@ -1121,7 +1121,7 @@ Adds a `Link` object for the Brixx decision table. Can be used for `output` obje
 
 **Attributes**
 
-`{String} [target='_blank']` - the Brixx decision table link target.
+`{String} [target='_blank']` - the decision table link target.
 
 **Example**
 
@@ -1131,23 +1131,23 @@ Adds a `Output` object for the Brixx decision table.
 
 **Attributes**
 
-`{Object} [action]` - the Brixx decision table output action callback function.
+`{Object} [action]` - the decision table output action callback function.
 
-`{Object} [component]` - the Brixx decision table output component flag. Defines the output value as component and if is set renders a Brixx element (component) in the target element section. The output value must be a valid Brixx element (HTML element).
+`{Object} [component]` - the decision table output component flag. Defines the output value as component and if is set renders a Brixx element (component) in the target element section. The output value must be a valid Brixx element (HTML element).
 
-`{Object} [data]` - the Brixx decision table output data callback function.
+`{Object} [data]` - the decision table output data callback function.
 
-`{String} [description]` - the Brixx decision table output object description.
+`{String} [description]` - the decision table output object description.
 
-`{String} [element]` - the Brixx decision table input (output) element id. Can be every input (output) element in the HTML document and will be searchd by `getElementById(element)`.
+`{String} [element]` - the decision table input (output) element id. Can be every input (output) element in the HTML document and will be searchd by `getElementById(element)`.
 
 `{Boolean} [link]` - the decision table output link flag. Defines the output value as link and if is set opens a link in the target browser window. The output value must be a valid link (URL) adress.
 
-`{String} [process]` - the Brixx decision table output process id. Runs a Brixx process (_not available in this version_).
+`{String} [process]` - the decision table output process id. Runs a Brixx process (_not available in this version_).
 
-`{String|Object} [target]` - the Brixx decision table output target. If the `component` flag is set renders a Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
+`{String|Object} [target]` - the decision table output target. If the `component` flag is set renders a Brixx element as default in to the `output` section and if the `link` flag is set opens a link in a new (`_blank`) browser window.
 
-`{String} [name]` - the Brixx decision table output identifier.
+`{String} [name]` - the decision table output identifier.
 
 **Example**
 
@@ -1157,7 +1157,7 @@ Adds a `Process` object for the Brixx decision table. Runs a Brixx process (_not
 
 **Attributes**
 
-`{String} [id]` - the Brixx decision table process id.
+`{String} [id]` - the decision table process id.
 
 **Example**
 
@@ -1167,13 +1167,13 @@ Adds an `Rule` object for the Brixx decision table. Can be used for `input` and 
 
 **Attributes**
 
-`{String} [name]` - the Brixx decision table rule object identifier.
+`{String} [name]` - the decision table rule object identifier.
 
-`{String} [input]` - the Brixx decision table rule input condition attribut.
+`{String} [input]` - the decision table rule input condition attribut.
 
-`{String} [output]` - the Brixx decision table rule output attribut.
+`{String} [output]` - the decision table rule output attribut.
 
-`{Number} [priority]` - the Brixx decision table rule priority attribut.
+`{Number} [priority]` - the decision table rule priority attribut.
 
 **Example**
 
@@ -1186,11 +1186,11 @@ Adds an `Rule` object for the Brixx decision table. Can be used for `input` and 
 Constructs a BrixxDecisionTable instance and creates a Brixx decision table with the optional given decision table definition.
 
 **Parameters**  
-`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+`{String|Object} [table=null] (optional)` - the decision table definition. This can be a JSON string or a JSON object.
 
-`{String|Object} [object.table=null] (optional)` - the Brixx decision table JSON string or JSON object. This can be a JSON string or a JSON object.
+`{String|Object} [object.table=null] (optional)` - the decision table JSON string or JSON object. This can be a JSON string or a JSON object.
 
-`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table JSON format.
+`{String} [object.file=null] (optional)` - the decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
 `{Object}` - BrixxDecisionTable instance.
@@ -1227,11 +1227,11 @@ Cheks the input data with the Brixx decision table.
 Creates a Brixx decision table with the given decision table definition.
 
 **Parameters**  
-`{String|Object} [table=null] (optional)` - the Brixx decision table definition. This can be a JSON string or a JSON object.
+`{String|Object} [table=null] (optional)` - the decision table definition. This can be a JSON string or a JSON object.
 
-`{String|Object} [object.table=null] (optional)` - the Brixx decision table JSON string or JSON object. This can be a JSON string or a JSON object.
+`{String|Object} [object.table=null] (optional)` - the decision table JSON string or JSON object. This can be a JSON string or a JSON object.
 
-`{String} [object.file=null] (optional)` - the Brixx decision table definition file name. The file must be in Brixx decision table JSON format.
+`{String} [object.file=null] (optional)` - the decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
 `{Object}` - Brixx decision table.
@@ -1246,7 +1246,7 @@ Creates a Brixx decision table with the given decision table definition.
 Creates a Brixx decision table with the given decision table definition.
 
 **Parameters**  
-`{Object} [table]` - the Brixx decision table definition as JSON object.
+`{Object} [table]` - the decision table definition as JSON object.
 
 **Returns**
 `{Object}` - Brixx decision table.
@@ -1384,7 +1384,7 @@ Console output
 Load Brixx decision table definition The file must be in Brixx decision table JSON format.
 
 **Parameters**  
-`{String} [file]` - the Brixx decision table definition file name.
+`{String} [file]` - the decision table definition file name.
 
 **Returns**
 `{Object}` - Brixx decision table JSON object.

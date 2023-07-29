@@ -108,7 +108,7 @@ Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../asse
             </table>
 
             <script>
-                // Create a new process instance
+                // Create process instance
                 document
                     .getElementById("btnCreateProcess")
                     .addEventListener("click", () => {
@@ -535,13 +535,13 @@ Defines a Brixx business process `root` element.
 
 **Attributes**
 
-`{Boolean} [checkAtStart=false]` - the Brixx business process check at start flag. Defines if an existing `Start Event` will be checked. If is `true`, the `Start Event` must be handled in the process definition with the HTML element `<Event>`
+`{Boolean} [checkAtStart=false]` - the check at start flag. Defines if an existing `Start Event` will be checked. If is `true`, the `Start Event` must be handled in the process definition with the HTML element `<Event>`
 
-`{String} [mid]` - the Brixx business process model identifier.
+`{String} [mid]` - the model identifier.
 
-`{String} [key]` - the Brixx business process model key (name).
+`{String} [key]` - the model key (name).
 
-`{String} [pid]` - the Brixx business process instance identifier.
+`{String} [pid]` - the process instance identifier.
 
 **Example**
 
@@ -551,11 +551,11 @@ Adds an `Event` object for the Brixx business process.
 
 **Attributes**
 
-`{String} [mid]` - the Brixx business process model event identifier.
+`{String} [mid]` - the model event identifier.
 
-`{String} [key]` - the Brixx business process model event key (name).
+`{String} [key]` - the model event key (name).
 
-`{Object} [action]` - the Brixx business process event action callback function.
+`{Object} [action]` - the event action callback function.
 
 **Example**
 
@@ -565,11 +565,11 @@ Adds an `Gateway` object for the Brixx business process.
 
 **Attributes**
 
-`{String} [mid]` - the Brixx business process model gateway identifier.
+`{String} [mid]` - the model gateway identifier.
 
-`{String} [key]` - the Brixx business process model gateway key (name).
+`{String} [key]` - the model gateway key (name).
 
-`{Object} [action]` - the Brixx business process gateway action callback function.
+`{Object} [action]` - the gateway action callback function.
 
 **Example**
 
@@ -579,11 +579,11 @@ Adds an `Task` object for the Brixx business process.
 
 **Attributes**
 
-`{String} [mid]` - the Brixx business process model task identifier.
+`{String} [mid]` - the model task identifier.
 
-`{String} [key]` - the Brixx business process model task key (name).
+`{String} [key]` - the model task key (name).
 
-`{Object} [action]` - the Brixx business process task action callback function.
+`{Object} [action]` - the task action callback function.
 
 **Example**
 
@@ -603,6 +603,12 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 **Example**
 
 ## BrixxProcessDefinition static properties
+
+### .baseURL
+
+The Brixx Process Engine base url (default=`http://127.0.0.1:5000/brixx`)
+
+## BrixxProcessDefinition static class
 
 ### .getSearchParam
 
@@ -631,12 +637,30 @@ Returns the BrixxProcessDefinition process object.
 
 ### .create
 
-...
+Creates a process instance.
+
+**Parameters**  
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [mid=null] (optional)` - the model identifier.
+
+`{String} [key=null] (optional)` - the model key (name).
+
+`{String} [mail=null] (optional)` - the mail recipient for the process creation response.
+
+`{String} [unit=null] (optional)` - the unit name. Enables the process instances to be managed in the Brixx Process Engine at the model level.
+
+`{String} [urlTPL==null] (optional)` - the url template for the process creation response. The url template can also be changed globally for the Brixx Process Engine. (default=`http://localhost?pid=${pid}`).
+
+`{String} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.create
+    BrixxProcessDefinition.process.create({
+        mid: 'Process_nehz6cn',
+        callback: (response) => (console.log(response.pid)),
+    });
     ...
 
 ### .done
@@ -700,17 +724,6 @@ Returns the BrixxProcessDefinition process event object.
 
 #
 
-### .events
-
-Returns the BrixxProcessDefinition process event list.
-
-**Returns**  
-`{Object}` - BrixxProcessDefinition process event list
-
-**Example**
-
-    BrixxProcessDefinition.process.events
-
 ### .gateway 
 
 Returns the BrixxProcessDefinition process gateway object.
@@ -761,19 +774,6 @@ Returns the BrixxProcessDefinition process gateway object.
     ...
 
 #
-
-### .gateways
-
-Returns the BrixxProcessDefinition process gateway list.
-
-**Returns**  
-`{Object}` - BrixxProcessDefinition process gateway list
-
-**Example**
-
-    ...
-    BrixxProcessDefinition.process.gateways
-    ...
 
 ### .get
 
@@ -862,21 +862,6 @@ Returns the BrixxProcessDefinition process task object.
 
     ...
     BrixxProcessDefinition.process.task.set
-    ...
-
-#
-
-### .tasks
-
-Returns the BrixxProcessDefinition process task list.
-
-**Returns**  
-`{Object}` - BrixxProcessDefinition process task list
-
-**Example**
-
-    ...
-    BrixxProcessDefinition.process.tasks
     ...
 
 #
