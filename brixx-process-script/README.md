@@ -606,9 +606,10 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 
 ### .baseURL
 
-The Brixx Process Engine base url (default=`http://127.0.0.1:5000/brixx`)
+`{String} [baseURL=http://127.0.0.1:5000/brixx]` - the Brixx Process Engine base url.
 
-## BrixxProcessDefinition static class
+## BrixxProcessDefinition static methods
+
 
 ### .getSearchParam
 
@@ -637,7 +638,7 @@ Returns the BrixxProcessDefinition process object.
 
 ### .create
 
-Creates a process instance.
+Creates a process instance with an published business process model in the Brixx Process Engine.
 
 **Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
