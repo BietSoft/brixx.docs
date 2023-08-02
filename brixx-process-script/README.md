@@ -708,7 +708,7 @@ Returns the BrixxProcessDefinition process event object.
 
 ### .done
 
-Set the state of an event element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+Set the state of an event element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done)
 
 **Parameters**  
 
@@ -805,7 +805,7 @@ Returns the BrixxProcessDefinition process gateway object.
 
 ### .done
 
-Set the state of a gateway element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+Set the state of a gateway element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done)
 
 **Parameters**  
 
@@ -914,7 +914,8 @@ Returns the BrixxProcessDefinition process instance data.
 
 ### .iterator
 
-The `iterator` function executes a provided function once per each active process element in the process instance object and returns the process element data.
+The `iterator` function executes a provided function once per each active process element in the process instance object and returns the process element data. See also [`BrixxProcessDefinition.process.start`](#process.start)
+
 
 **Parameters**  
 
@@ -971,8 +972,7 @@ Sets the BrixxProcessDefinition process instance data.
     BrixxProcessDefinition.process.set({ pid, data })
     ...
 
-
-### .start
+### <div id='process.start' /> .start
 
 Starts a process instance or process element.
 
@@ -1019,7 +1019,7 @@ Returns the BrixxProcessDefinition process task object.
 
 ### .done
 
-Set the state of a task element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+Set the state of a task element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done)
 
 **Parameters**  
 
