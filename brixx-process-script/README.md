@@ -728,7 +728,7 @@ Set the state of an event element to `done` and by default the state of a follow
 
 ### .get
 
-Returns the BrixxProcessDefinition process event data.
+Returns the BrixxProcessDefinition event element data.
 
 **Parameters**  
 
@@ -763,12 +763,12 @@ Set the next process element active.
     ...
     const { eid } = data;
     const store = { user: user, password: password };
-    BrixxProcessDefinition.process.event.done({ eid, store })
+    BrixxProcessDefinition.process.event.next({ eid, store })
     ...
 
 ### .set
 
-...
+Sets the BrixxProcessDefinition event element data.
 
 **Parameters**  
 
@@ -783,7 +783,13 @@ Set the next process element active.
 **Example**
 
     ...
-    BrixxProcessDefinition.process.event.set
+    const eid = '...'
+    const data = { 
+        "state": "done",
+        "store": { user: user, password: password },
+        "next": true
+    }
+    BrixxProcessDefinition.process.event.set({ eid, data })
     ...
 
 #
@@ -817,15 +823,9 @@ Set the state of a gateway element to `done` and by default the state of a follo
     BrixxProcessDefinition.process.gateway.done({ gid, store, next: false });
     ...
 
-**Example**
-
-    ...
-    BrixxProcessDefinition.process.gateway.done
-    ...
-
 ### .get
 
-Returns the BrixxProcessDefinition process gateway data.
+Returns the BrixxProcessDefinition gateway element data.
 
 **Parameters**  
 
@@ -860,18 +860,35 @@ Set the next process element active.
     ...
     const { gid } = data;
     const store = { user: user, password: password };
-    BrixxProcessDefinition.process.event.done({ gid, store })
+    BrixxProcessDefinition.process.gateway.next({ gid, store })
     ...
 
 ### .set
 
-...
+Sets the BrixxProcessDefinition gateway element data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{Object} [data=null] (optional)` - the request data.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.gateway.set
+    const gid = '...'
+    const data = { 
+        "state": "done",
+        "store": { user: user, password: password },
+        "next": true
+    }
+    BrixxProcessDefinition.process.gateway.set({ gid, data })
     ...
+
 
 #
 
@@ -908,13 +925,29 @@ Returns the BrixxProcessDefinition process instance data.
 
 ### .set
 
-...
+Sets the BrixxProcessDefinition process instance data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [pid=null] (optional)` - the process identifier.
+
+`{Object} [data=null] (optional)` - the request data.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.set
+    const data = { 
+        "state": "done",
+        "store": { user: user, password: password },
+        "next": true
+    }
+    BrixxProcessDefinition.process.set({ pid, data })
     ...
+
 
 ### .start
 
@@ -952,12 +985,12 @@ Set the state of a task element to `done` and by default the state of a followin
     ...
     const { tid } = data;
     const store = { user: user, password: password };
-    BrixxProcessDefinition.process.gateway.done({ tid, store, next: false });
+    BrixxProcessDefinition.process.task.done({ tid, store, next: false });
     ...
 
 ### .get
 
-Returns the BrixxProcessDefinition process task data.
+Returns the BrixxProcessDefinition task element data.
 
 **Parameters**  
 
@@ -983,26 +1016,42 @@ Set the next process element active.
 
 **Parameters**  
 
-`{String} [eid=null] (optional)` - the event identifier.
+`{String} [tid=null] (optional)` - the task identifier.
 
 `{Object} [store=null] (optional)` - the store data.
 
 **Example**
 
     ...
-    const { eid } = data;
+    const { tid } = data;
     const store = { user: user, password: password };
-    BrixxProcessDefinition.process.event.done({ eid, store })
+    BrixxProcessDefinition.process.task.next({ tid, store })
     ...
 
 ### .set
 
-...
+Sets the BrixxProcessDefinition task element data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [tid=null] (optional)` - the task identifier.
+
+`{Object} [data=null] (optional)` - the request data.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.task.set
+    const tid = '...'
+    const data = { 
+        "state": "done",
+        "store": { user: user, password: password },
+        "next": true
+    }
+    BrixxProcessDefinition.process.task.set({ tid, data })
     ...
 
 #
