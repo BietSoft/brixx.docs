@@ -750,12 +750,20 @@ Returns the BrixxProcessDefinition process event data.
 
 ### .next
 
-...
+Set the next process element active.
+
+**Parameters**  
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{Object} [store=null] (optional)` - the store data.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.event.next
+    const { eid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.event.done({ eid, store })
     ...
 
 ### .set
@@ -839,12 +847,20 @@ Returns the BrixxProcessDefinition process gateway data.
 
 ### .next
 
-...
+Set the next process element active.
+
+**Parameters**  
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{Object} [store=null] (optional)` - the store data.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.gateway.next
+    const { gid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.event.done({ gid, store })
     ...
 
 ### .set
@@ -861,12 +877,23 @@ Returns the BrixxProcessDefinition process gateway data.
 
 ### .get
 
-...
+Returns the BrixxProcessDefinition process instance data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [pid=null] (optional)` - the process identifier.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.get
+    const callback = (data) => {
+        console.log(data)
+    }
+    BrixxProcessDefinition.process.get({ pid, callback })
     ...
 
 ### .iterator
@@ -952,12 +979,20 @@ Returns the BrixxProcessDefinition process task data.
 
 ### .next
 
-...
+Set the next process element active.
+
+**Parameters**  
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{Object} [store=null] (optional)` - the store data.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.task.next
+    const { eid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.event.done({ eid, store })
     ...
 
 ### .set
