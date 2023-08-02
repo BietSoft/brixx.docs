@@ -55,7 +55,7 @@ Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
 ### <div id='admin-console' /> Admin Console
 
-Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process instance identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
+Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../assets/downloads/brixx-create-process.html)
 
@@ -541,7 +541,7 @@ Defines a Brixx business process `root` element.
 
 `{String} [key]` - the model key (name).
 
-`{String} [pid]` - the process instance identifier.
+`{String} [pid]` - the process identifier.
 
 **Example**
 
@@ -889,7 +889,6 @@ Sets the BrixxProcessDefinition gateway element data.
     BrixxProcessDefinition.process.gateway.set({ gid, data })
     ...
 
-
 #
 
 ### .get
@@ -915,12 +914,36 @@ Returns the BrixxProcessDefinition process instance data.
 
 ### .iterator
 
-...
+The `iterator` function executes a provided function once per each active process element in the process instance object and returns the process element data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.iterator
+    BrixxProcessDefinition.process.iterator = (data) => {
+        const { key, tid } = data;
+        switch (key) {
+            case "Login":
+                const user = prompt("User: ");
+                const password = prompt("Password: ");
+                const store = { user: user, password: password };
+                BrixxProcessDefinition.process.done({ tid, store });
+                break;
+            case "UserArea":
+                console.log("You have entered the user area.");
+                BrixxProcessDefinition.process.done({ tid });
+                break;
+            case "PublicArea":
+                console.log("You have entered the public area.");
+                BrixxProcessDefinition.process.done({ tid });
+                break;
+        }
+    };
+
+    BrixxProcessDefinition.process.start({ pid });
     ...
 
 ### .set
@@ -951,12 +974,38 @@ Sets the BrixxProcessDefinition process instance data.
 
 ### .start
 
-...
+Starts a process instance or process element.
+
+**Parameters**
+
+`{Boolean} [checkAtStart=false]` - the check at start flag. Defines if an existing `Start Event` will be checked. If is `true`, the `Start Event` must be handled in the process definition with the HTML element `<Event>`
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [pid=null] (optional)` - the process identifier.
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{String} [tid=null] (optional)` - the task identifier.
+
+`{String} [unit=null] (optional)` - the unit name. Enables the process instances to be managed in the Brixx Process Engine at the model level.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
+    const pid = BrixxProcessDefinition.process.getSearchParam('pid')
     ...
-    BrixxProcessDefinition.process.start
+    BrixxProcessDefinition.process.iterator = (data) => {
+        const { mid } = data;
+        switch (mid) {
+            ...
+        }
+    };
+
+    BrixxProcessDefinition.process.start({ pid });
     ...
 
 ### .task 
