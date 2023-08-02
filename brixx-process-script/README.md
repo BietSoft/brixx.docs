@@ -912,7 +912,7 @@ Returns the BrixxProcessDefinition process instance data.
     BrixxProcessDefinition.process.get({ pid, callback })
     ...
 
-### <div id='process.start' /> .iterator
+### <div id='process.iterator' /> .iterator
 
 The `iterator` function executes a provided function once per each active process element in the process instance object and returns the process element data. See also [`BrixxProcessDefinition.process.start`](#process.start)
 
