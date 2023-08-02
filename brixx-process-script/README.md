@@ -615,7 +615,8 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 
 Get a search param with a personl identifier from `window.location.href`. If the search parameter is not found, you will be asked for your personal identifier in an input dialog, which is typically used for development.
 
-**Parameters**  
+**Parameters**
+
 `{String} [paramName]` - the name of the sarch param.
 
 **Returns**  
@@ -640,7 +641,8 @@ Returns the BrixxProcessDefinition process object.
 
 Creates a process instance with an published business process model in the Brixx Process Engine.
 
-**Parameters**  
+**Parameters**
+
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [mid=null] (optional)` - the model identifier.
@@ -653,7 +655,7 @@ Creates a process instance with an published business process model in the Brixx
 
 `{String} [urlTPL==null] (optional)` - the url template for the process creation response. The url template can also be changed globally for the Brixx Process Engine. (default=`http://localhost?pid=${pid}`).
 
-`{String} [callback=null] (optional)` - the callback function.
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
@@ -668,7 +670,8 @@ Creates a process instance with an published business process model in the Brixx
 
 Set the state of a prcoess instance or process element to `done` and by default the state of a following process element to `active`. This can be used, for example, to archive completed processes.
 
-**Parameters**  
+**Parameters**
+
 `{String} [pid=null] (optional)` - the process identifier.
 
 `{Object} [data=null] (optional)` - the request data.
@@ -725,12 +728,24 @@ Set the state of an event element to `done` and by default the state of a follow
 
 ### .get
 
-...
+Returns the BrixxProcessDefinition process event data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.event.get
+    const { eid } = data;
+    const callback = (data) => {
+        console.log(data)
+    }
+    BrixxProcessDefinition.process.event.get({ eid, callback })
     ...
 
 ### .next
@@ -746,6 +761,16 @@ Set the state of an event element to `done` and by default the state of a follow
 ### .set
 
 ...
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{Object} [data=null] (optional)` - the request data.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
@@ -792,12 +817,24 @@ Set the state of a gateway element to `done` and by default the state of a follo
 
 ### .get
 
-...
+Returns the BrixxProcessDefinition process gateway data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.gateway.get
+    const { gid } = data;
+    const callback = (data) => {
+        console.log(data)
+    }
+    BrixxProcessDefinition.process.gateway.get({ gid, callback })
     ...
 
 ### .next
@@ -893,12 +930,24 @@ Set the state of a task element to `done` and by default the state of a followin
 
 ### .get
 
-...
+Returns the BrixxProcessDefinition process task data.
+
+**Parameters**  
+
+`{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
+
+`{String} [tid=null] (optional)` - the task identifier.
+
+`{Object} [callback=null] (optional)` - the callback function.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.task.get
+    const { tid } = data;
+    const callback = (data) => {
+        console.log(data)
+    }
+    BrixxProcessDefinition.process.task.get({ tid, callback })
     ...
 
 ### .next
