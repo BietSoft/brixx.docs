@@ -664,14 +664,34 @@ Creates a process instance with an published business process model in the Brixx
     });
     ...
 
-### .done
+### <div id='process.done' /> .done
 
-...
+Set the state of a prcoess instance or process element to `done` and by default the state of a following process element to `active`. This can be used, for example, to archive completed processes.
+
+**Parameters**  
+`{String} [pid=null] (optional)` - the process identifier.
+
+`{Object} [data=null] (optional)` - the request data.
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{String} [tid=null] (optional)` - the task identifier.
+
+`{Object} [store=null] (optional)` - the store data.
+
+`{Boolean} [next=true] (optional)` - the next flag. Defines if the state of a following process element will be set to `active`.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.done
+    // Set process definition iterator
+    BrixxProcessDefinition.process.iterator = (data) => {
+        ...
+        BrixxProcessDefinition.process.done({ tid: data.tid });
+        ...
+    };
     ...
 
 ### .event 
@@ -685,12 +705,22 @@ Returns the BrixxProcessDefinition process event object.
 
 ### .done
 
-...
+Set the state of an event element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+
+**Parameters**  
+
+`{String} [eid=null] (optional)` - the event identifier.
+
+`{Object} [store=null] (optional)` - the store data.
+
+`{Boolean} [next=true] (optional)` - the next flag. Defines if the state of a following process element will be set to `active`.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.event.done
+    const { eid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.event.done({ eid, store });
     ...
 
 ### .get
@@ -736,7 +766,23 @@ Returns the BrixxProcessDefinition process gateway object.
 
 ### .done
 
-...
+Set the state of a gateway element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+
+**Parameters**  
+
+`{String} [gid=null] (optional)` - the gateway identifier.
+
+`{Object} [store=null] (optional)` - the store data.
+
+`{Boolean} [next=true] (optional)` - the next flag. Defines if the state of a following process element will be set to `active`.
+
+**Example**
+
+    ...
+    const { gid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.gateway.done({ gid, store, next: false });
+    ...
 
 **Example**
 
@@ -827,12 +873,22 @@ Returns the BrixxProcessDefinition process task object.
 
 ### .done
 
-...
+Set the state of a task element to `done` and by default the state of a following process element to `active`. See also  [`BrixxProcessDefinition.process.done`](#process.done).
+
+**Parameters**  
+
+`{String} [tid=null] (optional)` - the task identifier.
+
+`{Object} [store=null] (optional)` - the store data.
+
+`{Boolean} [next=true] (optional)` - the next flag. Defines if the state of a following process element will be set to `active`.
 
 **Example**
 
     ...
-    BrixxProcessDefinition.process.task.done
+    const { tid } = data;
+    const store = { user: user, password: password };
+    BrixxProcessDefinition.process.gateway.done({ tid, store, next: false });
     ...
 
 ### .get
