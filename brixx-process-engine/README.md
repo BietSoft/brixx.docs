@@ -24,7 +24,7 @@ With **Brixx Process Engine** we bridge the gap to enterprise process orchestrat
 -   No database required
 -   Cross platform development
 -   Cross ui development
--   Low Code development
+-   Low Code Development
 -   Full HTML and JavaScript support
 -   IoT (Internet of Things) control and  
     (Single-Board-Computer) support
