@@ -76,8 +76,6 @@ This will create a new BPMN model with a **Start Event**. The start event does n
 
 We click on the start event icon to add a **Task** by clicking on the `[Append Task]` icon. Then we change the task type to **User Task** by clicking on the wrench icon.
 
-<div style="clear: left;" />
-
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-03.webp" style="width: 600px; margin-bottom: 10px;" />
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-04.webp" style="height: 100px; margin-bottom: 0px;" />
