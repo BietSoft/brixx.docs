@@ -49,7 +49,7 @@ Brixx-Process-Engine im Windows Terminal (PowerShell)
 ### Brixx BPMN-Editor
 Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
 
-<img src="../assets/images/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
