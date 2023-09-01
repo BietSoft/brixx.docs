@@ -63,19 +63,19 @@ Principle (Two-man rule), multi-level forms, or web applications for processing 
 
 <img src="../assets/images/brixx-process-engine-installer-01.webp" style="margin-bottom: -5px; width: 270px;" />
 
-Select [OK]
+Select `[OK]`
 
 <img src="../assets/images/brixx-process-engine-installer-02.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Next]
+Select `[Next]`
 
 <img src="../assets/images/brixx-process-engine-installer-03.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Next]
+Select `[Next]`
 
 <img src="../assets/images/brixx-process-engine-installer-04.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Imstall]
+Select `[Install]`
 
 <img src="../assets/images/brixx-process-engine-installer-05.webp" style="margin-bottom: -5px; width: 450px;" />
 
@@ -83,7 +83,7 @@ Installation in progress ...
 
 <img src="../assets/images/brixx-process-engine-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Finish]
+Select `[Finish]`
 
 After installation, the Brixx Process Engine is available at `http://localhost:5000`  
 Get the status at the Process Engine API Ressource http://localhost:5000/brixx/heartbeat

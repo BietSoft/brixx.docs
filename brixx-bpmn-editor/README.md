@@ -33,19 +33,19 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-01.webp" style="margin-bottom: -5px; width: 270px;" />
 
-Select [OK]
+Select `[OK]`
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-02.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Next]
+Select `[Next]`
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-03.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Next]
+Select `[Next]`
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-04.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Imstall]
+Select `[Install]`
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-05.webp" style="margin-bottom: -5px; width: 450px;" />
 
@@ -53,7 +53,7 @@ Installation in progress ...
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-installer-06.webp" style="margin-bottom: -5px; width: 450px;" />
 
-Select [Finish]
+Select `[Finish]`
 
 After installation, the Brixx BPMN-Editor is available at [`http://localhost:3000`](http://localhost:3000)  
 The Brixx BPMN-Editor is opened in the standard browser or use the link above.
