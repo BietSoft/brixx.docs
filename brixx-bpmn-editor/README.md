@@ -66,39 +66,45 @@ Brixx BPMN-Editor in Windows Terminal (PowerShell)
 
 ## Model your first diagram
 
-After starting the Brixx BPMN-Editor we can create a new BPMN model or by clicking on the `[Create new BPMN diagram]` icon.
+After launching the Brixx BPMN Editor, we can create a new BPMN diagram immediately or at any time by clicking on the `[Create new BPMN diagram]` icon. This will create a new BPMN model with a **Start Event**. The start event does not have to be specified for the Brixx Process Engine and is automatically inserted, but is required for a standard BPMN process.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-01.webp" style="width: 600px;" />
 
-This will create a new BPMN model with a **Start Event**. The start event does not have to be specified for the Brixx Process Engine and is automatically inserted, but is required for a standard BPMN process. 
-
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-02.webp" style="height: 100px; margin-bottom: 0px;" />
 
-We click on the start event icon to add a **Task** by clicking on the `[Append Task]` icon. Then we change the task type to **User Task** by clicking on the wrench icon.
+We click on the start event icon to add a **Task** by clicking on the `[Append Task]` icon. After this we change the task type to **User Task** by clicking on the wrench icon.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-03.webp" style="width: 600px; margin-bottom: 10px;" />
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-04.webp" style="height: 100px; margin-bottom: 0px;" />
 
-After this we click on the task icon to add a **End Event** by clicking on the `[Append EndEvent]` icon. 
+After creating a new BPMN model we append a **End Event** by clicking on the `[Append EndEvent]` icon. 
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-05.webp" style="width: 600px;" />
 
 ### Download BPMN diagram
 
-We can download and save the current process model as a BPMN diagram file by clicking the `[Download as BPMN 2.0 file]` icon. By default, the BPMN diagram is saved as `diagram.bpmn` in the Downloads folder. This allows us to open and edit the BPMN diagram file at a later point in time.
+We can download and save the current BPMN model as BPMN diagram file by clicking the `[Download as BPMN 2.0 file]` icon. By default, the BPMN diagram is saved as `diagram.bpmn` in the Downloads folder. This allows us to open and edit the BPMN diagram file at a later point in time.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-06.webp" style="width: 600px;" />
 
-### Publish process model
+### Publish model
 
-We can publish the current process model to the Brixx Process Engine by clicking the `[Publish Model to Brixx Process Engine]` icon. By default, the Brixx Process Engine runs under the Process Engine URL `http://localhost:5000` and can be changed in the publish properties section.
+We can publish the current BPMN model to the Brixx Process Engine by clicking the `[Publish Model to Brixx Process Engine]` icon. By default, the Brixx Process Engine runs under the Process Engine URL `http://localhost:5000` and can be changed in the publish properties section.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-07.webp" style="width: 600px;" />
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-08.webp" style="width: 600px;" />
 
 # <div id='reference' /> Brixx BPMN-Editor Referenz
+
+## BPMN diagram menu
+
+<img src="../assets/images/bpmn-editor/bpmn-editor-diagram-meue.webp" />
+
+## BPMN model menu
+
+<img src="../assets/images/bpmn-editor/bpmn-editor-model-meue.webp" />
 
 # <div id='downloads' /> Downloads
 
