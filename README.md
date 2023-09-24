@@ -17,7 +17,7 @@ This is the BRIXX.it documentation repository. For further information please fe
 
 ## [Brixx-Decision-Script Version 1.1.0](./brixx-decision-script/README.md)
 
-## [Brixx-Process-Engine Version 1.1.0](./brixx-process-engine/README.md)
+## [Brixx-Process-Engine Version 1.3.0](./brixx-process-engine/README.md)
 
 -   ### [Brixx BPMN-Editor Version 1.3.0](./brixx-bpmn-editor/README.md)
 -   ### [Brixx-Process-Script Version 1.0.1](./brixx-process-script/README.md)
