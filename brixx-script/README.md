@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.0.10` (Release, 24.02.2023)
+### Version: `1.1.0` (Release, 18.02.2024)
 
 #
 
@@ -251,10 +251,10 @@ In der _package.json_ ersetzen wir den Platzhalter `{brixx-component-name}` für
 Bei den `dependencies` ersetzen wir dann noch den Platzhalter `{brixx-script-version}` mit der Version für das NPM-Package `@brixx/script` das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.0.10"
+      "@brixx/script": "1.1.0"
     }
 
-Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.0.10`
+Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.1.0`
 
 Die Abhängigkeiten `devDependencies` werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit `npm install --save-dev  <package>` installiert werden.
 
@@ -791,7 +791,7 @@ Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://ww
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.0.10/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.1.0/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
@@ -1029,7 +1029,7 @@ Returns the Brixx version in semantic versioning format.
 
 Console output
 
-    Brixx version: 1.0.10
+    Brixx version: 1.1.0
 
 ## Brixx static methods
 
