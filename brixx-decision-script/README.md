@@ -40,7 +40,7 @@ Wir haben uns entschieden, Brixx-Decision-Script als Entscheidungstabelle und Re
 
 Wir verwenden Brixx-Script zur Erstellung einer **Entscheidungstabelle** (decision table). Brixx-Script ist Bestandteil in Brixx-Decision-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Decision-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einer Entscheidungstabelle für eine Altersüberprüfung (`brixx-check-age-web`) und anschließend als Node.js Application (`brixx-check-age-node`).
 
-## <div id='brixx-check-age-web' /> Brixx Web-Baustein [brixx-check-age] erstellen
+## <div id='brixx-check-age-web' /> Brixx Web-Baustein `[brixx-check-age]` erstellen
 
 Wir erstellen eine Brixx Entscheidungstabelle für eine Altersüberprüfung mit Aufruf einer entsprechenden „altersgerechten“ Webseite. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-check-age-web]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -278,7 +278,7 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 # <div id='tutorial' /> Brixx-Decision-Script Tutorial
 
-## <div id='brixx-check-age-styles' /> Brixx Web-Baustein [brixx-check-age] erweitern
+## <div id='brixx-check-age-styles' /> Brixx Web-Baustein `[brixx-check-age]` erweitern
 
 Wie erweitern die Brixx Webkomponente `[brixx-check-age]` mit HTML Styles. Dafür erstellen wir einen Projektordner `[brixx-check-age-styles]` und kopieren die Dateien aus dem vorherigen Beispiel in den Projektordner.
 
