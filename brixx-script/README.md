@@ -10,6 +10,8 @@
 
 Brixx-Script is a free JavaScript library for creating independent web components. **Smart Web Components** (brixx) for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for a **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as Brixx HTML elements in HTML documents or Brixx script components in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
 
+Brixx-Script ist eine kostenlose JavaScript-Bibliothek zum Erstellen unabhängiger Webkomponenten. Mit Brixx-Script können **Smart Web Components** (Brixx Webkomponenen) oder **Brixx Web-Bausteine** (brixx) für Websites und Webanwendungen erstellt werden. Dadurch wird der Programmieraufwand und die Projektkomplexität für eine **Low-Code-Entwicklung** auf ein Minimum reduziert. **Brixx-Web-Bausteine** werden mit [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) erstellt und können als Brixx-HTML-Elemente in HTML-Dokumenten oder Brixx Script-Components in JavaScript-Anwendungen und Frameworks verwendet werden. JSX wurde 2014 mit [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) eingeführt und hat dieselbe Syntax wie [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) zum Integrieren von XML in JavaScript. Brixx-Script hat 1998 als LaSSiE seinen Ursprung als plattformunabhängige Webentwicklung und wurde 2005 mit E4X erweitert. Zeitgleich mit dem Aufkommen von JSX wurde E4X 2014 von der Mozilla Foundation als veraltet markiert und folglich auch in LaSSiE durch JSX ersetzt. LaSSiE wurde zunächst als integriertes Bausteinsystem in anderen Bibliotheken verwendet, aber aufgrund der großen Popularität und Verbreitung von JSX wurde es im Dezember 2022 als kostenlose JavaScript-Bibliothek Brixx-Script zum Erstellen von Brixx-Webkomponenten veröffentlicht. **Brixx-Script** wird hauptsächlich zum Erstellen einer bausteinorientierten Projektarchitektur verwendet, kann aber auch eine leichte Alternative zu anderen Frameworks und Bibliotheken sein.
+
 -   [Was wird benötigt?](#required)
     -   [Install Visual Studio Code for Windows](../docs/VSCode-install.md)
     -   [Install Node.js and npm for Windows](../docs/Nodejs-install.md)
@@ -54,7 +56,7 @@ Der JavaScript Compiler [Babel](https://babeljs.io/ "Opensource JavaScript trans
 
 Wir verwenden moderne State-of-the-art Werkzeuge und Technologien zur Erstellung von Brixx Webkomponenten, um eine einfache Entwicklung und Integration in HTML-Dokumenten oder JavaScript-Projekten zu ermöglichen. Hierzu zählen neben [Node.js](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") und [npm](https://www.npmjs.com/ "Node package manager") auch [Webpack](https://webpack.js.org/ "Opensource JavaScript modul packer") und [Babel](https://babeljs.io/ "Opensource JavaScript transcompiler"). Zusätzlich steht für die Entwicklung aber auch eine Standalone Version zur Verfügung, die eine direkte Integration von Brixx Web-Bausteinen in ein HTML-Dokument ermöglicht.
 
-## <div id='brixx-animal-list'/> Brixx Web-Baustein [brixx-animal-list] erstellen
+## <div id='brixx-animal-list'/> Brixx Web-Baustein `[brixx-animal-list]` erstellen
 
 Brixx Web-Bausteine (Brixx Webkomponenten) werden in der Regel im Ordner `[components]` erstellt und erwartet. Dazu erstellen wir einen Ordner `./components` im Projektordner `[brixx-element-sample]` wodurch die Projekt-Ordnerstruktur wie folgt aussieht.
 
@@ -215,7 +217,7 @@ Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 # <div id='tutorial'/> Brixx-Script Tutorial
 
-## <div id='brixx-simple-element'/> Brixx Webkomponente [brixx-simple-element] erstellen
+## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
 Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner `[brixx-simple-element]` und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als `package.json` im des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
@@ -475,7 +477,7 @@ Die HTML-Datei `index.html` wird in erster Linie zum testen der Brixx Webkompone
 
     Der Brixx Web-Baustein `<brixx-simple-element>` im Browser-Fenster
 
-## <div id='brixx-complex-element'/> Brixx Webkomponente [brixx-complex-element] erstellen
+## <div id='brixx-complex-element'/> Brixx Webkomponente `[brixx-complex-element]` erstellen
 
 Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit HTML Styles und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner `[brixx-complex-element]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
