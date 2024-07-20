@@ -16,6 +16,16 @@
 
 We have decided to publish Brixx-Decision-Script as a decision table and rule engine for JavaScript. As a result, Brixx-Decision-Script can be used in common frameworks, development environments, programming languages and platforms as a web application or web service for low-code development without a special platform. In addition, Brixx-Decision-Script enables direct integration into an HTML document, which makes it special. This also gives non-programmers the opportunity to design dynamic websites. Ask about integration into your applications, whether Python, Java, as a RESTful API or as a Docker solution.
 
+#
+
+# Was ist Brixx-Decision-Script
+
+**Brixx-Decision-Script** ist eine kostenlose JavaScript-Bibliothek für regelbasierte Entscheidungssysteme. Mit Brixx-Decision-Script und der integrierten **Regel-Engine** kann die Programmierung auf ein Minimum reduziert und durch eine technische Konfiguration (Low-Code-Entwicklung) für Erweiterungen und Anpassungen über Regeln mit einer Brixx-Entscheidungstabelle ersetzt werden. Insbesondere mit [Brixx-Script (Webkomponenten)](https://brixx.it/brixx-script.html) als Brixx HTML-Elemente oder als Brixx Script-Components in JavaScript-Anwendungen und Frameworks ist eine schnelle Integration in jedes HTML-Dokument möglich und unterstützt auch JavaScript-Umgebungen wie [Node.js®](https://nodejs.org/en/) (plattformübergreifende JavaScript-Laufzeitumgebung). Regeln können mit der ([DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation)) einfach in einer externen Entscheidungstabellen-Definitionsdatei verwaltet werden. Für Änderungen oder Anpassungen sind keine Programmieraufgaben oder komplizierten Bereitstellungen erforderlich und grundlegende Konfigurationen aus einer Entscheidungstabellen-Definitionsdatei können auch mit Brixx-Decision-Script HTML-Elementen erweitert werden. Brixx-Decision-Script wurde für Systeme zur Automatisierung und Prozesssteuerung mit [BPMN (Business Process Model and Notation)](https://de.wikipedia.org/wiki/Business_Process_Model_and_Notation) entwickelt und wird für unsere webbasierte Prozess-Engine **Brixx-Process-Script** verwendet. Mit Brixx-Decision-Script können Sie Prozesse in Ihren Webprojekten oder Ihren eigenen Prozess-Engine-Systemen mit JavaScript implementieren. Hierzu verwenden wir unser Brixx-Script, um eine bausteinorientierte Projektarchitektur zu erstellen.
+
+## Warum eine Regel-Engine speziell für JavaScript?
+
+Wir haben uns entschieden, Brixx-Decision-Script als Entscheidungstabelle und Regel-Engine für JavaScript zu veröffentlichen. Dadurch kann Brixx-Decision-Script in gängigen Frameworks, Entwicklungsumgebungen, Programmiersprachen und Plattformen als Webanwendung oder Webservice für Low-Code-Entwicklung ohne spezielle Plattform verwendet werden. Darüber hinaus ermöglicht Brixx-Decision-Script die direkte Integration in ein HTML-Dokument, was es besonders macht. Dadurch erhalten auch Nicht-Programmierer die Möglichkeit, dynamische Websites zu gestalten. Fragen Sie nach der Integration in Ihre Anwendungen, egal ob Python, Java, als RESTful API oder als Docker-Lösung.
+
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-check-age] erstellen](#brixx-check-age-web)
 -   [Brixx-Decision-Script Tutorial](#tutorial)
