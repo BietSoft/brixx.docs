@@ -353,7 +353,7 @@ Die Brixx Webkomponente können wir mit dem _Live Server_ testen und starten die
 
 Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
-## <div id='brixx-check-age-node' /> Node.js Application [brixx-check-age] erstellen
+## <div id='brixx-check-age-node' /> Node.js Application `[brixx-check-age]` erstellen
 
 Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir für das Beispiel den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
 
