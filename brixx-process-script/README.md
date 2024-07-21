@@ -8,15 +8,25 @@
 
 > This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
-# Process Driven Development for everyone
+# What is Brixx-Process-Script
 
-## Create processes and workflows
+## Process Driven Development for everyone
 
 Brixx-Process-Script is a free JavaScript library to create process applications for the [Brixx Process-Engine](https://brixx.it/brixx-process-engine.html) and fill in a gap to enterprise process orchestration systems such as [Camunda](#) or [X4 BPMS](#) as a lean workflow management system for automation and digitization of business processes and industrial processes. For processes in web applications, to control multiple web applications up to IoT control. With minimal development, integration and costs, Brixx Process Engine can serve as the basis for applications or be integrated into existing applications as an extension for sub-processes. With our **Brixx-Process-Script**, the programming can be reduced to a minimum. Fast integration into any HTML document is possible, especially with the integrated [Brixx-Script (smart web components)](https://brixx.it/brixx-script.html) as Brixx HTML elements or as Brixx script components in JavaScript applications and frameworks and also support JavaScript environments such as [Node.js®](https://nodejs.org/en/ "Opensource cross platform JavaScript runtime environment") (cross-platform JavaScript runtime environment).
 
 ## Model processes and workflows
 
 With our workflow management system, all types of processes and workflows can be mapped with the [Brixx BPMN-Editor](https://brixx.it/brixx-bpmn-editor.html) for process modeling with Business Process Model and Notation ([BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)) and made available in the Brixx Process Engine with one click.
+
+# Was ist Brixx-Process-Script
+
+## Prozessgesteuerte Entwicklung für jedermann
+
+Brixx-Process-Script ist eine kostenlose JavaScript-Bibliothek, um Prozessanwendungen für die [Brixx Process-Engine](https://brixx.it/brixx-process-engine.html) zu erstellen und als schlankes Workflow-Management-System zur Automatisierung und Digitalisierung von Geschäftsprozessen und Industrieprozessen eine Lücke zu Enterprise-Prozessorchestrierungssystemen wie [Camunda](#) oder [X4 BPMS](#) zu schließen. Für Prozesse in Webanwendungen, zur Steuerung mehrerer Webanwendungen bis hin zur IoT-Steuerung. Mit minimalem Entwicklungs-, Integrations- und Kostenaufwand kann Brixx Process Engine als Grundlage für Anwendungen dienen oder als Erweiterung für Teilprozesse in bestehende Anwendungen integriert werden. Mit unserem **Brixx-Process-Script** kann die Programmierung auf ein Minimum reduziert werden. Insbesondere mit den integrierten [Brixx-Script (Webkomponenten)](https://brixx.it/brixx-script.html) ist eine schnelle Integration in beliebige HTML-Dokumente als Brixx-HTML-Elemente oder als Brixx-Skriptkomponenten in JavaScript-Anwendungen und Frameworks möglich und unterstützt auch JavaScript-Umgebungen wie [Node.js®](https://nodejs.org/en/ „Opensource Cross Platform JavaScript Runtime Environment“) (plattformübergreifende JavaScript-Laufzeitumgebung). 
+
+## Modellieren Sie Prozesse und Arbeitsabläufe
+
+Mit unserem Workflow-Management-System können alle Arten von Prozessen und Workflows mit dem [Brixx BPMN-Editor](https://brixx.it/brixx-bpmn-editor.html) zur Prozessmodellierung mit Business Process Model and Notation ([BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)) abgebildet und mit einem Klick in der Brixx Process Engine bereitgestellt werden.
 
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)](#brixx-login-process-html)

@@ -8,6 +8,8 @@
 
 #
 
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+
 # Define your process without programming
 
 ## Model processes and workflows
