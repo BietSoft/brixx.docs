@@ -83,7 +83,7 @@ Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../asse
             <h3>Create a process instance</h3>
             <table>
                 <tr>
-                    <td>Model identifier (ID)</td>
+                    <td>Model identifier (ID)&nbsp;</td>
                     <td>
                         <input type="text" id="mid" size="35" />
                     </td>
@@ -484,7 +484,7 @@ Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 Für die Entwicklung steht eine Brixx-Process-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Process-Script direkt ohne precompiling verwendet werden. Die Brixx-Process-Script Standalone Datei [`brixx-process.min.js`](https://brixx.it/@brixx/standalone/brixx-process.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
 
     <!-- Load Brixx-Process-Script standalone for development -->
-    <src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
+    <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
 
 Brixx-Script ist Bestandteil in Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)) und ein Brixx Web-Baustein kann danach mit einem HTML-`<script>`-Element importiert werden, wie z. B. die Brixx Script-Component-Datei `./components/brixx-animal-list.js`
 

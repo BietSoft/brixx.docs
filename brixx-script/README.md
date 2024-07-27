@@ -788,7 +788,7 @@ Der Brixx Web-Baustein `<brixx-complex-element>` im Browser-Fenster
 Für die Entwicklung steht eine Brixx-Script Standalone Version zur Verfügung. Dadurch kann Brixx-Script direkt ohne precompiling verwendet werden. Die Brixx-Script Standalone Datei [`brixx.min.js`](https://brixx.it/@brixx/standalone/brixx.min.js) kann dazu einfach mit einem HTML-`<script>`-Element vom Brixx CDN-(Content Delivery Network)-Server importiert (referenziert) werden.
 
     <!-- Load Brixx-Script standalone for development -->
-    <src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
+    <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
 
 Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://www.jsdelivr.com/) verwendet werden. Hier muss beachtet werden, dass es sich z. B. bei _jsDelivr_ um ein automatisiertes System handelt, und dort nicht die Brixx-Script Standalone, sondern das Brixx-Script NPM-Package bereitgestellt wird. Das erfordert gegenüber der Dokumentation von _jsDelivr_ einen zusätzlichen Babel import.
 
