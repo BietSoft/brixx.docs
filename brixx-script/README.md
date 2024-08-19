@@ -2,9 +2,12 @@
 
 ### Package: `@brixx/script`
 
-### Version: `1.1.0` (Release, 18.02.2024)
+### Version: `1.2.0` (Release, 19.09.2024)
 
 #
+
+> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+
 
 # What is Brixx-Script
 
@@ -255,10 +258,10 @@ In der _package.json_ ersetzen wir den Platzhalter `{brixx-component-name}` für
 Bei den `dependencies` ersetzen wir dann noch den Platzhalter `{brixx-script-version}` mit der Version für das NPM-Package `@brixx/script` das wir verwenden.
 
     "dependencies": {
-      "@brixx/script": "1.1.0"
+      "@brixx/script": "1.2.0"
     }
 
-Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.1.0`
+Die Brixx Webkomponente bekommt den Namen `brixx-simple-element` und für das Package `@brixx/script` verwenden wir die Version `1.2.0`
 
 Die Abhängigkeiten `devDependencies` werden für die Entwicklung verwendet um eine eigenständige Brixx Webkomponente zu erstellen, die anschließend als Brixx Web-Baustein in jeder Webseite oder Webanwendung verwendet werden kann. Die NPM-Packages werden „zentral“ in der _package.json_ verwaltet und müssen nicht einzeln mit `npm install --save-dev  <package>` installiert werden.
 
@@ -1033,7 +1036,7 @@ Returns the Brixx version in semantic versioning format.
 
 Console output
 
-    Brixx version: 1.1.0
+    Brixx version: 1.2.0
 
 ## Brixx static methods
 
@@ -1230,6 +1233,70 @@ The Brixx console object. A special Brixx console object, based on the browser c
 **Example**
 
     Brixx.console.setLogLevel(Brixx.console.Level.DEBUG)
+
+## Brixx.Dialog (object)
+
+The Brixx Dialog object. Opens a modal dialog window. Can also be used synchronously with a Promise.
+
+### Dialog.alert
+
+Opens a modal alert dialog window.
+
+**Parameters**  
+
+**Example**
+
+    BrixxProcessDefinition.Dialog.alert({
+      title: 'Brixx Process Engine',
+      text: '503 Service Unavailable<br />Please try again later',
+      confirmButtonText: 'OK',
+      callBackFnConfirm: async () => {
+        // Your code here ...
+      }
+    })
+
+### Dialog.confirm
+
+Opens a modal confirm dialog window.
+
+**Parameters**  
+
+**Example**
+
+    BrixxProcessDefinition.Dialog.confirm({
+      title: 'Brixx Process Identifier not found',
+      text: 'Please enter a valid process identifier',
+      confirmButtonText: 'OK',
+      cancelButtonText: 'Cancel',
+      callBackFnConfirm: () => {
+        // Your code here ...
+      },
+      callBackFnCancel: () => {
+        // Your code here ...
+      }
+    })
+
+### Dialog.prompt
+
+Opens a modal prompt dialog window.
+
+**Parameters**  
+
+**Example**
+
+    BrixxProcessDefinition.Dialog.prompt({
+      title: 'Brixx Process Identifier not found',
+      text: 'Please enter a valid process identifier',
+      placeholderInput: 'Waiting for input...',
+      confirmButtonText: 'OK',
+      cancelButtonText: 'Cancel',
+      callBackFnConfirm: (value) => {
+        // Your code here ...
+      },
+      callBackFnCancel: () => {
+        // Your code here ...
+      }
+    })
 
 ## Brixx.Component (object)
 
