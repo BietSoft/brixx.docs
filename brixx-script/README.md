@@ -1246,14 +1246,15 @@ Opens a modal alert dialog window.
 
 **Example**
 
-    BrixxProcessDefinition.Dialog.alert({
+    const config = {
       title: 'Brixx Process Engine',
       text: '503 Service Unavailable<br />Please try again later',
       confirmButtonText: 'OK',
       callBackFnConfirm: async () => {
         // Your code here ...
       }
-    })
+    }
+    Brixx.Dialog.alert(config)
 
 ### Dialog.confirm
 
@@ -1263,7 +1264,7 @@ Opens a modal confirm dialog window.
 
 **Example**
 
-    BrixxProcessDefinition.Dialog.confirm({
+    Brixx.Dialog.confirm({
       title: 'Brixx Process Identifier not found',
       text: 'Please enter a valid process identifier',
       confirmButtonText: 'OK',
@@ -1284,10 +1285,10 @@ Opens a modal prompt dialog window.
 
 **Example**
 
-    BrixxProcessDefinition.Dialog.prompt({
+    Brixx.Dialog.prompt({
       title: 'Brixx Process Identifier not found',
       text: 'Please enter a valid process identifier',
-      placeholderInput: 'Waiting for input...',
+      placeholderInput: 'Waiting for input ...',
       confirmButtonText: 'OK',
       cancelButtonText: 'Cancel',
       callBackFnConfirm: (value) => {
