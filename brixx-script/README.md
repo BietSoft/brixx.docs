@@ -8,7 +8,6 @@
 
 > This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
-
 # What is Brixx-Script
 
 Brixx-Script is a free JavaScript library for creating independent web components. **Smart Web Components** (brixx) for websites and web applications can be created with Brixx-Script. This reduces the programming effort and project complexity for a **low-code development** to a minimum. **Brixx web components** are created with [JSX (JavaScript XML)](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) and can be used as Brixx HTML elements in HTML documents or Brixx script components in JavaScript applications and frameworks. JSX was introduced in 2014 with [React](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) and has the same syntax as [E4X (EcmaScript for XML)](https://en.wikipedia.org/wiki/ECMAScript_for_XML) for integrating XML into JavaScript. Brixx-Script has its origins in 1998 as LaSSiE as a platform-independent web development and was expanded in 2005 with E4X. Coinciding with the advent of JSX, E4X was marked as deprecated by the Mozilla Foundation in 2014 and consequently replaced by JSX in LaSSiE as well. LaSSiE was initially used as an integrated building block system in other libraries, but due to the great popularity and spread of JSX, it was released in December 2022 as a free JavaScript library **Brixx-Script** for creating Brixx web components. Brixx-Script is primarily used to create a building block oriented project architecture, but it can also be a lightweight alternative to other frameworks and libraries.
@@ -798,7 +797,7 @@ Brixx-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](https://ww
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.1.0/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/script@1.2.0/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
