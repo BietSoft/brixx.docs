@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/process-script`
 
-### Version: `1.1.0` (Release, 24.08.2024)
+### Version: `1.2.1` (Release, 31.08.2024)
 
 #
 
@@ -406,7 +406,7 @@ Brixx-Procss-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](htt
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Procss-Script from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@brixx/process-script@1.1.0/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/process-script@1.2.1/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
