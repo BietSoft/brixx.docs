@@ -4,11 +4,9 @@
 
 ### Package: `@brixx/bpmn-editor`
 
-### Version: `1.5.0` (Release, 13.07.2024)
+### Version: `1.6.0` (Release, 15.09.2024)
 
-#
-
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx BPMN-Editor please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # Define your process without programming
 
@@ -27,7 +25,7 @@ With our Brixx BPMN editor for process modeling, all types of business and indus
 
 <a href="https://brixx.it/bpmn-editor/index.html" target="_blank"><img src="../assets/images/bpmn-editor/bpmn-sample.jpg"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)" style="margin-bottom: -5px; width: 600px;" /></a>
 
-<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.5.0 mit BPMN 2.0 Standard (Try it Online)
+<a href="https://brixx.it/bpmn-editor/index.html" target="_blank"  title="Brixx BPMN-Editor (Try it Online)" alt="Brixx BPMN-Editor (Try it Online)">Brixx BPMN-Editor</a> Version 1.6.0 mit BPMN 2.0 Standard (Try it Online)
 
 # <div id='setup' /> Install Brixx BPMN-Editor
 
@@ -112,21 +110,26 @@ We can publish the current BPMN model to the Brixx Process Engine by clicking th
 
 ## <img src="../assets/images/logo-blue.svg" style="height: 48px; vertical-align: middle;"  /> CDN - Latest Stable Version
 
-Version 1.5.0 (Latest)
+Version 1.6.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
 Download Web-Application Package Installer for Windows.
 
-### [Brixx BPMN-Editor Version 1.5.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.5.0-x64.exe)
+### [Brixx BPMN-Editor Version 1.6.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.6.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 
-Ask for your Linux runtime version.
+
+Download Web-Application Package Installer for Linux.
+
+### [Brixx BPMN-Editor Version 1.6.0 (Linux)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.6.0-linux.run)
 
 ## <i class="fa-brands fa-apple"></i> Mac OS Installer
 
-Ask for your Mac OS runtime version.
+Download Web-Application Package Installer for Mac OS.
+
+### [Brixx BPMN-Editor Version 1.6.0 (Mac OS)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.6.0-macos.run)
 
 ## Copyright and License
 

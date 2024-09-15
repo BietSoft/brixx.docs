@@ -4,11 +4,9 @@
 
 ### Package: `@brixx/process-engine`
 
-### Version: `1.3.0` (Release, 22.09.2023)
+### Version: `1.4.0` (Release, 15.09.2024)
 
-#
-
-> information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx-Process-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # What is Brixx-Process-Engine
 
@@ -135,7 +133,7 @@ Status of the Brixx Process Engine.
 
     {
         "appname":"Brixx-Process-Engine",
-        "version":"1.3.0",
+        "version":"1.4.0",
         "status":"started",
         "success":true
     }
@@ -144,21 +142,25 @@ Status of the Brixx Process Engine.
 
 ## <img src="../assets/images/logo-blue.svg" style="height: 48px; vertical-align: middle;"  /> CDN - Latest Stable Version
 
-Version 1.3.0 (Latest)
+Version 1.4.0 (Latest)
 
 ## <i class="fa-brands fa-windows"></i> Windows Installer
 
 Download Web-Application Package Installer for Windows.
 
-### [Brixx-Process-Engine Version 1.3.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.3.0-x64.exe)
+### [Brixx-Process-Engine Version 1.4.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.4.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
 
-Ask for your Linux runtime version.
+Download Web-Application Package Installer for Linux.
+
+### [Brixx-Process-Engine Version 1.4.0 (Linux)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.4.0-linux.run)
 
 ## <i class="fa-brands fa-apple"></i> Mac OS Installer
 
-Ask for your Mac OS runtime version.
+Download Web-Application Package Installer for Mac OS.
+
+### [Brixx-Process-Engine Version 1.4.0 (Mac OS)](https://brixx.it/@brixx/setup/Brixx-Process-Engine-v1.4.0-macos.run)
 
 # <div id='docker' /> Docker
 
