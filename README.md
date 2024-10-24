@@ -15,12 +15,12 @@ This is the BRIXX.it documentation repository. For further information please fe
 -   ### [NPM-Packages installieren](./docs/NPM-install.md)
 -   ### [Webpack-Konfiguration webpack.config.js](./docs/Webpack-config.md)
 
-## [Brixx-Decision-Script Version 1.2.1](./brixx-decision-script/README.md)
+## [Brixx-Decision-Script Version 1.2.2](./brixx-decision-script/README.md)
 
 ## [Brixx-Process-Engine Version 1.5.0](./brixx-process-engine/README.md)
 
 -   ### [Brixx BPMN-Editor Version 1.7.0](./brixx-bpmn-editor/README.md)
--   ### [Brixx-Process-Script Version 1.3.1](./brixx-process-script/README.md)
+-   ### [Brixx-Process-Script Version 1.3.2](./brixx-process-script/README.md)
 
 
 #

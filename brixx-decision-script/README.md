@@ -2,7 +2,7 @@
 
 ### Package: `@brixx/decision-script`
 
-### Version: `1.2.1` (Release, 24.08.2024)
+### Version: `1.2.2` (Release, 24.10.2024)
 
 #
 
@@ -222,7 +222,7 @@ Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](h
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="hhttps://cdn.jsdelivr.net/npm/@brixx/decision-script@1.2.1/dist/index.min.js"></script>
+    <script src="hhttps://cdn.jsdelivr.net/npm/@brixx/decision-script@1.2.2/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
@@ -424,7 +424,7 @@ Dadurch wird das NPM-Package im Ordner `node_modules` installiert und die _npm_-
 
     {
         "dependencies": {
-            "@brixx/decision-script": "1.2.1"
+            "@brixx/decision-script": "1.2.2"
         }
     }
 
@@ -449,7 +449,7 @@ Abschließend entfernen das Caretzeichen ( `^` ) bei der Version wodurch nicht m
 
     ...
     "dependencies": {
-        "@brixx/decision-script": "1.2.1"
+        "@brixx/decision-script": "1.2.2"
     }
     ...
 
@@ -462,7 +462,7 @@ Komplette `package.json` Datei
             "start": "node brixx-check-age.js"
         },
         "dependencies": {
-            "@brixx/decision-script": "1.2.1"
+            "@brixx/decision-script": "1.2.2"
         }
     }
 
@@ -1351,7 +1351,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 
 Console output
 
-    BrixxDecisionTable version: 1.2.1
+    BrixxDecisionTable version: 1.2.2
 
 ## DecisionTable static class
 
@@ -1422,7 +1422,7 @@ Returns the DecisionTable version in semantic versioning format.
 
 Console output
 
-    DecisionTable version: 1.2.1
+    DecisionTable version: 1.2.2
 
 # <div id='downloads' /> Downloads
 
