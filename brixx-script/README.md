@@ -187,7 +187,12 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <!-- Load Brixx-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx.min.js"></script>
         <!-- Include the Brixx script component files for development -->
-        <script type="text/babel" src="./components/brixx-animal-list.js" data-type="module" data-presets="brixx"></script>
+        <script
+          type="text/babel"
+          src="./components/brixx-animal-list.js"
+          data-type="module"
+          data-presets="brixx"
+        ></script>
       </head>
 
       <body>
@@ -223,30 +228,30 @@ Der Brixx Web-Baustein `<brixx-animal-list>` im Browser-Fenster
 
 ## <div id='brixx-simple-element'/> Brixx Webkomponente `[brixx-simple-element]` erstellen
 
-Wie erstellen eine „einfache“ **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner `[brixx-simple-element]` und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als `package.json` im des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
+Wie erstellen eine einfache **Brixx Webkomponente** und verwenden im Beispiel die Webkomponente wieder als **HTML-Element**. Als erstes erstellen wir wieder einen Projektordner `[brixx-simple-element]` und darin die [Projekt-Konfiguration package.json](../docs/NPM-config.md) als Konfigurationsdatei für das Projekt. Dafür nutzen wir das Template [package.json.windows](../assets/downloads/package.json.windows) und speichern die Datei als `package.json` im des Projekts. Anschließend können wir die Datei _package.json_ in Visual Studio Code bearbeiten und für unsere Webkomponente anpassen. Das erleichtert den Einstig im Umgang mit der _package.json_ und den Abhängigkeiten durch die benötigten JavaScript-Packages.
 
 Brixx _package.json_ Template für Windows
 
     {
       "name": "{brixx-component-name}",
       "scripts": {
-        "build": "webpack --env package_name=%npm_package_name%",
-        "start": "webpack-dev-server --env package_name=%npm_package_name%"
+        "build": "webpack --env package_name=%{npm_package_name}%",
+        "start": "webpack-dev-server --env package_name=%{npm_package_name}%"
       },
       "dependencies": {
-        "@brixx/script": "{brixx-script-version}"
+        "@brixx/script": "{npm_package_version}"
       },
       "devDependencies": {
-        "@babel/core": "7.19.6",
-        "@babel/preset-env": "7.19.4",
-        "@babel/plugin-transform-react-jsx": "7.19.0",
-        "babel-loader": "8.2.5",
-        "css-loader": "6.7.1",
-        "html-webpack-plugin": "5.5.0",
-        "style-loader": "3.3.1",
-        "webpack": "5.74.0",
-        "webpack-cli": "4.10.0",
-        "webpack-dev-server": "4.11.1"
+        "@babel/core": "7.26.0",
+        "@babel/plugin-transform-react-jsx": "7.25.9",
+        "@babel/preset-env": "7.26.0",
+        "babel-loader": "9.2.1",
+        "css-loader": "7.1.2",
+        "html-webpack-plugin": "5.6.3",
+        "style-loader": "4.0.0",
+        "webpack": "5.97.1",
+        "webpack-cli": "5.1.4",
+        "webpack-dev-server": "5.2.0"
       }
     }
 
@@ -268,16 +273,16 @@ Zur Erstellung der Brixx Webkomponente wird _Webpack_ und _Babel_ verwendet. Das
 
     ...
     "devDependencies": {
-      "@babel/core": "7.19.6",
-      "@babel/preset-env": "7.19.4",
-      "@babel/plugin-transform-react-jsx": "7.19.0",
-      "babel-loader": "8.2.5",
-      "css-loader": "6.7.1",
-      "html-webpack-plugin": "5.5.0",
-      "style-loader": "3.3.1",
-      "webpack": "5.74.0",
-      "webpack-cli": "4.10.0",
-      "webpack-dev-server": "4.11.1"
+      "@babel/core": "7.26.0",
+      "@babel/plugin-transform-react-jsx": "7.25.9",
+      "@babel/preset-env": "7.26.0",
+      "babel-loader": "9.2.1",
+      "css-loader": "7.1.2",
+      "html-webpack-plugin": "5.6.3",
+      "style-loader": "4.0.0",
+      "webpack": "5.97.1",
+      "webpack-cli": "5.1.4",
+      "webpack-dev-server": "5.2.0"
     }
     ...
 
@@ -444,7 +449,7 @@ In der Regel wird nur die JavaScript-Datei (Brixx Script-Component) der Brixx We
 
 Auf dem ersten Blick scheint das Ergebnis im Ordner `[dist]` identisch zum Brixx Web-Baustein `[brixx-animal-list]` zu sein. Auch die Brixx Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Aber anders als beim Brixx Web-Baustein ist die Brixx Webkomponente **eigenstängig**, kann direkt ohne Brixx-Script Standalone als **Brixx Script-Component** in das HTML-Dokument importiert werden.
 
-Komplettes Beispiel [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip) herunterladen.
+Komplettes Beispiel [[brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip) mit `package.json` für Linux herunterladen.
 
 ### Brixx Webkomponente testen
 
@@ -519,6 +524,7 @@ Komplette Styles der CSS-Datei `index.css`
       text-decoration: none;
     }
 
+
 Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
@@ -552,7 +558,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Brixx HTML element &lt;<%= htmlWebpackPlugin.options.component %>&gt;</title>
-        <!-- Include the Brixx script component files -->
+        <!-- Include the Brixx script component files-->
       </head>
 
       <body>
@@ -560,7 +566,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <!-- Add the Brixx HTML element -->
         <<%= htmlWebpackPlugin.options.component %>></<%= htmlWebpackPlugin.options.component %>>
         <a href="https://github.com/BietSoft/brixx.docs/tree/main/brixx-script" target="_bank">[Learn more about Brixx-Script]</a>
-        <!-- Include the Brixx script component files -->
+        <!-- Include the Brixx script component files-->
       </body>
     </html>
 
@@ -608,7 +614,7 @@ In der Projekt-Konfiguration _package.json_ müssen auch nicht viele Anpassungen
 Bei den `devDependencies` ersetzen wir das Package `style-loader` gegen `mini-css-extract-plugin` wie für das Plugin in der Webpack Konfiguration.
 
     ...
-    "mini-css-extract-plugin": "2.7.2",
+    "mini-css-extract-plugin": "2.9.2",
     ...
 
 ### NPM-Packages installieren
@@ -643,7 +649,7 @@ Damit der Name der Brixx Wekomponente auch hält was er verspricht erweitern wir
 Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
 
     // Imports
-    import { Brixx } from '@brixx/script'
+    import { Brixx } from "@brixx/script";
 
     /**
     * Class Brixx Counter component
@@ -655,20 +661,20 @@ Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
       * @param {*} props - the Counter props
       */
       constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-          count: 0
-        }
+          count: 0,
+        };
       }
 
       /**
       * Brixx Counter component mounted
       */
       componentDidMount() {
-        Brixx.console.log('Brixx Counter Component mounted')
+        Brixx.console.log("Brixx Counter Component mounted");
 
         // Force render if component is mounted
-        this.forceUpdate()
+        this.forceUpdate();
       }
 
       /**
@@ -682,14 +688,14 @@ Komplette Brixx Class Component `Counter` in der JavaScript-Datei `Counter.js`
             <button
               onClick={(event) => {
                 this.setState({
-                  count: this.state.count + 1
-                })
+                  count: this.state.count + 1,
+                });
               }}
             >
               Increment
             </button>
           </div>
-        )
+        );
       }
     }
 
@@ -711,35 +717,35 @@ Anschließend können wir die Class Component direkt als HTML-Element `<Counter>
 Komplette Brixx Webkomponente in der JavaScript-Datei `./index.js`
 
     // Imports
-    import { Brixx } from '@brixx/script'
-    import Counter from './components/Counter'
+    import { Brixx } from "@brixx/script";
+    import Counter from "./components/Counter";
 
     // Styles
-    import './styles/bootstrap.min.css'
-    import './styles/index.css'
+    import "./styles/bootstrap.min.css";
+    import "./styles/index.css";
 
     // Create a Brixx JSX element
     const Greeting = ({ name }) => (
       <div>
         <h3>Hello {name}. Welcome to the our Brixx world!</h3>
       </div>
-    )
+    );
 
     // Create a Brixx default element
     Brixx.element = (
       <div>
         <hr />
         <h2>Brixx JSX element</h2>
-        <Greeting name={'Bob the Builder'} />
+        <Greeting name={"Bob the Builder"} />
         <hr />
         <h2>Brixx Component</h2>
         <Counter></Counter>
         <hr />
       </div>
-    )
+    );
 
     // Register the Brixx HTML element <brixx-complex-element>
-    Brixx.registerElement({ name: 'brixx-complex-element' })
+    Brixx.registerElement({ name: "brixx-complex-element" });
 
 ### Brixx Webkomponente bauen
 
@@ -771,7 +777,7 @@ Der Ordner `[dist]` entspricht der Live-Umgebung von einem Projektordner und wir
 
 Wir können nach dem **Build**-Prozess die JavaScript-Datei (Brixx Script-Component) der Brixx Webkomponente in Projekten verwenden und verteilen. Die Webkomponente ist eine JavaScript-Datei im Ordner `[components]` und wird als Brixx HTML-Element im HTML-Dokument verwendet. Die Brixx Webkomponente ist **eigenstängig** und kann direkt als **Brixx Script-Component** in das HTML-Dokument importiert und verwendet werden.
 
-Komplettes Beispiel [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip) herunterladen.
+Komplettes Beispiel [[brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip) mit `package.json` für Linux herunterladen.
 
 ### Brixx Webkomponente testen
 
@@ -846,13 +852,13 @@ Es wird empfohlen Brixx-Script Standalone nicht in einer Produktionsumgebung zu 
 
 ### Brixx-Script Package installieren
 
-    `npm i @brixx/script`
+    npm i @brixx/script
 
 ### Brixx-Script Package importieren
 
 Das Modul `Brixx` vom Package `@brixx/script` importieren.
 
-    `import { Brixx } from '@brixx/script'`
+    import { Brixx } from '@brixx/script'
 
 ## Brixx-Script Library
 
@@ -902,7 +908,7 @@ Renders a Brixx element. It is recommended to use the configuration object for t
     const instance = new Brixx()
     instance.render(
       <div>
-        <h1>Brixx component element</h1>
+        <h1>Brixx Component element</h1>
       </div>
     )
 
@@ -976,20 +982,20 @@ Renders a Brixx element. It is recommended to use the configuration object for t
 
 ### .componentFolder
 
-Returns the Brixx component folder. Brixx web components are usually created and expected in the Brixx component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
+Returns the Brixx Component folder. Brixx web components are usually created and expected in the Brixx Component folder. Use `setComponentFolder` to change the default component folder `[componentFolder='components']`
 
 `Readonly`
 
 **Returns**  
-`{String}` - Brixx component folder.
+`{String}` - Brixx Component folder.
 
 **Example**
 
-    console.log('Brixx component folder: ', Brixx.componentFolder)
+    console.log('Brixx Component folder: ', Brixx.componentFolder)
 
 Console output
 
-    Brixx component folder: components
+    Brixx Component folder: components
 
 ### .element
 
@@ -1156,10 +1162,10 @@ Run a Brixx app. It is a shortcut to create and render a Brixx instance and will
 
 ### .setComponentFolder(folder='components')
 
-Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx component folder.
+Set the Brixx Component folder. Brixx web components are usually created and expected in the Brixx Component folder.
 
 **Parameters**  
-`{String} [folder='components'] (optional)` - the Brixx component folder.
+`{String} [folder='components'] (optional)` - the Brixx Component folder.
 
 **Example**
 
@@ -1242,6 +1248,11 @@ The Brixx Dialog object. Opens a modal dialog window. Can also be used synchrono
 Opens a modal alert dialog window.
 
 **Parameters**  
+`{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+`{String} title` - the dialog window title.  
+`{String} text` - the dialog window text.  
+`{String} confirmButtonText` - the dialog window confirm button text.  
+`{Object} callBackFnConfirm` - the dialog confirm callback function.
 
 **Example**
 
@@ -1260,6 +1271,13 @@ Opens a modal alert dialog window.
 Opens a modal confirm dialog window.
 
 **Parameters**  
+`{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+`{String} title` - the dialog window title.  
+`{String} text` - the dialog window text.  
+`{String} confirmButtonText` - the dialog window confirm button text.  
+`{String} cancelButtonText` - the dialog window cancel button text.  
+`{Object} callBackFnConfirm` - the dialog confirm callback function.  
+`{Object} callBackFnCancel` - the dialog confirm callback function.
 
 **Example**
 
@@ -1277,6 +1295,15 @@ Opens a modal confirm dialog window.
     })
 
 ### Dialog.prompt
+`{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+`{String} title` - the dialog window title.  
+`{String} text` - the dialog window text.  
+`{String} [value=''] (optional)` - the dialog prompt value.  
+`{String} [placeholderInput=null] (optional)` - the dialog prompt value.  
+`{String} confirmButtonText` - the dialog window confirm button text.  
+`{String} cancelButtonText` - the dialog window cancel button text.  
+`{Object} callBackFnConfirm` - the dialog confirm callback function.  
+`{Object} callBackFnCancel` - the dialog confirm callback function.
 
 Opens a modal prompt dialog window.
 

@@ -1,6 +1,6 @@
 # Install Visual Studio Code for Windows
 
-Visual Studio Code is a free code editor, which runs on the macOS, Linux, and Windows operating systems. Getting up and running with Visual Studio Code is quick and easy. It is a small download so you can install in a matter of minutes. Let's see how to install Visual Studio Code for Windows.
+Visual Studio Code (VS Code) is a free code editor, which runs on the macOS, Linux, and Windows operating systems. Getting up and running with Visual Studio Code is quick and easy. It is a small download so you can install in a matter of minutes. Let's see how to install Visual Studio Code for Windows.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Alternatively, you can also download a [Zip archive](https://code.visualstudio.c
 
 ## User setup versus system setup
 
-VS Code provides both Windows user and system level setups. Installing the [user setup](https://go.microsoft.com/fwlink/?LinkID=534107) does not require Administrator privileges as the location will be under your user Local AppData (`LOCALAPPDATA`) folder. User setup also provides a smoother background update experience.
+Visual Studio Code provides both Windows user and system level setups. Installing the [user setup](https://go.microsoft.com/fwlink/?LinkID=534107) does not require Administrator privileges as the location will be under your user Local AppData (`LOCALAPPDATA`) folder. User setup also provides a smoother background update experience.
 
 The [system setup](https://go.microsoft.com/fwlink/?linkid=852157) requires elevation to Administrator privileges and will place the installation under Program Files. This also means that VS Code will be available to all users in the system.
 
@@ -22,7 +22,7 @@ See the [Download Visual Studio Code](https://code.visualstudio.com/download) pa
 
 ## 32-bit versions
 
-If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https://go.microsoft.com/fwlink/?LinkId=723965) and [Zip archive](https://go.microsoft.com/fwlink/?LinkID=733265) are available.
+If you need to run a 32-bit version of Visual Studio Code, both a 32-bit [Installer](https://go.microsoft.com/fwlink/?LinkId=723965) and [Zip archive](https://go.microsoft.com/fwlink/?LinkID=733265) are available.
 
 <img src="../assets/images/vscode-start.webp" style="margin-bottom: -5px; width: 600px;" />
 
