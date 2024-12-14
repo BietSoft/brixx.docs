@@ -81,33 +81,51 @@ Anschließend erstellen wir ein Standard `Brixx.element` mit der Brixx Entscheid
 
     // Create a Brixx default element
     Brixx.element = (
-        <div>
-            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
-            <DecisionTable>
-                <ul>
-                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
-                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
-                    <li>Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i></li>
-                    <li>Teens (13 years or older) - <i>https://www.youtube.com/</i></li>
-                </ul>
-                <Input name={"age"} type={"number"}>
-                    <div>Please enter age</div>
-                    <Field />
-                </Input>
-                <Output name={"info"}>
-                    <Field readonly />
-                </Output>
-                <Output name={"url"}>
-                    <Link />
-                </Output>
-                <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
-                <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
-                <Rule age={"< 5"} priority={20} info={"Unfortunately too young!"} />
-                <Rule age={">= 13"} url={"https://www.youtube.com/"} />
-                <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
-                <Check button label={"Check age"} action={checkDecisionTable} />
-            </DecisionTable>
-        </div>
+    <div>
+        <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+        <DecisionTable>
+        <ul>
+            <li>
+            Baby (0 years old) - <i>It's still a baby!</i>
+            </li>
+            <li>
+            Preschool (under 5 years old) - <i>Unfortunately too young!</i>
+            </li>
+            <li>
+            Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i>
+            </li>
+            <li>
+            Teens (13 years or older) - <i>https://www.youtube.com/</i>
+            </li>
+        </ul>
+        <Input name={"age"} type={"number"}>
+            <div>Please enter age</div>
+            <Field />
+        </Input>
+        <Output name={"info"}>
+            <Field readonly />
+        </Output>
+        <Output name={"url"}>
+            <Link />
+        </Output>
+        <Rule
+            age={""}
+            priority={30}
+            info={"Please enter a valid age!"}
+            url={"https://github.com/BietSoft/brixx.docs/"}
+        />
+        <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
+        <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+        <Rule age={">= 13"} url={"https://www.youtube.com/"} />
+        <Rule
+            age={"< 13"}
+            priority={10}
+            info={"Internet Safety for Kids"}
+            url={"https://www.youtube.com/kids/"}
+        />
+        <Check button label={"Check age"} action={checkDecisionTable} />
+        </DecisionTable>
+    </div>
     );
 
 Mit Brixx-Decision-Script werden HTML-Elemente zur Erstellung für eine Brixx Entscheidungstabelle im HTML-Dokument zur Verfügung gestellt, und wir erstellen die Brixx Entscheidungstabelle mit dem HTML-Element `<DecisionTable>`.
@@ -147,11 +165,21 @@ Ausgabefelder sind optional und müssen nicht verwendet werden. Datenausgaben k�
 Das Herzstück der Brixx Entscheidungstabelle sind die **Regeln** (rules). Eine Regel wird mit dem HTML-Element `<Rule>` erstellt und wie bei anderen auf [DMN (Decision Model Notation)](https://en.wikipedia.org/wiki/Decision_Model_and_Notation) basierenden Systemen verwendet. Dabei werden die Bedingungen für die Dateneingabe, im Beispiel für das Eingabefeld _age_, sowie die Ergebnisswerte für die Ausgabefelder _info_ und _url_ erstellt. Dabei müssen nicht für jede Regel alle Eingabe- oder Ausgabefelder verwendet werden.
 
     ...
-    <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
+    <Rule
+        age={""}
+        priority={30}
+        info={"Please enter a valid age!"}
+        url={"https://github.com/BietSoft/brixx.docs/"}
+    />
     <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
-    <Rule age={"< 5"} priority={20} info={"Unfortunately too young!"} />
+    <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
     <Rule age={">= 13"} url={"https://www.youtube.com/"} />
-    <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
+    <Rule
+        age={"< 13"}
+        priority={10}
+        info={"Internet Safety for Kids"}
+        url={"https://www.youtube.com/kids/"}
+    />
     ...
 
 Für die Entscheidungstabelle können beliebig viele Regeln definiert werden und bei „überschneidenden” Regeln können Prioritäten mit der optionalen Eigenschaft `priority` vergeben werden. Das ist notwendig da wir keine `hitPolicy` definiert haben und standardmäßig `Priority` verwendet wird. Das bedeutet, die erste gefundene passende Regel unter Berücksichtigung der Prioritäten wird ausgegeben (siehe [Brixx-Decision-Script Referenz](#reference)).
@@ -173,42 +201,61 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
     // Check decision table callback function (optional)
     const checkDecisionTable = (output) => {
-        console.log("Output:", output);
-    }
+    console.log("Output:", output);
+    };
 
     // Create a Brixx default element
     Brixx.element = (
-        <div>
-            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
-            <DecisionTable>
-                <ul>
-                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
-                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
-                    <li>Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i></li>
-                    <li>Teens (13 years or older) - <i>https://www.youtube.com/</i></li>
-                </ul>
-                <Input name={"age"} type={"number"}>
-                    <div>Please enter age</div>
-                    <Field />
-                </Input>
-                <Output name={"info"}>
-                    <Field readonly />
-                </Output>
-                <Output name={"url"}>
-                    <Link />
-                </Output>
-                <Rule age={""} priority={30} info={"Please enter a valid age!"} url={"https://github.com/BietSoft/brixx.docs/"} />
-                <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
-                <Rule age={"< 5"} priority={20} info={"Unfortunately too young!"} />
-                <Rule age={">= 13"} url={"https://www.youtube.com/"} />
-                <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
-                <Check button label={"Check age"} action={checkDecisionTable} />
-            </DecisionTable>
-        </div>
+    <div>
+        <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+        <DecisionTable>
+        <ul>
+            <li>
+            Baby (0 years old) - <i>It's still a baby!</i>
+            </li>
+            <li>
+            Preschool (under 5 years old) - <i>Unfortunately too young!</i>
+            </li>
+            <li>
+            Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i>
+            </li>
+            <li>
+            Teens (13 years or older) - <i>https://www.youtube.com/</i>
+            </li>
+        </ul>
+        <Input name={"age"} type={"number"}>
+            <div>Please enter age</div>
+            <Field />
+        </Input>
+        <Output name={"info"}>
+            <Field readonly />
+        </Output>
+        <Output name={"url"}>
+            <Link />
+        </Output>
+        <Rule
+            age={""}
+            priority={30}
+            info={"Please enter a valid age!"}
+            url={"https://github.com/BietSoft/brixx.docs/"}
+        />
+        <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
+        <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+        <Rule age={">= 13"} url={"https://www.youtube.com/"} />
+        <Rule
+            age={"< 13"}
+            priority={10}
+            info={"Internet Safety for Kids"}
+            url={"https://www.youtube.com/kids/"}
+        />
+        <Check button label={"Check age"} action={checkDecisionTable} />
+        </DecisionTable>
+    </div>
     );
 
     // Register a Brixx HTML-Element <brixx-check-age>
     Brixx.registerElement({ name: "check-age" });
+
 
 ### Brixx Web-Baustein verwenden
 
@@ -222,14 +269,19 @@ Brixx-Decision-Script kann von CDN-Systemen wie [jsDelivr - A free global CDN](h
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Load Brixx-Decision-Script from jsDelivr CDN -->
-    <script src="hhttps://cdn.jsdelivr.net/npm/@brixx/decision-script@1.2.2/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brixx/decision-script@1.2.2/dist/index.min.js"></script>
 
 > **Info:** Der import von _jsDelivr_ darf mit Ausnahme verwendet werden, auch wenn die Lizenzbestimmungen nicht eingehalten werden.
 
 Der Brixx Web-Baustein `[brixx-check-age]` in der Brixx Script-Component Datei `./components/brixx-check-age.js"` wird mit einen HTML-`<script>`-Element im HTML-Dokument eingefügt.
 
     <!-- Include the Brixx script component files for development -->
-    <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
+    <script
+      type="text/babel"
+      src="./components/brixx-check-age.js"
+      data-type="module"
+      data-presets="brixx"
+    ></script>
 
 Für Brixx-Decision-Script Standalone verwenden wir Babel mit `type="text/babel"` um die Brixx Webkomponente in den unterschiedlichen Browsern nutzen zu können. Dann werden die Eigenschaften `data-type="module"` und `data-presets="brixx"` festgelegt, und der Brixx Web-Baustein kann als HTML-Element `<brixx-check-age>` verwendet werden. Die Eigenschaft _data-type_ ist optional und wird zum Import von ECMAScript 2015+ (ES6) Modulen benötigt. Zur Verwendung als HTML-Element werden keine weiteren Programmierkentnisse benötigt.
 
@@ -248,7 +300,12 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <!-- Load Brixx-Decision-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
         <!-- Include the Brixx script component files for development -->
-        <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
+        <script
+        type="text/babel"
+        src="./components/brixx-check-age.js"
+        data-type="module"
+        data-presets="brixx"
+        ></script>
     </head>
 
     <body>
@@ -291,11 +348,14 @@ Wie erweitern die Brixx Webkomponente `[brixx-check-age]` mit HTML Styles. Dafü
 Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./styles` im Projektordner. Wir nutzen [Bootstrap](https://getbootstrap.com/) und fügen die CSS-Datei `bootstrap.min.css` vom Cloudflare CDN-(Content Delivery Network)-Server mit einem HTML Stylesheet `<link>` im HTML-Dokument ein.
 
     <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"></head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
 Danach erstellen eine CSS-Datei `brixx-check-age.css` im Ordner `[styles]` für die Brixx Entscheidungstabelle und fügen die CSS-Datei im HTML-Dokument ein
 
-    <link href="./styles/brixx-check-age.css" rel="stylesheet"></head>
+    <link href="./styles/brixx-check-age.css" rel="stylesheet">
 
 Komplette Styles der CSS-Datei `brixx-check-age.css`
 
@@ -331,23 +391,31 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
 
     <!DOCTYPE html>
     <html>
-        <head>
-            <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-            <!-- Load Brixx-Decision-Script standalone for development -->
-            <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
-            <!-- Include the Brixx script component files for development -->
-            <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
-            <link href="./styles/brixx-check-age.css" rel="stylesheet">
-        </head>
+    <head>
+        <!-- Load Bootstrap styles from cdnjs.cloudflare.com -->
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <!-- Load Brixx-Decision-Script standalone for development -->
+        <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
+        <!-- Include the Brixx script component files for development -->
+        <script
+        type="text/babel"
+        src="./components/brixx-check-age.js"
+        data-type="module"
+        data-presets="brixx"
+        ></script>
+        <link href="./styles/brixx-check-age.css" rel="stylesheet" />
+    </head>
 
-        <body>
-            <!-- Add the Brixx HTML element -->
-            <brixx-check-age></brixx-check-age>
-        </body>
+    <body>
+        <!-- Add the Brixx HTML element -->
+        <brixx-check-age></brixx-check-age>
+    </body>
     </html>
 
-Komplettes Beispiel [[brixx-check-age-stles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip) herunterladen.
+Komplettes Beispiel [[brixx-check-age-styles] (ZIP-Archiv)](../assets/downloads/brixx-check-age-styles.zip) herunterladen.
 
 ### Brixx Webkomponente testen
 
