@@ -359,7 +359,7 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-node' /> Node.js Application `[brixx-check-age]` erstellen
 
-Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir für das Beispiel den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir als „Ersatz” die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
+Um die Brixx Entscheidungstabelle aus dem Beispiel vorher für eine Node.js (JavaScript) app zu verwenden erstellen wir für das Beispiel den Projektordner `[brixx-check-age-node]` und weil wir mit JavaScript keine HTML-Elemete zur Definition der Entscheidungstabelle verwenden können erstellen wir die JSON-**Definitionsdatei** (Brixx decision table definition) `brixx-check-age.json` im Projektordner.
 
 Komplette JSON-Definitionsdatei `brixx_check_age.json`
 
@@ -494,7 +494,7 @@ Danach erstellen wir ein Objekt (Instanz) von `BrixxDecisionTable` mit dem Insta
     // Create a BrixxDecisionTable instance
     const table = new BrixxDecisionTable({ file: "./brixx_check_age.json" })
 
-Die einzelnen Einträge `input` der Liste `input_data` werden mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert, und mit einer _JavaScript Array map()_ nacheinander in der Browserkonsole mit `console.log(output)` ausgegeben.
+Die einzelnen Einträge `input` der Liste `input_data` werden mit `const output = table.check(input)` mit der Brixx Entscheidungstabelle überprüft, in der Konstanten `output` gespeichert, und mit einer _JavaScript Array map()_ nacheinander in der Browserkonsole mit `console.log(output, "\n");` ausgegeben.
 
     // Imports
     const BrixxDecisionTable = require("@brixx/decision-script/node").default
@@ -502,9 +502,11 @@ Die einzelnen Einträge `input` der Liste `input_data` werden mit `const output 
     // Check the decision table input data list
     input_data.map((input) => {
         // Get the output from decision table input data
-        const output = table.check(input)
+        const output = table.check(input);
         // Prints the output to console
-        console.log(output)
+        console.log("Check result");
+        console.log("------------");
+        console.log(output, "\n");
     })
 
 Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
@@ -530,9 +532,11 @@ Komplette Node.js Application in der JavaScript-Datei `./brixx-check-age.js`
     // Check the decision table input data list
     input_data.map((input) => {
         // Get the output from decision table input data
-        const output = table.check(input)
+        const output = table.check(input);
         // Prints the output to console
-        console.log(output)
+        console.log("Check result");
+        console.log("------------");
+        console.log(output, "\n");
     })
 
 Komplettes Beispiel [[brixx-check-age-node] (ZIP-Archiv)](../assets/downloads/brixx-check-age-node.zip) herunterladen.
