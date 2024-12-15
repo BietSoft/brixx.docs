@@ -22,9 +22,9 @@ Brixx-Script ist eine kostenlose JavaScript-Bibliothek zum Erstellen unabhängig
 -   [Erste Schritte](#getstarted)
     -   [Brixx Web-Baustein [brixx-animal-list] erstellen](#brixx-animal-list)
 -   [Brixx-Script Tutorial](#tutorial)
-    -   [Projekt-Konfiguration package.json](../docs/NPM-config.md)
+    -   [Projekt-Konfiguration [package.json]](../docs/NPM-config.md)
     -   [NPM-Packages installieren](../docs/NPM-install.md)
-    -   [Webpack-Konfiguration webpack.config.js](../docs/Webpack-config.md)
+    -   [Webpack-Konfiguration [webpack.config.js]](../docs/Webpack-config.md)
     -   [Brixx Web-Baustein [brixx-simple-element] erstellen](#brixx-simple-element)
     -   [Brixx Web-Baustein [brixx-complex-element] erstellen](#brixx-complex-element)
 -   [Brixx-Script Referenz](#reference)
@@ -1295,6 +1295,10 @@ Opens a modal confirm dialog window.
     })
 
 ### Dialog.prompt
+
+Opens a modal prompt dialog window.
+
+**Parameters**  
 `{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
 `{String} title` - the dialog window title.  
 `{String} text` - the dialog window text.  
@@ -1305,9 +1309,8 @@ Opens a modal confirm dialog window.
 `{Object} callBackFnConfirm` - the dialog confirm callback function.  
 `{Object} callBackFnCancel` - the dialog confirm callback function.
 
-Opens a modal prompt dialog window.
-
-**Parameters**  
+**Returns**  
+`{String}` - Dialog callBackFnConfirm value.
 
 **Example**
 

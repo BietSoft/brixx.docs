@@ -1,6 +1,6 @@
-# Projekt-Konfiguration package.json
+# Projekt-Konfiguration [package.json]
 
-Die `package.json` ist die **Konfigurationsdatei** in einem modernen JavaScript Projekt mit **Node.js**, die sich in der Regel im Stammverzeichnis (`root`) des Projekts befindent.
+Die `package.json` ist die **Konfigurationsdatei** in einem modernen, State-of-the-art JavaScript Projekt mit **Node.js**, die sich in der Regel im `root` (Stammverzeichnis) des Projekts befindent.
 
 Beispiel für eine _package.json_ Datei
 
@@ -37,19 +37,19 @@ Beispiel für eine _package.json_ Datei
       }
     }
 
-## Wofür wird die package.json benötigt?
+## Wofür wird die [package.json] benötigt?
 
-Die _package.json_ ist der zentrale Ort im JavaScript Projekt, an dem man das Projekt konfigurieren kann und die Abhängigkeiten des Projekts verwaltet werden. Sie wird für das Package-Handling mit **npm** benötigt, um ein Projekt starten, Scripte ausführen, Abhängigkeiten installieren, in der npm-Registry veröffentlichen und andere nützliche Aufgaben auszuführen zu können. Die _package.json_ erfüllt mehrere Rollen im Projekt, von denen einige nur für die in der npm-Registry veröffentlichten Packages gelten.
+Die _package.json_ ist der zentrale Ort im JavaScript Projekt, an dem man das Projekt konfigurieren kann und die Abhängigkeiten des Projekts verwaltet werden. Sie wird für das Package-handling mit **npm** benötigt, um ein Projekt starten, Scripte ausführen, Abhängigkeiten zu installieren, in der npm-Registry zu veröffentlichen und andere nützliche Aufgaben. Die _package.json_ erfüllt mehrere Rollen im Projekt, von denen einige nur für die in der npm-Registry veröffentlichten Packages gelten.
 
 > Ein Projekt muss eine _package.json_ enthalten, bevor Packages mit npm installiert werden können.
 
-## Wichtige Felder in der package.json
+## Wichtige Felder in der [package.json]
 
 Wir sehen uns die wichtigsten Felder (Eigenschaften) der _package.json_ an. Einige sind für die Veröffentlichung in der npm-Registry erforderlich, während andere helfen, die Anwendung auszuführen oder Abhängigkeiten zu installieren. Es gibt mehr Felder als wir behandeln, sind aber die wesentlichen die man kennen sollte.
 
     name: "brixx-simple-element"
 
-Das Feld `name` definiert den Namen des Package. Beim Veröffentlichen in der npm-Registry ist das der Name, unter dem das Package aufgelistet wird. Der Name darf nicht mehr als 214 Zeichen lang sein, nur Kleinbuchstaben enthalten und muss URL-sicher sein (Bindestriche und Unterstriche sind erlaubt, aber keine Leerzeichen oder andere Zeichen, die in URLs nicht erlaubt sind).
+Das Feld `name` definiert den Namen des Package. Beim Veröffentlichen in der npm-Registry ist das der Name, unter dem das Package aufgelistet wird. Der Name darf nicht mehr als 214 Zeichen lang sein, nur Kleinbuchstaben enthalten und muss URL-sicher sein. Bindestriche und Unterstriche sind erlaubt, aber keine Leerzeichen oder andere Zeichen, die in einer URL nicht erlaubt sind.
 
     "version": "1.0.0"
 
@@ -63,7 +63,7 @@ Das Feld `description` wird von der npm-Registry für veröffentlichte Packages 
 
     "main": "index.js"
 
-Das Felt `main` ist eine funktionale Eigenschaft der _package.json_. Es definiert den Einstiegspunkt in das Projekt und ist üblicherweise die Datei, die zum Starten des Projekts verwendet wird. In der Regel die Datei `index.js` im Stammverzeichnis des Projekts, kann aber jede Datei sein.
+Das Feld `main` ist eine funktionale Eigenschaft der _package.json_. Es definiert den Einstiegspunkt in das Projekt und ist üblicherweise die Datei, die zum Starten des Projekts verwendet wird. In der Regel die Datei `index.js` im Stammverzeichnis des Projekts, kann aber jede Datei sein.
 
     "scripts": {
       "build": "webpack --env package_name=%npm_package_name%",
@@ -117,7 +117,7 @@ Mit dem Feld `dependencies` werden die Abhängigkeiten im Projekt aufgelistet, i
       "css-loader": "6.7.1",
       "html-webpack-plugin": "5.5.0",
       "style-loader": "3.3.1",
-      "webpack": "5.74.0",
+      "webpack": "5.90.2",
       "webpack-cli": "4.10.0",
       "webpack-dev-server": "4.11.1"
     }
@@ -126,13 +126,13 @@ Mit dem Feld `devDependencies` kann man angeben welche Abhängigkeiten für die 
 
 > Um ein Package als `devDependency` zu installieren, verwendet man `npm install --save-dev <package>`
 
-## Verwalten der package.json
+## Verwalten der [package.json]
 
 Eine _package.json_ Datei muss im gültigen **JSON-Format** sein. Das bedeutet, dass fehlende Kommas, nicht geschlossene Anführungszeichen oder andere Formatierungsfehler npm daran hindern, mit der _package.json_ zu interagieren, und beim nächsten Ausführen eines npm-Befehls wird ein Fehler angezeigt.
 
 NPM-Packages werden mit den npm-Befehlen `npm install`, `npm uninstall` und `npm update` verwaltet, so dass die Datei _package.json_ und der Ordner `[node_modules]` synchron gehalten werden. Wenn man eine Abhängigkeit manuell hinzufüget, muss man `npm install` ausführen bevor man die Abhängigkeit im Projekt verwenden kann.
 
-> Packages für die Entwicklung können aternativ im „globalen“ Ordner `[node_modules]` mit `npm install <package> -g` installiert werden, müssen dann nicht im Projekt bereitgestellt werden, und sind in allen Projekten verfügbar. Das ist aber nicht empfohlen, wenn man mehreren Entwicklern an einem Projekt arbeiten. Das kann auch zu Konflikten in Projekten kommen die eine spezielle Package Version benötigen. Es ist kein Nachteil Packages für ein Projekte bereitzustellen. Zuerst werden Packages im Projektordner gesucht, werden diese nicht gefunden wird im globalen Package Ordner gesucht.
+> Packages für die Entwicklung können aternativ im globalen System-Ordner `[node_modules]` mit `npm install <package> -g` installiert werden, müssen dann nicht im Projekt bereitgestellt werden, und sind in allen Projekten verfügbar. Das ist aber nicht empfohlen, wenn man mehreren Entwicklern an einem Projekt arbeiten. Das kann auch zu Konflikten in Projekten kommen die eine spezielle Package Version benötigen. Es ist kein Nachteil Packages für ein Projekte bereitzustellen. Zuerst werden Packages im Projektordner gesucht, werden diese nicht gefunden wird im globalen Package Ordner gesucht.
 
 Mit Hilfe von `npm init` zum Erstellen der _package.json_ kann man sicherstellen, dass Sie eine gültige _package.json_ Datei erstellt wird. Dazu erstellen als Beispiel einen neuen Ordner `[brixx-npm-sample]` und wechseln in die Eingabeaufforderung, oder einer anderen Terminal Anwendung in das erstellte Verzeichnis und starten `npm init`
 

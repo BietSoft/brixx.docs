@@ -621,7 +621,7 @@ Die Node.js Application `[brixx-check-age]` wird anschließend in der Browserkon
 
 ## <div id='brixx-check-age-class' /> JavaScript Web-Application [brixx-check-age] erstellen
 
-Wir können auch beide „Welten” verbinden und beliebig kombinieren. Dabei ist es sogar möglich dynamisch neue Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei in der Datei `brixx_check_age.json` aus dem Beispiel vorher. Danach erstellen wir auch hier wieder einen Ordner `[components]`, darin die Brixx Script-Component Datei `brixx-check-age.js`, und kopieren die HTML-Datei `index.html` aus dem Beispiel für den Brixx Web-Baustein. Die Projekt-Ordnerstruktur sieht dann wie folgt aus.
+Wir können auch beide Welten verbinden und beliebig kombinieren. Dabei ist es auch möglich dynamisch neue Regeln durch vorhandene Regeln zu erzeugen und bietet dadurch nahezu unbegrenzte Möglichkeiten. Wir erstellen eine JavaScript Web-Application mit einem Brixx Web-Baustein im Projektordner `[brixx-check-age-class]` und verwenden die JSON-Definitionsdatei in der Datei `brixx_check_age.json` aus dem Beispiel vorher. Danach erstellen wir auch hier wieder einen Ordner `[components]`, darin die Brixx Script-Component Datei `brixx-check-age.js`, und kopieren die HTML-Datei `index.html` aus dem Beispiel für den Brixx Web-Baustein. Die Projekt-Ordnerstruktur sieht dann wie folgt aus.
 
     brixx-check-age-slass/
         ├── components/
@@ -634,21 +634,21 @@ Von der Definitionsdatei verwenden wir die Beschreibung, Hit-Policy und zwei „
 Komplette JSON-Definitionsdatei `brixx_check_age.json`
 
     {
-        "description": "Check age",
-        "hitPolicy": "Priority",
-        "rules": {
-            "No entry": {
-                "age": "",
-                "info": "Please enter a valid age!",
-                "url": "https://github.com/BietSoft/brixx.docs/",
-                "priority": 30
-            },
-            "Baby": {
-                "age": "0",
-                "info": "It's is still a baby!",
-                "priority": 40
-            }
+    "description": "Check age",
+    "hitPolicy": "Priority",
+    "rules": {
+        "No entry": {
+        "age": "",
+        "info": "Please enter a valid age!",
+        "url": "https://github.com/BietSoft/brixx.docs/",
+        "priority": 30
+        },
+        "Baby": {
+        "age": "0",
+        "info": "It's is still a baby!",
+        "priority": 40
         }
+    }
     }
 
 Wir erstellen die Web-Application mit einem Brixx Web-Baustein in der Brixx Script-Component Datei `brixx-check-age.js` und importieren zuerst die JSON-Definitionsdatei in die Variable `DecisionTableDefinition`.
@@ -683,32 +683,45 @@ Anschließend erstellen wir die Brixx Entscheidungstabelle als Brixx Standard-El
 
     // Create a Brixx default element
     Brixx.element = (
-        <div>
-            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
-            <DecisionTable definition={DecisionTableDefinition}>
-                <ul>
-                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
-                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
-                    <li>Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i></li>
-                    <li>Teens (13 years or older) - <i>https://www.youtube.com/</i></li>
-                </ul>
-                <Input name={"age"} type={"number"}>
-                    <div>Please enter age</div>
-                    <Field />
-                </Input>
-                <Output name={"info"}>
-                    <Field readonly />
-                </Output>
-                <Output name={"url"}>
-                    <Link />
-                </Output>
-                <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
-                <Rule age={">= 13"} url={"https://www.youtube.com/"} />
-                <Rule age={"< 13"} priority={10} info={"Internet Safety for Kids"} url={"https://www.youtube.com/kids/"} />
-                <Check button label={"Check age"} />
-            </DecisionTable>
-        </div >
-    )
+    <div>
+        <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+        <DecisionTable definition={DecisionTableDefinition}>
+        <ul>
+            <li>
+            Baby (0 years old) - <i>It's still a baby!</i>
+            </li>
+            <li>
+            Preschool (under 5 years old) - <i>Unfortunately too young!</i>
+            </li>
+            <li>
+            Kids (under 13 years old) - <i>https://www.youtube.com/kids/</i>
+            </li>
+            <li>
+            Teens (13 years or older) - <i>https://www.youtube.com/</i>
+            </li>
+        </ul>
+        <Input name={"age"} type={"number"}>
+            <div>Please enter age</div>
+            <Field />
+        </Input>
+        <Output name={"info"}>
+            <Field readonly />
+        </Output>
+        <Output name={"url"}>
+            <Link />
+        </Output>
+        <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+        <Rule age={">= 13"} url={"https://www.youtube.com/"} />
+        <Rule
+            age={"< 13"}
+            priority={10}
+            info={"Internet Safety for Kids"}
+            url={"https://www.youtube.com/kids/"}
+        />
+        <Check button label={"Check age"} />
+        </DecisionTable>
+    </div>
+    );
 
 ### JavaScript Web-Application verwenden
 
@@ -722,7 +735,12 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
         <!-- Load Brixx-Decision-Script standalone for development -->
         <script src="https://brixx.it/@brixx/standalone/brixx-decision.min.js"></script>
         <!-- Include the Brixx script component files for development -->
-        <script type="text/babel" src="./components/brixx-check-age.js" data-type="module" data-presets="brixx"></script>
+        <script
+        type="text/babel"
+        src="./components/brixx-check-age.js"
+        data-type="module"
+        data-presets="brixx"
+        ></script>
     </head>
 
     <body>
@@ -749,51 +767,69 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./components/
 
     // Brixx JSX kids element
     const kids_element = (
-        <div>
-            <h5>[Kids area]</h5>
-            <h6><a href="https://www.youtube.com/kids/" target="_blank">Go to YouTube for Kids ...</a></h6>
-        </div>
-    )
+    <div>
+        <h5>[Kids area]</h5>
+        <h6>
+        <a href="https://www.youtube.com/kids/" target="_blank">
+            Go to YouTube for Kids ...
+        </a>
+        </h6>
+    </div>
+    );
 
     // Brixx JSX teens element
     const teens_element = (
-        <div>
-            <h5>[Teens area]</h5>
-            <h6><a href="https://www.youtube.com/kids/" target="_blank">Go to YouTube ...</a></h6>
-        </div>
-    )
+    <div>
+        <h5>[Teens area]</h5>
+        <h6>
+        <a href="https://www.youtube.com/kids/" target="_blank">
+            Go to YouTube ...
+        </a>
+        </h6>
+    </div>
+    );
 
     // Create a Brixx default element
     Brixx.element = (
-        <div>
-            <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
-            <DecisionTable>
-                <ul>
-                    <li>Baby (0 years old) - <i>It's still a baby!</i></li>
-                    <li>Preschool (under 5 years old) - <i>Unfortunately too young!</i></li>
-                    <li>Kids (under 13 years old) - <i>Show [Kids area] in component section!</i></li>
-                    <li>Teens (13 years or older) - <i>Show [Teens area] in component section!</i></li>
-                </ul>
-                <hr />
-                <Output component name={"element"}>
-                    <i>Decision table component section ...</i>
-                </Output>
-                <hr />
-                <Input name={"age"} type={"number"}>
-                    <div>Please enter age</div>
-                    <Field />
-                </Input>
-                <Output name={"info"}>
-                    <Field readonly />
-                </Output>
-                <Rule age={""} priority={30} info={"Please enter a valid age!"} />
-                <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
-                <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
-                <Rule age={">= 13"} element={teens_element} info={""} />
-                <Rule age={"< 13"} priority={10} element={kids_element} info={""} />
-                <Check button label={"Check age"} />
-            </DecisionTable>
-        </div>
+    <div>
+        <p>HTML element &lt;brixx-check-age&gt; created with Brixx-Script.</p>
+        <DecisionTable>
+        <ul>
+            <li>
+            Baby (0 years old) - <i>It's still a baby!</i>
+            </li>
+            <li>
+            Preschool (under 5 years old) - <i>Unfortunately too young!</i>
+            </li>
+            <li>
+            Kids (under 13 years old) -{" "}
+            <i>Show [Kids area] in component section!</i>
+            </li>
+            <li>
+            Teens (13 years or older) -{" "}
+            <i>Show [Teens area] in component section!</i>
+            </li>
+        </ul>
+        <hr />
+        <Output component name={"element"}>
+            <i>Decision table component section ...</i>
+        </Output>
+        <hr />
+        <Input name={"age"} type={"number"}>
+            <div>Please enter age</div>
+            <Field />
+        </Input>
+        <Output name={"info"}>
+            <Field readonly />
+        </Output>
+        <Rule age={""} priority={30} info={"Please enter a valid age!"} />
+        <Rule age={"0"} priority={40} info={"It's is still a baby!"} />
+        <Rule age={"< 6"} priority={20} info={"Unfortunately too young!"} />
+        <Rule age={">= 13"} element={teens_element} info={""} />
+        <Rule age={"< 13"} priority={10} element={kids_element} info={""} />
+        <Check button label={"Check age"} />
+        </DecisionTable>
+    </div>
     );
 
     // Register a Brixx HTML-Element <brixx-check-age>

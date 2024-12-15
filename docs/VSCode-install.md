@@ -56,8 +56,8 @@ Genauso einfach kann man in Visual Studio Code eine Erweiterung auch wieder dein
 
 Es gibt ein reichhaltiges Angebot nützlicher Erweiterungen für Visual Studio Code die einem die Arbeit bei der Entwicklung erleichten. Für die Erstellung von Brixx Webkomponenten sind folgende Erweiterungen nahezu unverzichtbar.
 
--   [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)  
-    Ein lokaler Webserver (Entwicklungsserver) mit Auto Reload (Live reload) Funktion bei Änderungen am Quellcode. Der _Live Server_ ermöglicht es bei der Entwicklung das Verhalten der Brixx Webkomponente in einer Browserumgebung zu testen, und verhindert die _blocked by CORS policy_ ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
+-   [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)  (Entwicklungsserver)  
+    Ein einfacher lokaler Webserver mit Auto Reload (Live reload) Funktion bei Änderungen am Quellcode. Der _Live Server_ ermöglicht es bei der Entwicklung das Verhalten der Brixx Webkomponente in einer Browserumgebung zu testen, und verhindert die _blocked by CORS policy_ ([Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) beim Zugriff vom Browser auf lokale Ressourcen in der Testumgebung.
 
 -   [NPM-Scripts](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.vscode-npm-scripts) (Visual Studio Code bis Version 1.22)  
     Anzeigen und Ausführen von NPM-Scripts aus der Explorer-Ansicht. Seit der Version 1.23 steht in Visual Studio Code in der Explorer-Ansicht bereits ein integrierter **NPM Script Explorer** zur Verfügung und eine zusätzliche Installation der Erweiterung _NPM-Scripts_ wird dann nicht mehr benötigt.
