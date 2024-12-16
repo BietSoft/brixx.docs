@@ -57,17 +57,19 @@ Nach der Installation steht die Brixx Prozess Engine standardmäßig unter `http
 Brixx-Process-Engine im Windows Terminal (PowerShell)
 
 ### Brixx BPMN-Editor
-Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden dazu das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken und veröffentlichen das Prozessmodell als Geschäftsprozess (LoginProcess) in der Brixx Prozess Engine.
+Anschließend erstellen wir mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) einen Benutzer-Login Prozess und verwenden dazu das BPMN-Prozessmodell aus der Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im BPMN-Editor indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken, und veröffentlichen den Benutzer-Login Prozess (Geschäftsprozess) in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Hier können wir jetzt das aktuelle BPMN-Modell einfach in der Brixx Process Engine veröffentlichen indem wir im Abschnitt „Veröffentlichungseigenschaften“ auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken. Dazu benötigt man die entsprechenden User Credentials der Brixx Process Engine. Diese sind standardmäßig in der nicht registrierten Version `Username=demo` und `Password=demo` und können in den Veröffentlichungseigenschaften geändert werden.
+Wir können jetzt das aktuelle BPMN-Modell einfach in der Brixx Process Engine veröffentlichen indem wir im Abschnitt „Veröffentlichungseigenschaften“ auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen nur die entsprechenden Zugangsdaten (Credentials) der verwendeten Brixx Process Engine. 
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 200px;" />
 
 Veröffentlichungseigenschaften
+
+> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Demo-Benutzer mit den Credentials *Username* `demo` und *Password* `demo`.
 
 Die Details im Benutzer-Login Prozess werden wir später betrachten, vorher erstellen wir zum Testen noch eine Prozessinstanz.
 
