@@ -57,31 +57,31 @@ Nach der Installation steht die Brixx Prozess Engine standardmäßig unter `http
 Brixx-Process-Engine im Windows Terminal (PowerShell)
 
 ### Brixx BPMN-Editor
-Anschließend erstellen wir mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) einen Benutzer-Login Prozess und verwenden dazu das BPMN-Prozessmodell aus der Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im BPMN-Editor indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken, und veröffentlichen den Benutzer-Login Prozess (Geschäftsprozess) in der Brixx Prozess Engine.
+Anschließend erstellen wir mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) einen Benutzer-Login Prozess und verwenden das BPMN-Prozessmodell aus der Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im BPMN-Editor indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken und veröffentlichen den Benutzer-Login Prozess (Geschäftsprozess) in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Wir können jetzt das aktuelle BPMN-Modell einfach in der Brixx Process Engine veröffentlichen indem wir im Abschnitt „Veröffentlichungseigenschaften“ auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen nur die entsprechenden Zugangsdaten (Credentials) der verwendeten Brixx Process Engine. 
+Wir können jetzt das aktuelle BPMN-Modell in der Brixx Process Engine veröffentlichen indem wir im Abschnitt der Veröffentlichungseigenschaften auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen dafür nur noch die entsprechenden Zugangsdaten (Credentials) der verwendeten Brixx Process Engine. 
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 200px;" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 202px;" />
 
 Veröffentlichungseigenschaften
 
-> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Demo-Benutzer mit den Credentials *Username* `demo` und *Password* `demo`.
+> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Benutzer mit den Credentials *Username* `demo` und *Password* `demo`.
 
 Die Details im Benutzer-Login Prozess werden wir später betrachten, vorher erstellen wir zum Testen noch eine Prozessinstanz.
 
 ### <div id='administration-tools' /> Administration Tools
 
-In der registrierten Version der Brixx Process Engine stehen verschiedene Werkzeuge zur Prozessverwaltung in der **Management Console** zur Verfügung, beispielsweise die **Administration Tools**, um eine Prozessinstanz zum Testen zu erstellen.
+Für die Prozessverwaltung stehen der Brixx Process Engine verschiedene Werkzeuge in einer **Management Console** zur Verfügung, beispielsweise die **Administration Tools**, um eine Prozessinstanz zu erstellen.
 
 <img src="../assets/images/brixx-process-engine-admin-tools.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Administration Tools der Brixx Process Engine
 
-Die Administration Tools stehen nur in der registrierten Version der Brixx Process Engine zur Verfügung. Als Ersatz erstellen wir ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
+Die Administration Tools stehen in der registrierten Version der Brixx Process Engine zur Verfügung. Für die freie Version erstellen wir ein ein HTML-Dokument als `Helper` für die Brixx Prozess Engine als **Admin Console**; zur Prozessverwaltung, und im ersten Schritt zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Die Funktion wird später genauer beschrieben; dabei kann u. a. auch eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../assets/downloads/brixx-create-process.html)
 
@@ -185,8 +185,7 @@ Wir erstellen einen einfachen Benutzer-Login Prozess mit einem privaten und öff
     │   └── brixx-login-process.js
     └── index.html
 
-Darin erstellen wir den Brixx Web-Baustein `[brixx-login-process]` in der Brixx Script-Component Datei `brixx-login-process.js`
-und suchen zuerst mit der Funktion `BrixxProcessDefinition.getSearchParam` nach dem URL-Parameter `pid` mit einer Process-ID. Ist der nicht in der URL enthalten wird nach der Process-ID mit einem Eingabedialog gefragt. Diese Funktion wird in der Regel für die Entwicklung verwendet.
+Darin erstellen wir den Brixx Web-Baustein `[brixx-login-process]` in der Brixx Script-Component Datei `brixx-login-process.js` und suchen zuerst mit der Funktion `BrixxProcessDefinition.getSearchParam` nach dem URL-Parameter `pid` mit einer Process-ID. Ist der nicht in der URL enthalten wird nach der Process-ID mit einem Eingabedialog gefragt. Diese Funktion wird in der Regel für die Entwicklung verwendet.
 
     // Get search param
     const pid = BrixxProcessDefinition.getSearchParam("pid");
