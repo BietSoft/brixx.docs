@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Admin Console</title>
-    </head>
+  <head>
+    <title>Admin Console</title>
+  </head>
 
-    <!-- Load Brixx-Process-Script standalone for development -->
-    <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
+  <!-- Load Brixx-Process-Script standalone for development -->
+  <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
 
-    <body>
-        <h1>Brixx-Process-Engine</h1>
-        <h3>Create a process instance</h3>
-        <table>
-            <tr>
-                <td>Model identifier (ID)&nbsp;</td>
-                <td>
-                    <input type="text" id="mid" size="35" />
-                </td>
-            </tr>
-            <tr>
-                <td>Model key (Name)</td>
-                <td>
-                    <input type="text" id="key" size="35"/>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="button" id="btnCreateProcess" value="Create process" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Process-ID (PID)</td>
-                <td>
-                    <input type="text" id="pid" size="35" />
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="button" id="btnCopyProcessID" value="Copy to clipboard" />
-                </td>
-            </tr>
-        </table>
+  <body>
+    <h1>Brixx-Process-Engine</h1>
+    <h3>Create a process instance</h3>
+    <table>
+      <tr>
+        <td>Model identifier (ID)&nbsp;</td>
+        <td>
+          <input type="text" id="mid" size="35" />
+        </td>
+      </tr>
+      <tr>
+        <td>Model key (Name)</td>
+        <td>
+          <input type="text" id="key" size="35" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="button" id="btnCreateProcess" value="Create process" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Process-ID (PID)</td>
+        <td>
+          <input type="text" id="pid" size="35" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input
+            type="button"
+            id="btnCopyProcessID"
+            value="Copy to clipboard"
+          />
+        </td>
+      </tr>
+    </table>
 
-        <script>
-            // Create a process instance
-            document
-                .getElementById("btnCreateProcess")
-                .addEventListener("click", () => {
-                    BrixxProcessDefinition.process.create({
-                        mid: document.getElementById("mid").value,
-                        key: document.getElementById("key").value,
-                        callback: (response) =>
-                            (document.getElementById("pid").value =
-                                response.pid),
-                    });
-                });
+    <script>
+      // Create a process instance
+      document
+        .getElementById("btnCreateProcess")
+        .addEventListener("click", () => {
+          BrixxProcessDefinition.process.create({
+            mid: document.getElementById("mid").value,
+            key: document.getElementById("key").value,
+            callback: (response) =>
+              (document.getElementById("pid").value = response.pid),
+          });
+        });
 
-            // Copy process identifier to clipboard
-            document.getElementById("btnCopyProcessID").addEventListener("click", () => {
-                const value = document.getElementById("pid").value;
-                navigator.clipboard.writeText(value);
-            });
-        </script>
-    </body>
+      // Copy process identifier to clipboard
+      document
+        .getElementById("btnCopyProcessID")
+        .addEventListener("click", () => {
+          const value = document.getElementById("pid").value;
+          navigator.clipboard.writeText(value);
+        });
+    </script>
+  </body>
 </html>

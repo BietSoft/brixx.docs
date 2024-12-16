@@ -6,7 +6,7 @@
 
 #
 
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx-Process-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # What is Brixx-Process-Script
 
@@ -38,7 +38,7 @@ Mit unserem Workflow-Management-System können alle Arten von Prozessen und Work
 
 # <div id='getstarted' /> Erste Schritte
 
-Wir verwenden Brixx-Script zur Erstellung von einem **Geschäftsprozess** (business process). Brixx-Script ist Bestandteil in Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine komplette Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide „Welten” kombiniert werden, was Brixx-Process-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einem Benutzer-Login Prozess (`brixx-login-process-html`) und anschließend als JavaScript Element (`brixx-login-process-javascript`) und Node.js Application (`brixx-login-process-node`).
+Wir verwenden Brixx-Script zur Erstellung von einem **Business Process** (Geschäftsprozess). Brixx-Script ist Bestandteil von Brixx-Process-Script und ermöglicht einen minimalen Programmieraufwand und schnelle Integration in ein HTML-Dokument (siehe [Brixx-Script Dokumentation](../brixx-script/README.md)). Dabei ist neben der JavaScript-Engine für Web-/Entwickler auch eine Erstellung im HTML-Code für Web-/Designer möglich. Es können auch beide Welten kombiniert werden, was Brixx-Process-Script besonders interessant und leistungsfähig macht. Im ersten Schritt erstellen wir einen einfachen Brixx Web-Baustein (Brixx web component) mit einem Benutzer-Login Prozess (`brixx-login-process-html`) und anschließend als JavaScript Element (`brixx-login-process-javascript`) und Node.js Application (`brixx-login-process-node`).
 
 ## Vorbereitungen
 
@@ -50,94 +50,113 @@ Für die Prozess-Erstellung und -Verarbeitung verwenden wir die [Brixx Prozess E
 
 Installation abgeschlossen - Windows-Installer
 
-Nach der Installation steht die Brixx Prozess Engine unter `http://localhost:5000` für die Entwicklung zur Verfügung und kann mit `http://localhost:5000/brixx/heartbeat` überprüft werden.
+Nach der Installation steht die Brixx Prozess Engine standardmäßig unter `http://localhost:5000` für die Entwicklung zur Verfügung und kann mit `http://localhost:5000/brixx/heartbeat` überprüft werden.
 
 <img src="../assets/images/brixx-process-engine-power-shell.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Brixx-Process-Engine im Windows Terminal (PowerShell)
 
 ### Brixx BPMN-Editor
-Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) und veröffentlichen für das Prozessmodell als Geschäftsprozess in der Brixx Prozess Engine.
+Anschließend erstellen wir einen Benutzer-Login Prozess und verwenden dazu das Prozessmodell aus der BPMN Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken und veröffentlichen das Prozessmodell als Geschäftsprozess (LoginProcess) in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-### <div id='admin-console' /> Admin Console
+Hier können wir jetzt das aktuelle BPMN-Modell einfach in der Brixx Process Engine veröffentlichen indem wir im Abschnitt „Veröffentlichungseigenschaften“ auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken. Dazu benötigt man die entsprechenden User Credentials der Brixx Process Engine. Diese sind standardmäßig in der nicht registrierten Version `Username=demo` und `Password=demo` und können in den Veröffentlichungseigenschaften geändert werden.
 
-Die Details im Benutzer-Login Prozess werden wir später betrachten. Wir erstellen vorher noch ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 250px;" />
+
+Veröffentlichungseigenschaften
+
+Die Details im Benutzer-Login Prozess werden wir später betrachten, vorher erstellen wir zum Testen noch eine Prozessinstanz.
+
+### <div id='administration-tools' /> Administration Tools
+
+In der registrierten Version der Brixx Process Engine stehen verschiedene Werkzeuge zur Prozessverwaltung in der **Management Console** zur Verfügung, beispielsweise die **Administration Tools**, um eine Prozessinstanz zum Testen zu erstellen.
+
+<img src="../assets/images/brixx-process-engine-admin-tools.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Administration Tools der Brixx Process Engine
+
+Die Administration Tools stehen nur in der registrierten Version der Brixx Process Engine zur Verfügung. Als Ersatz erstellen wir ein HTML-Dokument als `Helper` für die Brixx Prozess Engine zur Verwaltung der Geschäftsprozesse, und im ersten Schritt nur zur Erstellung einer Prozessinstanz. Dabei wird eine Prozessinstanz mit der Funktion `BrixxProcessDefinition.process.create` erstellt und die Process-ID (Process identifier) ausgegeben. Die Funktion wird später noch genauer beschrieben; dabei kann u. a. eine Mail mit der Prozess-URL und Projektinstanz als QR-Code an den Ersteller gesendet werden.
 
 Komplettes HTML-Dokument in der HTML-Datei [`brixx-create-process.html`](../assets/downloads/brixx-create-process.html)
 
     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Admin Console</title>
-        </head>
+    <head>
+        <title>Admin Console</title>
+    </head>
 
-        <!-- Load Brixx-Process-Script standalone for development -->
-        <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
+    <!-- Load Brixx-Process-Script standalone for development -->
+    <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
 
-        <body>
-            <h1>Brixx-Process-Engine</h1>
-            <h3>Create a process instance</h3>
-            <table>
-                <tr>
-                    <td>Model identifier (ID)&nbsp;</td>
-                    <td>
-                        <input type="text" id="mid" size="35" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Model key (Name)</td>
-                    <td>
-                        <input type="text" id="key" size="35"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="button" id="btnCreateProcess" value="Create process" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>Process-ID (PID)</td>
-                    <td>
-                        <input type="text" id="pid" size="35" />
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="button" id="btnCopyProcessID" value="Copy to clipboard" />
-                    </td>
-                </tr>
-            </table>
+    <body>
+        <h1>Brixx-Process-Engine</h1>
+        <h3>Create a process instance</h3>
+        <table>
+        <tr>
+            <td>Model identifier (ID)&nbsp;</td>
+            <td>
+            <input type="text" id="mid" size="35" />
+            </td>
+        </tr>
+        <tr>
+            <td>Model key (Name)</td>
+            <td>
+            <input type="text" id="key" size="35" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <input type="button" id="btnCreateProcess" value="Create process" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Process-ID (PID)</td>
+            <td>
+            <input type="text" id="pid" size="35" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <input
+                type="button"
+                id="btnCopyProcessID"
+                value="Copy to clipboard"
+            />
+            </td>
+        </tr>
+        </table>
 
-            <script>
-                // Create process instance
-                document
-                    .getElementById("btnCreateProcess")
-                    .addEventListener("click", () => {
-                        BrixxProcessDefinition.process.create({
-                            mid: document.getElementById("mid").value,
-                            key: document.getElementById("key").value,
-                            callback: (response) =>
-                                (document.getElementById("pid").value =
-                                    response.pid),
-                        });
-                    });
+        <script>
+        // Create a process instance
+        document
+            .getElementById("btnCreateProcess")
+            .addEventListener("click", () => {
+            BrixxProcessDefinition.process.create({
+                mid: document.getElementById("mid").value,
+                key: document.getElementById("key").value,
+                callback: (response) =>
+                (document.getElementById("pid").value = response.pid),
+            });
+            });
 
-                // Copy process identifier to clipboard
-                document.getElementById("btnCopyProcessID").addEventListener("click", () => {
-                    const value = document.getElementById("pid").value;
-                    navigator.clipboard.writeText(value);
-                });
-            </script>
-        </body>
+        // Copy process identifier to clipboard
+        document
+            .getElementById("btnCopyProcessID")
+            .addEventListener("click", () => {
+            const value = document.getElementById("pid").value;
+            navigator.clipboard.writeText(value);
+            });
+        </script>
+    </body>
     </html>
 
 Die _Admin Console_ verwendt Brixx-Process-Script standalone und kann dadurch während der Entwicklung, z. B. mit dem _Live Server_ in Visual Studio Code, direkt im Browser gestartet werden.
@@ -147,6 +166,13 @@ Die _Admin Console_ verwendt Brixx-Process-Script standalone und kann dadurch w�
 Die _Admin Console_ im Browser-Fenster
 
 Mit dem _Model identifiers (ID)_ oder dem _Model key (Name)_ aus dem Brixx BPMN-Editor kann eine Prozessinstanz mit Klick auf die Schaltfläche `[Create Process]` in der Brixx Prozess Engine erstellt, und mit Klick auf die Schaltfläche `[Copy to clipboard]` die _Process-ID (PID)_ in die Zwischenablage kopiert werden.
+
+
+
+
+
+
+
 
 ## <div id='brixx-login-process-html' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
 
@@ -465,7 +491,7 @@ Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Sta
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
-Wird kein URL-Parameter `pid` in der Prozess-URL gefunden, z. B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#admin-console))
+Wird kein URL-Parameter `pid` in der Prozess-URL gefunden, z. B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#administration-tools))
 
 <img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 600px;" />
 

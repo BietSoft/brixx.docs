@@ -6,7 +6,9 @@
 
 ### Version: `1.6.0` (Release, 11.12.2024)
 
-> This document is in progress. For further information on the use of Brixx-Process-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+#
+
+> This document is in progress. For further information on the use of Brixx-Process-Engine please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # What is Brixx-Process-Engine
 

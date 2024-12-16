@@ -6,7 +6,7 @@
 
 #
 
-> This document is in progress. For further information on the use of Brixx-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
+> This document is in progress. For further information on the use of Brixx-Decision-Script please feel free to contact [`info@brixx.it`](info@brixx.it)
 
 # What is Brixx-Decision-Script
 
