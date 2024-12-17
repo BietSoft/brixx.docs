@@ -490,7 +490,7 @@ Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Sta
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
-Wird kein URL-Parameter `pid` in der Prozess-URL gefunden, z. B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#administration-tools))
+Wird keine güötige Process-ID gefunden, beispielsweise in der Prozess-URL mit dem URL-Parameter `pid`, z.B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#administration-tools))
 
 <img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 600px;" />
 
@@ -500,7 +500,11 @@ Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 ## <div id='brixx-login-process-script' /> Brixx Web-Baustein [brixx-login-process] erstellen (JavaScript based)
 
+tbd
+
 ## <div id='brixx-login-process-node' /> Node.js Application [brixx-login-process] erstellen
+
+tbd
 
 # <div id='reference' /> Brixx-Process-Script Referenz
 

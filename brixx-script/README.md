@@ -1361,6 +1361,9 @@ Use the Brixx class component
 
 # <div id='downloads'/> Downloads
 
+-   ### [Template [package.json.windows] (JSON-Datei)](../assets/downloads/package.json.windows)
+-   ### [Template [webpack.config.template.js] (JS-Datei)](../assets/downloads/webpack.config.template.js)
+-   ### [Template [index.element.template.html] (HTML-Datei)](../assets/downloads/index.element.template.html)
 -   ### [Beispiel [brixx-element-sample] (ZIP-Archiv)](../assets/downloads/brixx-element-sample.zip)
 -   ### [Beispiel [brixx-simple-element] (ZIP-Archiv)](../assets/downloads/brixx-simple-element.zip)
 -   ### [Beispiel [brixx-complex-element] (ZIP-Archiv)](../assets/downloads/brixx-complex-element.zip)
