@@ -94,7 +94,15 @@ We can publish the current BPMN model to the Brixx Process Engine by clicking th
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-07.webp" style="width: 600px;" />
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-08.webp" style="width: 600px;" />
+To publish the BPMN model as a process, you only need the appropriate credentials for the Brixx Process Engine used in the publish properties section.
+
+<img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-08.webp" style="margin-bottom: -5px; width: 210px;" />
+
+Veröffentlichungseigenschaften
+
+> By default, the Brixx Process Engine in the unregistered version has a user with the credentials _Username_ `demo` and _Password_ `demo`.
+
+<img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-09.webp" style="width: 600px;" />
 
 # <div id='reference' /> Brixx BPMN-Editor Referenz
 
@@ -104,7 +112,11 @@ We can publish the current BPMN model to the Brixx Process Engine by clicking th
 
 ## BPMN model menu
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-model-meue.webp" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-model-meue.webp" style="width: 130px;" />
+
+## BPMN publish menu
+
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-meue.webp" style="width: 210px;" />
 
 # <div id='downloads' /> Downloads
 
@@ -119,7 +131,6 @@ Download Web-Application Package Installer for Windows.
 ### [Brixx BPMN-Editor Version 1.7.0 (64-bit)](https://brixx.it/@brixx/setup/Brixx-BPMN-Editor-v1.7.0-x64.exe)
 
 ## <i class="fa-brands fa-linux"></i> Linux Installer
-
 
 Download Web-Application Package Installer for Linux.
 

@@ -67,7 +67,7 @@ Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
 Wir können jetzt das aktuelle BPMN-Modell in der Brixx Process Engine veröffentlichen indem wir im Abschnitt der Veröffentlichungseigenschaften auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen dafür nur noch die entsprechenden Zugangsdaten (Credentials) der verwendeten Brixx Process Engine.
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 202px;" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 210px;" />
 
 Veröffentlichungseigenschaften
 
