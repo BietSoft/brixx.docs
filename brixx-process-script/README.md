@@ -499,7 +499,7 @@ Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 # <div id='tutorial' /> Brixx-Process-Script Tutorial
 
-## <div id='brixx-login-process-styles' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
+## <div id='brixx-login-process-styles' /> Brixx Web-Baustein [brixx-login-process] erweitern (HTML based)
 
 Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML Styles und  einer JavaScript-Datei für die JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in benennen im Projektordner den Ordner `[components]` in `[js]` um. Als Ersatz erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
 
