@@ -59,21 +59,21 @@ Brixx-Process-Engine im Windows Terminal (PowerShell)
 
 ### Brixx BPMN-Editor
 
-Anschließend erstellen wir mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) einen Benutzer-Login Prozess und verwenden das BPMN-Prozessmodell aus der Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im BPMN-Editor indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken und veröffentlichen den Benutzer-Login Prozess (Geschäftsprozess) in der Brixx Prozess Engine.
+Anschließend erstellen wir mit dem [Brixx BPMN-Editor](../brixx-bpmn-editor/README.md) einen einfachen Benutzer-Login Prozess und verwenden das BPMN-Prozessmodell aus der Datei [`brixx-login-process.bpmn`](../assets/downloads/brixx-login-process.bpmn) Wir öffnen die Datei im BPMN-Editor indem wir im Diagrammmenü auf das Symbol `[Open BPMN diagram from local file]` klicken und veröffentlichen den Benutzer-Login Prozess in der Brixx Prozess Engine.
 
 <img src="../assets/images/bpmn-editor/bpmn-editor-publish-model.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Benutzer-Login Prozessmodell `brixx-login-process` im Brixx BPMN-Editor
 
-Wir können jetzt das aktuelle BPMN-Modell in der Brixx Process Engine veröffentlichen indem wir im Abschnitt der Veröffentlichungseigenschaften auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen dafür nur noch die entsprechenden Zugangsdaten (Credentials) der verwendeten Brixx Process Engine.
+Wir können jetzt das aktuelle BPMN-Modell in der Brixx Process Engine veröffentlichen indem wir im Abschnitt der Veröffentlichungseigenschaften auf das Symbol `[Publish model to Brixx-Process-Engine]` klicken; und benötigen dafür nur noch die entsprechenden Credentials (Zugangsdaten) der verwendeten Brixx Process Engine.
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 210px;" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-publish-login-process.webp" style="margin-bottom: -5px; width: 350px;" />
 
 Veröffentlichungseigenschaften
 
-> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Benutzer mit den Credentials _Username_ `demo` und _Password_ `demo`.
+> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Benutzer mit den Credentials _Username_ `demo` und _Password_ `demo`. 
 
-Die Details im Benutzer-Login Prozess werden wir später betrachten, vorher erstellen wir zum Testen noch eine Prozessinstanz.
+Die Details im Benutzer-Login Prozess betrachten wir später, vorher erstellen wir zum Testen noch eine Prozessinstanz.
 
 ### <div id='administration-tools' /> Administration Tools
 

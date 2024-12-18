@@ -96,7 +96,7 @@ We can publish the current BPMN model to the Brixx Process Engine by clicking th
 
 To publish the BPMN model as a process, you only need the appropriate credentials for the Brixx Process Engine used in the publish properties section.
 
-<img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-08.webp" style="margin-bottom: -5px; width: 210px;" />
+<img src="../assets/images/bpmn-editor/bpmn-editor-tutorial-08.webp" style="margin-bottom: -5px; width: 350px;" />
 
 Veröffentlichungseigenschaften
 
