@@ -341,9 +341,9 @@ Der Brixx Web-Baustein `<brixx-check-age>` im Browser-Fenster
 
 ## <div id='brixx-check-age-styles' /> Brixx Web-Baustein `[brixx-check-age]` erweitern
 
-Wie erweitern die Brixx Webkomponente `[brixx-check-age]` mit HTML Styles. Dafür erstellen wir einen Projektordner `[brixx-check-age-styles]` und kopieren die Dateien aus dem vorherigen Beispiel in den Projektordner.
+Wie erweitern die Brixx Webkomponente `[brixx-check-age]` mit HTML-Styles. Dafür erstellen wir einen Projektordner `[brixx-check-age-styles]` und kopieren die Dateien aus dem vorherigen Beispiel in den Projektordner.
 
-### HTML Styles hinzufügen
+### HTML Stylesheets hinzufügen
 
 Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./styles` im Projektordner. Wir nutzen [Bootstrap](https://getbootstrap.com/) und fügen die CSS-Datei `bootstrap.min.css` vom Cloudflare CDN-(Content Delivery Network)-Server mit einem HTML Stylesheet `<link>` im HTML-Dokument ein.
 
@@ -378,7 +378,7 @@ Komplette Styles der CSS-Datei `brixx-check-age.css`
         margin-top: 2px;
     }
 
-Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+Die verwendeten HTML-Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-check-age-web/
     ├── components/

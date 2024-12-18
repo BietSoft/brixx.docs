@@ -488,9 +488,9 @@ Die HTML-Datei `index.html` wird in erster Linie zum testen der Brixx Webkompone
 
 ## <div id='brixx-complex-element'/> Brixx Webkomponente `[brixx-complex-element]` erstellen
 
-Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit HTML Styles und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner `[brixx-complex-element]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
+Wie erweitern die Brixx Webkomponente `[brixx-simple-element]` im ersten Schritt mit HTML-Styles und danach mit einer **Brixx Class Component** (Klassen-Komponente). Klassen-Komponenten können zur besseren Strukturierung komplexer Projekten verwendet werden und sind besonders für fortgeschrittene Entwickler interessant. Dafür erstellen wir zuerst einen Projektordner `[brixx-complex-element]` und kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner.
 
-### HTML Styles hinzufügen
+### HTML Stylesheets hinzufügen
 
 Wir „stylen“ die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./styles` im Projektordner. Wir nutzen [Bootstrap](https://getbootstrap.com/), kopieren die [`bootstrap.min.css`](../assets/downloads/bootstrap.min.css) in den Ordner `[styles]` und erstellen eine weitere CSS-Datei `index.css` für die Brixx Webkomponente.
 
@@ -524,7 +524,7 @@ Komplette Styles der CSS-Datei `index.css`
       text-decoration: none;
     }
 
-Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+Die verwendeten HTML-Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
     ├── styles/

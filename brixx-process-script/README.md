@@ -501,11 +501,11 @@ Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 ## <div id='brixx-login-process-styles' /> Brixx Web-Baustein [brixx-login-process] erweitern (HTML based)
 
-Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML Styles und  einer JavaScript-Datei für die JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in benennen im Projektordner den Ordner `[components]` in `[js]` um. Als Ersatz erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
+Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML-Styles und  einer JavaScript-Datei für JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner und benennen im Projektordner den Ordner `[components]` in `[js]` um. Als „Ersatz“ erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
 
-### HTML Styles hinzufügen
+### HTML Stylesheets hinzufügen
 
-Wir „stylen“ im ersten Schritt die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./css` im Projektordner. Wir nutzen **Bootstrap** vom CDN von [jsdelivr.com](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)  und erstellen im Ordner `[styles]` eine CSS-Datei `index.css` für die Brixx Webkomponente.
+Wir „stylen“ im ersten Schritt die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./css` im Projektordner. Wir nutzen im Beispiel **Bootstrap** vom CDN von [jsdelivr.com](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css) und erstellen im Ordner `[styles]` eine CSS-Datei `index.css` für die Brixx Webkomponente.
 
 Komplette Styles der CSS-Datei `index.css`
 
@@ -538,7 +538,7 @@ Komplette Styles der CSS-Datei `index.css`
     background-color: #0a58ca;
     }
 
-Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+Die verwendeten HTML-Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-login-process-styles/
     ├── css/
@@ -549,9 +549,9 @@ Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht be
     └── index.html
 
 
-### Brixx Web-Baustein anpassen
+### Brixx Web-Baustein optimieren
 
-Wir lagern die JSX-Komponenten aus dem Brixx Web-Baustein in der JavaScript-Datei `./js/components.js` aus und erhalten dadurch einen optimierten Web-Baustein (HTML-Element) `<brixx-login-process>` als Low-Code **Brixx Process Login-Komponente**
+Wir lagern die JSX-Komponenten aus dem Brixx Web-Baustein in die JavaScript-Datei `./js/components.js` aus und erhalten einen optimierten Web-Baustein (HTML-Element) `<brixx-login-process>` als Low-Code **Brixx Process Login-Komponente**
 
 Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./js/brixx-login-process.js`
 
@@ -602,10 +602,7 @@ Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./js/brixx-lo
     // Register Brixx HTML element
     Brixx.registerElement({ name: "login-process" });
 
-
-### JSX-Komponenten auslagern
-
-Wir lagern die JSX-Komponenten aus dem Brixx Web-Baustein in der JavaScript-Datei `./js/components.js` aus und erhalten dadurch die JSX-Components JavaScript-Datei `./js/components.js`
+> Wir erhalten eine JavaScript-Datei mit den benötigten Brixx JSX Components. Das kann weiter optimiert werden, indem man die JSX Komponenten jeweils in eigene JavaScript-Dateien auslagert, nicht zuletzt für eine verteilte Verwendung.
 
 Komplette JSX-Components JavaScript-Datei `./js/components.js`
 
@@ -754,7 +751,7 @@ Komplettes Beispiel [[brixx-login-process-styles] (ZIP-Archiv)](../assets/downlo
 
 ### Brixx Web-Baustein testen
 
-Zum testen öffnen wir den Projektordner [brixx-login-process-styles] in Visual Studio Code und starten die HTML-Datei index.html mit dem Live Server.
+Zum testen öffnen wir den Projektordner [brixx-login-process-styles] beispielsweise in Visual Studio Code und starten die HTML-Datei index.html mit dem Live Server.
 
 <img src="../assets/images/brixx-login-process-styles-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
