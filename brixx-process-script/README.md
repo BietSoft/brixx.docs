@@ -31,6 +31,7 @@ Mit unserem Workflow-Management-System können alle Arten von Prozessen und Work
 - [Erste Schritte](#getstarted)
   - [Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)](#brixx-login-process-html)
 - [Brixx-Process-Script Tutorial](#tutorial)
+  - [Brixx Web-Baustein [brixx-login-process] erweitern (HTML based)](#brixx-login-process-styles)
   - [Brixx Web-Baustein [brixx-login-process] erste (JavaScript based)](#brixx-login-process-script)
   - [Node.js Application [brixx-login-process] erstellen](#brixx-login-process-model)
 - [Brixx-Process-Script Referenz](#reference)
@@ -478,7 +479,7 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 3. Rechtsklick auf die HTML-Datei im **Editor-Fenster** und Auswahl von `[Open with Live Server]`
 4. Rechtsklick auf die HTML-Datei in der **Explorer-Ansicht** und Auswahl von `[Open with Live Server]`
 
-   <img src="../assets/images/brixx-login-process.webp" style="margin-bottom: -5px; width: 600px;" />
+   <img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 600px;" />
 
    Visual Studio Code - Explorer-Ansicht `[Open with Live Server]`
 
@@ -486,17 +487,278 @@ Zum testen öffnen wir den Projektordner `[brixx-login-process-html]` in Visual 
 
 Die HTML-Datei `index.html` wird mit dem _Live Server_ bereitgestellt und im Standard-Browser geöffnet.
 
-<img src="../assets/images/brixx-login-process-html-01.webp" style="margin-bottom: -5px; width: 450px;" />
+<img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 450px;" />
 
 Eingabedialog für eine Process-ID im Browser-Fenster.
 
 Wird keine güötige Process-ID gefunden, beispielsweise in der Prozess-URL mit dem URL-Parameter `pid`, z.B. `index.html?pid=f1d49482-a46e-7a1f-aee3-e5ece9aaa093`, wid man mit einem Eingabedialog aufgefortert eine Prozess-ID einzugeben (siehe [Admin Console](#administration-tools))
 
-<img src="../assets/images/brixx-login-process-html-02.webp" style="margin-bottom: -5px; width: 600px;" />
+<img src="../assets/images/brixx-login-process-html-03.webp" style="margin-bottom: -5px; width: 600px;" />
 
 Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 # <div id='tutorial' /> Brixx-Process-Script Tutorial
+
+## <div id='brixx-login-process-styles' /> Brixx Web-Baustein [brixx-login-process] erstellen (HTML based)
+
+Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML Styles und  einer JavaScript-Datei für die JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in benennen im Projektordner den Ordner `[components]` in `[js]` um. Als Ersatz erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
+
+### HTML Styles hinzufügen
+
+Wir „stylen“ im ersten Schritt die Brixx Webkomponente mit **CSS** (Cascade Style Sheet) und erstellen dafür einen Ordner `./css` im Projektordner. Wir nutzen **Bootstrap** vom CDN von [jsdelivr.com](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)  und erstellen im Ordner `[styles]` eine CSS-Datei `index.css` für die Brixx Webkomponente.
+
+Komplette Styles der CSS-Datei `index.css`
+
+    /*
+    *  Brixx styles
+    *
+    * Copyright 2024 The BRIXX.it Authors
+    */
+
+    body {
+    margin: 25px 10px;
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+    margin: 4px 0px;
+    padding: 8px 16px;
+    color: white;
+    background-color: #0d6efd;
+    border: 1px solid #0a58ca;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+    background-color: #0a58ca;
+    }
+
+Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
+
+    brixx-login-process-styles/
+    ├── css/
+    │   └── index.css
+    ├── js/
+    │   ├── brixx-login-process.js
+    │   └── components.js
+    └── index.html
+
+
+### Brixx Web-Baustein anpassen
+
+Wir lagern die JSX-Komponenten aus dem Brixx Web-Baustein in der JavaScript-Datei `./js/components.js` aus und erhalten dadurch einen optimierten Web-Baustein (HTML-Element) `<brixx-login-process>` als Low-Code **Brixx Process Login-Komponente**
+
+Kompletter Brixx Web-Baustein in der Brixx Script-Component Datei `./js/brixx-login-process.js`
+
+    /**
+    * Brixx HTML-Element
+    * <brixx-login-process>
+    *
+    * Copyright 2024 The BRIXX.it Authors
+    */
+
+    // Get process identifier
+    const pid = await BrixxProcessDefinition.getProcessIdentifier();
+
+    // Create a Brixx default element
+    Brixx.element = (
+    <ProcessDefinition mid="Process_nehz6cn" pid={pid}>
+        <Task mid="Task_0r94slz" action={(data) => LoginComponent(data)}>
+        <Gateway
+            mid="Gateway_0r8twz8"
+            action={(data) =>
+            BrixxProcessDefinition.process.done({ gid: data.gid })
+            }
+        >
+            <Task
+            mid="Task_1m8u5ed"
+            action={(data) =>
+                MessageComponent(data, "You have entered the user area!")
+            }
+            ></Task>
+            <Task
+            mid="Task_0zs24yh"
+            action={(data) =>
+                MessageComponent(data, "You have entered the public area!")
+            }
+            >
+            <Event
+                mid="Event_12hx5eq"
+                action={(data) =>
+                MessageComponent(data, "Login Process completed!", false)
+                }
+            />
+            </Task>
+        </Gateway>
+        </Task>
+    </ProcessDefinition>
+    );
+
+    // Register Brixx HTML element
+    Brixx.registerElement({ name: "login-process" });
+
+
+### JSX-Komponenten auslagern
+
+Wir lagern die JSX-Komponenten aus dem Brixx Web-Baustein in der JavaScript-Datei `./js/components.js` aus und erhalten dadurch die JSX-Components JavaScript-Datei `./js/components.js`
+
+Komplette JSX-Components JavaScript-Datei `./js/components.js`
+
+    /**
+    * Brixx JSX Components
+    *
+    * Copyright 2024 The BRIXX.it Authors
+    */
+
+    /**
+    * Message component
+    *
+    * Creates the brixx message component
+    */
+    const MessageComponent = (
+    data,
+    message = `${data.mid} is running.`,
+    next = true
+    ) => {
+    // Get process identifier
+    const { tid } = data;
+
+    // Set brixx element
+    const element = (
+        <div class="container">
+        <h2>Login Process</h2>
+        <h4>{message}</h4>
+        <div class="row">
+            <div>
+            {next ? (
+                <input type="button" id={"btn_" + tid} value={"Next"} />
+            ) : null}
+            </div>
+        </div>
+        </div>
+    );
+
+    // Render brixx jsx component
+    new Brixx().render({ element });
+
+    // Set next process task active
+    if (next) {
+        // Next button click handler
+        document.getElementById("btn_" + tid).addEventListener("click", () => {
+        // Set process task done
+        BrixxProcessDefinition.process.done({ tid });
+        });
+    }
+    };
+
+    /**
+    * Login component
+    *
+    * Creates the brixx login component
+    */
+    const LoginComponent = (data) => {
+    // Get process identifier
+    const { tid } = data;
+
+    // Set brixx element
+    const element = (
+        <div class="container">
+        <h2>Login Process</h2>
+        <h4>Authentication</h4>
+        <div class="row">
+            <div>User:</div>
+            <div class="col-12">
+            <input type="text" id={"user"} />
+            </div>
+        </div>
+        <div class="row">
+            <div>Password:</div>
+            <div class="col-1">
+            <input type="text" id={"password"} />
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row">
+            <div>
+            <input type="button" id={"btn_login"} value={"Login"} />
+            </div>
+        </div>
+        </div>
+    );
+
+    // Render brixx jsx component
+    new Brixx().render({ element });
+
+    // Login button click handler
+    document.getElementById("btn_login").addEventListener("click", () => {
+        // Set task store data
+        const store = {
+        user: document.getElementById("user").value,
+        password: document.getElementById("password").value,
+        };
+
+        // Set next process task active with store data
+        BrixxProcessDefinition.process.task.next({ tid, store });
+    });
+    };
+
+### HTML-Dokument erweitern
+
+Wir erweitern das HTML-Dokument im `<head>`-Bereich und fügen die neu erstellen Dateien `components.js` aus dem Ordner `[js]` und `index.css` aus dem Ordner `[css]` hinzu.
+
+Komplettes HTML-Dokument in der HTML-Datei `index.html`
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <!-- Load Brixx-Process-Script standalone for development-->
+        <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
+        
+        <!-- Load Brixx components -->
+        <script
+        src="./js/components.js"
+        type="text/babel"
+        data-presets="brixx"
+        ></script>
+        <!-- Load Brixx HTML element -->
+        <script
+        src="./js/brixx-login-process.js"
+        type="text/babel"
+        data-type="module"
+        data-presets="brixx"
+        ></script>
+
+        <!-- Load Bootstrap styles v5.3.3 -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+        />
+        <!-- Load Brixx styles -->
+        <link href="./css/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Add Brixx HTML element -->
+        <brixx-login-process></brixx-login-process>
+    </body>
+    </html>
+
+Komplettes Beispiel [[brixx-login-process-styles] (ZIP-Archiv)](../assets/downloads/brixx-login-process-styles.zip) herunterladen.
+
+### Brixx Web-Baustein testen
+
+Zum testen öffnen wir den Projektordner [brixx-login-process-styles] in Visual Studio Code und starten die HTML-Datei index.html mit dem Live Server.
+
+<img src="../assets/images/brixx-login-process-styles-01.webp" style="margin-bottom: -5px; width: 600px;" />
+
+Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 ## <div id='brixx-login-process-script' /> Brixx Web-Baustein [brixx-login-process] erstellen (JavaScript based)
 

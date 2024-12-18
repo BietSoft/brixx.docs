@@ -22,7 +22,7 @@ Die NPM-Packages kann man dann durch Klick mit der rechten Maustaste (Kontextmen
 
 Nach der Installation der Abhängigkeiten in der _package.json_ für das Projekt sehen wir in der Explorer-Ansicht den Ordner `node_modules` mit den NPM-Packages und die Datei `package-lock.json`
 
-> Die Datei _package-lock.json_ enthält eine Beschreibung der installierten NPM-Packages und wird automatisch für alle Vorgänge generiert, bei denen npm die _package.json_ ändert. Die _package-lock.json_ wird erstellt wenn die Datei nicht vorhanden ist. In seltenen Fällen kann es notwendig sein, z. B.bei einem Update, die Datei _package-lock.json_ vor der Installation zu löschen.
+> Die Datei _package-lock.json_ enthält eine Beschreibung der installierten NPM-Packages und wird automatisch für alle Vorgänge generiert, bei denen npm die _package.json_ ändert. Die _package-lock.json_ wird erstellt wenn die Datei nicht vorhanden ist. In seltenen Fällen kann es notwendig sein, z. B. bei einem Update, die Datei _package-lock.json_ vor der Installation zu löschen.
 
 <img src="../assets/images/vscode-node-modules.webp" style="margin-bottom: -5px; width: 600px;" />
 

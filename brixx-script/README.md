@@ -524,7 +524,6 @@ Komplette Styles der CSS-Datei `index.css`
       text-decoration: none;
     }
 
-
 Die verwendeten HTML Styles dienen als Beispiel und werden im Einzelnen nicht betrachtet. Damit sieht die Projekt-Ordnerstruktur folgendermaßen aus.
 
     brixx-complex-element/
