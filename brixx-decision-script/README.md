@@ -1315,7 +1315,7 @@ Constructs a BrixxDecisionTable instance and creates a Brixx decision table with
 `{String} [object.file=null] (optional)` - the decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
-`{Object}` - BrixxDecisionTable instance.
+`{Object}` - BrixxDecisionTable instance
 
 **Example**
 
@@ -1333,7 +1333,7 @@ Cheks the input data with the Brixx decision table.
 `{Object} [input]` - the data to check as JSON object.
 
 **Returns**
-`{Object}` - Output data as JSON object.
+`{Object}` - Output data as JSON object
 
 **Example**
 
@@ -1356,7 +1356,7 @@ Creates a Brixx decision table with the given decision table definition.
 `{String} [object.file=null] (optional)` - the decision table definition file name. The file must be in Brixx decision table JSON format.
 
 **Returns**  
-`{Object}` - Brixx decision table.
+`{Object}` - Brixx decision table
 
 **Example**
 
@@ -1371,7 +1371,7 @@ Creates a Brixx decision table with the given decision table definition.
 `{Object} [table]` - the decision table definition as JSON object.
 
 **Returns**
-`{Object}` - Brixx decision table.
+`{Object}` - Brixx decision table
 
 **Example**
 
@@ -1434,7 +1434,7 @@ Returns the BrixxDecisionTable default values in JSON format.
 `Readonly`
 
 **Returns**  
-`{Object}` - BrixxDecisionTable default values.
+`{Object}` - BrixxDecisionTable default values
 
 **Example**
 
@@ -1451,7 +1451,7 @@ Returns the BrixxDecisionTable version in semantic versioning format.
 `Readonly`
 
 **Returns**  
-`{String}` - BrixxDecisionTable version.
+`{String}` - BrixxDecisionTable version
 
 **Example**
 
@@ -1491,7 +1491,7 @@ Returns the DecisionTable default values in JSON format.
 `Readonly`
 
 **Returns**  
-`{Object}` - DecisionTable default values.
+`{Object}` - DecisionTable default values
 
 **Example**
 
@@ -1509,7 +1509,7 @@ Load Brixx decision table definition The file must be in Brixx decision table JS
 `{String} [file]` - the decision table definition file name.
 
 **Returns**
-`{Object}` - Brixx decision table JSON object.
+`{Object}` - Brixx decision table JSON object
 
 **Example**
 
@@ -1522,7 +1522,7 @@ Returns the DecisionTable version in semantic versioning format.
 `Readonly`
 
 **Returns**  
-`{String}` - DecisionTable version.
+`{String}` - DecisionTable version
 
 **Example**
 

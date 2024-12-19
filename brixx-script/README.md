@@ -874,7 +874,7 @@ Das Modul `Brixx` von der Brixx-Script Library importieren. Dafür kann man die 
 Constructs a Brixx instance.
 
 **Returns**  
-`{Object}` - Brixx instance.
+`{Object}` - Brixx instance
 
 **Example**
 
@@ -986,7 +986,7 @@ Returns the Brixx Component folder. Brixx web components are usually created and
 `Readonly`
 
 **Returns**  
-`{String}` - Brixx Component folder.
+`{String}` - Brixx Component folder
 
 **Example**
 
@@ -1015,7 +1015,7 @@ Returns the Brixx element prefix. The Brixx HTML element identifier is preceded 
 `Readonly`
 
 **Returns**  
-`{String}` - Brixx element prefix.
+`{String}` - Brixx element prefix
 
 **Example**
 
@@ -1032,7 +1032,7 @@ Returns the Brixx version in semantic versioning format.
 `Readonly`
 
 **Returns**  
-`{String}` - Brixx version.
+`{String}` - Brixx version
 
 **Example**
 
@@ -1052,7 +1052,7 @@ Creates and returns the Brixx root element. The Brixx root element is be used as
 `{Node} [rootElement] (optional)` - the Brixx root element. If the parameter `rootElement` is not specified, an existing Brixx root element is searched for. If no root element is found, an HTML `<div>` element with `id='brixx-root'` is inserted at the end of the `<body>` section and returned.
 
 **Returns**  
-`{Node}` - Brixx root element.
+`{Node}` - Brixx root element
 
 **Example**
 
@@ -1067,7 +1067,7 @@ Load Text/JSON files.
 `{String} [file]` - the file name.
 
 **Returns**
-`{String}` - File data.
+`{String}` - File data
 
 **Example**
 
@@ -1186,7 +1186,7 @@ Set the Brixx HTML element prefix. The Brixx HTML element identifier is preceded
 Returns a Brixx uuid string. The uuid is grouped as 32 hexadecimal characters with four hyphens in five groups (`XXXXXXXX`-`XXXX`-`XXXX`-`XXXX`-`XXXXXXXXXXXX`). The number of characters per group is 8-4-4-4-12.
 
 **Returns**  
-`{String}` - Brixx uuid.
+`{String}` - Brixx UUID
 
 **Example**
 
@@ -1248,9 +1248,13 @@ Opens a modal alert dialog window.
 
 **Parameters**  
 `{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+
 `{String} title` - the dialog window title.  
+
 `{String} text` - the dialog window text.  
+
 `{String} confirmButtonText` - the dialog window confirm button text.  
+
 `{Object} callBackFnConfirm` - the dialog confirm callback function.
 
 **Example**
@@ -1271,11 +1275,17 @@ Opens a modal confirm dialog window.
 
 **Parameters**  
 `{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+
 `{String} title` - the dialog window title.  
+
 `{String} text` - the dialog window text.  
+
 `{String} confirmButtonText` - the dialog window confirm button text.  
+
 `{String} cancelButtonText` - the dialog window cancel button text.  
+
 `{Object} callBackFnConfirm` - the dialog confirm callback function.  
+
 `{Object} callBackFnCancel` - the dialog confirm callback function.
 
 **Example**
@@ -1299,17 +1309,25 @@ Opens a modal prompt dialog window.
 
 **Parameters**  
 `{String} [icon=defaultIcon] (optional)` - the dialog window icon.  
+
 `{String} title` - the dialog window title.  
+
 `{String} text` - the dialog window text.  
+
 `{String} [value=''] (optional)` - the dialog prompt value.  
+
 `{String} [placeholderInput=null] (optional)` - the dialog prompt value.  
+
 `{String} confirmButtonText` - the dialog window confirm button text.  
+
 `{String} cancelButtonText` - the dialog window cancel button text.  
+
 `{Object} callBackFnConfirm` - the dialog confirm callback function.  
+
 `{Object} callBackFnCancel` - the dialog confirm callback function.
 
 **Returns**  
-`{String}` - Dialog callBackFnConfirm value.
+`{String}` - Dialog callBackFnConfirm value
 
 **Example**
 

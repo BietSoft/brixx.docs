@@ -71,7 +71,7 @@ Wir können jetzt das aktuelle BPMN-Modell in der Brixx Process Engine veröffen
 
 Veröffentlichungseigenschaften
 
-> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Benutzer mit den Credentials _Username_ `demo` und _Password_ `demo`. 
+> Standardmäßig hat die Brixx Process Engine in der nicht registrierten Version einen Benutzer mit den Credentials _Username_ `demo` und _Password_ `demo`.
 
 Die Details im Benutzer-Login Prozess betrachten wir später, vorher erstellen wir zum Testen noch eine Prozessinstanz.
 
@@ -501,7 +501,7 @@ Der Brixx Web-Baustein `<brixx-login-process>` im Browser-Fenster
 
 ## <div id='brixx-login-process-styles' /> Brixx Web-Baustein [brixx-login-process] erweitern (HTML based)
 
-Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML-Styles und  einer JavaScript-Datei für JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner und benennen im Projektordner den Ordner `[components]` in `[js]` um. Als „Ersatz“ erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
+Wie erweitern den Benutzer-Login Prozess `[brixx-login-process]` mit HTML-Styles und einer JavaScript-Datei für JSX-Komponenten. Dafür erstellen wir zuerst einen Projektordner `[brixx-login-process-styles]`, kopieren alle Dateien aus dem vorherigen Beispiel in den Projektordner und benennen im Projektordner den Ordner `[components]` in `[js]` um. Als „Ersatz“ erstellen wir im Ordner `[js]` eine JavaScript-Datei `components.js`.
 
 ### HTML Stylesheets hinzufügen
 
@@ -547,7 +547,6 @@ Die verwendeten HTML-Styles dienen als Beispiel und werden im Einzelnen nicht be
     │   ├── brixx-login-process.js
     │   └── components.js
     └── index.html
-
 
 ### Brixx Web-Baustein optimieren
 
@@ -715,7 +714,7 @@ Komplettes HTML-Dokument in der HTML-Datei `index.html`
     <head>
         <!-- Load Brixx-Process-Script standalone for development-->
         <script src="https://brixx.it/@brixx/standalone/brixx-process.min.js"></script>
-        
+
         <!-- Load Brixx components -->
         <script
         src="./js/components.js"
@@ -896,7 +895,7 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 **Parameters**
 
 **Returns**  
-`{Object}` - BrixxProcessDefinition instance.
+`{Object}` - BrixxProcessDefinition instance
 
 **Example**
 
@@ -904,20 +903,24 @@ Constructs a BrixxProcessDefinition instance and creates a Brixx business proces
 
 ### .baseURL
 
-Returns the BrixxProcessDefinition base url. 
+Returns the BrixxProcessDefinition base url.
 
 `Readonly`
 
 **Returns**  
-`{String} [baseURL=http://127.0.0.1:5000/brixx]` - the Brixx Process Engine base url.
+`{String} [baseURL=http://127.0.0.1:5000/brixx]` - Brixx Process Engine base url
 
-### .pid
+### ~~.pid~~
 
-tbd
+Avoid using directly. Will be used internal as fallback if no cookies or session storage is available. Please use `getProcessIdentifier()` or `getProcessIdentifier()` instead.
 
-### .serverURL
+{String} [pid]` - Represents the current Brixx process identifier,
 
-tbd
+### ~~.serverURL~~
+
+Avoid using directly. Will be used internal. Please use
+
+`{String} [serverURL]` - Represents the current Brixx Process Engine server url.
 
 ### .version
 
@@ -926,34 +929,57 @@ Returns the BrixxProcessDefinition version in semantic versioning format.
 `Readonly`
 
 **Returns**  
-`{String}` - BrixxProcessDefinition version.
+`{String}` - BrixxProcessDefinition version
 
 **Example**
 
     console.log('BrixxProcessDefinition version: ', BrixxProcessDefinition.version)
 
-
 ## BrixxProcessDefinition.context object
+
+Represents the Brixx context data object and uses key/value pairs to store data. Use for browser application only.
 
 ### .available
 
-tbd
+Checks if the Brixx context is available.
+
+**Example**
+
+    if (BrixxProcessDefinition.context.available) {
+        ...
+    }
 
 ### .clear
 
-tbd
+Clears the Brixx context.
+
+**Example**
+
+    BrixxProcessDefinition.context.clear()
 
 ### .get
 
-tbd
+Gets the `value` of a Brixx context `key`.
+
+**Example**
+
+    const value = BrixxProcessDefinition.context.get('myKey')
 
 ### .set
 
-tbd
+Sets the `value` of a Brixx context `key`.
+
+**Example**
+
+    BrixxProcessDefinition.context.set('myKey', value)
 
 ### .remove
 
-tbd
+Removes a `key` of the Brixx context.
+
+**Example**
+
+    BrixxProcessDefinition.context.remove('myKey')
 
 ## BrixxProcessDefinition static methods
 
@@ -962,9 +988,9 @@ tbd
 Gets the process identifier from the `BrixxProcessDefinition.context`. If this is not found, the search continues in the `window.location.href` for the search parameter `pid`. If the process identifier is not found, you will be asked for a process identifier in an input dialog, which is typically used for development.
 
 **Returns**  
-`{String}` - the process identifier.
+`{String}` - Process identifier
 
-**Example**  
+**Example**
 
     const pid = BrixxProcessDefinition.process.getProcessIdentifier()
     ...
@@ -974,8 +1000,7 @@ Gets the process identifier from the `BrixxProcessDefinition.context`. If this i
 
 Sets the process identifier to the `BrixxProcessDefinition.context`.
 
-**Parameters**
-
+**Parameters**  
 `{String} [pid]` - the process identifier.
 
 **Example**
@@ -987,12 +1012,11 @@ Sets the process identifier to the `BrixxProcessDefinition.context`.
 
 Gets a search param with a personl identifier from `window.location.href`. If the search parameter is not found, you will be asked for your personal identifier in an input dialog, which is typically used for development.
 
-**Parameters**
-
+**Parameters**  
 `{String} [paramName]` - the name of the sarch param.
 
 **Returns**  
-`{String}` - search param value.
+`{String}` - Search param value
 
 **Example**
 
@@ -1002,7 +1026,7 @@ Gets a search param with a personl identifier from `window.location.href`. If th
 
 ### .forceUpdate
 
-Force update the process instance state. 
+Force update the process instance state.  
 Use for browser application only.
 
 **Example**
@@ -1018,27 +1042,75 @@ Returns the BrixxProcessDefinition process object.
 
 ### .setTokenCookie
 
-tbd
+Sets a token to a Brixx identity cookie. Used in Brixx-Process-Script to save a Brixx access token to a Brixx identity cookie.
 
-### .getTokenCookie
+**Parameters**  
+`{String} [token=null]` - the token.
 
-tbd
+`{String} [path='/']` - the cookie path.
+
+**Example**
+
+    const getAccessToken = await BrixxProcessDefinition.getAccessToken({
+    user: 'demo',
+    password: 'demo'
+    })
+    ...
+    brixx.setTokenCookie({ token: getAccessToken.token, path: '/test/' })
+
+### .getCookieToken
+
+Gets the token from a Brixx identity cookie.
+
+**Returns**
+`{string}` - Token
+
+**Example**
+
+    const token = BrixxProcessDefinition.getCookieToken()
 
 ### .refreshCookieToken
 
-tbd
+Refreshes the token from a Brixx identity cookie.
 
-### .refreshCookieToken
+**Parameters**  
+`{String} [baseURL='BrixxProcessDefinition.baseURL]` - the brixx api base url.
 
-tbd
+`{String} [expires='1h']` - the expires value.
+
+`{String} [path='/']` - the cookie path.
+
+`{object} [callback]` - the callback function.
+
+**Example**
+
+    BrixxProcessDefinition.refreshCookieToken({ expires: '10h', path: '/test/'  })
 
 ### .deleteCookieToken
 
-tbd
+Deletes the token from a Brixx identity cookie.
+
+**Parameters**  
+`{String} [path='/']` - the cookie path.
+
+**Example**
+
+    BrixxProcessDefinition.deleteCookieToken({ path: '/test' })
 
 ### .getAccessToken
 
-tbd
+Gets the access token.
+
+**Parameters**  
+`{String} [user]` - the user.
+
+`{String} [password]` - the password.
+
+`{object} [callback]` - the callback function.
+
+**Example**
+
+    const getAccessToken = await BrixxProcessDefinition.getAccessToken({
 
 ## Process object
 
@@ -1046,8 +1118,7 @@ tbd
 
 Creates a process instance with an published business process model in the Brixx Process Engine.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [mid=null] (optional)` - the model identifier.
@@ -1075,8 +1146,7 @@ Creates a process instance with an published business process model in the Brixx
 
 Set the state of a prcoess instance or process element to `done` and by default the state of a following process element to `active`. This can be used, for example, to archive completed processes.
 
-**Parameters**
-
+**Parameters**  
 `{String} [pid=null] (optional)` - the process identifier.
 
 `{Object} [data=null] (optional)` - the request data.
@@ -1115,8 +1185,7 @@ Returns the BrixxProcessDefinition process event object.
 
 Set the state of an event element to `done` and by default the state of a following process element to `active`. See also [`BrixxProcessDefinition.process.done`](#process.done)
 
-**Parameters**
-
+**Parameters**  
 `{String} [eid=null] (optional)` - the event identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1135,8 +1204,7 @@ Set the state of an event element to `done` and by default the state of a follow
 
 Returns the BrixxProcessDefinition event element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [eid=null] (optional)` - the event identifier.
@@ -1157,8 +1225,7 @@ Returns the BrixxProcessDefinition event element data.
 
 Set the next process element active.
 
-**Parameters**
-
+**Parameters**  
 `{String} [eid=null] (optional)` - the event identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1175,8 +1242,7 @@ Set the next process element active.
 
 Sets the BrixxProcessDefinition event element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [eid=null] (optional)` - the event identifier.
@@ -1212,8 +1278,7 @@ Returns the BrixxProcessDefinition process gateway object.
 
 Set the state of a gateway element to `done` and by default the state of a following process element to `active`. See also [`BrixxProcessDefinition.process.done`](#process.done)
 
-**Parameters**
-
+**Parameters**  
 `{String} [gid=null] (optional)` - the gateway identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1232,8 +1297,7 @@ Set the state of a gateway element to `done` and by default the state of a follo
 
 Returns the BrixxProcessDefinition gateway element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [gid=null] (optional)` - the gateway identifier.
@@ -1254,8 +1318,7 @@ Returns the BrixxProcessDefinition gateway element data.
 
 Set the next process element active.
 
-**Parameters**
-
+**Parameters**  
 `{String} [gid=null] (optional)` - the gateway identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1272,8 +1335,7 @@ Set the next process element active.
 
 Sets the BrixxProcessDefinition gateway element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [gid=null] (optional)` - the gateway identifier.
@@ -1300,8 +1362,7 @@ Sets the BrixxProcessDefinition gateway element data.
 
 Returns the BrixxProcessDefinition process instance data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [pid=null] (optional)` - the process identifier.
@@ -1321,8 +1382,7 @@ Returns the BrixxProcessDefinition process instance data.
 
 The `iterator` function executes a provided function once per each active process element in the process instance object and returns the process element data. See also [`BrixxProcessDefinition.process.start`](#process.start)
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 **Example**
@@ -1355,8 +1415,7 @@ The `iterator` function executes a provided function once per each active proces
 
 Sets the BrixxProcessDefinition process instance data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [pid=null] (optional)` - the process identifier.
@@ -1380,8 +1439,7 @@ Sets the BrixxProcessDefinition process instance data.
 
 Starts a process instance or process element. See also [`BrixxProcessDefinition.process.iterator`](#process.iterator)
 
-**Parameters**
-
+**Parameters**  
 `{Boolean} [checkAtStart=false]` - the check at start flag. Defines if an existing `Start Event` will be checked. If is `true`, the `Start Event` must be handled in the process definition with the HTML element `<Event>`
 
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
@@ -1425,8 +1483,7 @@ Returns the BrixxProcessDefinition process task object.
 
 Set the state of a task element to `done` and by default the state of a following process element to `active`. See also [`BrixxProcessDefinition.process.done`](#process.done)
 
-**Parameters**
-
+**Parameters**  
 `{String} [tid=null] (optional)` - the task identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1445,8 +1502,7 @@ Set the state of a task element to `done` and by default the state of a followin
 
 Returns the BrixxProcessDefinition task element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [tid=null] (optional)` - the task identifier.
@@ -1467,8 +1523,7 @@ Returns the BrixxProcessDefinition task element data.
 
 Set the next process element active.
 
-**Parameters**
-
+**Parameters**  
 `{String} [tid=null] (optional)` - the task identifier.
 
 `{Object} [store=null] (optional)` - the store data.
@@ -1485,8 +1540,7 @@ Set the next process element active.
 
 Sets the BrixxProcessDefinition task element data.
 
-**Parameters**
-
+**Parameters**  
 `{String} [baseURL=BrixxProcessDefinition.baseURL] (optional)` - the Brixx Process Engine base url.
 
 `{String} [tid=null] (optional)` - the task identifier.
