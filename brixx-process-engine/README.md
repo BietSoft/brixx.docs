@@ -16,18 +16,19 @@
 
 With **Brixx Process Engine** we bridge the gap to enterprise process orchestration systems, such as Camunda or X4 BPMS, as a lightweight workflow management system for the automation and digitization of business and industrial processes, processes in web applications and to IoT process control. With minimal development, integration and cost effort, our process can serve as the basis for applications, or be integrated into existing applications as an extension for sub-processes and is the control center for configuration, process creation and processing.
 
--   Lightweight process enging
--   Simple system integration
--   No special training needed
--   No special server hardware
--   or installation needed
--   No database required
+-   Lightweight process and workflow enging
+-   Microservice orchestration engine
+-   IoT (Internet of Things) control
+-   Simple system integration and installation
+-   No special server hardware needed
+-   Single Board Computer support
 -   Cross platform development
 -   Cross ui development
 -   Low Code Development
 -   Full HTML and JavaScript support
--   IoT (Internet of Things) control and  
-    (Single-Board-Computer) support
+-   Python script support
+-   No special training needed
+-   No database required
 -   BPMN 2.0 Standard
 -   Suitable for BPMN training
 -   Cloud (FaaS) and Blockchain ready
