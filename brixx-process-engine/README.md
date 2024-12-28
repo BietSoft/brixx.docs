@@ -24,7 +24,7 @@ With **Brixx Process Engine** we bridge the gap to enterprise process orchestrat
 -   Single Board Computer support
 -   Cross platform development
 -   Cross ui development
--   Low Code Development
+-   Low-Code Development
 -   HTML and JavaScript support
 -   Python script support
 -   No special training needed
